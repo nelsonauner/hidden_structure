@@ -1,7 +1,7 @@
-MNlatent
+hidden_structure
 =====
 
-Adding mixture membership and latent factor structure as part of a massive multinomial regression -- e.g., for text phrase counts regressed onto document attributes.  This will be useful to model and control for unobserved heterogenaity between (or dependence within) documents.  
+First project: adding mixture membership and latent factor structure as part of a massive multinomial regression -- e.g., for text phrase counts regressed onto document attributes.  This will be useful to model and control for unobserved heterogenaity between (or dependence within) documents.  
 
 
 Our final model will have Ci ~ MN(f(alpha + Phi\*v_i + Gamma\*u_i)) as the likelihood,
