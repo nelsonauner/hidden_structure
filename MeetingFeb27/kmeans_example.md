@@ -107,15 +107,7 @@ plot(normalize(x), col = cl2$cluster, main = "k means on normalized data")
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
-And we see that even the cluster predictions are now quite different:
-
-```r
-cl2$cluster
-```
-
-```
- [1] 2 1 2 1 1 2 1 2 1 2
-```
+And we see that the standardized data is not clustered correctly:
 
 ```r
 cl$cluster
@@ -123,6 +115,14 @@ cl$cluster
 
 ```
  [1] 1 1 1 1 1 2 2 2 2 2
+```
+
+```r
+cl2$cluster
+```
+
+```
+ [1] 2 1 2 1 1 2 1 2 1 2
 ```
 
 
