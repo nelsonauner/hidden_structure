@@ -20,10 +20,14 @@ plot(fwd$fitted ~ factor(we8thereRatings$Overall),varwidth=TRUE, col="lightslate
 #### k-means ##
 
 #quickly scale data
-normalize<- function(x) {return((x-mean(x))/sd(x))}
+normalize<- function(x) {
+return(	
+	apply(
+		t(apply(t(x),2,FUN=function(x) {x/sum(x)})),
+		2,FUN=function(x) {x/sd(x)})
+	)}
 #how to select # of clusters? I know to be five...
-km <- kmeans(apply(we8thereCounts,2,normalize),5)  
+km <- kmeans(normalize(we8thereCounts),5)
 # takes ~7 seconds.
-
-
+table(km)
 
