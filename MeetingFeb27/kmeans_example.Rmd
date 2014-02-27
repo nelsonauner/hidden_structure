@@ -39,7 +39,6 @@ x
 t(apply(t(x),2,FUN=function(x) {x/sum(x)}))
 #and now devide by std of column (standardize term variance):
 normalize(x)
-plot(normalize(x), col = cl2$cluster,main="k means on normalized data")
 ```
 And we see that the standardized data is not clustered correctly:
 ```{r,comment=""}
