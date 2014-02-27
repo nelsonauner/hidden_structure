@@ -3,9 +3,18 @@ Thursday Feb 27th Textir & K means - Nelson Auner
 
 
 Nelson's Notes:
-- kmeans fit is quite unstable...and slow...
+
+Progress: fit textir, fit kmeans. 
+
+
+Questions/Issues:
 - Next Steps? 
+- kmeans fit is quite unstable...and slow...
 - Balancing this vs. pygamlr. 
+- Conferences
+- Swimming... :P
+
+Code below:
 
 ```r
 ## textir & k-means ## borrowing heavily from documentation:
