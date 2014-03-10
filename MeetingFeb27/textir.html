@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+<h1 id="thursday-feb-27th-textir-k-means---nelson-auner">Thursday Feb 27th Textir &amp; K means - Nelson Auner</h1>
+<pre class="sourceCode r"><code class="sourceCode r">## textir &amp; k-means ## borrowing heavily from documentation:
+## http://cran.r-project.org/web/packages/textir/textir.pdf
+<span class="kw">library</span>(textir)
+<span class="kw">data</span>(we8there)
+cl &lt;-<span class="st"> </span><span class="ot">NULL</span>
+fits &lt;-<span class="st"> </span><span class="kw">mnlm</span>(cl, we8thereRatings[, <span class="st">&quot;Overall&quot;</span>, <span class="dt">drop =</span> <span class="ot">FALSE</span>], we8thereCounts, 
+    <span class="dt">bins =</span> <span class="dv">5</span>, <span class="dt">gamma =</span> <span class="dv">1</span>, <span class="dt">nlambda =</span> <span class="dv">10</span>)
+B &lt;-<span class="st"> </span><span class="kw">coef</span>(fits)
+<span class="co"># do MNIR projection onto factors</span>
+z &lt;-<span class="st"> </span><span class="kw">srproj</span>(B, we8thereCounts)
+## fit a fwd model to the factors
+fwd &lt;-<span class="st"> </span><span class="kw">lm</span>(we8thereRatings$Overall ~<span class="st"> </span>z)
+<span class="kw">head</span>(z)</code></pre>
+<pre><code>   Overall  m
+1   0.4801  8
+2  -0.2714  2
+5   0.8178  2
+11  0.3721 11
+12  0.3728  8
+13  0.5097  8</code></pre>
+<p>Understanding m: total number of tracked utterances. Linear effect?</p>
+<pre class="sourceCode r"><code class="sourceCode r">#### k-means ##
+
+<span class="co"># quickly scale data</span>
+normalize &lt;-<span class="st"> </span>function(x) {
+    <span class="kw">return</span>(<span class="kw">apply</span>(<span class="kw">t</span>(<span class="kw">apply</span>(<span class="kw">t</span>(x), <span class="dv">2</span>, <span class="dt">FUN =</span> function(x) {
+        x/<span class="kw">sum</span>(x)
+    })), <span class="dv">2</span>, <span class="dt">FUN =</span> function(x) {
+        x/<span class="kw">sd</span>(x)
+    }))
+}
+<span class="co"># how to select # of clusters? I know to be five...</span>
+ptm &lt;-<span class="st"> </span><span class="kw">proc.time</span>()
+km5 &lt;-<span class="st"> </span><span class="kw">kmeans</span>(<span class="kw">normalize</span>(we8thereCounts), <span class="dv">5</span>)
+<span class="kw">proc.time</span>() -<span class="st"> </span>ptm</code></pre>
+<pre><code>   user  system elapsed 
+  33.63    0.72   38.02 </code></pre>
+<p>Some more investigative work on how the centers of the means are, since we can’t see them:</p>
+<pre class="sourceCode r"><code class="sourceCode r">hdkmtable &lt;-<span class="st"> </span>function(kmobj, y) {
+    n_y &lt;-<span class="st"> </span><span class="kw">length</span>(yu &lt;-<span class="st"> </span><span class="kw">as.integer</span>(<span class="kw">levels</span>(<span class="kw">factor</span>(y))))
+    n_km &lt;-<span class="st"> </span><span class="kw">length</span>(kmobj$size)
+    res &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(<span class="kw">rep</span>(<span class="ot">NA</span>, n_y *<span class="st"> </span>(<span class="dv">2</span> *<span class="st"> </span>n_y)), <span class="dt">nrow =</span> n_y))
+    <span class="kw">names</span>(res) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;mean.y&quot;</span>, <span class="st">&quot;sd.y&quot;</span>, <span class="kw">paste</span>(<span class="st">&quot;cos&quot;</span>, <span class="dv">2</span>:n_km), <span class="kw">paste</span>(<span class="st">&quot;dist&quot;</span>, <span class="dv">2</span>:n_km))
+    for (i in <span class="dv">1</span>:n_km) {
+        temp.y &lt;-<span class="st"> </span>y[kmobj$cluster ==<span class="st"> </span>i]
+        res[i, <span class="dv">1</span>:<span class="dv">2</span>] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">mean</span>(temp.y), <span class="kw">sd</span>(temp.y))
+        if (i ==<span class="st"> </span>n_km) {
+            (break)()
+        }
+        for (j in (i +<span class="st"> </span><span class="dv">1</span>):n_km) {
+            res[i, (<span class="dv">1</span> +<span class="st"> </span>j)] &lt;-<span class="st"> </span><span class="kw">acos</span>(<span class="kw">cor</span>(kmobj$centers[i, ], kmobj$centers[j, 
+                ]))
+            res[i, (j +<span class="st"> </span>n_km)] &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">sum</span>((kmobj$centers[i, ] -<span class="st"> </span>kmobj$centers[j, 
+                ])^<span class="dv">2</span>))
+        }
+    }
+    res$Freq =<span class="st"> </span><span class="kw">table</span>(kmobj$cluster)
+    <span class="kw">return</span>(res)
+}
+
+(table5 &lt;-<span class="st"> </span><span class="kw">hdkmtable</span>(km5, we8thereRatings$Overall))</code></pre>
+<pre><code>  mean.y   sd.y cos 2 cos 3 cos 4 cos 5 dist 2 dist 3 dist 4 dist 5 Freq
+1  4.186 1.1814 1.604 1.574 1.595 1.693  16.82  16.19  22.18 13.399   59
+2  3.268 1.6678    NA 1.588 1.604 1.737     NA  13.74  20.42 10.216   97
+3  3.641 0.8777    NA    NA 1.542 1.897     NA     NA  19.55  9.792  231
+4  3.562 1.4354    NA    NA    NA 1.710     NA     NA     NA 17.692   32
+5  3.968 1.3574    NA    NA    NA    NA     NA     NA     NA     NA 5747</code></pre>
+<p>Nelson’s Notes: - Next Steps? - Balancing this vs. pygamlr.</p>
+</body>
+</html>
