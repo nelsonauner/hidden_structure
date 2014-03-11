@@ -13,11 +13,10 @@ Y<-Y_orig <- cbind(we8thereRatings[,'Overall',drop=FALSE],cl_matrix)
 
 #Iterating loop. Takes a while
 n.loop = 10
-for (i in 1:n.loop) {
 fits <- mnlm(cl,Y ,we8thereCounts, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
 #Fit the model 
-B <- coef(fits) #Pull the coeffecients
-
+B <- B_orig <- coef(fits) #Pull the coeffecients
+for (i in 1:n.loop) {
 #We want to make our "prediction" but are only interested in the effect of cluster membership
 #There's no need to multiply out the entire B matrix since the model is linear:
 #However, the predict method will not work if we subset the B matrix, so we do it manually
@@ -33,5 +32,12 @@ n_cl <- as.factor(apply(qz,MARGIN=1,FUN=which.max)) #biased towards 1. Oh well.
 n_cl_matrix <- model.matrix(formula(~0+(n_cl))) #and convert to [0 0 1] form. 
 #update our Y:
 Y[,2:5] <- n_cl_matrixi
+#And refit: 
+fits <- mnlm(cl,Y ,we8thereCounts, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
+B <- B_orig <- coef(fits) #Pull the coeffecients
 }
 
+#TODO: Check that the log likelihood is actually higher: 
+
+qfinal <- predict(B, newdata=we8thereRatings,type="response")
+sum(we8thereCounts[1,]*log(q[1,]))

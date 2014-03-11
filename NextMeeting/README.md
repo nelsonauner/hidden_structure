@@ -1,5 +1,5 @@
-Tasks: 
-1. Iterate between cluster and parameter updates
+Task: Iterate between cluster and parameter updates
+
 
 By bayes formula: 
 P(u_i = b | c_i,v_i) = P(c_i | v_i, u_i = b) * some constant
@@ -13,6 +13,9 @@ Step 2: Given theta and Gamma, evaluate likelihood and switch to a better cluste
 What is the best way to update the cluster point? 
 - The predicted point is YB, the contribution from the cluster point is 
 - We can see the contribution from all memberships by looking at X_i * Gamma = [X_i under member=1, X_i under member=2, ...]
+
+Results: 
+We see that LL can be increased through iterations. See graph. 
 
 
 Questions:
