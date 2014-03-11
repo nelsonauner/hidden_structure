@@ -1,20 +1,22 @@
 Tasks: 
 1. Iterate between cluster and parameter updates
 
-$$P(u_i = b | c_i,v_i) = P(c_i | v_i, u_i = b)$$
+By bayes formula: 
+P(u_i = b | c_i,v_i) = P(c_i | v_i, u_i = b) * some constant
+
+X \sim Multinomial(f(Y*theta + U*Gamma)) = MN(f(Y*Beta)) #let Y = [Y,U] so B = [theta,gamma]
+
+Step 1: Given cluster membership, fit parameter values theta and Gamma
+Step 2: Given theta and Gamma, evaluate likelihood and switch to a better cluster if possible
 
 
--Initialize with some cluster DONE
-
--For each data point, switch to a better cluster if possible
 What is the best way to update the cluster point? 
 - The predicted point is YB, the contribution from the cluster point is 
-- It's not necessary to make a full prediction for each point, we can simply maxim
+- We can see the contribution from all memberships by looking at X_i * Gamma = [X_i under member=1, X_i under member=2, ...]
 
 
 Questions:
 How do we choose how many topics to fit with? 
 Best way to iterate?
 mnlm and the way it deals with factor variables..
-When doing a simple cluster membership with K clusters, the information of the last cluster is redundant, since
-$$ \sum_{l \in K}{I_{x_{i} \in l} = 1$$
+When doing a simple cluster membership with K clusters, the information of the last cluster is redundant - do we need to do something about that? 
