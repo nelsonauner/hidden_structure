@@ -4,22 +4,28 @@ library(textir);data(we8there);cl <- NULL
 
 #Initialize Cluster Membership randomly
 cl_num<- as.factor(floor(runif(n=dim(we8thereRatings)[1],min=0,max=4)))
-
+m <- rowSums(we8thereCounts)
 # Notes: mnlm does not handle factors!
 #Turn our factor (membership = 1,2 or 3) into vector (membership = [0 1 0]), etc
 cl_matrix <- model.matrix(formula(~0+cl_num))
 #Add clustermembership to the 'attributes' matrix so we can regress on it
 Y<-Y_orig <- cbind(we8thereRatings[,'Overall',drop=FALSE],cl_matrix)
 
-penal <- function(y,b) {
+
+## Not yet able to incorporate more than one y--need to get on this!
+penal <- function(y,b,clusters) {
   #Beta should be {#params, #vars} wide matrix with row order (intercept, y, clusters)
-  #y is the v from Taddy papers, should be 
-  runsum = 0 
-  for (i in 1:dim(b)[2]) {
+  #y is  from the from Taddy papers, should be 
+  hm<- matrix(y) %*% t(matrix(b[2,])) ##    matrix(b[2,]) %*% t(matrix(y))
+  const = b[1,] + b[2,]*y[i] #this doesn't depend on the cluster
+  cl_term = 
+  for (i in 1:(dim(b)[2]-2) {
     runsum = runsum+=
   }
   
 }
+
+B[1,] + B[2,]*y
 
 #Iterating loop. Takes a while
 n.loop = 10
@@ -38,7 +44,19 @@ for (i in 1:n.loop) {
 #THIS IS WHAT WE WANT:
   
   
-qz <- we8thereCounts%*%t(B[3:6,])   #this is still correct for the first part. 
+ll_left <- we8thereCounts%*%t(B[3:6,])   #this is still correct for the first part. 
+
+#this produces an N x p matrix used for calculating penalization
+hm<-sweep(matrix(Y[,1]) %*% t(matrix(B[2,])),MARGIN=2, B[1,],'+')  #Faster than sweep: t(t())? http://stackoverflow.com/questions/3643555/multiply-rows-of-matrix-by-vector
+#for each possible cluster, we want to add the cluster coeffecients to the intercept and y*beta term we already have
+#the results should be an N x (#clusters) matrix
+#so basically a repeated sweep!
+cust_sweep <- function(m,v) { sweep(m,MARGIN=2,v,'+')}
+ll_penal <- cust_sweep(matrix(Y[,1]) %*% B[2,] ,B[1,]) #add intercept and v_i term
+ll_penal_tot <- apply(B[3:6,],MARGIN=1,function(x) log(rowSums(exp(cust_sweep(ll_penal,x)))))
+
+# check out cust_sweep(ll_penal,B[4,]) for an example of what's going on here
+t(B[3:6,])
 #Select new cluster membership if better. 
 n_cl <- as.factor(apply(qz,MARGIN=1,FUN=which.max)) #biased towards 1. Oh well.
 n_cl_matrix <- model.matrix(formula(~0+(n_cl))) #and convert to [0 0 1] form. 
