@@ -70,7 +70,7 @@ We may be interested in using predicting traits about bloggers given their movie
 Theory and Model Specification
 ----------------------------------
 Denoting the word count of a document as the vector $x_i$, we propose the following model:
-$$ x_{i} \sim MN(q_{ij},m_{ij}) ; q_{ij} = \frac{exp(\alpha_j + y_i \theta_j + u_i \Gamma_{kj})}{\sum{exp(\alpha_j + y_i \theta_j + u_i \Gamma_{kj})}}$$
+$$ x_{i} \sim MN(q_{ij},m_{ij}) ; q_{ij} = \frac{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}{\sum{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}}$$
 
 where $y_i$, $u_i$ are the metadata and cluster membership associated with document $i$, and $\phi_j$ and $\Gamma_{kj}$ are the distortion coeffecients for the respective metadata and factor membership.
 We use the subscript $k$ to denote that each document $x_i$ is considered a member of $k = 1,..,K$ clusters, with their own distortion vectors $\Gamma_1,..,\Gamma_K$
@@ -82,10 +82,19 @@ To do so, we initiatilize cluster membership using one of the three following me
 2. K-means on the word count data
 3. K-means on the residual of the word count data after incorporating metadata $y$
 
-We use an iterated Expectation Maximization algorithm. For each step, we alternate between
+
+Estimation of Paramters via Maximum a posteriori
+-----------------------
+
+Using the approach described in Taddy (Multinomial Inverse Regression for Text Analysis), 
+The negative log likelihood for our model can be written as:
+
+$$L = \sum_{i = 1}^{N}{\alpha + \phi v_i + u_i \Gamma_kj} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_kj \big]}})$$
 
 1. Determine parameters $\alpha_, \phi \Gamma$ by fitting a multinomial regression on $y_i | x_i , u_i$
 2. For each document $i$, determine new cluster $u_i$ membership as $argmax_{k = 1,..,K} \big[  \ell(y_i,x_i,u_k | \alpha, \phi, \Gamma) \big]$
+
+
 
 
 By alternating between the two steps, we aim to converge to optimal parameter estimates $\alpha, \phi, \Gamma$ as well as optimal cluster membership $u$. 

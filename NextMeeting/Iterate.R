@@ -11,6 +11,16 @@ cl_matrix <- model.matrix(formula(~0+cl_num))
 #Add clustermembership to the 'attributes' matrix so we can regress on it
 Y<-Y_orig <- cbind(we8thereRatings[,'Overall',drop=FALSE],cl_matrix)
 
+penal <- function(y,b) {
+  #Beta should be {#params, #vars} wide matrix with row order (intercept, y, clusters)
+  #y is the v from Taddy papers, should be 
+  runsum = 0 
+  for (i in 1:dim(b)[2]) {
+    runsum = runsum+=
+  }
+  
+}
+
 #Iterating loop. Takes a while
 n.loop = 10
 fits <- mnlm(cl,Y ,we8thereCounts, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
@@ -26,7 +36,9 @@ for (i in 1:n.loop) {
 #These is the part of the prediction from the cluster effect:
 #qq <- as.matrix(Y[,2:5]) %*% B[3:6,] #these look mis-aligned because of the intercept term
 #THIS IS WHAT WE WANT:
-qz <- we8thereCounts%*%t(B[3:6,])
+  
+  
+qz <- we8thereCounts%*%t(B[3:6,])   #this is still correct for the first part. 
 #Select new cluster membership if better. 
 n_cl <- as.factor(apply(qz,MARGIN=1,FUN=which.max)) #biased towards 1. Oh well.
 n_cl_matrix <- model.matrix(formula(~0+(n_cl))) #and convert to [0 0 1] form. 

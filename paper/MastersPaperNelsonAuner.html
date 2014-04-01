@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=9" >
 
-<title>Master&#39;s Paper Nelson Auner</title>
+<title>Master&#39;s Paper - 2014 - Nelson Auner</title>
 
 <style type="text/css">
 body, td {
@@ -146,12 +146,13 @@ hr {
 </head>
 
 <body>
-<h1>Master&#39;s Paper Nelson Auner</h1>
+<h1>Master&#39;s Paper - 2014 - Nelson Auner</h1>
 
 <ol>
-<li>Abstract</li>
-<li>Introduction</li>
+<li><p>Abstract</p></li>
 </ol>
+
+<h1>2. Introduction</h1>
 
 <h2>Multinomial Model</h2>
 
@@ -205,7 +206,9 @@ The inverse regression metadata approach has a computational advantage over topi
 
 <p>Recent articles have proposed and implemented versions combining both metadata and topic modeling approaches.</p>
 
-<h1>3. Mixture models and cluster membership</h1>
+<h1>3. Theory and Approach</h1>
+
+<h2>Mixture models and cluster membership</h2>
 
 <p>We now turn our attention to the purpose of this paper, which is to implement an approach to discover and model &ldquo;hidden&rdquo;, or previously unspecified traits, across documents by grouping content unexplained by metadata.<br/>
 As a simple motivating example, we might imagine a corpus of movie reviews written by several bloggers. 
@@ -215,9 +218,9 @@ We may be interested in using predicting traits about bloggers given their movie
 <h2>Theory and Model Specification</h2>
 
 <p>Denoting the word count of a document as the vector \( x_i \), we propose the following model:
-\[  x_{i} \sim MN(q_{ij},m_{ij}) ; q_{ij} = \frac{exp(\alpha_j + y_i \theta_j + u_i \Gamma_{kj})}{\sum{exp(\alpha_j + y_i \theta_j + u_i \Gamma_{kj})}} \]</p>
+\[  x_{i} \sim MN(q_{ij},m_{ij}) ; q_{ij} = \frac{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}{\sum{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}} \]</p>
 
-<p>where \( y_i \), \( u_i \) are the metadata and cluster membership associated with document \( i \), and \( \phi_j \) and \( \Gamma_kj \) are the distortion coeffecients for the respective metadata and factor membership.
+<p>where \( y_i \), \( u_i \) are the metadata and cluster membership associated with document \( i \), and \( \phi_j \) and \( \Gamma_{kj} \) are the distortion coeffecients for the respective metadata and factor membership.
 We use the subscript \( k \) to denote that each document \( x_i \) is considered a member of \( k = 1,..,K \) clusters, with their own distortion vectors \( \Gamma_1,..,\Gamma_K \)</p>
 
 <p>Our focus in on predicting cluster membership \( u_i \) and the corresponding probability distortion \( \Gamma_i \). 
@@ -229,24 +232,26 @@ To do so, we initiatilize cluster membership using one of the three following me
 <li>K-means on the residual of the word count data after incorporating metadata \( y \)</li>
 </ol>
 
-<p>We use an iterated Expectation Maximization algorithm. For each step, we alternate between</p>
+<h2>Estimation of Paramters via Maximum a posteriori</h2>
+
+<p>Using the approach described in Taddy (Multinomial Inverse Regression for Text Analysis), 
+The negative log likelihood for our model can be written as:</p>
+
+<p>\[ L = \sum_{i = 1}^{N}{\alpha + \phi v_i + u_i \Gamma_kj} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_kj \big]}}) \]</p>
 
 <ol>
 <li>Determine parameters \( \alpha_, \phi \Gamma \) by fitting a multinomial regression on \( y_i | x_i , u_i \)</li>
-<li>For each document \( i \), determine new cluster \( u_i \) membership as \( argmax_{k = 1,..,K}   \ell(y_i,x_i,u_k | \alpha, \phi, \Gamma) \)</li>
+<li>For each document \( i \), determine new cluster \( u_i \) membership as \( argmax_{k = 1,..,K} \big[  \ell(y_i,x_i,u_k | \alpha, \phi, \Gamma) \big] \)</li>
 </ol>
 
 <p>By alternating between the two steps, we aim to converge to optimal parameter estimates \( \alpha, \phi, \Gamma \) as well as optimal cluster membership \( u \). </p>
 
 <p>To do: </p>
 
-<ol>
-<li>Application</li>
-<li>Graphs</li>
-<li>Conclusion</li>
-<li>Acknowledgements</li>
-<li>References</li>
-</ol>
+<p>Application<br/>
+Graphs<br/>
+Conclusion<br/>
+References  </p>
 
 </body>
 
