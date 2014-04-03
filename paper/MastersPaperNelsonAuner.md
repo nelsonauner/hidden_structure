@@ -2,12 +2,15 @@ Master's Paper - 2014 - Nelson Auner
 ===========================
 
 1. Abstract
+===========
+This paper introduces a variant to existing models of multinomial regression for text analysis. 
+Using the base model introduced by Taddy (2013), we extend the data-generating model to incorporate topics not explained by existing Metadata. In doing so, we seek to both increase the prediction accuracy over existing techniques and also to bridge the gap between multinomial regression and standard topic models. Finally, we explore computational aspects of our approach and propose areas of future research.
 
 2. Introduction
 ===================
 
-Multinomial Model
-------------------
+Multinomial Models and Text
+-----------------------
 
 Multinomial models are a common way of modeling annotated text. 
 Typically, textual information is grouped by documents and represented by counts of tokens. A document might be a single written text (e.g. an academic article), or a collection of works by the same author (e.g. all of the lyrics of an album by the rolling stones)
@@ -101,10 +104,19 @@ By alternating between the two steps, we aim to converge to optimal parameter es
 
 To do: 
 
+Computation
+----------
+As noted by Taddy, Multinormal Regression enjoyes the ability to collapse observations across levels of metadata. This attractive property is preserved even in our more complex cluster membership model. 
+
+
 Application		
-Graphs	
+===========
+*Graphs*
+
 Conclusion	
-References	
+===========
+References
+============
 
 
 

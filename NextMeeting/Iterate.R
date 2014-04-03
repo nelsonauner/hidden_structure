@@ -3,8 +3,9 @@
 ######################################################################
 
 # borrowing heavily from documentation: http://cran.r-project.org/web/packages/textir/textir.pdf
+# It would  be nice to implement some error checking
 
-iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE) {
+iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
   ptm<-proc.time()
   require(textir)
   ## note, so far, y must be a vector, not matrix :(
@@ -13,10 +14,10 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE) {
   #Turn our factor (membership = 1,2 or 3) into vector (membership = [0 1 0]), etc
   cl_matrix <- model.matrix(formula(~0+as.factor(clusters)))
   #Add 
-  Y<-Y_orig <- cbind(y,cl_matrix)
+  Y<-Y_orig <- as.matrix(cbind(y,cl_matrix))
   likes <- rep(NA,n.loop) #store likelihood updates here! 
   clusters <- array(,dim=c(dim(X)[1],n.loop))
-  fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); B <- coef(fits)
+  fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); #B <- coef(fits)
   res = list(likes,clusters,B,NULL);names(res) <- c("likes","clusters","B","time")
   for (i in 1:n.loop) {
     ll_left <- X%*%t(B[3:6,])   #Only take he relevant part
