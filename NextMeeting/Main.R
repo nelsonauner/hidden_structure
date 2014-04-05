@@ -21,23 +21,34 @@ sum(round(fwd$fitted) != we8thereRatings$Overall)/length(we8thereRatings$Overall
 mean(abs(round(fwd$fitted)-we8thereRatings$Overall))
 #[1] 0.5591956
 
-######################################################################
-###         Initialize  Cluster Membership                        ####
-######################################################################
-#load algorithm
-source('Iterate.R')
-
 ##############################################################
 #Initialize Cluster Membership randomly and assign variables:#
 ##############################################################
+#load algorithm
+source('Iterate.R')
 X = we8thereCounts
 y = we8thereRatings['Overall']
 clusters <- sample(1:4,size=dim(we8thereRatings)[1],replace=TRUE)
-n.loop = 15
+n.loop = 30
 #################################
 #         Run Algorithm         #
 #################################
 res<-iter_cluster(y,clusters,X,n.loop)
+
+#####################################
+#  Test Iterations and Convergence? #
+#####################################
+library(ggplot2);library(reshape2)
+qplot(1:30,res$likes,xlab="iteration",ylab="log likelihood (relative)",main="MNIR with Clustering")
+d.plot <- melt(res$clusters)
+p<-ggplot(data=d.plot,aes(x = Var2,y=Var1,colour = factor(value)))
+p+ layer(geom="point")
+plot(d.plot$Var2,d.plot$Var1,col=d.plot$value)
+#Is there a better way to visualize this? 
+
+p<-ggplot(data=h)
+p<-p+aes(x=Var1)
+#how do clusters change over time?
 
 #####################
 #forward regression:#
@@ -77,6 +88,7 @@ for (i in 4:n.sim){
   res.sim_cl = append(res.sim_cl,list(iter_cluster(y,sample(1:i,size=dim(we8thereRatings)[1],replace=TRUE),X,n.loop)))
 }
 
+res.sim.iter <-iter_cluster(y,(sample(1:4,size=dim(we8thereRatings)[1],replace=TRUE)),X,n.loop=30)
 
 #we now have a bunch of simulations....
 
@@ -101,4 +113,4 @@ cl_any_good <- append(cl_any_good,sum(rowSums(pred.lik)))
 pred.naive <- exp(B.naive[1,] + matrix(we8thereRatings$Overall) %*% B.naive[2,])
 pred.naive <- pred.naive/rowSums(pred.naive)
 fitted.naive <- m*pred.naive
-lik.naive <- abs(we8thereCounts-fitted.naive
+lik.naive <- abs(we8thereCounts-fitted.naive)
