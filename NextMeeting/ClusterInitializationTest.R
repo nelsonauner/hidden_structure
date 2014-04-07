@@ -58,17 +58,8 @@ for (i in 1:3) {
     #quick <- make the model matrix
     factorize <- as.factor(totres[[i]][[j]]$h.cluster[,dim(totres[[i]][[j]]$h.cluster)[2]])
     cl_m <- model.matrix(formula(~0+factorize))
-    res[j,i] <- multi.devian(X,cbind(y,cl_m),totres[[i]][[j]]$B)
+    res[j,i] <- multi.devian(X,as.matrix(cbind(y,cl_m)),totres[[i]][[j]]$B)
   }
 }
-    
-      
-      #are they the same? 
-      
-      
-    
-      
-      png(file="cars%d.png")
-      for(Var in names(mtcars)) {
-        print(qplot(mtcars[,Var], wt, data=mtcars, xlab=Var))
-      }
+ 
+
