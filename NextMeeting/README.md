@@ -12,7 +12,7 @@ We want to maximize the above expression in terms of choosing cluster membership
 Issues: 
 
 1. My current solution is computationally ineffecient, since, for the penalization term, I am not collapsing over V_i and cluster combinations. Better steps?
-
+[Article on speeding up R](http://stackoverflow.com/questions/2908822/speed-up-the-loop-operation-in-r)
 
 Results
 ---------

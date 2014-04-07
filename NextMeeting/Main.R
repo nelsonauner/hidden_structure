@@ -1,3 +1,7 @@
+#Contents:
+#Test Baseline against new models
+
+
 ######################################################################
 ###         Establish Baseline: "Vanilla" MNIR:                   ####
 ######################################################################
@@ -49,6 +53,9 @@ plot(d.plot$Var2,d.plot$Var1,col=d.plot$value)
 p<-ggplot(data=h)
 p<-p+aes(x=Var1)
 #how do clusters change over time?
+
+cls <- sim.1[[1]]$clusters
+
 
 #####################
 #forward regression:#
