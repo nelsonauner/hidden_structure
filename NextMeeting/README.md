@@ -25,4 +25,13 @@ We see an decrease in negative log likelihood:
 Cluster Initialization Results
 ------------
 
+Currently attempting to calculate multinomial deviance...
+
+
+Days that work well for final presentation
+
+Cross Validation?
+
+
+
 
