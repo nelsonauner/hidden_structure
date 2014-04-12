@@ -5,7 +5,7 @@
 # borrowing heavily from documentation: http://cran.r-project.org/web/packages/textir/textir.pdf
 # It would  be nice to implement some error checking
 
-iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
+iter_cluster <- function(v,clusters,X,n.loop,debug=FALSE,cl=NULL) {
   ptm<-proc.time()
   require(textir)
   ## note, so far, y must be a vector, not matrix :(
@@ -15,9 +15,9 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
   cl_matrix <- model.matrix(formula(~0+as.factor(clusters)))
   #Add 
   ncl <- dim(cl_matrix)[2]
-  Y<-Y_orig <- as.matrix(cbind(y,cl_matrix))
+  Y<-Y_orig <- as.matrix(cbind(v,cl_matrix))
   d.Y <- dim(Y)[2]
-  n.meta <- dim(matrix(y))[2]
+  n.meta <- dim(matrix(v))[2]
   likes <- rep(NA,n.loop) #store likelihood updates here! 
   h.clusters <- array(,dim=c(dim(X)[1],n.loop))
   fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); 
@@ -47,7 +47,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
     #update our Y:
     Y[,(2+n.meta):d.Y] <- n_cl_matrix
     #And refit: 
-    fits <- mnlm(cl,Y ,we8thereCounts, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
+    fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
     B <- coef(fits) #Pull the coeffecients
   }
   res$likes = likes
