@@ -69,5 +69,5 @@ predict.qij<-function(Y,B){ #we need to make a function to make the predicted q_
 
 multi.devian <- function(X,Y,B) {
   q.ij <- predict.qij(Y,B)
-  return(sum(rowSums(X*q.ij)))
+  return(sum(rowSums(X*log(q.ij))))
 }
