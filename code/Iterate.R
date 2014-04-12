@@ -6,6 +6,7 @@
 # It would  be nice to implement some error checking
 
 iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
+  require('plyr') 
   ptm<-proc.time()
   require(textir)
   ## note, so far, y must be a vector, not matrix :(
