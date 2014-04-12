@@ -32,7 +32,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
     ##################################################################################
     #  This operation could be simplified by collapsing over metadata levels:        #
     ##################################################################################
-    ll_penal <- cust_sweep(matrix(Y[,1:n.meta]) %*% B[2:(1+n.meta),] ,B[1,]) #add intercept and v_i*theta term
+    ll_penal <- cust_sweep(as.matrix(Y[,1:n.meta]) %*% B[2:(1+n.meta),] ,B[1,]) #add intercept and v_i*theta term
     #The apply function is flipping our matrix, etf. 
     #ll_penal_tot <- vapply(B[3:6,],MARGIN=1,FUN.VALUE=1,FUN=function(x) cust_sweep(ll_penal,x))
     #let's try plyr version:
@@ -48,7 +48,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
     #update our Y:
     Y[,(2+n.meta):d.Y] <- n_cl_matrix
     #And refit: 
-    fits <- mnlm(cl,Y ,we8thereCounts, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
+    fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
     B <- coef(fits) #Pull the coeffecients
   }
   res$likes = likes

@@ -30,6 +30,8 @@ make_cl3 <- function(i) {kmeans(resids,i)$cluster}
 
 nloop = 15
 
+#test:
+
 #Now I will test each cluster initialization, for 15 iterations,
 sim.1 <- sim.2 <- sim.3<- list()
 for (i in c(10,15)) {
