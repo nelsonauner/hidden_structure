@@ -42,3 +42,16 @@ for (nloop in c(10,15)) {
 }}
 
 save.image()
+
+#now, time to calculate multinomial deviance or something for all of them to compare
+
+naive.dev <- multi.devian(X,as.matrix(covars),coef(fits))
+
+#prepare results matrix:
+resm <- array(dim=c(3,4))
+
+for (i in 1:3) {
+for (j in 1:4) {
+rel_sim <- totres[[i]][[j]]
+resm[i,j] <- multi.devian(X,as.matrix(cbind(covars,model.matrix(~0+as.factor(rel_sim$clusters)))),rel_sim$B)
+}}
