@@ -34,10 +34,11 @@ nloop = 15
 
 #Now I will test each cluster initialization, for 15 iterations,
 sim.1 <- sim.2 <- sim.3<- list()
-for (i in c(10,15)) {
+for (i in c(5,10)) {
+for (nloop in c(10,15)) {    
   sim.1 <- append(sim.1,list(iter_cluster(covars,make_cl1(i),X,n.loop=nloop)))
   sim.2 <- append(sim.2,list(iter_cluster(covars,make_cl2(i),X,n.loop=nloop)))
   sim.3 <- append(sim.3,list(iter_cluster(covars,make_cl3(i),X,n.loop=nloop)))
-}
+}}
 
 save.image()
