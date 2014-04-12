@@ -18,7 +18,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
   ncl <- dim(cl_matrix)[2]
   Y<-Y_orig <- as.matrix(cbind(y,cl_matrix))
   d.Y <- dim(Y)[2]
-  n.meta <- dim(matrix(y))[2]
+  n.meta <- dim(as.matrix(y))[2]
   likes <- rep(NA,n.loop) #store likelihood updates here! 
   h.clusters <- array(,dim=c(dim(X)[1],n.loop))
   fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); 
