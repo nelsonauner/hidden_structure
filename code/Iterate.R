@@ -5,7 +5,12 @@
 # borrowing heavily from documentation: http://cran.r-project.org/web/packages/textir/textir.pdf
 # It would  be nice to implement some error checking
 
+<<<<<<< HEAD
 iter_cluster <- function(v,clusters,X,n.loop,debug=FALSE,cl=NULL) {
+=======
+iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
+  require('plyr') 
+>>>>>>> f186049f32b77609c4fd35bf65a46fda64700ebb
   ptm<-proc.time()
   require(textir)
   ## note, so far, y must be a vector, not matrix :(
