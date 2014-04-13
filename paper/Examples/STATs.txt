@@ -1,0 +1,92 @@
+STAT 20000. Elementary Statistics. 100 Units.
+This course introduces statistical concepts and methods for the collection, presentation, analysis, and interpretation of data. Elements of sampling, simple techniques for analysis of means, proportions, and linear association are used to illustrate both effective and fallacious uses of statistics.
+Terms Offered: Autumn, Winter, Spring
+Note(s): Students with credit for STAT 22000 or 23400 not admitted. This course is recommended for students who do not plan to take advanced statistics courses, and it may not be used in the Statistics major or minor. This course meets one of the general education requirements in the mathematical sciences.
+STAT 22000. Statistical Methods and Applications. 100 Units.
+This course introduces statistical techniques and methods of data analysis, including the use of computers. Examples are drawn from the biological, physical, and social sciences. Students are required to apply the techniques discussed to data drawn from actual research. Topics include data description, graphical techniques, exploratory data analyses, random variation and sampling, one- and two-sample problems, analysis of variance, linear regression, and analysis of discrete data.
+Terms Offered: Autumn, Winter, Spring
+Prerequisite(s): Two quarters of calculus
+Note(s): Students may count either STAT 22000 or 23400, but not both, toward the forty-two credits required for graduation.
+STAT 22200. Linear Models and Experimental Design. 100 Units.
+This course covers principles and techniques for the analysis of experimental data and the planning of the statistical aspects of experiments. Topics include linear models; analysis of variance; randomization, blocking, and factorial designs; confounding; and incorporation of covariate information.
+Terms Offered: Spring
+Prerequisite(s): STAT 22000 or 23400 or 24500
+STAT 22400. Applied Regression Analysis. 100 Units.
+This course introduces the methods and applications of fitting and interpreting multiple regression models. The primary emphasis is on the method of least squares and its many varieties. Topics include the examination of residuals, the transformation of data, strategies and criteria for the selection of a regression equation, the use of dummy variables, tests of fit, nonlinear models, biases due to excluded variables and measurement error, and the use and interpretation of computer package regression programs. The techniques discussed are illustrated by many real examples involving data from both the natural and social sciences. Matrix notation is introduced as needed.
+Terms Offered: Autumn
+Prerequisite(s): STAT 22000 or 23400 or 24500 or HSTD 32100
+Equivalent Course(s): HSTD 32400
+STAT 22600. Analysis of Categorical Data. 100 Units.
+This course covers statistical methods for the analysis of structured, counted data. Topics may include Poisson, multinomial, and product-multinomial sampling models; chi-square and likelihood ratio tests; log-linear models for cross-classified counted data, including models for data with ordinal categories and log-multiplicative models; logistic regression and logit linear models; and measures of association. Applications in the social and biological sciences are considered, and the interpretation of models and fits, rather than mathematical details of computational procedures, is emphasized.
+Terms Offered: Winter
+Prerequisite(s): STAT 22000 or 23400 or 24500
+Equivalent Course(s): HSTD 32600
+STAT 22700. Biostatistical Methods. 100 Units.
+This course is designed to provide students with tools for analyzing categorical, count, and time-to-event data frequently encountered in medicine, public health, and related biological and social sciences. This course emphasizes application of the methodology rather than statistical theory (e.g., recognition of the appropriate methods; interpretation and presentation of results). Methods covered include contingency table analysis, Kaplan-Meier survival analysis, Cox proportional-hazards survival analysis, logistic regression, and Poisson regression.
+Instructor(s): H. Cao     Terms Offered: Winter
+Prerequisite(s): HSTD 32400, STAT 22400 or STAT 24500 or equivalent or consent of instructor.
+Equivalent Course(s): HSTD 32700
+STAT 23400. Statistical Models and Methods. 100 Units.
+This course is recommended for students throughout the natural and social sciences who want a broad background in statistical methodology and exposure to probability models and the statistical concepts underlying the methodology. Probability is developed for the purpose of modeling outcomes of random phenomena. Random variables and their expectations are studied; including means and variances of linear combinations and an introduction to conditional expectation. Binomial, Poisson, normal and other standard probability distributions are considered. Some probability models are studied mathematically, and others are studied via simulation on a computer. Sampling distributions and related statistical methods are explored mathematically, studied via simulation, and illustrated on data. Methods include, but are not limited to, inference for means and variances for one- and two-sample problems, correlation, and simple linear regression. Graphical description and numerical data description are used for exploration, communication of results, and comparing mathematical consequences of probability models and data. Mathematics employed is to the level of univariate calculus, but it is less demanding than that required by STAT 24400.
+Terms Offered: Autumn, Winter, Spring
+Prerequisite(s): MATH 13300, 15300, or 16300
+Note(s): Students may count either STAT 22000 or 23400, but not both, toward the forty-two credits required for graduation. Recommended sequence for Economics majors: MATH 19620, STAT 23400, ECON 21000 in consecutive quarters.
+STAT 24300. Numerical Linear Algebra. 100 Units.
+This course is devoted to the basic theory of linear algebra and its significant applications in scientific computing. The main objective is to provide a working knowledge of linear algebra and matrix computation suitable for advanced studies in which numerical methods are in demand, such as in statistics, econometrics, and scientific data organization and computation. Topics covered will include: Gaussian elimination, LU decomposition, vector spaces, linear transformations and their matrix representations, orthogonality and projections, QR factorization, eigenvectors and eigenvalues, diagonalization of real symmetric and complex Hermitian matrices, the spectral theorem, Cholesky decomposition, and Singular Value Decomposition. In addition, students will program in MATLAB or R using basic algorithms for linear systems, eigenvalue problem, matrix factorization, and sensitivity analysis.
+Terms Offered: Autumn
+Prerequisite(s): Multivariate calculus (MATH 19520 or 20000, or equivalent). Previous exposure to linear algebra is helpful.
+Equivalent Course(s): STAT 30750
+STAT 24400-24500. Statistical Theory and Methods I-II.
+This course is a systematic introduction to the principles and techniques of statistics, as well as to practical considerations in the analysis of data, with emphasis on the analysis of experimental data. The first quarter covers tools from probability and the elements of statistical theory. Topics include the definitions of probability and random variables, binomial and other discrete probability distributions, normal and other continuous probability distributions, joint probability distributions and the transformation of random variables, principles of inference (including Bayesian inference), maximum likelihood estimation, hypothesis testing and confidence intervals, likelihood ratio tests, multinomial distributions, and chi-square tests. Examples are drawn from the social, physical, and biological sciences. The coverage of topics in probability is limited and brief, so students who have taken a course in probability find reinforcement rather than redundancy. The second quarter covers statistical methodology, including the analysis of variance, regression, correlation, and some multivariate analysis. Some principles of data analysis are introduced, and an attempt is made to present the analysis of variance and regression in a unified framework. Computers are used in the second quarter.
+STAT 24400. Statistical Theory and Methods I. 100 Units.
+Terms Offered: Autumn, Winter
+Prerequisite(s): Multivariate calculus (MATH 19520 or 20000 or 20500, or equivalent)
+Note(s): Some previous experience with statistics and/or probability and linear algebra helpful but not required. In 2014, a special section of STAT 24400 will be offered in Autumn Quarter for students who have already taken STAT 25100. This special section of STAT 24400 will include additional topics in statistics not normally covered in STAT 24400-24500. Students taking either section of STAT 24400 will have appropriate preparation for STAT 24500.
+STAT 24500. Statistical Theory and Methods II. 100 Units.
+Terms Offered: Winter, Spring
+Prerequisite(s): Multivariate calculus (MATH 19520 or 20000 or 20500, or equivalent) and linear algebra (MATH 19620 or 25500 or STAT 24300 or equivalent)
+Note(s): Some previous experience with statistics and/or probability helpful but not required.
+STAT 24610. Pattern Recognition. 100 Units.
+This course treats statistical models and methods for pattern recognition and machine learning. Topics include a review of the multivariate normal distribution, graphical models, computational methods for inference in graphical models in particular the EM algorithm for mixture models and HMM’s, and the sum-product algorithm. Linear discriminative analysis and other discriminative methods, such as decision trees and SVM’s are covered as well.
+Terms Offered: Spring
+Prerequisite(s): Linear algebra at the level of STAT 24300. Knowledge of probability and statistical estimation techniques (e.g., maximum likelihood and linear regression) at the level of STAT 24400-24500
+Equivalent Course(s): STAT 37500
+STAT 25100. Introduction to Mathematical Probability. 100 Units.
+This course covers fundamentals and axioms; combinatorial probability; conditional probability and independence; binomial, Poisson, and normal distributions; the law of large numbers and the central limit theorem; and random variables and generating functions.
+Terms Offered: Spring
+Prerequisite(s): MATH 20000 or 20500, or consent of instructor
+STAT 25300. Introduction to Probability Models. 100 Units.
+This course introduces stochastic processes as models for a variety of phenomena in the physical and biological sciences. Following a brief review of basic concepts in probability, we introduce stochastic processes that are popular in applications in sciences (e.g., discrete time Markov chain, the Poisson process, continuous time Markov process, renewal process and Brownian motion).
+Terms Offered: Winter
+Prerequisite(s): STAT 24400 or 25100
+Equivalent Course(s): STAT 31700
+STAT 26100. Time Dependent Data. 100 Units.
+This course considers the modeling and analysis of data that are ordered in time. The main focus is on quantitative observations taken at evenly spaced intervals and includes both time-domain and spectral approaches.
+Terms Offered: Winter or Spring
+Prerequisite(s): STAT 24500 is required; alternatively STAT 22400 and exposure to multivariate calculus. Some previous exposure to Fourier series is helpful but not required.
+Equivalent Course(s): STAT 33600
+STAT 26700. History of Statistics. 100 Units.
+This course covers topics in the history of statistics, from the eleventh century to the middle of the twentieth century. We focus on the period from 1650 to 1950, with an emphasis on the mathematical developments in the theory of probability and how they came to be used in the sciences. Our goals are both to quantify uncertainty in observational data and to develop a conceptual framework for scientific theories. This course includes broad views of the development of the subject and closer looks at specific people and investigations, including reanalyses of historical data.
+Instructor(s): S. Stigler     Terms Offered: Spring
+Prerequisite(s): Prior statistics course
+Equivalent Course(s): CHSS 32900,HIPS 25600,STAT 36700
+STAT 27400. Nonparametric Inference. 100 Units.
+Nonparametric inference is about developing statistical methods and models that make weak assumptions. A typical nonparametric approach estimates a nonlinear function from an infinite dimensional space rather than a linear model from a finite dimensional space. This course gives an introduction to nonparametric inference, with a focus on density estimation, regression, confidence sets, orthogonal functions, random processes, and kernels. The course treats nonparametric methodology and its use, together with theory that explains the statistical properties of the methods.
+Terms Offered: Winter
+Prerequisite(s): STAT 22400 or 24400
+Equivalent Course(s): STAT 37400
+STAT 27725. Machine Learning. 100 Units.
+This course offers a practical, problem-centered introduction to machine learning. Topics covered include the Perceptron and other online algorithms; boosting; graphical models and message passing; dimensionality reduction and manifold learning; SVMs and other kernel methods; and a short introduction to statistical learning theory. Weekly programming assignments give students the opportunity to try out each learning algorithm on real world datasets.
+Instructor(s): R. Kondor     Terms Offered: Winter
+Prerequisite(s): CMSC 15300, CMSC 15400. STAT 22000 or STAT 23400 strongly recommended.
+Equivalent Course(s): CMSC 25400
+STAT 29700. Undergraduate Research. 100 Units.
+This course consists of reading and research in an area of statistics or probability under the guidance of a faculty member. A written report must be submitted at the end of the quarter.
+Terms Offered: Autumn, Winter, Spring
+Prerequisite(s): Consent of faculty adviser and Departmental Adviser for Majors
+Note(s): Students are required to submit the College Reading and Research Course Form. Open to all students, including nonmajors. May be taken either for quality grades or for P/F grading.
+STAT 29900. Bachelor's Paper. 100 Units.
+This course consists of reading and research in an area of statistics or probability under the guidance of a faculty member, leading to a bachelor's paper. The paper must be submitted at the end of the quarter.
+Terms Offered: Autumn, Winter, Spring
+Prerequisite(s): Consent of faculty adviser and Departmental Adviser for Majors
+Note(s): Students are required to submit the College Reading and Research Course Form. Open only to students who are majoring in Statistics. May be taken for P/F grading. Credit for STAT 29900 may not be counted toward the major in Statistics.
