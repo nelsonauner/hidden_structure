@@ -4,25 +4,57 @@ Master's Paper - 2014 - Nelson Auner
 1. Abstract
 ===========
 This paper introduces a variant to existing models of multinomial regression for text analysis. 
-Using the base model introduced by Taddy (2013), we extend the data-generating model to incorporate topics not explained by existing Metadata. In doing so, we seek to both increase the prediction accuracy over existing techniques and also to bridge the gap between multinomial regression and standard topic models. Finally, we explore computational aspects of our approach and propose areas of future research.
+Using the base model introduced by Taddy (2013), we extend the data-generating model to incorporate topics not explained by existing Metadata. In doing so, we seek to both increase the prediction accuracy over existing techniques, bridge the gap between multinomial regression and standard topic models, and investigate methods for discovering new topics in a corpus. We explore computational aspects of our approach and provide software for parallelization of the algorithm and conclude by proposing areas of future research.
 
 2. Introduction
 ===================
 
-Multinomial Models and Text
+Text Data 
 -----------------------
 
 Multinomial models are a common way of modeling annotated text. 
-Typically, textual information is grouped by documents and represented by counts of tokens. A document might be a single written text (e.g. an academic article), or a collection of works by the same author (e.g. all of the lyrics of an album by the rolling stones)
-A token is often a single word (called unigram) but may also be continguous sequence of two or more words (e.g. 'good swimmer' is a bigram, and 'I eat cheese' is a trigram).
+Typically, textual information is grouped into documents, and each document is represented by counts of tokens. A document might be a single written text (e.g. an academic article), or a collection of works by the same author (e.g. all of the lyrics of an album by the rolling stones)
+A token is often a single word (called unigram) but may also be a sequence of two or more words (e.g. bi-grams, like 'good swimmer' is a bigram, or tri-grams, like 'I eat cheese').
 The word components of tokens are often reduced to a root form by removing suffixes (e.g. 'illuminated', 'illumination' and 'illuminating' all become 'illuminate').
-These tokens are then aggregated by document: for each document $i$ of $i = 1,2,...N$, the count vector $x_i = [x_{i1}, x_{i2}, ... , x_{ip}]$ contains the number of occurrences of first, second, ... $p$ th token, where $p$ is the total number of unique tokens in all documents. 
-This forms the complete count matrix $X$, where $x_{ij}$ is the number of occurences of word $j$ in document $i$.
 
-*example image here?*
 
-Since the number of unique words that appear in a large number of documents can be extensive, we often restrict $p$ to words that occur in at least two documents. 
+These tokens are then aggregated by document: 
+For $i$ in $i = 1,...,N$, the count vector $x_i = [x_{i1}, x_{i2}, ... , x_{ip}]$ contains the number of occurrences of first, second, ... $p$ th token in the $i$th document, where $p$ is the total number of unique tokens in all documents. 
+This forms the complete count matrix $X$, where each $x_{ij}$ is the number of occurences of word $j$ in document $i$.
+
+Since the number of unique words that appear in a large number of documents can be extensive, we often restrict the number of tracked tokens, $p$ to words that occur in at least two documents.
 We may also remove common tokens that add little meaning and are found in all documents (i.e. 'the' or 'of').
+
+
+----------
+###Example
+>A trivial example of such content might be student's answers to the question 
+"What did homework assignments involve?"
+
+
+```bash
+Some computation and formula proving, a lot of R code.
+Problems, computation using R
+Some computations and writing R code.
+Proofs, problems, and programming work
+```
+
+>After removing common words and stemming the remaining words, we might produce the following count matrix:
+
+ |  Document | Some      | comp | formula  | prov | R | code | use | problem | writ | program | work
+| ------------- |-------------| -----|---|
+| 1 |  1 | 1 | 1 | 1 | 1| 1| 0 | 0 | 0| 0| 0
+| 2 | 0      |  1 | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 0 
+| 3 | 1 | 1 | 0 | 0 | 1 | 0 | 0| 0| 1 | 0|  0 
+|  4| 0 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 1
+
+
+--------
+
+
+
+Multinomial Model
+---------------------
 
 We then model each document $x_i$ as the realization of a multinomial distribution. That is, 
 
@@ -67,13 +99,13 @@ Mixture models and cluster membership
 --------------------
 We now turn our attention to the purpose of this paper, which is to implement an approach to discover and model "hidden", or previously unspecified traits, across documents by grouping content unexplained by metadata.  
 As a simple motivating example, we might imagine a corpus of movie reviews written by several bloggers. 
-After accounting for text information explained by the rating (i.e. relating a 5-star rating to 'good plot', etc), the remaining heterogeneity in the movie review content could be related traits of the blogger (i.e. gender, or home city)
+After accounting for text information explained by the rating (i.e. relating a 5-star rating to 'good plot', etc), the remaining heterogeneity in the movie review content could be related traits of the blogger (e.g. gender, or home city)
 We may be interested in using predicting traits about bloggers given their movie reviews, and also in determining how movie review content changes across these traits.
 
-Theory and Model Specification
+Model Specification
 ----------------------------------
-Denoting the word count of a document as the vector $x_i$, we propose the following model:
-$$ x_{i} \sim MN(q_{ij},m_{ij}) ; q_{ij} = \frac{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}{\sum{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}}$$
+Denoting the word count of a document as the vector $x_i$, we propose that words in a document are distributed as a multinomial with a log-link to related sentiment or topics. That is:
+$$ x_{i} \sim MN(q_{ij},m_{ij}) ; q_{ij} = \frac{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}{\sum_{l=1}^{p}{exp(\alpha_l+ y_i \phi_l + u_i \Gamma_{kl})}}$$
 
 where $y_i$, $u_i$ are the metadata and cluster membership associated with document $i$, and $\phi_j$ and $\Gamma_{kj}$ are the distortion coeffecients for the respective metadata and factor membership.
 We use the subscript $k$ to denote that each document $x_i$ is considered a member of $k = 1,..,K$ clusters, with their own distortion vectors $\Gamma_1,..,\Gamma_K$
@@ -82,19 +114,22 @@ Our focus in on predicting cluster membership $u_i$ and the corresponding probab
 To do so, we initiatilize cluster membership using one of the three following methods:
 
 1. Random Initialization
-2. K-means on the word count data
+2. K-means on the word count data $X$
 3. K-means on the residual of the word count data after incorporating metadata $y$
+    (That is, give $\hat{X}$ predicted document counts, clustering on $X-\hat{X}$
 
 
-Estimation of Paramters via Maximum a posteriori
+Estimation of Parameters via Maximum a Posteriori
 -----------------------
 
-Using the approach described in Taddy (Multinomial Inverse Regression for Text Analysis), 
-The negative log likelihood for our model can be written as:
+The negative log likelihood of a multinomial distribution with a gamma lasso penalty can be written as:
+$$L = \sum_{i = 1}^{N}{\alpha + \phi v_i + u_i \Gamma_{kj}} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_{kj} \big]}})$$
 
-$$L = \sum_{i = 1}^{N}{\alpha + \phi v_i + u_i \Gamma_kj} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_kj \big]}})$$
 
-1. Determine parameters $\alpha_, \phi \Gamma$ by fitting a multinomial regression on $y_i | x_i , u_i$
+The basic algorithm we use to fit coefficients $\alpha$, $\phi$,$\Gamma$ and cluster memberships $u$ is two main steps iterated until convergance: 
+
+-----------
+1. Determine parameters $\alpha_, \phi, \Gamma$ by fitting a multinomial regression on $y_i | x_i , u_i$ with a gamma lasso penalty
 2. For each document $i$, determine new cluster $u_i$ membership as $argmax_{k = 1,..,K} \big[  \ell(y_i,x_i,u_k | \alpha, \phi, \Gamma) \big]$
 
 
@@ -102,7 +137,7 @@ $$L = \sum_{i = 1}^{N}{\alpha + \phi v_i + u_i \Gamma_kj} - m_i log(\sum_{j = 1}
 
 By alternating between the two steps, we aim to converge to optimal parameter estimates $\alpha, \phi, \Gamma$ as well as optimal cluster membership $u$. 
 
-To do: 
+
 
 Computation
 ----------
