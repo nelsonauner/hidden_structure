@@ -5,7 +5,7 @@
 #### k -means  #######
 require(textir);data(congress109);cl <- NULL
 #load algorithm
-source('Iterate.R')
+source('hidden_structure.R')
 X = congress109Counts
 covars <- data.frame(gop=congress109Ideology$party=="R",
 cscore=congress109Ideology$cs1)
@@ -55,3 +55,6 @@ for (j in 1:4) {
 rel_sim <- totres[[i]][[j]]
 resm[i,j] <- multi.devian(X,as.matrix(cbind(covars,model.matrix(~0+as.factor(rel_sim$clusters)))),rel_sim$B)
 }}
+
+#Plot the log likelihood 
+

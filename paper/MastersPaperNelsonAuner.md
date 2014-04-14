@@ -4,7 +4,7 @@ Master's Paper - 2014 - Nelson Auner
 1. Abstract
 ===========
 This paper introduces a variant to existing models of multinomial regression for text analysis. 
-Using the base model introduced by Taddy (2013), we extend the data-generating model to incorporate topics not explained by existing Metadata. In doing so, we seek to both increase the prediction accuracy over existing techniques, bridge the gap between multinomial regression and standard topic models, and investigate methods for discovering new topics in a corpus. We explore computational aspects of our approach and provide software for parallelization of the algorithm and conclude by proposing areas of future research.
+Using the base model introduced by Taddy (2013), we extend the data-generating model to incorporate topics not explained by existing Metadata. In doing so, we seek to both increase the prediction accuracy over existing techniques, bridge the gap between multinomial regression and standard topic models, and investigate methods for discovering new topics in a corpus. We explore computational aspects of our approach, provide software for parallelization of the algorithm, and conclude by proposing areas of future research.
 
 2. Introduction
 ===================
@@ -26,30 +26,28 @@ Since the number of unique words that appear in a large number of documents can 
 We may also remove common tokens that add little meaning and are found in all documents (i.e. 'the' or 'of').
 
 
-----------
-###Example
->A trivial example of such content might be student's answers to the question 
+
+A trivial example of such content might be student's answers to the question 
 "What did homework assignments involve?"
 
 
-```bash
+```
 Some computation and formula proving, a lot of R code.
 Problems, computation using R
 Some computations and writing R code.
 Proofs, problems, and programming work
 ```
 
->After removing common words and stemming the remaining words, we might produce the following count matrix:
+After removing common words and stemming the remaining words, we might produce the following count matrix:
 
- |  Document | Some      | comp | formula  | prov | R | code | use | problem | writ | program | work
-| ------------- |-------------| -----|---|
-| 1 |  1 | 1 | 1 | 1 | 1| 1| 0 | 0 | 0| 0| 0
-| 2 | 0      |  1 | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 0 
-| 3 | 1 | 1 | 0 | 0 | 1 | 0 | 0| 0| 1 | 0|  0 
-|  4| 0 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 1
+| **Document** | Some      | comp | formula  | prov | R | code | use | problem | writ | program | work |
+|----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----| 
+| 1 |  1 | 1 | 1 | 1 | 1| 1| 0 | 0 | 0| 0| 0 |
+| 2 | 0  |  1 | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 0 |
+| 3 | 1 | 1 | 0 | 0 | 1 | 0 | 0| 0| 1 | 0|  0 |
+|  4| 0 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 1 |
 
 
---------
 
 
 
@@ -122,14 +120,21 @@ To do so, we initiatilize cluster membership using one of the three following me
 Estimation of Parameters via Maximum a Posteriori
 -----------------------
 
-The negative log likelihood of a multinomial distribution with a gamma lasso penalty can be written as:
-$$L = \sum_{i = 1}^{N}{\alpha + \phi v_i + u_i \Gamma_{kj}} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_{kj} \big]}})$$
+The negative log likelihood of a multinomial distribution can be written as
+
+$$L(\alpha,\phi,\Gamma,u_i) = \sum_{i = 1}^{N}{\alpha + \phi v_i + u_i \Gamma_{kj}} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_{kj} \big]}})$$
+
+We specify laplace priors and gamma hyperprior on coeffecients, as well as a gamma lasso penalty on coeffecients $c(\Phi,\Gamma)$. This procedure leads us to minimize
+
+$$L(\alpha,\Phi,\Gamma,u_i) + \sum_{j=1}^{p}(\alpha_j/ \sigma_\alpha)^2 + c(\Phi,\Gamma) $$
+
 
 
 The basic algorithm we use to fit coefficients $\alpha$, $\phi$,$\Gamma$ and cluster memberships $u$ is two main steps iterated until convergance: 
 
------------
+
 1. Determine parameters $\alpha_, \phi, \Gamma$ by fitting a multinomial regression on $y_i | x_i , u_i$ with a gamma lasso penalty
+
 2. For each document $i$, determine new cluster $u_i$ membership as $argmax_{k = 1,..,K} \big[  \ell(y_i,x_i,u_k | \alpha, \phi, \Gamma) \big]$
 
 
@@ -152,7 +157,5 @@ Conclusion
 ===========
 References
 ============
-
-
 
 

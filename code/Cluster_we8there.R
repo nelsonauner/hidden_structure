@@ -5,7 +5,7 @@
 #### k -means  #######
 require(textir);data(we8there);cl <- NULL
 #load algorithm
-source('Iterate.R')
+source('hidden_structure.R')
 X = we8thereCounts
 y = we8thereRatings[,'Overall',drop=FALSE]
 
