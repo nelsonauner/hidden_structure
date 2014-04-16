@@ -58,3 +58,12 @@ resm[i,j] <- multi.devian(X,as.matrix(cbind(covars,model.matrix(~0+as.factor(rel
 
 #Plot the log likelihood 
 
+par(mfrow=c(3,4))
+titles =c("Random Initialization", "K means Initialization", "Residual K Means")
+nclust <- c("5","10")
+likes <- array(dim=c(15,12))
+for (i in 1:3) {
+  for (j in 1:4) {
+    plot(totres[[1]][[j]]$likes,type="l",ylab="relevant log likelihood",xlab="Iterations",main=paste(titles[i]," \n # clusters = ",nclust[(j>2)+1]))
+}}
+
