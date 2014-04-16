@@ -4,6 +4,9 @@
 \oddsidemargin = 0.05in
 \evensidemargin = 0.05in
 \textwidth = 6.5in
+\usepackage{times}
+%\usepackage{babel}
+\usepackage{graphicx}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -58,7 +61,8 @@
 
 \vspace{1.8in}
 \begin{center}
-{\bf\LARGE Hidden Structure of Text Data }
+{\bf\LARGE Hidden Structure of Text Data } \\~\\
+{Latent Topic Models and Sentiment Analysis}
 \\~\\
 %{\bf\Large --- A Sample Format}
 
@@ -113,6 +117,9 @@ algorithm, and conclude by proposing areas of future research.
 \subsection{Text Data}
 
 
+
+%\includegraphics{chick}
+
 Multinomial models are a common way of modeling annotated text.
 Typically, text information is naturally grouped by documents, and each
 document is represented by counts of words, or "tokens". A document might be a
@@ -151,22 +158,16 @@ Proofs, problems, and programming work
 After removing common words and stemming the remaining words, we might
 produce the following count matrix:
 
-\begin{longtable}[c]{@{}llllllllllll@{}}
-\toprule\addlinespace
+\begin{tabular}{ c |  c c c c c c c c c c c}
+\hline
 \textbf{Document} & Some & comp & formula & prov & R & code & use &
-problem & writ & program & work
-\\\addlinespace
-\midrule\endhead
-1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0
-\\\addlinespace
-2 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0
-\\\addlinespace
-3 & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0
-\\\addlinespace
-4 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 1
-\\\addlinespace
-\bottomrule
-\end{longtable}
+problem & writ & program & work \\
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+2 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 \\
+3 & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0\\
+4 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 1\\
+\hline
+\end{tabular}
 
 \subsection{Multinomial Model}\label{multinomial-model}
 
@@ -331,9 +332,7 @@ convergance:
 By alternating between the two steps, we aim to converge to optimal
 parameter estimates $\alpha, \phi, \Gamma$ as well as optimal cluster
 membership $u$.
-
 \subsection{Computation}\label{computation}
-
 As noted by Taddy, multinormal regression enjoyes the ability of being able to
 collapse observations across levels of metadata. This attractive
 property is preserved even in our more complex cluster membership model.
@@ -352,8 +351,15 @@ In addition, the right hand side does not depend on $x_i$ and can be precalculat
 
 \subsection{Congressional Speech} 
 
-We applied this method to the congressional speech data of Moskowitz and Shapiro. 
+We applied this method to the congressional speech data of Moskowitz and Shapiro and report our results. (Description of Data here)
 %Do this later dog. 1
+\subsection{Evaluation of cluster-hot-starting} 
+Method 2: \\
+Clustering the congressional members by speech content led to the overwhelming (majority around 450) being placed in the same cluster, with 1, 3, and 74 persons in the other clusters. After running the algorithm, clusters seemed to be more or less random
+\\
+Method 3:\\
+Clustering the congressional members by unexplained speech content (that is, on the residuls of the regression of party affiliation led to similar results, albiet that the size of the main cluster increased from 450 to 500 congressional members. 
+After the algorithm, 
 
 \subsection{Convergence and Stability of Clusters}
 
@@ -361,7 +367,13 @@ Of key interest is knowing whether or not the algorithm converges to the same cl
 
 At each step in classic two 
 
-\subsection{Evaluation of cluster-hot-starting} 
+
+\includegraphics[width=\linewidth]{Images/LikelihoodOfClusters_Iterations}
+
+
+
+
+
 \subsection{Interpretation of results}
 \subsection{Evaluating fit}
 

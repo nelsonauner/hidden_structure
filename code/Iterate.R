@@ -6,13 +6,9 @@
 # It would  be nice to implement some error checking
 
 iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
-  require('plyr') 
-  ptm<-proc.time()
-  require(textir)
-  ## note, so far, y must be a vector, not matrix :(
+  require('plyr');require(textir)
   m <- rowSums(X)
-  # Notes: mnlm does not handle factors!
-  #Turn our factor (membership = 1,2 or 3) into vector (membership = [0 1 0]), etc
+  # mnlm does not handle factors! Turn our factor (membership = 1,2 or 3) into vector (membership = [0 1 0]), etc
   cl_matrix <- model.matrix(formula(~0+as.factor(clusters)))
   #Add 
   ncl <- dim(cl_matrix)[2]
@@ -28,10 +24,8 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
   for (i in 1:n.loop) {
     ll_left <- X%*%t(B[(2+n.meta):d.Y,])   #This ignores the alpha and meta data terms of the coeffecient matrix 
     print("ll_left OK")
-    #The above formula verified to correctly multiply! We want to maximize ll_left!
-    ##################################################################################
+    #The above formula verified to correctly multiply! We want to maximize ll_left
     #  This operation could be simplified by collapsing over metadata levels:        #
-    ##################################################################################
     ll_penal <- cust_sweep(as.matrix(Y[,1:n.meta]) %*% B[2:(1+n.meta),] ,B[1,]) #add intercept and v_i*theta term
     #The apply function is flipping our matrix, etf. 
     #ll_penal_tot <- vapply(B[3:6,],MARGIN=1,FUN.VALUE=1,FUN=function(x) cust_sweep(ll_penal,x))
@@ -54,7 +48,6 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
   res$likes = likes
   res$h.clusters = h.clusters
   res$B = B #the final loadings matrix
-  res$time <- proc.time()-ptm
   return(res)
 }
 

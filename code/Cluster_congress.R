@@ -67,3 +67,4 @@ for (i in 1:3) {
     plot(totres[[1]][[j]]$likes,type="l",ylab="relevant log likelihood",xlab="Iterations",main=paste(titles[i]," \n # clusters = ",nclust[(j>2)+1]))
 }}
 
+#########Let's investigate the clustering results..? 
