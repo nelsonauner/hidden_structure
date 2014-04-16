@@ -72,15 +72,13 @@
 \end{center}
 
 \vspace{.6in}
-{\Large Approved} ~\underline{~~~~~~~~~~~~~~~~~~
-\small (Signatures of the advisors)~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+{\Large Approved} ~\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
 
 \vspace{.2in}
-{\Large Date} ~\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~
-{\small (Date of the signatures)}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+{\Large Date} ~\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
 
-\vfill
-\begin{center}{\large Month-day, 20xx}\end{center}
 
 \newpage
 \pagestyle{plain}
@@ -116,8 +114,8 @@ algorithm, and conclude by proposing areas of future research.
 
 
 Multinomial models are a common way of modeling annotated text.
-Typically, textual information is grouped into documents, and each
-document is represented by counts of tokens. A document might be a
+Typically, text information is naturally grouped by documents, and each
+document is represented by counts of words, or "tokens". A document might be a
 single written text (e.g.~an academic article), or a collection of works
 by the same author (e.g.~all of the lyrics of an album by the rolling
 stones) A token is often a single word (called unigram) but may also be
@@ -228,7 +226,7 @@ metada is believed to be relevant to the composition of the document, we
 use the generic term \emph{sentiment}. For example, given a database of
 written movie reviews and final rating out of five $y \in (1,2,3,4,5)$,
 we might want to model the relationship between the words used in the
-document and the final rating. A simple model introduced by Taddy (2013)
+document and the final rating. A simple log-link model
 is that the contents of a document $x$ with given metadata rating $y$,
 denoted $x_y$, is
 
@@ -240,18 +238,17 @@ $x$, we use Cook's Inverse Regression method (2007) to reduce the
 dimension of $x$ while maintaining its predictive power on y. That is,
 find $\phi$ such that $y_i - \phi' x_i \perp x_i$. This criteria is
 called \emph{sufficient reduction}. We then take $\phi$ and use it to
-predict content $x_i$ from metadata $y_i$. This technique is always
-helpful and is, in fact, necessary to avoid over-fitting in the many
+predict content $x_i$ from metadata $y_i$. This technique can be used to create a sparse coeffecient matrix, and is, in fact, necessary to avoid over-fitting in the many
 cases where the number of words $p$ is greater than the number of
 documents $N$. The inverse regression metadata approach has a
 computational advantage over topic models in that when creating maximum
-likelihood scores, the word count data $x_ij$ can be collapsed by
+likelihood scores, the word count data $x_{ij}$ can be collapsed by
 metadata label, that is $x_y = \sum_{y_{i} = y}{x_i}$
 
 Recent articles have proposed and implemented versions combining both
 metadata and topic modeling approaches.
 
-\section{3. Theory and Approach}\label{theory-and-approach}
+\section{Theory and Approach}\label{theory-and-approach}
 
 \subsection{Mixture models and cluster
 membership}\label{mixture-models-and-cluster-membership}
@@ -259,10 +256,11 @@ membership}\label{mixture-models-and-cluster-membership}
 We now turn our attention to the purpose of this paper, which is to
 implement an approach to discover and model ``hidden'', or previously
 unspecified traits, across documents by grouping content unexplained by
-metadata.\\As a simple motivating example, we might imagine a corpus of
+metadata. Initially, we will restrict our model by assuming that every document is a member of one and only one topic, or "cluster". 
+\\As a simple motivating example, we might imagine a corpus of
 movie reviews written by several bloggers. After accounting for text
-information explained by the rating (i.e.~relating a 5-star rating to
-`good plot', etc), the remaining heterogeneity in the movie review
+information explained by the rating (e.g. ~relating a 5-star rating to
+`good plot'), the remaining heterogeneity in the movie review
 content could be related traits of the blogger (e.g.~gender, or home
 city) We may be interested in using predicting traits about bloggers
 given their movie reviews, and also in determining how movie review
@@ -306,7 +304,9 @@ Posteriori}\label{estimation-of-parameters-via-maximum-a-posteriori}
 The negative log likelihood of a multinomial distribution can be written
 as
 
-\[L(\alpha,\phi,\Gamma,u_i) = \sum_{i = 1}^{N}{\alpha + \phi v_i + u_i \Gamma_{kj}} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_{kj} \big]}})\]
+\begin{equation} 
+L(\alpha,\phi,\Gamma,u_i) = \sum_{i = 1}^{N}{ x_i^\top (\alpha + \phi v_i + u_i \Gamma_{kj})} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_{kj} \big]}})
+\end{equation}
 
 We specify laplace priors and gamma hyperprior on coeffecients, as well
 as a gamma lasso penalty on coeffecients $c(\Phi,\Gamma)$. This
@@ -334,9 +334,19 @@ membership $u$.
 
 \subsection{Computation}\label{computation}
 
-As noted by Taddy, Multinormal Regression enjoyes the ability to
+As noted by Taddy, multinormal regression enjoyes the ability of being able to
 collapse observations across levels of metadata. This attractive
 property is preserved even in our more complex cluster membership model.
+
+We can increase the speed of step two by only evaluating portions of the likelihood function relevant to $u_i$ and $\Gamma$ by eliminating first two terms from equation one:
+
+\begin{equation} 
+L(\alpha,\phi,\Gamma,u_i) = \sum_{i = 1}^{N}{ x_i^\top (u_i \Gamma_{kj})} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_{kj} \big]}})
+\end{equation}
+
+In addition, the right hand side does not depend on $x_i$ and can be precalculated for each cluster $u_i$. This will lead to an order-of-magnitude speed-up as long as the number of clusters is relatively small compared to the number of documents. 
+
+
 
 \section{Application}\label{application}
 
