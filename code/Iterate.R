@@ -5,24 +5,25 @@
 # borrowing heavily from documentation: http://cran.r-project.org/web/packages/textir/textir.pdf
 # It would  be nice to implement some error checking
 
-iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
+iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE) {
   require('plyr');require(textir)
   m <- rowSums(X)
   # mnlm does not handle factors! Turn our factor (membership = 1,2 or 3) into vector (membership = [0 1 0]), etc
   cl_matrix <- model.matrix(formula(~0+as.factor(clusters)))
-  #Add 
-  ncl <- dim(cl_matrix)[2]
+  ncl <- dim(cl_matrix)[2]  #Keep track of how many clusters we're using. 
   Y<-Y_orig <- as.matrix(cbind(y,cl_matrix))
   d.Y <- dim(Y)[2]
   n.meta <- dim(as.matrix(y))[2]
   likes <- rep(NA,n.loop) #store likelihood updates here! 
-  h.clusters <- array(,dim=c(dim(X)[1],n.loop))
+  h.clusters <- array(,dim=c(dim(X)[1],n.loop)) #we'll keep track of cluster assignments over time here
   fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); 
   B <- coef(fits)
+  #Initialize a result to return. 
   res = list(likes,clusters,B,NULL);names(res) <- c("likes","clusters","B","time")
   cust_sweep <- function(m,v) { sweep(m,MARGIN=2,v,'+')}  #this adds vector v to every row in matrix m
   for (i in 1:n.loop) {
     ll_left <- X%*%t(B[(2+n.meta):d.Y,])   #This ignores the alpha and meta data terms of the coeffecient matrix 
+    #This is definitely necessary (above)
     print("ll_left OK")
     #The above formula verified to correctly multiply! We want to maximize ll_left
     #  This operation could be simplified by collapsing over metadata levels:        #
@@ -31,6 +32,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
     #ll_penal_tot <- vapply(B[3:6,],MARGIN=1,FUN.VALUE=1,FUN=function(x) cust_sweep(ll_penal,x))
     #let's try plyr version:
     ll_penal_tot <- t(aaply(B[(2+n.meta):d.Y,],.margins=1,.fun=function(x) log(rowSums(exp(cust_sweep(ll_penal,x))))))
+    #parRapply(cl,x=hey,FUN=function(x) sum(exp(x)))
     print("ll_penal_tot OK")
     ll <- m*ll_penal_tot - ll_left  #We cannot expect to be positive as we took out some common terms. 
     # check out cust_sweep(ll_penal,B[4,]) for an example of what's going on here
