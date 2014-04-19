@@ -68,3 +68,8 @@ for (i in 1:3) {
 }}
 
 #########Let's investigate the clustering results..? 
+final_clusters <- cbind(cl2,totres[[1]][[1]]$h.clusters[,10],totres[[1]][[2]]$h.clusters[,15],
+                        totres[[2]][[1]]$h.clusters[,10],totres[[2]][[2]]$h.clusters[,15])
+
+table(final_clusters[final_clusters[,2]==1,3])
+
