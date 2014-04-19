@@ -21,18 +21,44 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
   #Initialize a result to return. 
   res = list(likes,clusters,B,NULL);names(res) <- c("likes","clusters","B","time")
   cust_sweep <- function(m,v) { sweep(m,MARGIN=2,v,'+')}  #this adds vector v to every row in matrix m
+  normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
   for (i in 1:n.loop) {
     ll_left <- X%*%t(B[(2+n.meta):d.Y,])   #This ignores the alpha and meta data terms of the coeffecient matrix 
     #This is definitely necessary (above)
     print("ll_left OK")
     #The above formula verified to correctly multiply! We want to maximize ll_left
     #  This operation could be simplified by collapsing over metadata levels:        #
-    ll_penal <- cust_sweep(as.matrix(Y[,1:n.meta]) %*% B[2:(1+n.meta),] ,B[1,]) #add intercept and v_i*theta term
+    Xhat <- cust_sweep(as.matrix(Y[,1:n.meta]) %*% B[2:(1+n.meta),] ,B[1,]) #add intercept and v_i*theta term
     #The apply function is flipping our matrix, etf. 
     #ll_penal_tot <- vapply(B[3:6,],MARGIN=1,FUN.VALUE=1,FUN=function(x) cust_sweep(ll_penal,x))
     #let's try plyr version:
-    ll_penal_tot <- t(aaply(B[(2+n.meta):d.Y,],.margins=1,.fun=function(x) log(rowSums(exp(cust_sweep(ll_penal,x))))))
-    #parRapply(cl,x=hey,FUN=function(x) sum(exp(x)))
+    Gamma_cl <-B[(2+n.meta):d.Y,] #the cluster coeffecients
+    gamma_v <- Gamma_cl[,1]
+    hey <- matrix(1:16,nrow=4)
+    
+    llp <- apply(Gamma_cl,MARGIN=1,FUN=function(vector) normalize(Xhat,vector))
+    
+    sfSapply
+    
+    Xhey <- cust_sweep(Xhat,gamma_v)
+    apply(X=cust_sweep(Xhat,gamma_v),MARGIN=1,FUN=function(m_row) log(sum(exp(m_row))))
+    ### SUCCESSFULL FIT IN PARALLEL
+    parRapply(cl,x=cust_sweep(Xhat,gamma_v),FUN=function(m_row) log(sum(exp(m_row))))
+    
+    
+    parRapply(cl,x=Xhat,FUN=function(m_part,v) 
+    
+    
+    
+    ll_penal_tot <- parRapply(cl,x=Gamma_cl,FUN=function(vector) log(rowSums(exp(cust_sweep(Xhat,vector)))))
+    
+    
+    ll_penal_tot <- t(aaply(B[(2+n.meta):d.Y,],.margins=1,.fun=function(x) {
+      parRapply(cl,)
+      }
+      
+      log(rowSums(exp(cust_sweep(Xhat,x))))))
+    
     print("ll_penal_tot OK")
     ll <- m*ll_penal_tot - ll_left  #We cannot expect to be positive as we took out some common terms. 
     # check out cust_sweep(ll_penal,B[4,]) for an example of what's going on here
