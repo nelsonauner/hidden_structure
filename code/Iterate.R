@@ -35,7 +35,6 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
     #let's try plyr version:
     Gamma_cl <-B[(2+n.meta):d.Y,] #the cluster coeffecients
     #A quick function to 
-    left_term<-function(x,Xhat) { log(rowSums(exp( t(t(Xhat)+x) ))) }  
     ll_right = m*apply(X=Gamma_cl,MARGIN=1,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat)
     #system.time(apply(X=Gamma_cl,MARGIN=1,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat))
     #system.time(parRapply(cl,x = Gamma_cl,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat))
