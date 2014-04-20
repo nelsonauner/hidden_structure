@@ -38,7 +38,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
     ll_right = m*apply(X=Gamma_cl,MARGIN=1,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat)
     #system.time(apply(X=Gamma_cl,MARGIN=1,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat))
     #system.time(parRapply(cl,x = Gamma_cl,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat))
-    print("ll_penal_right OK")
+    print("ll_right OK")
     #Compute total log likelihood
     ll <- ll_right - ll_left  #We cannot expect to be positive as we took out some common terms.   
     cluster_likes[i] <- sum(apply(ll,MARGIN=1,FUN=min))
