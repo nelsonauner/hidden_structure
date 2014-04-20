@@ -33,37 +33,16 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
     #ll_penal_tot <- vapply(B[3:6,],MARGIN=1,FUN.VALUE=1,FUN=function(x) cust_sweep(ll_penal,x))
     #let's try plyr version:
     Gamma_cl <-B[(2+n.meta):d.Y,] #the cluster coeffecients
-    gamma_v <- Gamma_cl[,1]
-    hey <- matrix(1:16,nrow=4)
     
-    llp <- apply(Gamma_cl,MARGIN=1,FUN=function(vector) normalize(Xhat,vector))
-    
-    sfSapply
-    
-    Xhey <- cust_sweep(Xhat,gamma_v)
-    apply(X=cust_sweep(Xhat,gamma_v),MARGIN=1,FUN=function(m_row) log(sum(exp(m_row))))
-    ### SUCCESSFULL FIT IN PARALLEL
-    parRapply(cl,x=cust_sweep(Xhat,gamma_v),FUN=function(m_row) log(sum(exp(m_row))))
-    
-    
-    parRapply(cl,x=Xhat,FUN=function(m_part,v) 
-    
-    
-    
-    ll_penal_tot <- parRapply(cl,x=Gamma_cl,FUN=function(vector) log(rowSums(exp(cust_sweep(Xhat,vector)))))
-    
-    
-    ll_penal_tot <- t(aaply(B[(2+n.meta):d.Y,],.margins=1,.fun=function(x) {
-      parRapply(cl,)
-      }
-      
-      log(rowSums(exp(cust_sweep(Xhat,x))))))
-    
-    print("ll_penal_tot OK")
-    ll <- m*ll_penal_tot - ll_left  #We cannot expect to be positive as we took out some common terms. 
-    # check out cust_sweep(ll_penal,B[4,]) for an example of what's going on here
-    #Store the new (relative) log likelihood here:
-    likes[i] <- sum(apply(ll,MARGIN=1,FUN=min))
+    left_term<-function(x,Xhat) { log(rowSums(exp( t(t(Xhat)+x) ))) }  
+    ll_right = m*apply(X=Gamma_cl,MARGIN=1,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat)
+    #system.time(apply(X=Gamma_cl,MARGIN=1,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat))
+    #system.time(parRapply(cl,x = Gamma_cl,FUN=function(x,matrix){log(rowSums(exp( t(t(matrix)+x) )))},matrix=Xhat))
+    print("ll_penal_right OK")
+    #Compute total log likelihood
+    ll <- ll_right - ll_left  #We cannot expect to be positive as we took out some common terms.   
+    cluster_likes[i] <- sum(apply(ll,MARGIN=1,FUN=min)+)
+    full_likes[i] = cluster_likes[i] - rowSums(Xhat*X) #Add in the likelihood from the -x'(alpha+phi*vi)
     #Select new cluster membership if better. 
     h.clusters[,i] <- n_cl <- as.factor(apply(ll,MARGIN=1,FUN=which.min)) #select cluster to minimize L 
     n_cl_matrix <- model.matrix(formula(~0+(n_cl))) #and convert to [0 0 1] form. 
