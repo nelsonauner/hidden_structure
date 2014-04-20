@@ -43,12 +43,12 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
     #Compute total log likelihood
     ll <- m*ll_right - ll_left  #We cannot expect to be positive as we took out some common terms.   
     cluster_likes[i] <- sum(apply(ll,MARGIN=1,FUN=min))
-    full_likes[i] = cluster_likes[i] - rowSums(Xhat*X) #Add in the likelihood from the -x'(alpha+phi*vi)
+    full_likes[i] = cluster_likes[i] - sum(rowSums(Xhat*X)) #Add in the likelihood from the -x'(alpha+phi*vi)
     #Select new cluster membership if better. 
     h.clusters[,i] <- n_cl <- factor(apply(ll,MARGIN=1,FUN=which.min),levels=1:ncl) #select cluster to minimize L 
     n_cl_matrix <- model.matrix(formula(~0+(n_cl))) #and convert to [0 0 1] form. 
     #update our Y:
-    Y[,(2+n.meta):d.Y] <- n_cl_matrix
+    Y[,(2+n.meta):(d.Y+1)] <- n_cl_matrix
     #And refit: 
     fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
     B <- coef(fits) #Pull the coeffecients
