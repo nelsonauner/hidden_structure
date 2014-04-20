@@ -26,8 +26,8 @@ make_cl3 <- function(i) {kmeans(resids,i)$cluster}
 
 #test:
 fsim.1 <- fsim.2 <- fsim.3<- list()
-n_cl = 1
-nloop = 20
+n_cl = 5
+nloop = 30
   fsim.1 <- append(fsim.1,list(iter_cluster(covars,make_cl1(n_cl),X,n.loop=nloop)))
   fsim.2 <- append(fsim.2,list(iter_cluster(covars,make_cl2(n_cl),X,n.loop=nloop)))
   fsim.3 <- append(fsim.3,list(iter_cluster(covars,make_cl3(n_cl),X,n.loop=nloop)))
@@ -57,7 +57,7 @@ nclust <- c("5","10")
 likes <- array(dim=c(15,12))
 for (i in 1:3) {
     plot(ftotres[[i]]$full_likes,type="l",ylab="relevant log likelihood",xlab="Iterations",main=paste(titles[i]," \n # clusters = ",nclust[(j>2)+1]))
-}}
+}
 
 #########Let's investigate the clustering results..? 
 final_clusters <- cbind(cl2,ftotres[[1]][[1]]$h.clusters[,10],ftotres[[1]][[2]]$h.clusters[,15],
