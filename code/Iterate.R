@@ -24,7 +24,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
   cust_sweep <- function(m,v) { t(t(m)+v) }  #this adds vector v to every row in matrix m
   #normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
   for (i in 1:n.loop) {
-	Gamma_cl <- B[(2+n.meta):(d.Y+1),]
+	Gamma_cl <- B[(2+n.meta):d.Y,]
     ll_left <- X%*%t(Gamma_cl)   #This ignores the alpha and meta data terms of the coeffecient matrix 
     #This is definitely necessary (above)
     if(debug) print("ll_left OK")
