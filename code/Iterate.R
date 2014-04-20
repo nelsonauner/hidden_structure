@@ -12,7 +12,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
   cl_matrix <- model.matrix(formula(~0+as.factor(clusters)))
   ncl <- dim(cl_matrix)[2]  #Keep track of how many clusters we're using. 
   Y<-Y_orig <- as.matrix(cbind(y,cl_matrix))
-  d.Y <- (dim(Y)[2]+1) #Include intercept term!
+  d.Y <- dim(Y)[2]
   n.meta <- dim(as.matrix(y))[2]
   cluster_likes<-full_likes <- rep(NA,n.loop) #store likelihood updates here! 
   h.clusters <- array(,dim=c(dim(X)[1],n.loop)) #we'll keep track of cluster assignments over time here
@@ -23,7 +23,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
   cust_sweep <- function(m,v) { t(t(m)+v) }  #this adds vector v to every row in matrix m
   #normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
   for (i in 1:n.loop) {
-	Gamma_cl <- B[(2+n.meta):d.Y,]
+	Gamma_cl <- B[(2+n.meta):d.Y+1,] #include intercept term...
     ll_left <- X%*%t(Gamma_cl)   #This ignores the alpha and meta data terms of the coeffecient matrix 
     #This is definitely necessary (above)
     if(debug) print("ll_left OK")
