@@ -62,7 +62,7 @@ predict.qij<-function(Y,B){ #we need to make a function to make the predicted q_
   ##WTF are you serious where is d.Y????
   d.Y = dim(Y)[2]
   ## Important! Y needs to be in model matrix form! ## [alpha beta [1 0 0 ] ]
-  q.num <- exp(cust_sweep(Y[,1:d.Y] %*% B[2:(1+d.Y),] ,B[1,])) #add intercept, v_i*theta, and cluster term
+  q.num <- exp(cust_sweep(as.matrix(Y)[,1:d.Y] %*% B[2:(1+d.Y),] ,B[1,])) #add intercept, v_i*theta, and cluster term
   q.denom <- rowSums(q.num) #since we add up for all terms j = 1 to p!
   return(q.num/q.denom)
 }
