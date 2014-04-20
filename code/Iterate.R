@@ -13,7 +13,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
   ncl <- dim(cl_matrix)[2]  #Keep track of how many clusters we're using. 
   Y<-Y_orig <- as.matrix(cbind(y,cl_matrix))
   d.Y <- dim(Y)[2]
-  n.meta <- dim(as.matrix(y))[2]
+  n.meta <- d.Y-ncl
   cluster_likes<-full_likes <- rep(NA,n.loop) #store likelihood updates here! 
   h.clusters <- array(,dim=c(dim(X)[1],n.loop)) #we'll keep track of cluster assignments over time here
   fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); 
@@ -21,10 +21,10 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
   #Initialize a result to return. 
   likes<-NULL
   res = list(likes,clusters,B,NULL);names(res) <- c("likes","clusters","B","time")
-  cust_sweep <- function(m,v) { sweep(m,MARGIN=2,v,'+')}  #this adds vector v to every row in matrix m
-  normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
+  cust_sweep <- function(m,v) { t(t(m)+v) }  #this adds vector v to every row in matrix m
+  #normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
   for (i in 1:n.loop) {
-    ll_left <- X%*%t(B[(2+n.meta):d.Y,])   #This ignores the alpha and meta data terms of the coeffecient matrix 
+    ll_left <- X%*%t(B[(2+n.meta):(d.Y+1),])   #This ignores the alpha and meta data terms of the coeffecient matrix 
     #This is definitely necessary (above)
     print("ll_left OK")
     #The above formula verified to correctly multiply! We want to maximize ll_left
@@ -78,7 +78,7 @@ iter_cluster_old <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
   fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); 
   B <- coef(fits)
   res = list(likes,clusters,B,NULL);names(res) <- c("likes","clusters","B","time")
-  cust_sweep <- function(m,v) { sweep(m,MARGIN=2,v,'+')}  #this adds vector v to every row in matrix m
+  cust_sweep <- function(m,v) { t(t(m)+v) }  #this adds vector v to every row in matrix m
   for (i in 1:n.loop) {
     ll_left <- X%*%t(B[(2+n.meta):d.Y,])   #This ignores the alpha and meta data terms of the coeffecient matrix 
     print("ll_left OK")
@@ -114,7 +114,8 @@ iter_cluster_old <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL) {
 
 
 predict.qij<-function(Y,B){ #we need to make a function to make the predicted q_ij
-  d.Y = dim(Y)[2]
+#verified to produce same results as  
+ d.Y = dim(Y)[2]
   ## Important! Y needs to be in model matrix form! ## [alpha beta [1 0 0 ] ]
   q.num <- exp(cust_sweep(as.matrix(Y)[,1:d.Y] %*% B[2:(1+d.Y),] ,B[1,])) #add intercept, v_i*theta, and cluster term
   q.denom <- rowSums(q.num) #since we add up for all terms j = 1 to p!
