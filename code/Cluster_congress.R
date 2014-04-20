@@ -32,12 +32,12 @@ nloop = 15
 
 #test:
 #Now I will test each cluster initialization, for 15 iterations,
-sim.1 <- sim.2 <- sim.3<- list()
+fsim.1 <- fsim.2 <- fsim.3<- list()
 for (i in c(5,10)) {
 for (nloop in c(20,50)) {    
-  sim.1 <- append(sim.1,list(iter_cluster(covars,make_cl1(i),X,n.loop=nloop)))
-  sim.2 <- append(sim.2,list(iter_cluster(covars,make_cl2(i),X,n.loop=nloop)))
-  sim.3 <- append(sim.3,list(iter_cluster(covars,make_cl3(i),X,n.loop=nloop)))
+  fsim.1 <- append(fsim.1,list(iter_cluster(covars,make_cl1(i),X,n.loop=nloop)))
+  fsim.2 <- append(fsim.2,list(iter_cluster(covars,make_cl2(i),X,n.loop=nloop)))
+  fsim.3 <- append(fsim.3,list(iter_cluster(covars,make_cl3(i),X,n.loop=nloop)))
 }}
 
 save.image()
@@ -45,13 +45,13 @@ save.image()
 #now, time to calculate multinomial deviance or something for all of them to compare
 
 naive.dev <- multi.devian(X,as.matrix(covars),coef(fits))
-
+ftotres<-list(fsim.1,fsim.2,fsim.3)
 #prepare results matrix:
 resm <- array(dim=c(3,4))
 
 for (i in 1:3) {
 for (j in 1:4) {
-rel_sim <- totres[[i]][[j]]
+rel_sim <- ftotres[[i]][[j]]
 resm[i,j] <- multi.devian(X,as.matrix(cbind(covars,model.matrix(~0+as.factor(rel_sim$clusters)))),rel_sim$B)
 }}
 
@@ -63,12 +63,12 @@ nclust <- c("5","10")
 likes <- array(dim=c(15,12))
 for (i in 1:3) {
   for (j in 1:4) {
-    plot(totres[[1]][[j]]$likes,type="l",ylab="relevant log likelihood",xlab="Iterations",main=paste(titles[i]," \n # clusters = ",nclust[(j>2)+1]))
+    plot(ftotres[[1]][[j]]$likes,type="l",ylab="relevant log likelihood",xlab="Iterations",main=paste(titles[i]," \n # clusters = ",nclust[(j>2)+1]))
 }}
 
 #########Let's investigate the clustering results..? 
-final_clusters <- cbind(cl2,totres[[1]][[1]]$h.clusters[,10],totres[[1]][[2]]$h.clusters[,15],
-                        totres[[2]][[1]]$h.clusters[,10],totres[[2]][[2]]$h.clusters[,15])
+final_clusters <- cbind(cl2,ftotres[[1]][[1]]$h.clusters[,10],ftotres[[1]][[2]]$h.clusters[,15],
+                        ftotres[[2]][[1]]$h.clusters[,10],ftotres[[2]][[2]]$h.clusters[,15])
 
 table(final_clusters[final_clusters[,2]==1,3])
 
