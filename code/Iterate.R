@@ -12,15 +12,14 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
   cl_matrix <- model.matrix(formula(~0+as.factor(clusters)))
   ncl <- dim(cl_matrix)[2]  #Keep track of how many clusters we're using. 
   Y<-Y_orig <- as.matrix(cbind(y,cl_matrix))
-  d.Y <- dim(Y)[2]
-  n.meta <- d.Y-ncl
+  d.Y <- (dim(Y)[2]+1) #Include intercept term!
+  n.meta <- dim(as.matrix(y))[2]
   cluster_likes<-full_likes <- rep(NA,n.loop) #store likelihood updates here! 
   h.clusters <- array(,dim=c(dim(X)[1],n.loop)) #we'll keep track of cluster assignments over time here
   fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); 
   B <- coef(fits)
-  #Initialize a result to return. 
-  likes<-NULL;
-  res = list(likes,clusters,B,NULL);names(res) <- c("likes","clusters","B","time")
+
+  res = list(NULL,clusters,NULL,NULL);names(res) <- c("likes","clusters","B","time")
   cust_sweep <- function(m,v) { t(t(m)+v) }  #this adds vector v to every row in matrix m
   #normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
   for (i in 1:n.loop) {
@@ -48,7 +47,7 @@ iter_cluster <- function(y,clusters,X,n.loop,debug=FALSE,cl=NULL,collapse=FALSE)
     h.clusters[,i] <- n_cl <- factor(apply(ll,MARGIN=1,FUN=which.min),levels=1:(ncl-1)) #select cluster to minimize L 
     n_cl_matrix <- model.matrix(formula(~0+(n_cl))) #and convert to [0 0 1] form. 
     #update our Y:
-    Y[,(2+n.meta):(d.Y+1)] <- n_cl_matrix
+    Y[,(2+n.meta):d.Y] <- n_cl_matrix
     #And refit: 
     fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); B <- coef(fits)  #
     B <- coef(fits) #Pull the coeffecients
