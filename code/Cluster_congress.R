@@ -8,7 +8,11 @@ require(textir);data(congress109);cl <- NULL
 #source('hidden_structure.R')
 source('Iterate.R')
 X = congress109Counts
-covars <- data.frame(gop=congress109Ideology$party=="R")
+covars <- data.frame(gop=congress109Ideology$party=="R",
+cscore=congress109Ideology$cs1)
+covars$cscore <- covars$cscore -
+tapply(covars$cscore,covars$gop,mean)[covars$gop+1]
+rownames(covars) <- rownames(congress109Ideology)
 
 
 #Initialization methods:
