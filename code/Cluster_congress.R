@@ -32,10 +32,11 @@ make_cl3 <- function(i) {kmeans(resids,i)$cluster}
 fsim.1 <- fsim.2 <- fsim.3<- list()
 num_cl = 5
 nloop = 30
+for(i in 1:10) {
   fsim.1 <- append(fsim.1,list(iter_cluster(covars,make_cl1(num_cl),X,n.loop=nloop)))
   fsim.2 <- append(fsim.2,list(iter_cluster(covars,make_cl2(num_cl),X,n.loop=nloop)))
   fsim.3 <- append(fsim.3,list(iter_cluster(covars,make_cl3(num_cl),X,n.loop=nloop)))
-
+}
 
 save.image()
 
@@ -50,6 +51,8 @@ for (i in 1:3) {
 rel_sim <- ftotres[[i]][[1]]
 resm[i] <- multi.devian(X,as.matrix(cbind(covars,model.matrix(~0+as.factor(rel_sim$clusters)))),rel_sim$B)
 }
+
+rel_sim<-sim.1[[1]]
 
 save.image()
 
