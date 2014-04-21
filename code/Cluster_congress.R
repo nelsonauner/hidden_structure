@@ -22,6 +22,7 @@ make_cl1 <- function(i) {sample(1:i,size=dim(X)[1],replace=TRUE)}
 make_cl2 <- function(i) {kmeans(X,i)$cluster}
 ##### k means on residuals#################
 fits <- mnlm(cl, covars,X, bins=5, gamma=1, nlambda=10)
+m <- rowSums(X)
 resids <- X-m*predict(fits,covars,type="response") #(these are not really good residuals?)
 make_cl3 <- function(i) {kmeans(resids,i)$cluster}
 # k mean
