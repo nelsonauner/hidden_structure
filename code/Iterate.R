@@ -21,9 +21,9 @@ iter_cluster <- function(
   m <- rowSums(X)
   # Turn our factor (membership = 1,2 or 3) 
   # into vector (membership = [0 1 0]), etc
-  cl_matrix <- sparse.model.matrix(formula(~0+as.factor(clusters)))
+  cl_matrix <- model.matrix(formula(~0+as.factor(clusters)))
   ncl <- dim(cl_matrix)[2]  #Keep track of how many clusters we're using. 
-  Y<- Y_orig <- cBind(y,cl_matrix)
+  Y<- Y_orig <- Matrix(cbind(as.matrix(y),cl_matrix),sparse=TRUE)
   d.Y <- dim(Y)[2]
   n.meta <- dim(as.matrix(y))[2]
   #store likelihood updates here! 
@@ -38,10 +38,9 @@ iter_cluster <- function(
   #we'll keep track of cluster assignments over time here
   #normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
   for (i in 1:n.loop) {
-	  Gamma_cl <- B[(1+n.meta):d.Y+1,] #include intercept term...
+	Gamma_cl <- B[(1+n.meta):d.Y+1,] #include intercept term...
     #This ignores the alpha and meta data terms of the coeffecient matrix 
     ll_left <- X%*%t(Gamma_cl)   
-    #This is definitely necessary (above)
     if(debug) print("ll_left OK")
     # The above formula verified to correctly multiply! 
     # We want to maximize ll_left + ll_right
@@ -63,7 +62,7 @@ iter_cluster <- function(
     cluster_likes[i] <- sum(apply(ll,MARGIN=1,FUN=min)) ## use n_cl
     full_likes[i] = cluster_likes[i] - sum(rowSums(Xhat*X)) #Add in the likelihood from the -x'(alpha+phi*vi)
     #Select new cluster membership if better. 
-    n_cl_matrix <- model.matrix(formula(~0+(n_cl))) # and convert to [0 0 1] form. 
+    n_cl_matrix <- sparse.model.matrix(formula(~0+(n_cl))) # and convert to [0 0 1] form. 
     #update our Y:
     Y[,(1+n.meta):d.Y] <- n_cl_matrix
     #And refit: 
@@ -87,7 +86,9 @@ predict.qij<-function(Y,B){ #we need to make a function to make the predicted q_
   return(q.num/q.denom)
 }
 
+
+##This works fine but we have to be careful that the dimensions are matching up.
 multi.devian <- function(X,Y,B) {
-  q.ij <- predict(B, newdata=Y,type="response")
+  q.ij <- predict(B,Y,type="response")
   return(sum(rowSums(X*log(q.ij))))
 }
