@@ -89,6 +89,6 @@ predict.qij<-function(Y,B){ #we need to make a function to make the predicted q_
 
 ##This works fine but we have to be careful that the dimensions are matching up.
 multi.devian <- function(X,Y,B) {
-  q.ij <- predict(B,Y[,1:6])
+  q.ij <- predict(B,Y,type="response")
   return(sum(rowSums(X*log(q.ij))))
 }
