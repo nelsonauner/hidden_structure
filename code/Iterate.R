@@ -17,7 +17,7 @@ iter_cluster <- function(
   require('plyr')
   require(textir)
   ptm<-proc.time()
-  
+  CONVERGENCE <- FALSE #initialize CONVERGENCE dummy variable
   m <- rowSums(X)
   # Turn our factor (membership = 1,2 or 3) 
   # into vector (membership = [0 1 0]), etc
@@ -33,8 +33,8 @@ iter_cluster <- function(
   fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); 
   B <- coef(fits)
 
-  res = list(NULL,clusters,NULL,NULL)
-  names(res) <- c("likes","clusters","B","time")
+  res = list(NULL,NULL,NULL,NULL)
+  names(res) <- c("likes","covars","B","time")
   #we'll keep track of cluster assignments over time here
   #normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
   for (i in 1:n.loop) {
@@ -59,6 +59,7 @@ iter_cluster <- function(
     ll <- m*ll_right - ll_left   
     h.clusters[,i] <- 
       n_cl <- factor(apply(ll,MARGIN=1,FUN=which.min),levels=1:ncl) #select cluster to minimize L   
+	 if(n_cl ==h.clusters[,i-1]) break
     cluster_likes[i] <- sum(apply(ll,MARGIN=1,FUN=min)) ## use n_cl
     full_likes[i] = cluster_likes[i] - sum(rowSums(t(tXhat)*X)) #Add in the likelihood from the -x'(alpha+phi*vi)
     #Select new cluster membership if better. 
@@ -71,6 +72,7 @@ iter_cluster <- function(
   }
   res$time <- proc.time()-ptm
   res$likes <- as.data.frame(cbind(cluster_likes,full_likes))
+  res$covars <- Matrix(cbind(as.matrix(y),h.clusters[.i]),sparse=TRUE)
   res$h.clusters = h.clusters
   res$B = B #the final loadings matrix
   return(res)

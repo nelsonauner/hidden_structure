@@ -30,22 +30,34 @@ make_cl3 <- function(i) {kmeans(resids,i)$cluster}
 
 #test:
 fsim.1 <- fsim.2 <- fsim.3<- list()
-#n.sim=10
+n.sim=5 #careful, this is a lot!!
 num_cl = 5
-nloop = 25
+nloop = 15
 for(i in 1:n.sim) {
   fsim.1 <- append(fsim.1,list(iter_cluster(covars,make_cl1(num_cl),X,n.loop=nloop)))
   fsim.2 <- append(fsim.2,list(iter_cluster(covars,make_cl2(num_cl),X,n.loop=nloop)))
   fsim.3 <- append(fsim.3,list(iter_cluster(covars,make_cl3(num_cl),X,n.loop=nloop)))
 }
 
-cong_res <- list(fsim.1,fsim.2,fsim.3)
 save(cong_res,file="cong_res.RData")
 
 #now, time to calculate multinomial deviance or something for all of them to compare
 
 naive.dev <- multi.devian(X,as.matrix(covars),coef(fits))
 ftotres<-list(fsim.1,fsim.2,fsim.3)
+
+##Calculate naive deviance just for one observations: 
+temp <- fsim.3
+
+cl_matrix <- model.matrix(formula(~0+as.factor(temp[[1]]$h.clusters[,30])))
+Y<-  Matrix(cbind(as.matrix(y),cl_matrix),sparse=TRUE)
+multi.devian(X,Y,temp[[1]]$B)
+
+#AICc, k = 5
+
+AICc
+	
+
 #prepare results matrix:
 resm <- as.data.frame(c(rep(1,10),rep(2,10),rep(3,10))
 
@@ -56,7 +68,9 @@ for(j in 1:n.sim) {
 print(i)
 print(j)
 rel_sim <- totres[[i]][[1]]
-resm$deviance[(i-1)*10+j] <- multi.devian(X,as.matrix(cbind(covars,model.matrix(~0+as.factor(rel_sim$clusters)))),rel_sim$B)
+
+resm$deviance[(i-1)*10+j] <- multi.devian(X,
+										as.matrix(cbind(covars,model.matrix(~0+as.factor(rel_sim$clusters)))),rel_sim$B) ##THIS IS WRONG!
 resm$elapsed[(i-1)*10+j]<- rel_sim$time[3]
 }
 }
