@@ -14,7 +14,7 @@ covars$cscore <- covars$cscore -
 tapply(covars$cscore,covars$gop,mean)[covars$gop+1]
 rownames(covars) <- rownames(congress109Ideology)
 
-
+	
 #Initialization methods:
 ##### random ##########
 make_cl1 <- function(i) {sample(1:i,size=dim(X)[1],replace=TRUE)}
@@ -26,7 +26,6 @@ m <- rowSums(X)
 resids <- X-m*predict(fits,covars,type="response") #(these are not really good residuals?)
 make_cl3 <- function(i) {kmeans(resids,i)$cluster}
 # k mean
-
 
 
 #test:
