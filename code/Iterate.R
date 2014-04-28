@@ -60,7 +60,7 @@ iter_cluster <- function(
     h.clusters[,i] <- 
       n_cl <- factor(apply(ll,MARGIN=1,FUN=which.min),levels=1:ncl) #select cluster to minimize L   
     cluster_likes[i] <- sum(apply(ll,MARGIN=1,FUN=min)) ## use n_cl
-    full_likes[i] = cluster_likes[i] - sum(rowSums(Xhat*X)) #Add in the likelihood from the -x'(alpha+phi*vi)
+    full_likes[i] = cluster_likes[i] - sum(rowSums(t(tXhat)*X)) #Add in the likelihood from the -x'(alpha+phi*vi)
     #Select new cluster membership if better. 
     n_cl_matrix <- sparse.model.matrix(formula(~0+(n_cl))) # and convert to [0 0 1] form. 
     #update our Y:
