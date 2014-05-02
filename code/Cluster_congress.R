@@ -19,15 +19,17 @@ rownames(covars) <- rownames(congress109Ideology)
 #test:
 fsim.1 <- fsim.2 <- fsim.3<- list()
 n.sim=5 #careful, this is a lot!!
-num_cl = 5
+num_cl_vec = c(5,10,15,20,25)
 nloop = 15
 
 for(i in 1:n.sim) {
+  num_cl = num_cl_vec[i]
   fsim.1 <- append(fsim.1,list(iter_cluster(covars,make_cl1(X=X,i=num_cl),X,nmax=nloop)))
   fsim.2 <- append(fsim.2,list(iter_cluster(covars,make_cl2(X=X,i=num_cl),X,nmax=nloop)))
   fsim.3 <- append(fsim.3,list(iter_cluster(covars,make_cl3(X=X,covars=covars,cl=cl,num_cl),X,nmax=nloop)))
 }
 
+cong_res <- list(fsim.1,fsim.2,fsim.3)
 save(cong_res,file="cong_res.RData")
 
 #now, time to calculate multinomial deviance or something for all of them to compare

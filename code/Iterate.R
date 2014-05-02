@@ -73,9 +73,9 @@ iter_cluster <- function(
   }
   #Only return relevant clusters--pre-allocated NA vectors will be garbage disposed of.
   res$time <- proc.time()-ptm
-  res$likes <- as.data.frame(cbind(cluster_likes[1:i],full_likes[1:i]))
-  res$covars <- Matrix(cbind(as.matrix(y),h.clusters[,i]),sparse=TRUE)
-  res$h.clusters <-  h.clusters[,1:i]
+  res$likes <- as.data.frame(cbind(cluster_likes[1:(i-1)],full_likes[1:(i-1)]))
+  res$covars <- Matrix(cbind(as.matrix(y),h.clusters[,(i-1)]),sparse=TRUE)
+  res$h.clusters <-  h.clusters[,1:(i-1)]
   res$B = B #the final loadings matrix
   return(res)
 }
