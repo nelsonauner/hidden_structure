@@ -9,7 +9,7 @@ iter_cluster <- function(
   y,
   clusters,
   X,
-  n.loop,
+  nmax,
   debug=FALSE,
   cl=NULL,
   collapse=FALSE) 
@@ -27,9 +27,9 @@ iter_cluster <- function(
   d.Y <- dim(Y)[2]
   n.meta <- dim(as.matrix(y))[2]
   #store likelihood updates here! 
-  cluster_likes<-full_likes <- rep(NA,n.loop) 
+  cluster_likes<-full_likes <- rep(NA,nmax) 
   #we'll keep track of cluster assignments over time here
-  h.clusters <- array(,dim=c(dim(X)[1],n.loop)) 
+  h.clusters <- array(,dim=c(dim(X)[1],nmax)) 
   fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10); 
   B <- coef(fits)
 
@@ -37,7 +37,8 @@ iter_cluster <- function(
   names(res) <- c("likes","covars","B","time")
   #we'll keep track of cluster assignments over time here
   #normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
-  for (i in 1:n.loop) {
+	for (i in 1:nmax) {
+	print(i)	
 	Gamma_cl <- B[(1+n.meta):d.Y+1,] #include intercept term...
     #This ignores the alpha and meta data terms of the coeffecient matrix 
     ll_left <- X%*%t(Gamma_cl)   
@@ -57,9 +58,9 @@ iter_cluster <- function(
     if(debug) print("ll_right OK")
     #Compute total log likelihood
     ll <- m*ll_right - ll_left   
-    h.clusters[,i] <- 
-      n_cl <- factor(apply(ll,MARGIN=1,FUN=which.min),levels=1:ncl) #select cluster to minimize L   
-	 if(n_cl ==h.clusters[,i-1]) break
+    h.clusters[,i] <-  n_cl <- factor(apply(ll,MARGIN=1,FUN=which.min),levels=1:ncl) #select cluster to minimize L   
+	#if we have converged (same cluster labels as last iteration, then quit)
+	 if( i > 1) {if ( all(n_cl ==h.clusters[,i-1])) {CONVERGENCE <- TRUE; break}}
     cluster_likes[i] <- sum(apply(ll,MARGIN=1,FUN=min)) ## use n_cl
     full_likes[i] = cluster_likes[i] - sum(rowSums(t(tXhat)*X)) #Add in the likelihood from the -x'(alpha+phi*vi)
     #Select new cluster membership if better. 
@@ -70,10 +71,11 @@ iter_cluster <- function(
     fits <- mnlm(cl,Y ,X, bins=5, gamma=1, nlambda=10);
     B <- coef(fits) #Pull the coeffecients
   }
+  #Only return relevant clusters--pre-allocated NA vectors will be garbage disposed of.
   res$time <- proc.time()-ptm
-  res$likes <- as.data.frame(cbind(cluster_likes,full_likes))
-  res$covars <- Matrix(cbind(as.matrix(y),h.clusters[.i]),sparse=TRUE)
-  res$h.clusters = h.clusters
+  res$likes <- as.data.frame(cbind(cluster_likes[1:(i-1)],full_likes[1:(i-1)]))
+  res$covars <- Matrix(cbind(as.matrix(y),h.clusters[,(i-1)]),sparse=TRUE)
+  res$h.clusters <-  h.clusters[,1:(i-1)]
   res$B = B #the final loadings matrix
   return(res)
 }
@@ -94,3 +96,20 @@ multi.devian <- function(X,Y,B) {
   q.ij <- predict(B,Y,type="response")
   return(sum(rowSums(X*log(q.ij))))
 }
+
+#Initialization methods: 
+
+#random initialization
+make_cl1 <- function(X,i) {sample(1:i,size=dim(X)[1],replace=TRUE)} 
+
+# cluster on word vector
+make_cl2 <- function(X,i) {kmeans(X,i)$cluster} 
+
+# cluster on residuals
+make_cl3 <- function(X,covars,cl=NULL,i) {
+	fits <- mnlm(cl, covars,X, bins=5, gamma=1, nlambda=10) 
+	m <- rowSums(X) 
+	resids <- X-m*predict(fits,covars,type="response") #(these are not really good residuals?) 
+	return(kmeans(resids,i)$cluster)
+} 
+
