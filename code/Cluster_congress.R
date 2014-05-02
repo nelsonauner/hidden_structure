@@ -22,11 +22,28 @@ make_cl1 <- function(i) {sample(1:i,size=dim(X)[1],replace=TRUE)}
 make_cl2 <- function(i) {kmeans(X,i)$cluster}
 ##### k means on residuals#################
 fits <- mnlm(cl, covars,X, bins=5, gamma=1, nlambda=10)
+Y2 <- cbind(covars,model.matrix(~0+congress109Ideology$chamber))
+fits2 <- mnlm(cl,Y2,X, bins=5, gamma=1, nlambda=10)
+Y3 <- cbind(Y2,model.matrix(~ 0+factor(sample(5,dim(covars)[1],replace=TRUE))))
+fits3 <- mnlm(cl,Y3,X, bins=5, gamma=1, nlambda=10)
+
 m <- rowSums(X)
 resids <- X-m*predict(fits,covars,type="response") #(these are not really good residuals?)
 make_cl3 <- function(i) {kmeans(resids,i)$cluster}
 # k mean
 
+B2 <- coef(fits2)
+q <- predict(coef(fits), newdata=covars,type="response")
+q2 <- predict(coef(fits2), newdata=Y2,type="response")
+q3 <- predict(coef(fits3), newdata=Y3,type="response")
+
+sum(rowSums(X*log(q)))
+sum(rowSums(X*log(q2)))
+sum(rowSums(X*log(q3)))
+sum(rowSums(congress109Counts*log(q)))
+
+
+blah <- iter_cluster(covars,make_cl3(num_cl),X,n.loop=nloop,debug=TRUE)
 
 #test:
 fsim.1 <- fsim.2 <- fsim.3<- list()
