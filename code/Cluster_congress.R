@@ -15,28 +15,17 @@ tapply(covars$cscore,covars$gop,mean)[covars$gop+1]
 rownames(covars) <- rownames(congress109Ideology)
 
 	
-#Initialization methods:
-##### random ##########
-make_cl1 <- function(i) {sample(1:i,size=dim(X)[1],replace=TRUE)}
-##### k means on data ##########
-make_cl2 <- function(i) {kmeans(X,i)$cluster}
-##### k means on residuals#################
-fits <- mnlm(cl, covars,X, bins=5, gamma=1, nlambda=10)
-m <- rowSums(X)
-resids <- X-m*predict(fits,covars,type="response") #(these are not really good residuals?)
-make_cl3 <- function(i) {kmeans(resids,i)$cluster}
-# k mean
-
 
 #test:
 fsim.1 <- fsim.2 <- fsim.3<- list()
 n.sim=5 #careful, this is a lot!!
 num_cl = 5
 nloop = 15
+
 for(i in 1:n.sim) {
-  fsim.1 <- append(fsim.1,list(iter_cluster(covars,make_cl1(num_cl),X,n.loop=nloop)))
-  fsim.2 <- append(fsim.2,list(iter_cluster(covars,make_cl2(num_cl),X,n.loop=nloop)))
-  fsim.3 <- append(fsim.3,list(iter_cluster(covars,make_cl3(num_cl),X,n.loop=nloop)))
+  fsim.1 <- append(fsim.1,list(iter_cluster(covars,make_cl1(X=X,i=num_cl),X,nmax=nloop)))
+  fsim.2 <- append(fsim.2,list(iter_cluster(covars,make_cl2(X=X,i=num_cl),X,nmax=nloop)))
+  fsim.3 <- append(fsim.3,list(iter_cluster(covars,make_cl3(X=X,covars=covars,cl=cl,num_cl),X,nmax=nloop)))
 }
 
 save(cong_res,file="cong_res.RData")
