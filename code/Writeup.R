@@ -37,10 +37,11 @@ length(beta[4,][beta[4,]!=0])  #the first cluster
 #find highest rated coeffecients for each cluster and puht into a table!
 
 head(beta[6,][order(abs(beta[6,]),decreasing=TRUE)])
-
-high_loadings <- function(beta,startpoint,digits=2) {
-cl_range = startpoint:(dim(beta)[1])
-highloadings <- data.frame(do.call(cbind,lapply(4:8,
+berta
+high_loadings <- function(beta,cl_range,digits=2) {
+if(length(cl_range)==1) { 
+cl_range <- cl_index #startpoint:(dim(beta)[1])
+highloadings <- data.frame(do.call(cbind,lapply(cl_index,
 					FUN=function(x){
 						res<-head(
 						beta[x,][order(abs(beta[x,]),decreasing=TRUE)])
@@ -51,6 +52,6 @@ names(highloadings) = rep(c("term","loading"),length(cl_range))
 return(highloadings)
 }
 
-y<-high_loadings(beta,4)
-
+y<-high_loadings(beta,c(6,8))
+z
 
