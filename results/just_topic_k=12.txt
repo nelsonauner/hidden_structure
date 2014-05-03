@@ -1,0 +1,18 @@
+ summary(just_tpx)
+
+Top 5 phrases by topic-over-null term lift (and usage %):
+
+[1] 'change.heart.mind', 'hate.crime.legislation', 'national.heritage.corridor', 'hate.crime.law', 'asian.pacific.american' (13) 
+[2] 'southeast.texa', 'amnesty.illegal.alien', 'million.illegal.alien', 'temporary.worker.program', 'enforce.immigration.law' (12.1) 
+[3] 'near.retirement.age', 'commonly.prescribed.drug', 'medic.liability.crisi', 'repeal.death.tax', 'death.tax.repeal' (11.2) 
+[4] 'united.airline.employe', 'spending.cut.bil', 'issue.facing.american', 'student.loan.cut', 'privatization.plan' (10.3) 
+[5] 'driver.education', 'near.earth.object', 'global.gag.rule', 'va.health.care', 'disabled.american.veteran' (10.3) 
+[6] 'wild.bird', 'republic.cypru', 'fuel.efficiency', 'fuel.efficiency.standard', 'chemic.plant.security' (8.4) 
+[7] 'national.homeownership.month', 'postal.service', 'national.flood.insurance', 'export.import.bank', 'flood.insurance.program' (8.3) 
+[8] 'witness.testify', 'hearing.scheduled', 'president.announce', 'indian.art.craft', 'safety.belt.law' (7.2) 
+[9] 'pluripotent.stem.cel', 'national.ad.campaign', 'cel.stem.cel', 'stem.cel.line', 'cel.line' (5) 
+[10] 'able.buy.gun', 'caliber.sniper.rifle', 'sniper.rifle', 'deep.sea.coral', 'assault.weapon.ban' (4.8) 
+[11] 'american.fre.trade', 'central.american.fre', 'north.american.fre', 'financial.accounting.standard', 'buy.american.product' (4.7) 
+[12] 'credit.card.industry', 'supreme.court.rejected', 'increase.minimum.wage', 'card.compani', 'credit.card.compani' (4.6) 
+
+Dispersion = 2.68

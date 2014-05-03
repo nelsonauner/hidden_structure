@@ -30,7 +30,7 @@ table(cong_res[[1]][[1]]$h.clusters[,14]) #no longer evenly distributed
 
  head(cong_res[[1]][[1]]$B@Dimnames[2][order(cong_res[[1]][[1]]$B@Dimnames[1])])
  
- beta <- as.matrix(cong_res[[1]][[1]]$B)
+congress_res_2.15 <- cong_res[[2]][[3]]  #the results for kmeans initialization, 15 clusters
  
 #find number of non-zero coeffecients
 length(beta[4,][beta[4,]!=0])  #the first cluster
@@ -38,20 +38,19 @@ length(beta[4,][beta[4,]!=0])  #the first cluster
 
 
 head(beta[6,][order(abs(beta[6,]),decreasing=TRUE)])
-berta
-high_loadings <- function(beta,cl_range,digits=2) {
-if(length(cl_range)==1) { 
-cl_range <- cl_index #startpoint:(dim(beta)[1])
-highloadings <- data.frame(do.call(cbind,lapply(cl_index,
+
+high_loadings <- function(beta,cl_range,terms=10,digits=2) {
+#if(length(cl_range)==1) { 
+beta <- as.matrix(beta) #could be something else :)
+highloadings <- data.frame(do.call(cbind,lapply(cl_range,
 					FUN=function(x){
 						res<-head(
-						beta[x,][order(abs(beta[x,]),decreasing=TRUE)])
+						(beta[x,][order(abs(beta[x,]),decreasing=TRUE)]),n=terms)
 						return(cbind(names(res),round(res,digits=2)))
 						}
 						)),row.names=NULL)
 names(highloadings) = rep(c("term","loading"),length(cl_range))
 return(highloadings)
-}
 }
 
 (y<-high_loadings(beta,c(6,8)))
@@ -64,7 +63,7 @@ hl_list = list()
 num_cl_vec = c(5,10,15,20,25)
 for (method in 1:3) {
 for (cls in 1:5) {
-cat(method);cat(num_cl_vec[cls]);cat("\n")
+cat("Initialization Method: ");cat(method);cat(" # of Topics: ");cat(num_cl_vec[cls]);cat("\n")
 print(high_loadings(
 										cong_res[[method]][[cls]]$B,
 										(4:(3+num_cl_vec[cls]))))
@@ -72,3 +71,51 @@ print(high_loadings(
 	}
 	}
 sink()
+
+
+
+##How does this measure up against just fitting a topic model: 
+
+require(maptpx)
+just_tpx <- topics(counts = congress109Counts,K=12)
+summary(just_tpx)
+#looks good
+
+
+#Now, step two. I want to look up a words and their loadings in a pure topic model vs in my mixed semantic topic model. 
+#word weights in gop
+
+#prepare covars
+covars <- data.frame(gop=congress109Ideology$party=="R",
+cscore=congress109Ideology$cs1)
+covars$cscore <- covars$cscore -
+tapply(covars$cscore,covars$gop,mean)[covars$gop+1]
+rownames(covars) <- rownames(congress109Ideology)
+
+
+cong_mnlm_beta <- coef(cong_fits <- fits <- mnlm(cl=NULL,covars,counts=congress109Counts,bins=5, gamma=1, nlambda=10));
+
+xtable(cbind(high_loadings(cong_mnlm_beta,2,terms=10),high_loadings(congress_res_2.15$B,2,terms=10)))
+
+#Republican Term: 
+cong_mnlm_beta[,'nation.oil.food']
+congress_res_2.15$B[,'nation.oil.food']
+
+#Democrat Term: 
+cong_mnlm_beta[,'death.penalty.system']
+congress_res_2.15$B[,'death.penalty.system']
+
+
+
+##who are these groups? function idea: reveal the members of a cluster....cong_
+show_members = function(fitted_model,clusternumber){
+return(rownames(congress_res_2.15$covars)[tail(t(fitted_model$h.clusters),n=1)==clusternumber])
+} 		
+
+xtable(as.data.frame(show_members(congress_res_2.15,14)) #for nation.oil.food
+xtable(as.data.frame(show_members(congress_res_2.15,7))) #a category
+
+
+##we see that the nation.oil.food category includes cluster number 14
+#The loadings on cluster #14 are 
+high_loadings(congress_res_2.15$B,14+3,terms=100)

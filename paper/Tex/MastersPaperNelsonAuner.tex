@@ -8,7 +8,9 @@
 %\usepackage{babel}
 \usepackage{graphicx}
 \usepackage[T1]{fontenc}
+\usepackage[flushleft]{threeparttable}
 \usepackage{lmodern}
+\usepackage{graphicx}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -51,6 +53,35 @@
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \setcounter{secnumdepth}{0}
 
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+	% N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+	% remember to use [htp] or [htpb] for placement
+
+
+
+
+
+
+
+
+
+
 \begin{document}
 
 \noindent
@@ -61,8 +92,8 @@
 
 \vspace{1.8in}
 \begin{center}
-{\bf\LARGE Hidden Structure of Text Data } \\~\\
-{Latent Topic Models and Sentiment Analysis}
+{\bf\LARGE Latent Topic Models and Sentiment Analysis} \\~\\
+{A parallelizeable, computationally-minded approach }
 \\~\\
 %{\bf\Large --- A Sample Format}
 
@@ -95,7 +126,7 @@
 This paper introduces a variant to existing models of multinomial
 regression for text analysis. Using the base model introduced by Taddy
 (2013), we extend the data-generating model to incorporate topics not
-explained by metadata. In doing so, we seek to both increase
+explained by metadata. In doing so, we seek to increase
 the prediction accuracy over existing techniques, bridge the gap between
 multinomial regression and standard topic models, and investigate
 methods for discovering new topics in a corpus. We explore computational
@@ -148,16 +179,30 @@ documents (i.e. `the' or `of').
 A trivial example of such content might be student's answers to the
 question ``What did homework assignments involve?'', with the following four responses:
 
-\begin{verbatim}
-Some computation and formula proving, a lot of R code.
-Problems, computation using R
-Some computations and writing R code.
-Proofs, problems, and programming work
-\end{verbatim}
+\begin{table}[!hbpt]
+\caption{Example of text data from course reviews} \label{tab:title}
+\begin{center}
+\begin{tabular} {c c}
+\textbf{Document} & \textbf{Content} \\
+\hline
+1 & Some computation and formula proving, a lot of R code \\
+2 & Problems, computation using R \\
+3 & Some computations and writing R code\\
+4 & Proofs, problems, and programming work \\
+\end{tabular}
+\end{center}
+\end{table}
+
+
 
 After removing common words and stemming the remaining words, we might
-produce the following count matrix:
+produce the count matrix in Table 2. 
 
+
+\begin{table}[!hbpt]
+\caption{Creating a word-count matrix from text}
+\begin{center}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{ c |  c c c c c c c c c c c}
 \hline
 \textbf{Document} & Some & comp & formula & prov & R & code & use &
@@ -167,7 +212,11 @@ problem & writ & program & work \\
 3 & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0\\
 4 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 1\\
 \hline
-\end{tabular}
+\end{tabular}}
+\end{center}
+\end{table} 
+
+
 
 \subsection{Multinomial Model}\label{multinomial-model}
 
@@ -326,7 +375,7 @@ convergance:
   Determine parameters $\alpha_, \phi, \Gamma$ by fitting a multinomial
   regression on $y_i | x_i , u_i$ with a gamma lasso penalty
 \item
-  For each document $i$, determine new cluster $u_i$ membership as
+  For each document $i$, determine new cluster $u_i$ membership as \\
   $argmax_{k = 1,..,K} \big[  \ell(y_i,x_i,u_k | \alpha, \phi, \Gamma) \big]$
 \end{enumerate}
 
@@ -348,7 +397,7 @@ In addition, the right hand side does not depend on $x_i$ and can be precalculat
 
 
 
-\section{Application}\label{application}
+\section{Application and Evaluation of Algorithm}\label{application}
 
 \subsection{Congressional Speech} 
 
@@ -366,36 +415,99 @@ After the algorithm,
 
 Of key interest is knowing whether or not the algorithm converges to the same clusters when run repeatedly on the same data, and also how this convergence is affected by the 3 proposed cluster initialization 
 
-At each step in classic two 
+\subsection{Interpretation of Topics}
 
+An essential aspect of topic modeling is determining the overall theme from the loadings vector. Laffety and Blei show that, once a theme is correctly determined, topic models can be used to accurately track a theme over hundreds of years. 
 
-\includegraphics[width=\linewidth]{Images/LikelihoodOfClusters_Iterations}
+Of particular importance is that our extreme simplication of topic weights does not 
+If the topics produced by our method bear no relation to the topics produced by more complex topic modeling approaches, then there is little benefit of our model, regardless of computational improvements and model simplicity. 
 
-/subsection{Interpretation of Clusters}
-We plot the term loadings of the five clusters (random cluster initialization) 
+To test topic fit, we compare topics produced from our method with the topics produced by fitting a topic-only model, via MAP, with 12 topics on Gentzkow and Shapiro's Congressional Data. Fortuneately, we find that topics from our model are extremely similar to topics obtained by traditional methods. For example, table below shows a "stem cell" topic found by our method, compared to a similar topic found using the topic-only model mentioned above.
+
+\begin{table}
+\caption{Comparison of top word loadings on a stem-cell topic} \label{tab:title}
+\begin{center}
+\begin{tabular}{  c  c }
+Mixed Topic-Sentiment & Topic-Only \\
+\hline
+umbilic.cord.blood & pluripotent.stem.cel \\
+cord.blood.stem  & national.ad.campaign \\
+blood.stem.cel   & cel.stem.cel \\
+adult.stem.cel & stem.cel.line \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Interpretation of results}
+
+We first evaluate our model by comparing the coeffecients predicting GOP to a gamma lasso regression without any topic models. 
+The words with the highest loading for determing party affiiliation are illustrated in Table 3. 
+
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Fri May 02 20:16:29 2014
+% Sat May 03 15:01:23 2014
+\begin{table}[!htbp]
+\begin{threeparttable}
+\caption{Words with highest loadings for predicting Republican-party affiliation}
+\centering
+\begin{tabular}{r l l | l  l }
+ & \multicolumn{2}{c}{Multinomial Regression} &  \multicolumn{2}{c}{Mixed Model}  \\
+  \hline
+ & term & loading & term & loading \\ 
+  \hline
+1 & wild.bird & -7.97 & children.live.poverty & -14.71 \\ 
+  2 & speaker.table & 7.36 & ready.mixed.concrete & 9.25 \\ 
+  3 & un.official & 7.34 & wild.bird & -7.66 \\ 
+  4 & death.penalty.system & -7.33 & caliber.sniper.rifle & -7.59 \\ 
+  5 & term.care.insurance & 7.32 & bunker.buster & -7.47 \\ 
+  6 & weapon.grade.plutonium & 7.31 & driver.education & 7.34 \\ 
+  7 & national.homeownership.month & 7.28 & speaker.table & 7.2 \\ 
+  8 & additional.tax.cut & -7.28 & medic.liability.reform & 6.85 \\ 
+  9 & united.nation.oil & 7.25 & gun.safety & -6.74 \\ 
+  10 & nation.oil.food & 7.24 & near.retirement.age & 6.42 \\ 
+   \hline
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Mixed model fit with 15 topics, each topic initialized with K-means on the word count matrix
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+The theory behind our mixed topic model regression predicts that the topics should be able to incorporate a specific theme important to a group of individuals, leaving behind the more general predictors of party-affiliation to the regression coeffecient.
+We can test this prediction by examining terms that are significant for a Multinomial Regression without topics, but decrease in importance once topic models are added. For a simple illustration, we choose the phrase "nation oil food", which strongly predicts affiliation with the republican party. 
+
+We find that these terms are now associated with specific topics and specific groups of politicians, instead of being confounded with general party-affiliation.
+
+For example, the phrase "nation oil food" is strongly associated with a topic we might call "macro policy", with the following high word loading terms:
+
+% latex table generated in R 3.0.2 by xtable 1.7-1 package
+% Sat May 03 16:31:24 2014
 \begin{table}[ht]
 \centering
-\begin{tabular}{rllllllllll}
+\begin{tabular}{rll}
   \hline
- & word & weight & word & weight & word & weight & word & weight & word & weight \\ 
+ & term & loading \\ 
   \hline
-1 & commonly.prescribed.drug & 6.96377017258304 & winning.war.iraq & 10.5107139044061 & wild.bird & 12.533473343671 & pacific.american.heritage & -6.61455615166365 & driver.education & 12.5487795374065 \\ 
-  2 & america.blood.cent & 6.07543079426245 & deep.sea.coral & 8.11830789416926 & near.retirement.age & 10.7128290146961 & american.heritage.month & -5.91570306742865 & ready.mixed.concrete & 8.62040700411985 \\ 
-  3 & national.homeownership.month & 5.65964454962347 & national.ad.campaign & 7.47457723170782 & able.buy.gun & 8.24076099502087 & republic.cypru & 5.81797833647083 & regional.training.cent & 8.05371220628104 \\ 
-  4 & mount.st.helen & 5.49279369327883 & change.heart.mind & 7.1207378938059 & violent.sexual.predator & 7.207733161518 & relief.middle.class & -4.9487923273946 & cel.stem.cel & 6.52122636813409 \\ 
-  5 & human.right.body & 5.45105030596739 & columbia.river.gorge & 6.66454431894439 & buy.american.product & 6.78621243383459 & senate.committe.business & 4.91476416129303 & mount.st.helen & 6.350152341975 \\ 
-  6 & fifth.circuit.court & -5.27057059588348 & hate.crime & 5.47730538791582 & sole.source.contract & 6.64485734304875 & near.earth.object & -4.51207093358752 & asian.pacific.islander & 6.03463025868887 \\ 
+1 & human.right.body & 6.68 \\ 
+  2 & urge.swift.passage & 5.69 \\ 
+  3 & tongass.national.forest & 5.29 \\ 
+  4 & un.official & 5.07 \\ 
+  5 & export.import.bank & 4.62 \\ 
+  6 & arm.embargo.china & 4.36 \\ 
+  7 & middle.class.tax & 4.26 \\ 
+  8 & nation.oil.food & 4.16 \\ 
+  9 & feder.trade & 4.15 \\ 
+  10 & feder.trade.commission & 4.15 \\ 
    \hline
 \end{tabular}
 \end{table}
 
+We also notice that the members of this topic (by our simplification, each observation can only be a member of one topic) are 10 republicans and 4 democrats. 
+The ability to group observations that may have different metadata (in this case, political party) is a benefit of our mixed regression-topic model approach. 
+Under standard multinomial regression, observations cannot be grouped by topics, whereas topic modeling does not immediately offer a computationally simple way to include influence on outside metadata.
 
-
-
-\subsection{Interpretation of results}
 \subsection{Evaluating fit}
 
 

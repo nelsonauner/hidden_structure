@@ -1,330 +1,1258 @@
-Referenced by initialization method, then by # of clusters15
-                          term loading                 term loading                    term loading                      term loading                   term loading
-1     commonly.prescribed.drug    6.96     winning.war.iraq   10.51               wild.bird   12.53 pacific.american.heritage   -6.61       driver.education   12.55
-2           america.blood.cent    6.08       deep.sea.coral    8.12     near.retirement.age   10.71   american.heritage.month   -5.92   ready.mixed.concrete    8.62
-3 national.homeownership.month    5.66 national.ad.campaign    7.47            able.buy.gun    8.24            republic.cypru    5.82 regional.training.cent    8.05
-4               mount.st.helen    5.49    change.heart.mind    7.12 violent.sexual.predator    7.21       relief.middle.class   -4.95           cel.stem.cel    6.52
-5             human.right.body    5.45 columbia.river.gorge    6.66    buy.american.product    6.79  senate.committe.business    4.91         mount.st.helen    6.35
-6          fifth.circuit.court   -5.27           hate.crime    5.48    sole.source.contract    6.64         near.earth.object   -4.51 asian.pacific.islander    6.03
-110
-                      term loading                          term loading                      term loading                      term loading                    term loading
-1   regional.training.cent   13.34          western.energy.crisi    9.29        america.blood.cent    6.16      ready.mixed.concrete   10.26 violent.sexual.predator    8.73
-2             able.buy.gun    8.36               global.gag.rule    8.52 sex.offender.registration    5.91          winning.war.iraq   10.26          deep.sea.coral    7.18
-3     caliber.sniper.rifle    8.15                republic.cypru     7.8            gun.safety.law    5.65          pacific.islander    6.51    sole.source.contract    6.82
-4 commonly.prescribed.drug    8.05      senate.committe.business    6.62    asian.pacific.american     5.6 american.pacific.islander    6.36          warren.buffett    6.47
-5     american.force.radio    7.72 marriage.protection.amendment     6.6        confer.civil.right     5.4    asian.american.pacific    6.35           speaker.table    5.83
-6           southeast.texa    7.21                mount.st.helen    6.32   leadership.confer.civil     5.4    gross.national.product    5.81   county.north.carolina    5.77
-                     term loading                    term loading                   term loading                          term loading                      term loading
-1    national.ad.campaign    8.04 gifted.talented.student     8.3    near.retirement.age   14.81          world.poorest.people    7.63          driver.education   13.94
-2          grand.ole.opry    6.98  hate.crime.legislation     7.2      low.cost.reliable   10.71 financial.accounting.standard    7.27          little.rock.nine    6.38
-3 gifted.talented.student    6.76    pluripotent.stem.cel    7.14         grand.ole.opry    7.62              send.job.oversea    6.07  senate.committe.business    6.24
-4               busy.week    6.05            cel.stem.cel    6.75      suppli.natural.ga    7.16          buy.american.product    5.82 liberty.pursuit.happiness   -5.91
-5   children.live.poverty    5.84          hate.crime.law    6.72   columbia.river.gorge    7.05         children.live.poverty    5.32      life.liberty.pursuit   -5.91
-6        indian.art.craft    5.77        spending.cut.bil    6.37 asian.pacific.american    6.89        asian.pacific.american    5.24            warren.buffett    5.81
-115
-                      term loading                    term loading                    term loading                 term loading                    term loading                         term
-1 senate.committe.business    7.16        driver.education   13.02          deep.sea.coral    9.83 national.ad.campaign    8.05 gifted.talented.student    7.12               mount.st.helen
-2    children.live.poverty     6.5    sole.source.contract    7.27    american.force.radio    7.44 pluripotent.stem.cel    6.57          gun.safety.law    6.78         caliber.sniper.rifle
-3        near.earth.object    6.44 violent.sexual.predator    7.18             timber.sale    6.35     produce.stem.cel    6.45           bunker.buster    6.42           credit.card.issuer
-4                equal.pay    6.32               tax.haven    6.18      flag.draped.coffin    6.05            wild.bird     6.1    caliber.sniper.rifle    6.32     domestic.violence.sexual
-5         human.right.body    5.89  rail.passenger.service    6.14         timber.industry       6         cel.stem.cel    5.91   nuclear.bunker.buster    6.25        county.north.carolina
-6   passenger.rail.service    5.76       tax.break.compani    5.94 background.check.system    5.35     little.rock.nine    5.72   children.live.poverty    6.09 fifth.congressional.district
-  loading              term loading                       term loading                 term loading                          term loading                      term loading
-1    8.07   global.gag.rule    6.56         ga.price.reduction    6.28         able.buy.gun   16.91          ready.mixed.concrete   14.35          winning.war.iraq   13.94
-2    6.81    southeast.texa    6.43            witness.testify    5.92    low.cost.reliable    9.85                grand.ole.opry    7.28            hate.crime.law     6.8
-3    6.53 feder.air.marshal    6.25          hearing.scheduled    5.83       mount.st.helen    8.75 financial.accounting.standard    6.41         change.heart.mind    6.67
-4    6.19  indian.art.craft    6.05 national.heritage.corridor    5.72 western.energy.crisi     7.4            nunn.lugar.program    6.31 flag.protection.amendment    5.77
-5    5.82    grand.ole.opry    5.97                  equal.pay    5.24       grand.ole.opry    7.24        united.airline.employe    6.11    hate.crime.legislation    5.54
-6    5.82     consent.decre    5.93   permanent.resident.statu    4.99 death.penalty.system    7.24       gifted.talented.student    5.98                hate.crime    5.39
-                       term loading                     term loading                 term loading                     term loading
-1      guest.worker.program    6.46      near.retirement.age   10.78      safety.belt.law    7.84       america.blood.cent    8.13
-2             bunker.buster    6.03   regional.training.cent   10.78 world.poorest.people    7.65 underground.storage.tank    6.26
-3    asian.pacific.islander    5.88 commonly.prescribed.drug    7.64 caliber.sniper.rifle    7.36       credit.card.issuer    6.25
-4   american.heritage.month    5.82 remembered.family.friend    6.55       hate.crime.law     6.9          ryan.white.care     6.1
-5 pacific.american.heritage    5.59    children.live.poverty    5.84 columbia.river.gorge    6.49             cel.stem.cel    5.83
-6          troop.bring.home    5.57   asian.pacific.islander    5.43   america.blood.cent    6.35         human.right.body    5.77
-120
-                      term loading                  term loading                       term loading                       term loading                         term loading
-1           southeast.texa    8.86         bunker.buster    7.06        near.retirement.age   12.03            global.gag.rule    7.79  defense.intelligence.agency    8.32
-2        feder.air.marshal    6.44     near.earth.object     6.9 national.heritage.corridor    7.61 explosive.device.detonated     6.4               mount.st.helen    7.18
-3 temporary.worker.program    6.01 issue.facing.american    6.73             republic.cypru    6.77   armored.cavalry.regiment    6.33     senate.committe.business    6.69
-4     clinic.social.worker    5.88      outing.cia.agent    6.61   senate.committe.business    6.61         urge.swift.passage    6.23       asian.pacific.islander    6.49
-5            speaker.table    5.56      plan.bring.troop    5.95     united.airline.employe    6.43          hearing.scheduled     6.1 national.homeownership.month    6.37
-6       natural.ga.natural    5.56    city.san.francisco    5.94       credit.card.industry    6.09         credit.card.issuer    5.93             pacific.islander    6.19
-                   term loading                    term loading                     term loading                        term loading                          term loading
-1  caliber.sniper.rifle    8.58  united.airline.employe   11.77 remembered.family.friend    7.12                   wild.bird    8.19             low.cost.reliable    9.38
-2      indian.art.craft    8.17 violent.sexual.predator    7.97           grand.ole.opry    6.32       county.north.carolina    6.48            ga.price.reduction    8.71
-3      human.right.body     7.6    sole.source.contract    6.87        tax.break.wealthy    5.68              southeast.texa    5.95          world.poorest.people    8.51
-4        gun.safety.law    7.51           bunker.buster    6.87             rail.service   -5.47                 timber.sale    5.95                grand.ole.opry    7.94
-5            gun.safety    7.04  gross.national.product    6.73    judge.alberto.gonzale    5.45      passenger.rail.service    5.79          buy.american.product    7.03
-6 children.live.poverty    6.58               tax.haven    6.38 temporary.worker.program    5.08 medic.malpractice.insurance    5.47 financial.accounting.standard    6.77
-                      term loading                         term loading                 term loading                          term loading                      term loading
-1            bunker.buster    8.52         western.energy.crisi    8.24 national.ad.campaign    8.97          columbia.river.gorge    8.79   gifted.talented.student    7.99
-2           gun.safety.law    8.16               mount.st.helen    7.91 pluripotent.stem.cel    7.53            ga.price.reduction    8.44           safety.belt.law    6.33
-3    nuclear.bunker.buster    7.99       asian.pacific.islander    7.12     arab.oil.embargo    7.17                madison.county     6.2            offset.tax.cut    6.16
-4     caliber.sniper.rifle    7.97            change.heart.mind     6.7     produce.stem.cel    6.65 judicial.confirmation.process    6.14 project.safe.neighborhood       6
-5     western.energy.crisi    7.71 national.homeownership.month    6.67         cel.stem.cel    6.11      remembered.family.friend     5.6          indian.art.craft       6
-6 commonly.prescribed.drug    7.36         columbia.river.gorge    6.53      embryo.stem.cel    6.03               budget.surpluse    5.53              rail.service   -5.79
-                   term loading                        term loading                   term loading                  term loading                      term loading
-1 children.live.poverty   10.31           low.cost.reliable    9.22         deep.sea.coral   16.03  american.force.radio    6.81          winning.war.iraq   11.56
-2             equal.pay    7.96              republic.cypru    8.66       driver.education    15.2    america.blood.cent    6.03        nunn.lugar.program    6.58
-3       global.gag.rule    7.86            little.rock.nine    7.39 regional.training.cent   12.33 county.north.carolina    5.36    asian.pacific.american     6.5
-4             earth.day    7.09 defense.intelligence.agency    7.38           able.buy.gun   12.16      outing.cia.agent    5.34             asian.pacific    6.43
-5     hearing.scheduled    6.79               bunker.buster    6.74         grand.ole.opry    6.75 passenger.rail.system    5.16          human.right.body    6.09
-6    export.import.bank    5.74    permanent.resident.statu    6.59             gun.safety    6.46   growth.job.creation    5.13 pacific.american.heritage    5.88
-125
-                    term loading                   term loading                        term loading                     term loading                      term loading
-1   columbia.river.gorge    8.54 asian.pacific.american    6.74              republic.cypru     7.8     national.ad.campaign   23.08                 earth.day    7.02
-2       pacific.islander    7.99 asian.pacific.islander    6.36    senate.committe.business    7.11                wild.bird     8.7                 busy.week    6.17
-3 asian.pacific.islander    7.91          asian.pacific    6.13          urge.swift.passage    7.03     caliber.sniper.rifle    8.08     child.support.program    5.75
-4         mount.st.helen    7.81         republic.cypru    6.08 defense.intelligence.agency    6.86               gun.safety    7.51            madison.county    5.53
-5          bunker.buster    7.78       pacific.islander    6.06  national.heritage.corridor     6.7           gun.safety.law    6.92 president.judicial.nomine    5.45
-6     credit.card.issuer    7.59 medic.liability.reform    5.69      asian.pacific.american    6.45 remembered.family.friend     6.8     palestinian.authority    5.44
-                         term loading                       term loading                         term loading                         term loading                   term loading
-1        guest.worker.program    6.91            safety.belt.law    6.41 national.homeownership.month    8.01                speaker.table    5.72 asian.pacific.american    6.82
-2 defense.intelligence.agency    6.34 dropout.prevention.program    5.92     armored.cavalry.regiment    6.68              safety.belt.law    5.71         gun.safety.law    6.73
-3   million.illegal.immigrant    6.33               fund.tax.cut    5.75      minority.owned.business    6.23        issue.facing.american    5.71       pacific.islander    6.72
-4     enforce.immigration.law    5.82  project.safe.neighborhood    5.72      water.conservation.fund    5.52                    cash.flow    5.44 asian.pacific.islander    6.67
-5          people.health.care   -5.78       credit.card.industry    5.46           export.import.bank    5.44    sex.offender.registration     5.3       human.right.body     6.6
-6               bunker.buster     5.6                    buy.gun    5.44             iraq.weapon.mass    5.27 fifth.congressional.district    5.15  passenger.rail.system    6.48
-                     term loading                     term loading                   term loading                    term loading                         term loading                 term
-1    american.force.radio    7.06 commonly.prescribed.drug    8.65   terrorist.watch.list    6.23        driver.education   18.39              global.gag.rule    7.94   america.blood.cent
-2 gifted.talented.student    6.82   million.budget.request    7.22           college.cost    5.93 violent.sexual.predator    9.67 national.homeownership.month    7.52     indian.art.craft
-3      export.import.bank    6.71       umbilic.cord.blood    6.31  palestinian.authority    5.72    sole.source.contract    7.88             human.right.body    6.81        bunker.buster
-4       arm.embargo.china    6.14       professional.sport    6.05         madison.county    5.66      ga.price.reduction    6.94           credit.card.issuer     6.7   export.import.bank
-5          offset.tax.cut    6.08    medic.liability.crisi    5.83          speaker.table    5.58               tax.haven    6.55           nunn.lugar.program    6.56 caliber.sniper.rifle
-6        spending.cut.bil    5.97    chief.naval.operation    5.81 million.budget.request    5.52           bunker.buster    6.44     armored.cavalry.regiment    6.33     middle.class.tax
-  loading                   term loading                     term loading                     term loading                 term loading               term loading                   term
-1    7.19     america.blood.cent    7.26        hearing.scheduled    7.29     buy.american.product    7.78 pluripotent.stem.cel    6.91     mount.st.helen    7.09           able.buy.gun
-2    6.65  issue.facing.american     6.6            personal.data    6.46     world.poorest.people    7.76  percent.growth.rate    6.53 ga.price.reduction    7.08   ready.mixed.concrete
-3    6.16 united.airline.employe    6.56   protect.minority.right    6.35         send.job.oversea    5.94     produce.stem.cel    6.44  low.cost.reliable    6.64                buy.gun
-4    5.96       outing.cia.agent    6.54              chief.judge    6.33 permanent.resident.statu     5.8     arab.oil.embargo    6.39  suppli.natural.ga    6.58       spending.cut.bil
-5    5.95        timber.industry    6.52 domestic.violence.sexual    6.21       america.blood.cent    5.61         cel.stem.cel    6.31     grand.ole.opry    6.32             gun.safety
-6    5.85            timber.sale    6.41 permanent.resident.statu    5.77                east.texa     5.6   umbilic.cord.blood    5.71 people.health.care   -6.22 asian.pacific.american
-  loading                   term loading                   term loading                      term loading
-1   20.13 regional.training.cent   10.56         southeast.texa    9.24    asian.pacific.islander    7.75
-2    8.53       little.rock.nine    7.01       spending.cut.bil    6.57          pacific.islander    7.56
-3    7.49         grand.ole.opry    6.26 gross.national.product    6.45          indian.art.craft    7.27
-4    6.64          bunker.buster    5.91      hearing.scheduled    6.22             asian.pacific    6.42
-5    6.24              busy.week    5.86   social.security.card    5.88 american.pacific.islander    6.13
-6    6.05        clean.water.act   -5.34   world.poorest.people    5.78        professional.sport    6.13
-25
-                  term loading                 term loading                   term loading                       term loading                          term loading
-1 ready.mixed.concrete    9.01   america.blood.cent    6.49       driver.education   10.91             grand.ole.opry    7.39   defense.intelligence.agency    7.73
-2     indian.art.craft    5.75             war.iraq   -4.63       winning.war.iraq    9.73         ga.price.reduction     6.8                grand.ole.opry    7.73
-3       deep.sea.coral    5.57       nuclear.weapon   -4.61    near.retirement.age    9.73          suppli.natural.ga     6.6            ga.price.reduction    6.81
-4 american.force.radio    5.55      party.line.vote   -4.61 regional.training.cent    9.73            embryo.stem.cel    6.05                    hate.crime    6.42
-5       mount.st.helen    5.42   provisional.ballot   -4.59         hate.crime.law    7.66 malpractice.insurance.rate    5.38                hate.crime.law    6.33
-6 western.energy.crisi    5.36 central.american.fre    4.57             hate.crime    7.27       pluripotent.stem.cel    5.35 judicial.confirmation.process    5.91
-210
-                  term loading                    term loading                     term loading                          term loading                        term loading
-1     driver.education   19.92        human.right.body    6.68     ready.mixed.concrete   10.49       violent.sexual.predator    7.97     gifted.talented.student   13.36
-2     winning.war.iraq   10.81      urge.swift.passage    5.69   regional.training.cent    9.45          sole.source.contract    6.75 defense.intelligence.agency       7
-3  near.retirement.age    9.87 tongass.national.forest    5.29           republic.cypru    7.79 financial.accounting.standard    6.49       judge.alberto.gonzale    5.73
-4         able.buy.gun     6.9             un.official    5.07 senate.committe.business    7.25                patient.safety   -6.03    senate.committe.business    5.06
-5 columbia.river.gorge    6.81      export.import.bank    4.62           deep.sea.coral    7.24                 bunker.buster    5.75     land.water.conservation   -4.97
-6       republic.cypru    6.78       arm.embargo.china    4.36           mount.st.helen    6.83                     tax.haven    5.51               bunker.buster    4.81
-                          term loading                        term loading                term loading                 term loading                   term loading
-1      gifted.talented.student   15.14 defense.intelligence.agency  -12.46  america.blood.cent   10.22 third.quarter.profit     6.6             ethic.rule    7.46
-2         american.force.radio    7.51               bunker.buster    7.56          child.left   -5.55      cord.blood.stem    6.08              equal.pay    5.12
-3           export.import.bank    6.16       nuclear.bunker.buster    7.24   abu.ghraib.prison   -5.44        type.stem.cel    6.04         birth.abortion    4.86
-4 law.enforcement.intelligence    -5.4        third.quarter.profit    6.66      minority.right   -5.27         cel.stem.cel     5.7          partial.birth    4.86
-5               driver.license   -5.32        caliber.sniper.rifle     6.3 middle.class.famili   -5.24     human.right.body    5.32 partial.birth.abortion    4.86
-6         personal.information   -5.03        western.energy.crisi    6.27         change.rule   -5.15        human.cloning    5.09             ga.natural    4.56
-215
-                     term loading                         term loading                    term loading                 term loading                    term loading               term loading
-1 land.water.conservation    7.51       regional.training.cent    17.1 gifted.talented.student   16.07            wild.bird    8.73       united.nation.oil    5.83 america.blood.cent    7.79
-2 water.conservation.fund    6.99         american.force.radio    8.79  gross.national.product    6.01       deep.sea.coral    7.16 tongass.national.forest    5.77         child.left   -5.75
-3    social.security.card    5.72              cord.blood.stem    5.37            cost.tax.cut    5.39       southeast.texa    6.32         nation.oil.food    5.23  abu.ghraib.prison   -5.66
-4            clean.energy    4.86               blood.stem.cel    5.36       abu.ghraib.prison   -5.24       mount.st.helen    5.63  private.account.social    4.79     voting.machine   -5.34
-5           bil.fal.short    4.81 fifth.congressional.district    5.25            gain.tax.cut    5.08 social.security.card    5.46           bil.fal.short    4.57     care.education   -5.12
-6              natural.ga    4.59               care.education   -5.16   record.budget.deficit    5.06   health.care.budget    5.23      winning.war.terror    4.56  education.program   -4.87
-                        term loading                     term loading                        term loading                 term loading                       term loading
-1           winning.war.iraq   16.86      near.retirement.age   21.15 defense.intelligence.agency    7.39 ready.mixed.concrete    18.3           using.adult.stem    5.25
-2 explosive.device.detonated    6.03         driver.education   20.56      weapon.grade.plutonium    5.75       republic.cypru    7.18 malpractice.insurance.rate    5.15
-3                  earth.day    5.67     national.ad.campaign    7.67             enemy.combatant    5.44 caliber.sniper.rifle     7.1             blood.stem.cel    5.02
-4   senate.committe.business    5.48 commonly.prescribed.drug    7.52      justice.priscilla.owen    5.16 western.energy.crisi    6.07            cord.blood.stem     4.9
-5       social.security.card    5.39             able.buy.gun    7.26           hearing.scheduled    4.74           gun.safety    5.95     weapon.grade.plutonium    4.88
-6     justice.priscilla.owen    4.83     columbia.river.gorge     6.9                 farm.bureau   -4.66         sniper.rifle    5.95          hurricane.katrina   -4.67
-                    term loading                  term loading                     term loading                            term loading
-1   social.security.card    6.62         bunker.buster    7.41  gifted.talented.student   17.51 corporation.public.broadcasting    7.08
-2      abu.ghraib.prison   -4.94 nuclear.bunker.buster     7.2     clean.drinking.water    5.98                repeal.death.tax    6.66
-3 private.account.social    4.55  western.energy.crisi    7.14  national.security.issue   -5.61                   bunker.buster    6.54
-4         budget.deficit   -4.35  caliber.sniper.rifle    6.55          immigration.law   -5.37             public.broadcasting     6.4
-5         gasoline.price   -4.34         voting.system    6.55 senate.committe.business    5.27               public.television    6.37
-6         minority.right   -4.34    credit.card.issuer    5.89        support.boy.scout    5.25          rail.passenger.service    6.19
-220
-                       term loading                       term loading                         term loading                       term loading                               term loading
-1          send.job.oversea    6.05             republic.cypru    8.24   national.heritage.corridor    7.59             patient.safety    5.41 committe.business.entrepreneurship    8.63
-2           timber.industry    5.69                  wild.bird    7.31     national.flood.insurance    6.72           trillion.tax.cut    5.23         dropout.prevention.program    7.66
-3         education.program   -5.49       caliber.sniper.rifle    6.99       asian.pacific.islander    6.26      people.living.poverty    5.15           temporary.worker.program    6.34
-4             bless.america    5.48               sniper.rifle    6.35 national.homeownership.month    5.94            budget.surpluse    4.62              nuclear.bunker.buster    6.31
-5 defense.appropriation.bil   -5.38   senate.committe.business    6.12        county.north.carolina     5.9             driver.license   -4.58                      bunker.buster    6.22
-6              student.loan   -5.24 dropout.prevention.program    6.09           urge.swift.passage    5.84 feder.emergency.management   -4.53               minority.women.owned    6.15
-                        term loading                   term loading                     term loading                          term loading                               term loading
-1           human.right.body    7.09        timber.industry    7.22        hearing.scheduled    7.38       gifted.talented.student   18.84               western.energy.crisi   14.96
-2 malpractice.insurance.rate    6.36       using.adult.stem    5.53             base.closing    6.47         bankruptcy.reform.act    5.92 committe.business.entrepreneurship   10.36
-3    american.heritage.month    5.42         driver.license   -5.52 terrorism.risk.insurance    6.17      terrorism.risk.insurance    5.87              bankruptcy.reform.act    8.78
-4               unborn.child    5.35 weapon.grade.plutonium    5.35         outing.cia.agent    6.11               immigration.law   -5.57           senate.committe.business    8.77
-5        student.aid.program    5.29        immigration.law   -5.32                east.texa    5.89                     busy.week    5.43                     mount.st.helen    7.88
-6               umbilic.cord    5.26          illegal.alien   -5.16   protect.minority.right    5.88 marriage.protection.amendment    5.39                        timber.sale     7.7
-                          term loading                   term loading                        term loading                         term loading                               term loading
-1            hearing.scheduled    6.71   western.energy.crisi   13.01           ayman.al.zawahiri    5.98      gifted.talented.student   19.47                      bunker.buster     6.6
-2 congressional.hispanic.caucu    6.01          bunker.buster    8.18              madison.county    5.89       gross.national.product    6.65          project.safe.neighborhood    6.52
-3      land.water.conservation    5.77  nuclear.bunker.buster    7.72 defense.intelligence.agency     5.6                 cost.tax.cut    6.26           temporary.worker.program    5.44
-4             time.white.house    5.53   caliber.sniper.rifle    6.83  feder.emergency.management   -5.48       protect.minority.right    6.08                          east.texa    5.22
-5       weapon.grade.plutonium    5.36          voting.system     6.8       victim.identity.theft    5.21 assistant.secretary.commerce    5.69                  ayman.al.zawahiri    5.13
-6                  arm.embargo    5.16 asian.pacific.islander    6.29   president.judicial.nomine    4.94        bankruptcy.reform.act    5.63 committe.business.entrepreneurship    4.92
-                      term loading                   term loading                          term loading                      term loading                            term loading
-1         driver.education   21.47            arm.embargo    6.39              winning.war.iraq    8.65   land.water.conservation    8.11          rail.passenger.service    8.17
-2      near.retirement.age   14.86 feder.trade.commission    5.46                deep.sea.coral    6.92    protect.minority.right    6.98                   bunker.buster    7.29
-3             able.buy.gun    7.65            feder.trade     5.4 financial.accounting.standard    5.78   water.conservation.fund    6.64 corporation.public.broadcasting    6.51
-4     columbia.river.gorge    7.62          price.gouging    5.08        surplu.social.security     5.3             bil.fal.short    5.94             public.broadcasting    5.79
-5     national.ad.campaign    7.62  low.income.individual    4.74              outing.cia.agent    5.22 president.judicial.nomine    5.12               education.program   -5.54
-6 commonly.prescribed.drug    7.53        timber.industry     4.5               nation.oil.food    5.16                natural.ga    4.81               home.heating.fuel    5.39
-225
-                                term loading                         term loading                         term loading                term loading                 term loading
-1           senate.committe.business    7.39 congressional.hispanic.caucu   10.14             driver.education    14.7    winning.war.iraq    8.48      clean.water.act   -5.49
-2         explosive.device.detonated    6.34         clinic.social.worker    8.54                 able.buy.gun     7.6 near.retirement.age    8.48    education.program   -5.38
-3      financial.accounting.standard    6.27           credit.card.issuer    7.22         national.ad.campaign    7.47      deep.sea.coral    8.05        bless.america    5.25
-4             united.airline.employe    5.85                    earth.day    7.21     commonly.prescribed.drug    7.43      southeast.texa    6.98        child.support   -5.04
-5 committe.business.entrepreneurship    5.42             time.white.house    6.48         columbia.river.gorge    6.94   feder.air.marshal    5.74 central.american.fre    4.95
-6                          earth.day    5.21           deputy.chief.staff    5.84 national.homeownership.month    6.29  flag.draped.coffin    5.67      timber.industry    4.92
-                     term loading                   term loading                     term loading                        term loading                         term loading
-1 water.conservation.fund    7.52         mount.st.helen    6.79       flag.draped.coffin     7.9 defense.intelligence.agency    9.36             little.rock.nine    6.28
-2 land.water.conservation    7.27            plan.reform    6.58   racial.ethnic.minoriti    7.42           support.boy.scout    6.22        amnesty.illegal.alien    6.01
-3  protect.minority.right    6.68    million.job.created    6.17 permanent.resident.statu    6.59              madison.county    5.76         guest.worker.program     5.9
-4          oil.natural.ga     5.9 weapon.grade.plutonium    5.99       urge.swift.passage    6.58             clean.water.act   -5.71 congressional.hispanic.caucu    5.61
-5      right.life.liberty    5.16        clean.water.act   -5.66   supreme.court.rejected     6.1           ayman.al.zawahiri    5.64          victim.gun.violence     5.5
-6    valid.driver.license    5.13      pay.national.debt     5.5           madison.county    6.03                 iraqi.women    5.45            feder.air.marshal    5.39
-                    term loading                         term loading                   term loading                        term loading                       term loading
-1  middle.class.american    5.85            senate.energy.bil    7.22     nunn.lugar.program    8.27 defense.intelligence.agency    8.33      social.security.crisi    5.66
-2     provisional.ballot    5.49     senate.committe.business    6.46 rail.passenger.service     7.9  dropout.prevention.program    8.13            clean.water.act   -5.01
-3        oil.ga.industri    5.11                     anti.gun    6.12          bunker.buster    6.64        minority.women.owned    7.32       plan.social.security    5.01
-4     urge.swift.passage    4.95       racial.ethnic.minoriti    6.08       repeal.death.tax     6.6                  green.card    6.44          tax.cut.permanent    4.92
-5 arctic.wildlife.refuge    4.95            education.program   -5.78      home.heating.fuel     6.6               bunker.buster    6.36    protect.social.security     4.9
-6      senate.energy.bil    4.87 assistant.secretary.commerce    5.63      public.television    6.03        guest.worker.program    6.31 committe.government.reform    4.85
-                  term loading                     term loading                         term loading               term loading                         term loading                   term
-1        bunker.buster    7.63   weapon.grade.plutonium    6.91   explosive.device.detonated    6.21 safety.net.program    7.49   malpractice.insurance.rate    6.26 weapon.grade.plutonium
-2 mission.accomplished    6.17   justice.priscilla.owen    5.68 assistant.secretary.commerce    6.07        arm.embargo    6.01        children.live.poverty    6.02        timber.industry
-3   nunn.lugar.program    6.15 terrorism.risk.insurance    5.68       protect.minority.right    6.06     un.peacekeeper    4.66             human.right.body    6.01         national.guard
-4          iraqi.women    6.06 domestic.violence.sexual    5.54       gross.national.product    5.94      price.gouging    4.53                 human.embryo    5.76         driver.license
-5    tax.break.compani    5.69   protect.minority.right    5.43           tax.relief.package    5.69      war.terrorism   -4.21         third.quarter.profit    5.22      pledge.allegiance
-6    ayman.al.zawahiri    5.62  violence.sexual.assault     5.3               driver.license   -5.37  education.program   -4.19 congressional.hispanic.caucu    5.16            farm.bureau
-  loading                 term loading                       term loading                 term loading                   term loading
-1    6.57       patient.safety    6.04                  wild.bird    9.46          iraqi.women    8.06       little.rock.nine    7.27
-2    6.24 white.house.official    5.78             republic.cypru    8.55        bunker.buster    7.76 asian.pacific.american     6.2
-3   -5.76      clean.water.act   -4.72       caliber.sniper.rifle    7.56   credit.card.issuer    7.67    million.job.created    6.11
-4   -5.62    senate.energy.bil    4.59   senate.committe.business    7.35 western.energy.crisi    7.56            iraqi.women    6.06
-5   -5.29       driver.license   -4.58 dropout.prevention.program     6.8   nunn.lugar.program     7.3     urge.swift.passage    6.01
-6   -5.25      budget.surpluse    4.53             mount.st.helen    6.32 caliber.sniper.rifle    7.23 asian.pacific.islander    5.82
-35
-                      term loading                    term loading                 term loading                        term loading                          term loading
-1    children.live.poverty   -7.32        driver.education   15.27     produce.stem.cel    6.59        minority.women.owned    9.75                republic.cypru    7.92
-2     columbia.river.gorge    5.54    ready.mixed.concrete   11.26 world.poorest.people    4.97               invasion.iraq    8.64             near.earth.object    6.37
-3 permanent.resident.statu    5.39     near.retirement.age   11.26 pluripotent.stem.cel    4.94 consumer.federation.america    7.61 marriage.protection.amendment   -5.51
-4             base.closing    -5.1  regional.training.cent   11.26 buy.american.product    4.85   flag.protection.amendment    7.54  national.homeownership.month     5.5
-5   racial.ethnic.minoriti   -4.89       low.cost.reliable    8.47    low.income.people   -4.84                   gun.lobby    6.59 financial.accounting.standard    5.48
-6 senate.committe.business   -4.83 gifted.talented.student    8.31   retirement.account   -4.78          assault.weapon.ban    6.52               medic.leave.act   -5.18
-310
-                     term loading                        term loading                            term loading                   term loading                  term loading
-1        driver.education   19.06 defense.intelligence.agency   10.52        armored.cavalry.regiment    6.59     america.blood.cent    7.35    ga.price.reduction   16.59
-2    ready.mixed.concrete    9.56              republic.cypru    8.67           united.postal.service    6.19             child.left   -5.37        grand.ole.opry   16.51
-3     near.retirement.age    8.62                     buy.gun    5.58             public.broadcasting    5.99        timber.industry    5.14     suppli.natural.ga    7.92
-4  regional.training.cent    8.62      weapon.grade.plutonium    5.56                    sniper.rifle    5.97               war.iraq   -5.12     low.cost.reliable    7.57
-5 gifted.talented.student    7.84        plan.social.security    5.46            caliber.sniper.rifle    5.97 dependence.foreign.oil   -5.06 palestinian.authority    5.87
-6               wild.bird    7.36                   bush.plan    5.34 corporation.public.broadcasting    5.85           fuel.economy   -5.05        natural.ga.oil     5.6
-                     term loading                         term loading                        term loading                    term loading                          term loading
-1    plan.social.security    6.19               republic.cypru    8.53  national.heritage.corridor    7.44          grand.ole.opry   17.96       gifted.talented.student   -8.65
-2 benefit.social.security    6.14         guest.worker.program    6.22          america.blood.cent    6.83      ga.price.reduction    17.7                     earth.day    7.29
-3    white.house.official    5.06 national.homeownership.month    5.76         public.broadcasting    6.48 gifted.talented.student    9.65             arm.embargo.china    7.07
-4  private.account.social    5.01    million.illegal.immigrant    5.51           near.earth.object    5.73      nunn.lugar.program    6.62 marriage.protection.amendment    7.04
-5  dependence.foreign.oil   -4.93           urge.swift.passage    5.46 medic.malpractice.insurance     5.7               busy.week    5.91        integrated.oil.compani    6.56
-6 social.security.private    4.92           america.blood.cent    5.23              forest.service    5.69     term.care.insurance     5.9              middle.class.tax    6.28
-315
-                        term loading                          term loading                    term loading                       term loading                        term loading
-1           driver.education      20   medic.malpractice.insurance    7.04 gifted.talented.student   16.68            safety.belt.law    6.69           support.boy.scout    6.43
-2        near.retirement.age   11.61             support.boy.scout     6.8         nation.oil.food    6.92   domestic.violence.sexual    5.93 defense.intelligence.agency    5.96
-3     regional.training.cent   11.61         county.north.carolina    6.65           voting.system    6.12         nunn.lugar.program    5.85                 iraqi.women    5.88
-4            global.gag.rule    7.51 malpractice.insurance.premium    6.26    guest.worker.program   -5.34 explosive.device.detonated    5.43                    iwo.jima    5.41
-5 explosive.device.detonated    6.89            oil.ga.exploration    6.01            cel.stem.cel    5.34    violence.sexual.assault    5.41      weapon.grade.plutonium    5.35
-6           pacific.islander    5.89       flood.insurance.program    5.97               busy.week    5.21      passenger.rail.system     5.2                   cash.flow    5.24
-                   term loading                 term loading                      term loading                    term loading                       term loading                    term
-1    america.blood.cent    6.84 ready.mixed.concrete      16          human.right.body    7.54               east.texa    6.33               unborn.child    6.59               equal.pay
-2         bless.america     5.5 western.energy.crisi   12.17        export.import.bank    7.16 benefit.social.security    5.97             blood.stem.cel    6.55 land.water.conservation
-3 million.illegal.alien    5.18         able.buy.gun   12.17 flag.protection.amendment     6.8          tuskege.airmen    5.23            cord.blood.stem     6.5 water.conservation.fund
-4         clean.air.act   -4.89 american.force.radio    8.36      united.nation.reform    6.79        student.loan.cut    5.18            embryo.stem.cel    6.49  protect.minority.right
-5  central.american.fre    4.88 caliber.sniper.rifle     7.1            un.peacekeeper    6.74    social.security.card    5.18               umbilic.cord    6.36         cost.natural.ga
-6    american.fre.trade    4.78           gun.safety    6.53             export.import    6.44        universal.health    5.11 malpractice.insurance.rate    6.28   palestinian.authority
-  loading                   term loading                 term loading                       term loading                       term loading
-1    9.77              earth.day    8.07      nation.oil.food   13.55    gifted.talented.student   17.81       minority.women.owned    7.09
-2    7.99      arm.embargo.china    7.05    united.nation.oil    8.77 explosive.device.detonated    7.57 dropout.prevention.program    6.27
-3    7.25   minority.women.owned    6.28 minority.women.owned    6.25                  tax.haven    7.34             patient.safety    6.21
-4    6.18     nunn.lugar.program    -6.1     universal.health    6.24     rail.passenger.service    7.29         raise.minimum.wage    5.64
-5    5.63     sneak.peek.searche    5.74       white.care.act    6.18       sole.source.contract    6.86             voting.machine   -5.53
-6    5.47 arctic.wildlife.refuge    5.48      ryan.white.care    6.08             warren.buffett    6.57          tax.break.compani    5.37
-320
-                       term loading                       term loading                          term loading                   term loading                       term loading
-1     palestinian.authority    6.39 committe.government.reform    5.66            america.blood.cent    7.03 rail.passenger.service   10.16             tuskege.airmen    6.71
-2 liberty.pursuit.happiness    6.21          cut.child.support    5.32       flood.insurance.program    6.27              tax.haven     7.9 committe.government.reform     6.3
-3      life.liberty.pursuit    6.21           student.loan.cut    5.31                   timber.sale    6.15     nunn.lugar.program    7.85      united.postal.service    6.13
-4            oil.natural.ga     6.2           universal.health     5.3      national.flood.insurance    5.94      public.television    7.44      amnesty.illegal.alien     5.3
-5                ethic.rule    6.13      people.living.poverty    5.25   medic.malpractice.insurance    5.75      tax.break.compani    6.81                un.official    5.25
-6   land.water.conservation    5.51              health.saving    5.24 malpractice.insurance.premium    5.64    public.broadcasting     6.5             postal.service    5.12
-                term loading                       term loading                    term loading                       term loading                   term loading                       term
-1 america.blood.cent   10.53            global.gag.rule    7.53         sexual.predator    6.81    gifted.talented.student   17.32       driver.education   18.91    gifted.talented.student
-2  education.program   -5.89            safety.belt.law    6.74            parent.right    5.83               cost.tax.cut    6.72    near.retirement.age    11.8            nation.oil.food
-3    cord.blood.stem    5.82 explosive.device.detonated    6.28      sneak.peek.searche    5.48     gross.national.product    6.13              wild.bird    7.29          united.nation.oil
-4     blood.stem.cel    5.58  project.safe.neighborhood    5.89           boy.girl.club    5.28      record.budget.deficit    5.95         deep.sea.coral    6.67      palestinian.authority
-5      child.support   -5.54  american.pacific.islander     5.6 violence.sexual.assault    5.21 explosive.device.detonated    5.86 rail.passenger.service    6.25               urge.support
-6       voting.right   -5.53     asian.american.pacific    5.53    minority.women.owned    5.17             driver.license   -5.64       pacific.islander    6.17 medicare.prescription.drug
-  loading                     term loading                          term loading                      term loading                        term loading                   term loading
-1   16.87            boy.girl.club    7.08 marriage.protection.amendment   10.03           nation.oil.food   20.09 defense.intelligence.agency    8.44     umbilic.cord.blood    6.83
-2   11.03       nunn.lugar.program    6.46             arm.embargo.china    8.29         united.nation.oil   12.09      weapon.grade.plutonium    6.61        cord.blood.stem    6.49
-3    6.43 domestic.violence.sexual    6.44                     earth.day    7.22 liberty.pursuit.happiness    8.11        credit.card.industry    5.85         blood.stem.cel    6.45
-4    5.41  violence.sexual.assault    6.37                 arctic.refuge    6.65      life.liberty.pursuit    8.11             enemy.combatant    5.77         adult.stem.cel    6.11
-5   -5.17 permanent.resident.statu    6.37          minority.women.owned    6.39      minority.women.owned    6.73           ayman.al.zawahiri     5.6             adult.stem    6.09
-6   -5.04   justice.priscilla.owen    5.82          training.health.care    6.15          universal.health    6.67              madison.county     5.4 weapon.grade.plutonium    5.71
-                    term loading                        term loading                 term loading               term loading
-1 regional.training.cent   11.58        minority.women.owned    7.06 ready.mixed.concrete   13.35   student.loan.cut    9.34
-2   national.ad.campaign    7.88  dropout.prevention.program    6.06 caliber.sniper.rifle    9.18   human.right.body    8.82
-3       little.rock.nine       7 defense.intelligence.agency    5.83 western.energy.crisi    7.76 sneak.peek.searche    8.58
-4        cord.blood.stem    6.67            minimum.wage.job    5.64   credit.card.issuer    7.67 assault.weapon.ban    8.51
-5         blood.stem.cel    6.66        credit.card.industry    5.51     pacific.islander    6.96          gun.lobby    8.28
-6       human.right.body    6.59   liberty.pursuit.happiness    5.28           gun.safety    6.81     assault.weapon    8.07
-325
-                     term loading                       term loading                term loading                   term loading                   term loading                        term
-1 gifted.talented.student   21.23     regional.training.cent    9.97       bless.america    7.34 racial.ethnic.minoriti   10.28       driver.education   19.31          sneak.peek.searche
-2            cost.tax.cut    7.28       national.ad.campaign    8.29  america.blood.cent    6.42     voter.registration    6.33    near.retirement.age   14.64            human.right.body
-3  gross.national.product     7.2       third.quarter.profit    6.59    send.job.oversea    5.96           parent.right    6.28 united.airline.employe   10.16            student.loan.cut
-4         massive.tax.cut    6.02               unborn.child    6.28 consumer.protection   -5.49        sexual.predator    6.14              wild.bird    7.53          assault.weapon.ban
-5   low.income.individual    5.93 malpractice.insurance.rate    6.17   god.bless.america     5.3 personal.injury.lawyer    5.76         southeast.texa    6.71 community.oriented.policing
-6   record.budget.deficit    5.88           human.right.body    5.97         moral.value    5.26  amnesty.illegal.alien    5.42         deep.sea.coral    6.66               birth.control
-  loading                         term loading                   term loading                    term loading                 term loading                         term loading
-1    9.15              safety.belt.law       7            exxon.mobil    6.71      confer.civil.right    7.37   credit.card.issuer   10.89             little.rock.nine    7.48
-2     7.2             little.rock.nine    6.88 weapon.grade.plutonium    6.43 leadership.confer.civil    7.37          iraqi.women    7.82 congressional.hispanic.caucu    6.69
-3    7.18 national.homeownership.month    6.82         adult.stem.cel    5.92          madison.county    6.61 western.energy.crisi    7.78       arctic.wildlife.refuge    6.37
-4    7.12               tuskege.airmen    6.75             adult.stem     5.9  racial.ethnic.minoriti    5.69 caliber.sniper.rifle     7.7     national.flood.insurance    6.22
-5    6.84        amnesty.illegal.alien    5.91        economic.growth   -5.55  personal.injury.lawyer    5.63     pacific.islander    7.46               tax.break.rich    6.02
-6    5.99           urge.swift.passage     5.9     umbilic.cord.blood    5.48   universal.health.care    5.59 third.quarter.profit    7.11     drilling.arctic.national    5.73
-                    term loading                          term loading                          term loading                         term loading                 term loading
-1 united.airline.employe   18.98       gifted.talented.student   21.09 marriage.protection.amendment   12.35  defense.intelligence.agency    7.95 ready.mixed.concrete   14.69
-2 medic.liability.reform    6.13               nation.oil.food    8.61             arm.embargo.china    9.44            tax.break.compani    7.28   credit.card.issuer    9.42
-3     america.blood.cent    6.04          clean.drinking.water     8.4          third.quarter.profit    7.96         guest.worker.program    6.73 caliber.sniper.rifle    8.55
-4            exxon.mobil    6.03         palestinian.authority    6.03                     earth.day    7.61   dropout.prevention.program    6.72         able.buy.gun    8.23
-5 surplu.social.security    5.86 marriage.protection.amendment    5.88            sneak.peek.searche    6.22         minority.women.owned    6.67           gun.safety    7.15
-6  medic.liability.crisi    5.74        funding.veteran.health    5.26          minority.women.owned    5.83 fifth.congressional.district    6.22 western.energy.crisi    7.06
-                            term loading                            term loading                      term loading                       term loading                             term loading
-1                    iraqi.women    6.28          rail.passenger.service   10.48           nation.oil.food   17.34 committe.government.reform    5.96                   patient.safety    6.65
-2                  bunker.buster    6.19               public.television    6.44         united.nation.oil    9.16      social.security.crisi    5.76                        equal.pay    5.84
-3             head.start.teacher    5.31                repeal.death.tax    6.43        right.life.liberty    7.19       social.security.card    5.69 international.labor.organization    5.52
-4   international.peace.security    4.93 corporation.public.broadcasting    6.39 liberty.pursuit.happiness    7.12        consumer.protection   -5.46                 minimum.wage.job    5.27
-5 national.defense.authorization    4.82               home.heating.fuel    6.35      life.liberty.pursuit    7.12     private.account.social    5.39             clean.drinking.water    5.17
-6             sneak.peek.searche    4.43               tax.break.compani    6.23      minority.women.owned    6.19    benefit.social.security    5.31             white.house.official    5.15
-                     term loading                     term loading                          term loading                        term loading
-1               equal.pay    7.78 permanent.resident.statu    7.12     project.safe.neighborhood    5.97      united.airline.employe   14.81
-2   palestinian.authority    7.06        hearing.scheduled    6.93               global.gag.rule    5.94 defense.intelligence.agency    9.34
-3 water.conservation.fund    6.96       confer.civil.right    5.76     american.pacific.islander    5.75         consumer.protection   -5.77
-4 land.water.conservation    6.63  leadership.confer.civil    5.76 financial.accounting.standard    5.73                   cash.flow    5.65
-5           bil.fal.short    6.16           un.peacekeeper    5.46        asian.american.pacific    5.63              madison.county    5.64
-6  protect.minority.right    5.91    passenger.rail.system    5.39             tax.cut.permanent    5.51            bush.white.house    5.61
+Referenced by initialization method, then by # of clustersInitialization Method: 1 # of Topics: 5
+                           term loading                       term loading
+1      commonly.prescribed.drug    6.96           winning.war.iraq   10.51
+2            america.blood.cent    6.08             deep.sea.coral    8.12
+3  national.homeownership.month    5.66       national.ad.campaign    7.47
+4                mount.st.helen    5.49          change.heart.mind    7.12
+5              human.right.body    5.45       columbia.river.gorge    6.66
+6           fifth.circuit.court   -5.27                 hate.crime    5.48
+7                     wild.bird    5.24     hate.crime.legislation    5.43
+8         medic.malpractice.bil    5.07     asian.pacific.islander    5.35
+9            right.life.liberty   -4.59 explosive.device.detonated    5.16
+10         columbia.river.gorge    4.26    violence.sexual.assault   -5.04
+                            term loading                      term loading
+1                      wild.bird   12.53 pacific.american.heritage   -6.61
+2            near.retirement.age   10.71   american.heritage.month   -5.92
+3                   able.buy.gun    8.24            republic.cypru    5.82
+4        violent.sexual.predator    7.21       relief.middle.class   -4.95
+5           buy.american.product    6.79  senate.committe.business    4.91
+6           sole.source.contract    6.64         near.earth.object   -4.51
+7           world.poorest.people    6.35        credit.card.issuer     4.2
+8        gifted.talented.student    6.19      caliber.sniper.rifle   -4.08
+9  financial.accounting.standard    5.45           embryo.stem.cel      -4
+10     pacific.american.heritage   -5.43    asian.pacific.american   -3.66
+                     term loading
+1        driver.education   12.55
+2    ready.mixed.concrete    8.62
+3  regional.training.cent    8.05
+4            cel.stem.cel    6.52
+5          mount.st.helen    6.35
+6  asian.pacific.islander    6.03
+7    pluripotent.stem.cel    5.88
+8    western.energy.crisi    5.66
+9      ga.price.reduction    5.38
+10      low.cost.reliable    5.28
+Initialization Method: 1 # of Topics: 10
+                       term loading                          term loading
+1    regional.training.cent   13.34          western.energy.crisi    9.29
+2              able.buy.gun    8.36               global.gag.rule    8.52
+3      caliber.sniper.rifle    8.15                republic.cypru     7.8
+4  commonly.prescribed.drug    8.05      senate.committe.business    6.62
+5      american.force.radio    7.72 marriage.protection.amendment     6.6
+6            southeast.texa    7.21                mount.st.helen    6.32
+7            gun.safety.law    6.77                 bunker.buster    6.18
+8  remembered.family.friend    6.27          third.quarter.profit    5.91
+9     children.live.poverty     5.8         nuclear.bunker.buster     5.9
+10       assault.weapon.ban    5.69              pacific.islander    5.88
+                             term loading                      term loading
+1              america.blood.cent    6.16      ready.mixed.concrete   10.26
+2       sex.offender.registration    5.91          winning.war.iraq   10.26
+3                  gun.safety.law    5.65          pacific.islander    6.51
+4          asian.pacific.american     5.6 american.pacific.islander    6.36
+5              confer.civil.right     5.4    asian.american.pacific    6.35
+6         leadership.confer.civil     5.4    gross.national.product    5.81
+7                     wage.worker   -5.31    asian.pacific.american    5.81
+8                    college.cost   -5.24           global.gag.rule    5.78
+9            caliber.sniper.rifle    5.24    asian.pacific.islander    5.77
+10 national.defense.authorization   -5.23        credit.card.issuer    5.54
+                           term loading                        term loading
+1       violent.sexual.predator    8.73        national.ad.campaign    8.04
+2                deep.sea.coral    7.18              grand.ole.opry    6.98
+3          sole.source.contract    6.82     gifted.talented.student    6.76
+4                warren.buffett    6.47                   busy.week    6.05
+5                 speaker.table    5.83       children.live.poverty    5.84
+6         county.north.carolina    5.77            indian.art.craft    5.77
+7  national.homeownership.month    5.76 defense.intelligence.agency    5.59
+8        million.budget.request    5.73   liberty.pursuit.happiness   -5.39
+9               timber.industry    5.65        life.liberty.pursuit   -5.39
+10                    tax.haven    5.56       issue.facing.american    5.23
+                      term loading                      term loading
+1  gifted.talented.student     8.3       near.retirement.age   14.81
+2   hate.crime.legislation     7.2         low.cost.reliable   10.71
+3     pluripotent.stem.cel    7.14            grand.ole.opry    7.62
+4             cel.stem.cel    6.75         suppli.natural.ga    7.16
+5           hate.crime.law    6.72      columbia.river.gorge    7.05
+6         spending.cut.bil    6.37    asian.pacific.american    6.89
+7          embryo.stem.cel    6.36        ga.price.reduction    6.84
+8         arab.oil.embargo    6.09 american.pacific.islander    6.33
+9         produce.stem.cel    6.08    asian.american.pacific    6.27
+10       change.heart.mind    5.82        city.san.francisco    6.14
+                            term loading                             term loading
+1           world.poorest.people    7.63                 driver.education   13.94
+2  financial.accounting.standard    7.27                 little.rock.nine    6.38
+3               send.job.oversea    6.07         senate.committe.business    6.24
+4           buy.american.product    5.82        liberty.pursuit.happiness   -5.91
+5          children.live.poverty    5.32             life.liberty.pursuit   -5.91
+6         asian.pacific.american    5.24                   warren.buffett    5.81
+7                   judge.robert   -5.18                    bunker.buster    5.61
+8                     abu.ghraib   -5.11             adequate.health.care    5.58
+9                   court.appeal      -5             world.poorest.people    5.17
+10            america.blood.cent       5 international.labor.organization   -5.12
+Initialization Method: 1 # of Topics: 15
+                       term loading                    term loading
+1  senate.committe.business    7.16        driver.education   13.02
+2     children.live.poverty     6.5    sole.source.contract    7.27
+3         near.earth.object    6.44 violent.sexual.predator    7.18
+4                 equal.pay    6.32               tax.haven    6.18
+5          human.right.body    5.89  rail.passenger.service    6.14
+6    passenger.rail.service    5.76       tax.break.compani    5.94
+7         supply.natural.ga    5.69    death.penalty.system    5.83
+8              base.closing    5.67         ryan.white.care     5.8
+9              parent.right    5.45           bunker.buster    5.71
+10          global.gag.rule    5.45  integrated.oil.compani    5.69
+                       term loading                 term loading                    term
+1            deep.sea.coral    9.83 national.ad.campaign    8.05 gifted.talented.student
+2      american.force.radio    7.44 pluripotent.stem.cel    6.57          gun.safety.law
+3               timber.sale    6.35     produce.stem.cel    6.45           bunker.buster
+4        flag.draped.coffin    6.05            wild.bird     6.1    caliber.sniper.rifle
+5           timber.industry       6         cel.stem.cel    5.91   nuclear.bunker.buster
+6   background.check.system    5.35     little.rock.nine    5.72   children.live.poverty
+7    farm.bureau.federation    5.26     arab.oil.embargo     5.7      export.import.bank
+8  spending.social.security    5.09       public.college   -5.49    western.energy.crisi
+9                 earth.day    4.99      safety.belt.law    5.37       tax.break.wealthy
+10  tongass.national.forest    4.97      embryo.stem.cel    5.33    third.quarter.profit
+   loading                         term loading                       term loading
+1     7.12               mount.st.helen    8.07            global.gag.rule    6.56
+2     6.78         caliber.sniper.rifle    6.81             southeast.texa    6.43
+3     6.42           credit.card.issuer    6.53          feder.air.marshal    6.25
+4     6.32     domestic.violence.sexual    6.19           indian.art.craft    6.05
+5     6.25        county.north.carolina    5.82             grand.ole.opry    5.97
+6     6.09 fifth.congressional.district    5.82              consent.decre    5.93
+7     6.09              global.gag.rule     5.7 explosive.device.detonated    5.89
+8      5.6   dropout.prevention.program    5.69   spending.social.security    5.85
+9     5.56                 sniper.rifle    5.37     gross.national.product    5.69
+10    5.56                type.stem.cel    5.19             camp.pendleton    5.51
+                         term loading                        term loading
+1          ga.price.reduction    6.28                able.buy.gun   16.91
+2             witness.testify    5.92           low.cost.reliable    9.85
+3           hearing.scheduled    5.83              mount.st.helen    8.75
+4  national.heritage.corridor    5.72        western.energy.crisi     7.4
+5                   equal.pay    5.24              grand.ole.opry    7.24
+6    permanent.resident.statu    4.99        death.penalty.system    7.24
+7              warren.buffett    4.82               consent.decre    6.68
+8               consent.decre     4.7          ga.price.reduction    6.64
+9         angele.city.council    4.65 defense.intelligence.agency    6.62
+10     weapon.grade.plutonium    4.64            indian.art.craft    6.46
+                            term loading                      term loading
+1           ready.mixed.concrete   14.35          winning.war.iraq   13.94
+2                 grand.ole.opry    7.28            hate.crime.law     6.8
+3  financial.accounting.standard    6.41         change.heart.mind    6.67
+4             nunn.lugar.program    6.31 flag.protection.amendment    5.77
+5         united.airline.employe    6.11    hate.crime.legislation    5.54
+6        gifted.talented.student    5.98                hate.crime    5.39
+7              support.boy.scout    5.35         pay.national.debt    5.37
+8  malpractice.insurance.premium    5.26         feder.air.marshal    5.31
+9                      earth.day     5.2          spending.cut.bil    5.17
+10                  final.minute    5.08         arm.embargo.china    5.05
+                        term loading                       term loading
+1       guest.worker.program    6.46        near.retirement.age   10.78
+2              bunker.buster    6.03     regional.training.cent   10.78
+3     asian.pacific.islander    5.88   commonly.prescribed.drug    7.64
+4    american.heritage.month    5.82   remembered.family.friend    6.55
+5  pacific.american.heritage    5.59      children.live.poverty    5.84
+6           troop.bring.home    5.57     asian.pacific.islander    5.43
+7       world.poorest.people    5.32           feder.income.tax    5.39
+8             heritage.month    5.31          supply.natural.ga    5.28
+9      county.north.carolina    5.19              bunker.buster    5.12
+10         hearing.scheduled    5.13 dropout.prevention.program    4.95
+                          term loading                         term loading
+1              safety.belt.law    7.84           america.blood.cent    8.13
+2         world.poorest.people    7.65     underground.storage.tank    6.26
+3         caliber.sniper.rifle    7.36           credit.card.issuer    6.25
+4               hate.crime.law     6.9              ryan.white.care     6.1
+5         columbia.river.gorge    6.49                 cel.stem.cel    5.83
+6           america.blood.cent    6.35             human.right.body    5.77
+7               gun.safety.law    6.06       rail.passenger.service    5.55
+8  defense.intelligence.agency    6.04 national.homeownership.month     5.5
+9      water.conservation.fund   -5.82              cord.blood.stem    5.49
+10                sniper.rifle    5.81               blood.stem.cel    5.46
+Initialization Method: 1 # of Topics: 20
+                       term loading                    term loading
+1            southeast.texa    8.86           bunker.buster    7.06
+2         feder.air.marshal    6.44       near.earth.object     6.9
+3  temporary.worker.program    6.01   issue.facing.american    6.73
+4      clinic.social.worker    5.88        outing.cia.agent    6.61
+5             speaker.table    5.56        plan.bring.troop    5.95
+6        natural.ga.natural    5.56      city.san.francisco    5.94
+7            white.care.act    5.49 military.operation.iraq    5.63
+8         suppli.natural.ga    5.48            rail.service   -5.47
+9           ryan.white.care    5.46           speaker.table    5.37
+10           natural.ga.oil    5.42    world.poorest.people    5.34
+                         term loading                         term loading
+1         near.retirement.age   12.03              global.gag.rule    7.79
+2  national.heritage.corridor    7.61   explosive.device.detonated     6.4
+3              republic.cypru    6.77     armored.cavalry.regiment    6.33
+4    senate.committe.business    6.61           urge.swift.passage    6.23
+5      united.airline.employe    6.43            hearing.scheduled     6.1
+6        credit.card.industry    6.09           credit.card.issuer    5.93
+7                   equal.pay    5.85                personal.data    5.81
+8     personal.saving.account    5.67         guest.worker.program    5.66
+9        american.farm.bureau   -5.41    disabled.american.veteran    5.65
+10              personal.data    5.14 assistant.secretary.commerce    5.52
+                           term loading                  term loading
+1   defense.intelligence.agency    8.32  caliber.sniper.rifle    8.58
+2                mount.st.helen    7.18      indian.art.craft    8.17
+3      senate.committe.business    6.69      human.right.body     7.6
+4        asian.pacific.islander    6.49        gun.safety.law    7.51
+5  national.homeownership.month    6.37            gun.safety    7.04
+6              pacific.islander    6.19 children.live.poverty    6.58
+7                 asian.pacific    5.93   victim.gun.violence    5.85
+8               global.gag.rule    5.67    assault.weapon.ban    5.78
+9     american.pacific.islander    5.53          rail.service   -5.75
+10       asian.pacific.american    5.49        offset.tax.cut    5.44
+                      term loading                       term loading
+1   united.airline.employe   11.77   remembered.family.friend    7.12
+2  violent.sexual.predator    7.97             grand.ole.opry    6.32
+3     sole.source.contract    6.87          tax.break.wealthy    5.68
+4            bunker.buster    6.87               rail.service   -5.47
+5   gross.national.product    6.73      judge.alberto.gonzale    5.45
+6                tax.haven    6.38   temporary.worker.program    5.08
+7   rail.passenger.service    6.14  abused.neglected.children    4.96
+8     democrat.white.house    6.01                  equal.pay    4.95
+9   integrated.oil.compani    5.86 explosive.device.detonated    4.95
+10     victim.gun.violence    5.85           katrina.survivor    4.89
+                            term loading                          term loading
+1                      wild.bird    8.19             low.cost.reliable    9.38
+2          county.north.carolina    6.48            ga.price.reduction    8.71
+3                 southeast.texa    5.95          world.poorest.people    8.51
+4                    timber.sale    5.95                grand.ole.opry    7.94
+5         passenger.rail.service    5.79          buy.american.product    7.03
+6    medic.malpractice.insurance    5.47 financial.accounting.standard    6.77
+7          universal.health.care     5.2             suppli.natural.ga    6.54
+8                 white.care.act    5.18                 consent.decre    6.24
+9         racial.ethnic.minoriti    5.06         children.live.poverty    5.98
+10 malpractice.insurance.premium    5.04          credit.card.industry    5.88
+                       term loading                         term loading
+1             bunker.buster    8.52         western.energy.crisi    8.24
+2            gun.safety.law    8.16               mount.st.helen    7.91
+3     nuclear.bunker.buster    7.99       asian.pacific.islander    7.12
+4      caliber.sniper.rifle    7.97            change.heart.mind     6.7
+5      western.energy.crisi    7.71 national.homeownership.month    6.67
+6  commonly.prescribed.drug    7.36         columbia.river.gorge    6.53
+7    asian.pacific.islander    6.88             pacific.islander    6.31
+8                gun.safety    6.61                    earth.day    6.04
+9        city.san.francisco    6.28       medic.liability.reform       6
+10  national.passenger.rail    6.25    medic.liability.insurance    5.84
+                      term loading                          term loading
+1     national.ad.campaign    8.97          columbia.river.gorge    8.79
+2     pluripotent.stem.cel    7.53            ga.price.reduction    8.44
+3         arab.oil.embargo    7.17                madison.county     6.2
+4         produce.stem.cel    6.65 judicial.confirmation.process    6.14
+5             cel.stem.cel    6.11      remembered.family.friend     5.6
+6          embryo.stem.cel    6.03               budget.surpluse    5.53
+7                earth.day    5.66      social.security.shortfal     5.5
+8    children.live.poverty   -5.59                blood.stem.cel    5.49
+9       deputy.chief.staff    5.54               massive.tax.cut    5.46
+10 military.operation.iraq    5.51                  fund.tax.cut    5.44
+                            term loading                           term loading
+1        gifted.talented.student    7.99          children.live.poverty   10.31
+2                safety.belt.law    6.33                      equal.pay    7.96
+3                 offset.tax.cut    6.16                global.gag.rule    7.86
+4      project.safe.neighborhood       6                      earth.day    7.09
+5               indian.art.craft       6              hearing.scheduled    6.79
+6                   rail.service   -5.79             export.import.bank    5.74
+7  judicial.confirmation.process    5.46         weapon.grade.plutonium    5.37
+8               little.rock.nine     5.4                    arm.embargo    5.22
+9             export.import.bank    5.29              boy.scout.america    5.22
+10      permanent.resident.statu    5.23 national.defense.authorization    5.21
+                          term loading                    term loading
+1            low.cost.reliable    9.22          deep.sea.coral   16.03
+2               republic.cypru    8.66        driver.education    15.2
+3             little.rock.nine    7.39  regional.training.cent   12.33
+4  defense.intelligence.agency    7.38            able.buy.gun   12.16
+5                bunker.buster    6.74          grand.ole.opry    6.75
+6     permanent.resident.statu    6.59              gun.safety    6.46
+7        nuclear.bunker.buster     6.5 gifted.talented.student    6.21
+8         credit.card.industry    6.18                 buy.gun     6.2
+9   national.heritage.corridor    5.72      flag.draped.coffin       6
+10    underground.storage.tank    5.61         global.gag.rule    5.95
+                     term loading                       term loading
+1    american.force.radio    6.81           winning.war.iraq   11.56
+2      america.blood.cent    6.03         nunn.lugar.program    6.58
+3   county.north.carolina    5.36     asian.pacific.american     6.5
+4        outing.cia.agent    5.34              asian.pacific    6.43
+5   passenger.rail.system    5.16           human.right.body    6.09
+6     growth.job.creation    5.13  pacific.american.heritage    5.88
+7  national.guard.reserve   -4.88           little.rock.nine    5.62
+8    clean.drinking.water    4.84     asian.pacific.islander    5.47
+9      reverse.robin.hood     4.8            embryo.stem.cel    5.38
+10       human.right.body    4.74 african.american.community    5.35
+Initialization Method: 1 # of Topics: 25
+                        term loading                      term loading
+1       columbia.river.gorge    8.54    asian.pacific.american    6.74
+2           pacific.islander    7.99    asian.pacific.islander    6.36
+3     asian.pacific.islander    7.91             asian.pacific    6.13
+4             mount.st.helen    7.81            republic.cypru    6.08
+5              bunker.buster    7.78          pacific.islander    6.06
+6         credit.card.issuer    7.59    medic.liability.reform    5.69
+7     asian.pacific.american    7.33     medic.liability.crisi    5.23
+8              asian.pacific    7.03   american.heritage.month    5.16
+9  american.pacific.islander    6.76 pacific.american.heritage    5.12
+10    asian.american.pacific    6.66  commonly.prescribed.drug    5.06
+                                 term loading                     term loading
+1                      republic.cypru     7.8     national.ad.campaign   23.08
+2            senate.committe.business    7.11                wild.bird     8.7
+3                  urge.swift.passage    7.03     caliber.sniper.rifle    8.08
+4         defense.intelligence.agency    6.86               gun.safety    7.51
+5          national.heritage.corridor     6.7           gun.safety.law    6.92
+6              asian.pacific.american    6.45 remembered.family.friend     6.8
+7  committe.business.entrepreneurship    5.93             drug.compani   -5.99
+8                       asian.pacific    5.85                earth.day    5.79
+9       financial.accounting.standard    5.71     terrorist.watch.list    5.77
+10          american.pacific.islander    5.68                tax.haven    5.77
+                        term loading                        term loading
+1                  earth.day    7.02        guest.worker.program    6.91
+2                  busy.week    6.17 defense.intelligence.agency    6.34
+3      child.support.program    5.75   million.illegal.immigrant    6.33
+4             madison.county    5.53     enforce.immigration.law    5.82
+5  president.judicial.nomine    5.45          people.health.care   -5.78
+6      palestinian.authority    5.44               bunker.buster     5.6
+7             grand.ole.opry    5.21  dropout.prevention.program    5.55
+8     passenger.rail.service    5.18        credit.card.industry    5.45
+9            budget.surpluse    5.12                 un.official    5.39
+10              human.embryo    5.09   flag.protection.amendment    5.37
+                         term loading                         term loading
+1             safety.belt.law    6.41 national.homeownership.month    8.01
+2  dropout.prevention.program    5.92     armored.cavalry.regiment    6.68
+3                fund.tax.cut    5.75      minority.owned.business    6.23
+4   project.safe.neighborhood    5.72      water.conservation.fund    5.52
+5        credit.card.industry    5.46           export.import.bank    5.44
+6                     buy.gun    5.44             iraq.weapon.mass    5.27
+7   president.judicial.nomine    5.29      land.water.conservation    5.25
+8                cost.tax.cut    5.25              ten.commandment    5.12
+9  national.rifle.association    5.05                money.tax.cut    4.78
+10        secretary.air.force    5.04    flag.protection.amendment    4.73
+                           term loading                   term loading
+1                 speaker.table    5.72 asian.pacific.american    6.82
+2               safety.belt.law    5.71         gun.safety.law    6.73
+3         issue.facing.american    5.71       pacific.islander    6.72
+4                     cash.flow    5.44 asian.pacific.islander    6.67
+5     sex.offender.registration     5.3       human.right.body     6.6
+6  fifth.congressional.district    5.15  passenger.rail.system    6.48
+7            winning.war.terror     5.1             gun.safety    6.47
+8           angele.city.council    5.09 passenger.rail.service    6.28
+9            sneak.peek.searche    5.07          asian.pacific    6.23
+10         guest.worker.program    4.99     reverse.robin.hood    6.23
+                      term loading                      term loading
+1     american.force.radio    7.06  commonly.prescribed.drug    8.65
+2  gifted.talented.student    6.82    million.budget.request    7.22
+3       export.import.bank    6.71        umbilic.cord.blood    6.31
+4        arm.embargo.china    6.14        professional.sport    6.05
+5           offset.tax.cut    6.08     medic.liability.crisi    5.83
+6         spending.cut.bil    5.97     chief.naval.operation    5.81
+7   farm.bureau.federation    5.92             speaker.table    5.78
+8        change.heart.mind    5.64       low.income.children   -5.65
+9           hate.crime.law    5.63 flag.protection.amendment    5.49
+10               equal.pay    5.22          outing.cia.agent    5.48
+                      term loading                            term loading
+1     terrorist.watch.list    6.23                driver.education   18.39
+2             college.cost    5.93         violent.sexual.predator    9.67
+3    palestinian.authority    5.72            sole.source.contract    7.88
+4           madison.county    5.66              ga.price.reduction    6.94
+5            speaker.table    5.58                       tax.haven    6.55
+6   million.budget.request    5.52                   bunker.buster    6.44
+7              timber.sale    5.34          rail.passenger.service    6.24
+8  personal.saving.account     5.1               public.television    5.99
+9      victim.gun.violence    4.96 corporation.public.broadcasting    5.86
+10       public.television    4.94                  madison.county    5.74
+                           term loading                 term loading
+1               global.gag.rule    7.94   america.blood.cent    7.19
+2  national.homeownership.month    7.52     indian.art.craft    6.65
+3              human.right.body    6.81        bunker.buster    6.16
+4            credit.card.issuer     6.7   export.import.bank    5.96
+5            nunn.lugar.program    6.56 caliber.sniper.rifle    5.95
+6      armored.cavalry.regiment    6.33     middle.class.tax    5.85
+7                 voting.system     6.1   head.start.teacher     5.7
+8    explosive.device.detonated    6.05    suppli.natural.ga     5.7
+9              pacific.islander    5.71    major.oil.compani    5.68
+10                   green.card    5.64           green.card    5.59
+                        term loading                      term loading
+1         america.blood.cent    7.26         hearing.scheduled    7.29
+2      issue.facing.american     6.6             personal.data    6.46
+3     united.airline.employe    6.56    protect.minority.right    6.35
+4           outing.cia.agent    6.54               chief.judge    6.33
+5            timber.industry    6.52  domestic.violence.sexual    6.21
+6                timber.sale    6.41  permanent.resident.statu    5.77
+7                exxon.mobil    5.82        confer.civil.right     5.7
+8  flag.protection.amendment    5.61   leadership.confer.civil     5.7
+9                  equal.pay    5.55 president.judicial.nomine    5.69
+10   tongass.national.forest    5.49      guest.worker.program    5.66
+                       term loading                   term loading                 term
+1      buy.american.product    7.78   pluripotent.stem.cel    6.91       mount.st.helen
+2      world.poorest.people    7.76    percent.growth.rate    6.53   ga.price.reduction
+3          send.job.oversea    5.94       produce.stem.cel    6.44    low.cost.reliable
+4  permanent.resident.statu     5.8       arab.oil.embargo    6.39    suppli.natural.ga
+5        america.blood.cent    5.61           cel.stem.cel    6.31       grand.ole.opry
+6                 east.texa     5.6     umbilic.cord.blood    5.71   people.health.care
+7           abortion.clinic    5.26 united.airline.employe    5.66 guest.worker.program
+8                   bil.cut   -5.09           unborn.child     5.6    supply.natural.ga
+9                  anti.gun    5.06       using.adult.stem    5.52 clinic.social.worker
+10           climate.change   -4.98          type.stem.cel    5.38  rising.energy.price
+   loading                    term loading                   term loading
+1     7.09            able.buy.gun   20.13 regional.training.cent   10.56
+2     7.08    ready.mixed.concrete    8.53       little.rock.nine    7.01
+3     6.64                 buy.gun    7.49         grand.ole.opry    6.26
+4     6.58        spending.cut.bil    6.64          bunker.buster    5.91
+5     6.32              gun.safety    6.24              busy.week    5.86
+6    -6.22  asian.pacific.american    6.05        clean.water.act   -5.34
+7     6.08       arm.embargo.china     5.8        security.reform   -5.32
+8     5.68 background.check.system    5.65           cel.stem.cel    5.29
+9     5.67        katrina.survivor    5.61          type.stem.cel    5.28
+10    5.63          assault.weapon    5.46        coalition.force    5.13
+                     term loading                      term loading
+1          southeast.texa    9.24    asian.pacific.islander    7.75
+2        spending.cut.bil    6.57          pacific.islander    7.56
+3  gross.national.product    6.45          indian.art.craft    7.27
+4       hearing.scheduled    6.22             asian.pacific    6.42
+5    social.security.card    5.88 american.pacific.islander    6.13
+6    world.poorest.people    5.78        professional.sport    6.13
+7    record.trade.deficit    5.47    asian.american.pacific    6.01
+8       feder.air.marshal    5.44    asian.pacific.american    6.01
+9         witness.testify    5.35        urge.swift.passage     5.8
+10           solar.energy    5.29        extend.patriot.act    5.52
+Initialization Method: 2 # of Topics: 5
+                     term loading                 term loading                   term
+1    ready.mixed.concrete    9.01   america.blood.cent    6.49       driver.education
+2        indian.art.craft    5.75             war.iraq   -4.63       winning.war.iraq
+3          deep.sea.coral    5.57       nuclear.weapon   -4.61    near.retirement.age
+4    american.force.radio    5.55      party.line.vote   -4.61 regional.training.cent
+5          mount.st.helen    5.42   provisional.ballot   -4.59         hate.crime.law
+6    western.energy.crisi    5.36 central.american.fre    4.57             hate.crime
+7    clinic.social.worker    4.97        bless.america     4.5      change.heart.mind
+8  gross.national.product    4.56           child.left   -4.45           able.buy.gun
+9              adult.stem   -4.52  security.trust.fund   -4.38  judge.alberto.gonzale
+10         adult.stem.cel   -4.51  public.broadcasting   -4.36         southeast.texa
+   loading                       term loading                          term loading
+1    10.91             grand.ole.opry    7.39   defense.intelligence.agency    7.73
+2     9.73         ga.price.reduction     6.8                grand.ole.opry    7.73
+3     9.73          suppli.natural.ga     6.6            ga.price.reduction    6.81
+4     9.73            embryo.stem.cel    6.05                    hate.crime    6.42
+5     7.66 malpractice.insurance.rate    5.38                hate.crime.law    6.33
+6     7.27       pluripotent.stem.cel    5.35 judicial.confirmation.process    5.91
+7     6.92          low.cost.reliable    5.31      armored.cavalry.regiment    -5.5
+8     6.59                world.trade   -5.16      permanent.resident.statu    5.17
+9    -6.35        class.action.reform   -4.96                     earth.day   -4.54
+10    6.16     justice.priscilla.owen   -4.78       water.conservation.fund   -4.53
+Initialization Method: 2 # of Topics: 10
+                         term loading                    term loading
+1            driver.education   19.92        human.right.body    6.68
+2            winning.war.iraq   10.81      urge.swift.passage    5.69
+3         near.retirement.age    9.87 tongass.national.forest    5.29
+4                able.buy.gun     6.9             un.official    5.07
+5        columbia.river.gorge    6.81      export.import.bank    4.62
+6              republic.cypru    6.78       arm.embargo.china    4.36
+7  national.heritage.corridor    6.47        middle.class.tax    4.26
+8    commonly.prescribed.drug    6.22         nation.oil.food    4.16
+9        national.ad.campaign    6.17             feder.trade    4.15
+10         america.blood.cent    6.01  feder.trade.commission    4.15
+                       term loading                          term loading
+1      ready.mixed.concrete   10.49       violent.sexual.predator    7.97
+2    regional.training.cent    9.45          sole.source.contract    6.75
+3            republic.cypru    7.79 financial.accounting.standard    6.49
+4  senate.committe.business    7.25                patient.safety   -6.03
+5            deep.sea.coral    7.24                 bunker.buster    5.75
+6            mount.st.helen    6.83                     tax.haven    5.51
+7      caliber.sniper.rifle    6.28            export.import.bank    5.31
+8          indian.art.craft    6.22             home.heating.fuel    5.13
+9                 wild.bird    6.07          third.quarter.profit    5.05
+10    judge.alberto.gonzale    5.79         children.live.poverty   -5.02
+                           term loading                         term loading
+1       gifted.talented.student   13.36      gifted.talented.student   15.14
+2   defense.intelligence.agency       7         american.force.radio    7.51
+3         judge.alberto.gonzale    5.73           export.import.bank    6.16
+4      senate.committe.business    5.06 law.enforcement.intelligence    -5.4
+5       land.water.conservation   -4.97               driver.license   -5.32
+6                 bunker.buster    4.81         personal.information   -5.03
+7  assistant.secretary.commerce    4.58          parent.notification    -4.8
+8           health.care.housing    4.31                     title.ix   -4.74
+9                 type.stem.cel     4.1          growth.job.creation    4.73
+10     national.flood.insurance    4.03 assistant.secretary.commerce     4.7
+                          term loading                 term loading
+1  defense.intelligence.agency  -12.46   america.blood.cent   10.22
+2                bunker.buster    7.56           child.left   -5.55
+3        nuclear.bunker.buster    7.24    abu.ghraib.prison   -5.44
+4         third.quarter.profit    6.66       minority.right   -5.27
+5         caliber.sniper.rifle     6.3  middle.class.famili   -5.24
+6         western.energy.crisi    6.27          change.rule   -5.15
+7           credit.card.issuer    5.58 personal.information    -5.1
+8               birth.abortion    5.47       national.guard   -5.06
+9                partial.birth    5.47      college.student   -5.04
+10      partial.birth.abortion    5.47 central.american.fre       5
+                           term loading                   term loading
+1          third.quarter.profit     6.6             ethic.rule    7.46
+2               cord.blood.stem    6.08              equal.pay    5.12
+3                 type.stem.cel    6.04         birth.abortion    4.86
+4                  cel.stem.cel     5.7          partial.birth    4.86
+5              human.right.body    5.32 partial.birth.abortion    4.86
+6                 human.cloning    5.09             ga.natural    4.56
+7  law.enforcement.intelligence   -4.97            rule.change    4.45
+8    malpractice.insurance.rate    4.79            world.trade   -4.41
+9                 stem.cel.line    4.71           soviet.union   -4.26
+10                  million.job   -4.69             natural.ga    4.24
+Initialization Method: 2 # of Topics: 15
+                      term loading                         term loading
+1  land.water.conservation    7.51       regional.training.cent    17.1
+2  water.conservation.fund    6.99         american.force.radio    8.79
+3     social.security.card    5.72              cord.blood.stem    5.37
+4             clean.energy    4.86               blood.stem.cel    5.36
+5            bil.fal.short    4.81 fifth.congressional.district    5.25
+6               natural.ga    4.59               care.education   -5.16
+7           current.system   -4.43                   cord.blood    4.88
+8                   ga.oil     4.1             using.adult.stem    4.74
+9            health.saving   -4.04                security.plan   -4.72
+10       abu.ghraib.prison   -3.95      benefit.social.security   -4.42
+                         term loading                  term loading
+1     gifted.talented.student   16.07             wild.bird    8.73
+2      gross.national.product    6.01        deep.sea.coral    7.16
+3                cost.tax.cut    5.39        southeast.texa    6.32
+4           abu.ghraib.prison   -5.24        mount.st.helen    5.63
+5                gain.tax.cut    5.08  social.security.card    5.46
+6       record.budget.deficit    5.06    health.care.budget    5.23
+7  explosive.device.detonated       5 children.live.poverty   -5.06
+8     national.security.issue   -4.88     feder.air.marshal    4.79
+9              driver.license   -4.75         speaker.table    4.71
+10             voting.machine   -4.68     united.nation.oil    4.63
+                      term loading               term loading
+1        united.nation.oil    5.83 america.blood.cent    7.79
+2  tongass.national.forest    5.77         child.left   -5.75
+3          nation.oil.food    5.23  abu.ghraib.prison   -5.66
+4   private.account.social    4.79     voting.machine   -5.34
+5            bil.fal.short    4.57     care.education   -5.12
+6       winning.war.terror    4.56  education.program   -4.87
+7      public.broadcasting    4.33  low.income.famili   -4.85
+8     clean.drinking.water    4.25       student.loan   -4.84
+9       food.stamp.program    4.15     minority.right   -4.83
+10       arm.embargo.china    4.07      bless.america     4.7
+                                 term loading                       term loading
+1                    winning.war.iraq   16.86        near.retirement.age   21.15
+2          explosive.device.detonated    6.03           driver.education   20.56
+3                           earth.day    5.67       national.ad.campaign    7.67
+4            senate.committe.business    5.48   commonly.prescribed.drug    7.52
+5                social.security.card    5.39               able.buy.gun    7.26
+6              justice.priscilla.owen    4.83       columbia.river.gorge     6.9
+7            armored.cavalry.regiment    4.82         america.blood.cent    6.38
+8                          ethic.rule    4.79 national.heritage.corridor    6.27
+9                       bunker.buster    4.75   national.flood.insurance    5.97
+10 committe.business.entrepreneurship    4.66           little.rock.nine    5.93
+                          term loading                     term loading
+1  defense.intelligence.agency    7.39     ready.mixed.concrete    18.3
+2       weapon.grade.plutonium    5.75           republic.cypru    7.18
+3              enemy.combatant    5.44     caliber.sniper.rifle     7.1
+4       justice.priscilla.owen    5.16     western.energy.crisi    6.07
+5            hearing.scheduled    4.74               gun.safety    5.95
+6                  farm.bureau   -4.66             sniper.rifle    5.95
+7         personal.information    4.45           mount.st.helen    5.94
+8                   ethic.rule    4.41 senate.committe.business    5.86
+9     permanent.resident.statu    4.32                earth.day    5.55
+10               bunker.buster    4.31         indian.art.craft    5.53
+                         term loading                          term loading
+1            using.adult.stem    5.25          social.security.card    6.62
+2  malpractice.insurance.rate    5.15             abu.ghraib.prison   -4.94
+3              blood.stem.cel    5.02        private.account.social    4.55
+4             cord.blood.stem     4.9                budget.deficit   -4.35
+5      weapon.grade.plutonium    4.88                gasoline.price   -4.34
+6           hurricane.katrina   -4.67                minority.right   -4.34
+7          umbilic.cord.blood    4.64             low.income.famili   -4.22
+8              current.system   -4.62                     cia.agent    4.17
+9                  save.money   -4.43      arctic.national.wildlife   -4.17
+10            economic.growth   -4.33 privatization.social.security    4.12
+                          term loading                     term loading
+1                bunker.buster    7.41  gifted.talented.student   17.51
+2        nuclear.bunker.buster     7.2     clean.drinking.water    5.98
+3         western.energy.crisi    7.14  national.security.issue   -5.61
+4         caliber.sniper.rifle    6.55          immigration.law   -5.37
+5                voting.system    6.55 senate.committe.business    5.27
+6           credit.card.issuer    5.89        support.boy.scout    5.25
+7             pacific.islander    5.88   justice.priscilla.owen    5.16
+8              safety.belt.law     5.7                busy.week    4.55
+9  defense.intelligence.agency   -5.66           care.education   -4.45
+10    permanent.resident.statu    5.42 national.flood.insurance     4.4
+                              term loading
+1  corporation.public.broadcasting    7.08
+2                 repeal.death.tax    6.66
+3                    bunker.buster    6.54
+4              public.broadcasting     6.4
+5                public.television    6.37
+6           rail.passenger.service    6.19
+7                        death.tax    5.71
+8                abu.ghraib.prison   -5.57
+9                     cut.medicaid   -5.55
+10                   national.debt   -5.42
+Initialization Method: 2 # of Topics: 20
+                         term loading                               term loading
+1            send.job.oversea    6.05                     republic.cypru    8.24
+2             timber.industry    5.69                          wild.bird    7.31
+3           education.program   -5.49               caliber.sniper.rifle    6.99
+4               bless.america    5.48                       sniper.rifle    6.35
+5   defense.appropriation.bil   -5.38           senate.committe.business    6.12
+6                student.loan   -5.24         dropout.prevention.program    6.09
+7       billion.trade.deficit    5.17                     mount.st.helen    5.89
+8       people.living.poverty    5.16 committe.business.entrepreneurship    5.57
+9  feder.emergency.management   -5.14                    timber.industry    5.45
+10  defense.authorization.bil    -5.1      marriage.protection.amendment    5.39
+                           term loading                       term loading
+1    national.heritage.corridor    7.59             patient.safety    5.41
+2      national.flood.insurance    6.72           trillion.tax.cut    5.23
+3        asian.pacific.islander    6.26      people.living.poverty    5.15
+4  national.homeownership.month    5.94            budget.surpluse    4.62
+5         county.north.carolina     5.9             driver.license   -4.58
+6            urge.swift.passage    5.84 feder.emergency.management   -4.53
+7       american.heritage.month    5.56      increase.minimum.wage    4.51
+8       flood.insurance.program    5.24           feder.income.tax    4.51
+9      terrorism.risk.insurance    5.23   terrorism.risk.insurance    4.29
+10               tuskege.airmen    5.21                 cord.blood    4.19
+                                 term loading                       term loading
+1  committe.business.entrepreneurship    8.63           human.right.body    7.09
+2          dropout.prevention.program    7.66 malpractice.insurance.rate    6.36
+3            temporary.worker.program    6.34    american.heritage.month    5.42
+4               nuclear.bunker.buster    6.31               unborn.child    5.35
+5                       bunker.buster    6.22        student.aid.program    5.29
+6                minority.women.owned    6.15               umbilic.cord    5.26
+7                    temporary.worker    5.73       third.quarter.profit    5.23
+8          feder.emergency.management   -5.61            security.reform   -5.11
+9                      transit.system   -5.57              human.cloning    5.09
+10            african.american.latino    5.41           using.adult.stem    5.03
+                     term loading                     term loading
+1         timber.industry    7.22        hearing.scheduled    7.38
+2        using.adult.stem    5.53             base.closing    6.47
+3          driver.license   -5.52 terrorism.risk.insurance    6.17
+4  weapon.grade.plutonium    5.35         outing.cia.agent    6.11
+5         immigration.law   -5.32                east.texa    5.89
+6           illegal.alien   -5.16   protect.minority.right    5.88
+7      umbilic.cord.blood    5.13       senate.white.house    5.79
+8         economic.growth   -5.09              chief.judge    5.55
+9          adult.stem.cel    5.09      low.income.children   -5.33
+10             adult.stem    5.09            personal.data    5.28
+                            term loading                               term loading
+1        gifted.talented.student   18.84               western.energy.crisi   14.96
+2          bankruptcy.reform.act    5.92 committe.business.entrepreneurship   10.36
+3       terrorism.risk.insurance    5.87              bankruptcy.reform.act    8.78
+4                immigration.law   -5.57           senate.committe.business    8.77
+5                      busy.week    5.43                     mount.st.helen    7.88
+6  marriage.protection.amendment    5.39                        timber.sale     7.7
+7                       anti.gun    5.34         explosive.device.detonated    5.86
+8   assistant.secretary.commerce    5.28                  hearing.scheduled    5.78
+9                security.reform   -5.19             asian.pacific.islander    5.64
+10           student.aid.program    5.04                         cut.budget   -5.41
+                            term loading                     term loading
+1              hearing.scheduled    6.71     western.energy.crisi   13.01
+2   congressional.hispanic.caucu    6.01            bunker.buster    8.18
+3        land.water.conservation    5.77    nuclear.bunker.buster    7.72
+4               time.white.house    5.53     caliber.sniper.rifle    6.83
+5         weapon.grade.plutonium    5.36            voting.system     6.8
+6                    arm.embargo    5.16   asian.pacific.islander    6.29
+7            rising.energy.price    4.88       head.start.teacher    6.12
+8  marriage.protection.amendment    4.64             sniper.rifle    6.08
+9         gross.national.product    4.59 terrorism.risk.insurance    5.75
+10         amnesty.illegal.alien    4.56                 anti.gun    5.58
+                          term loading                          term loading
+1            ayman.al.zawahiri    5.98       gifted.talented.student   19.47
+2               madison.county    5.89        gross.national.product    6.65
+3  defense.intelligence.agency     5.6                  cost.tax.cut    6.26
+4   feder.emergency.management   -5.48        protect.minority.right    6.08
+5        victim.identity.theft    5.21  assistant.secretary.commerce    5.69
+6    president.judicial.nomine    4.94         bankruptcy.reform.act    5.63
+7          president.bush.plan    4.86 marriage.protection.amendment    5.61
+8                      buy.gun    4.82         low.income.individual    5.48
+9              environment.law   -4.69                driver.license   -5.47
+10          voter.registration   -4.67         record.budget.deficit    5.37
+                                 term loading                     term loading
+1                       bunker.buster     6.6         driver.education   21.47
+2           project.safe.neighborhood    6.52      near.retirement.age   14.86
+3            temporary.worker.program    5.44             able.buy.gun    7.65
+4                           east.texa    5.22     columbia.river.gorge    7.62
+5                   ayman.al.zawahiri    5.13     national.ad.campaign    7.62
+6  committe.business.entrepreneurship    4.92 commonly.prescribed.drug    7.53
+7                   armenian.genocide   -4.91           republic.cypru    7.47
+8               bankruptcy.reform.act    4.84   medic.liability.reform    5.79
+9                 low.income.children   -4.83       head.start.teacher    5.38
+10          president.judicial.nomine    4.74     terrorist.watch.list    5.37
+                        term loading                          term loading
+1                arm.embargo    6.39              winning.war.iraq    8.65
+2     feder.trade.commission    5.46                deep.sea.coral    6.92
+3                feder.trade     5.4 financial.accounting.standard    5.78
+4              price.gouging    5.08        surplu.social.security     5.3
+5      low.income.individual    4.74              outing.cia.agent    5.22
+6            timber.industry     4.5               nation.oil.food    5.16
+7    chief.justice.rehnquist   -4.23        medic.liability.reform    4.92
+8  defense.appropriation.bil   -4.18        social.security.surplu    4.84
+9          education.program   -4.03              trillion.tax.cut    4.78
+10        safety.net.program    3.98            senate.white.house    4.77
+                        term loading                            term loading
+1    land.water.conservation    8.11          rail.passenger.service    8.17
+2     protect.minority.right    6.98                   bunker.buster    7.29
+3    water.conservation.fund    6.64 corporation.public.broadcasting    6.51
+4              bil.fal.short    5.94             public.broadcasting    5.79
+5  president.judicial.nomine    5.12               education.program   -5.54
+6                 natural.ga    4.81               home.heating.fuel    5.39
+7      palestinian.authority    4.78 coalition.provisional.authority    5.35
+8    chief.justice.rehnquist   -4.66      feder.emergency.management   -5.27
+9                china.japan    4.36                 budget.surpluse    5.26
+10             war.terrorism   -4.32               tax.break.compani    5.07
+Initialization Method: 2 # of Topics: 25
+                                 term loading                         term loading
+1            senate.committe.business    7.39 congressional.hispanic.caucu   10.14
+2          explosive.device.detonated    6.34         clinic.social.worker    8.54
+3       financial.accounting.standard    6.27           credit.card.issuer    7.22
+4              united.airline.employe    5.85                    earth.day    7.21
+5  committe.business.entrepreneurship    5.42             time.white.house    6.48
+6                           earth.day    5.21           deputy.chief.staff    5.84
+7                   tax.cut.permanent    5.16                 indian.tribe    5.84
+8              medic.liability.reform    5.12            hearing.scheduled    5.79
+9               medic.liability.crisi    4.97     permanent.resident.statu    5.13
+10               mission.accomplished    4.86      water.conservation.fund    5.12
+                           term loading                   term loading
+1              driver.education    14.7       winning.war.iraq    8.48
+2                  able.buy.gun     7.6    near.retirement.age    8.48
+3          national.ad.campaign    7.47         deep.sea.coral    8.05
+4      commonly.prescribed.drug    7.43         southeast.texa    6.98
+5          columbia.river.gorge    6.94      feder.air.marshal    5.74
+6  national.homeownership.month    6.29     flag.draped.coffin    5.67
+7        asian.pacific.american    6.26   mission.accomplished    5.32
+8      national.flood.insurance    5.91 united.airline.employe    5.23
+9  congressional.hispanic.caucu    5.77     reverse.robin.hood    5.19
+10     remembered.family.friend    5.66 social.security.surplu    5.18
+                   term loading                    term loading                   term
+1       clean.water.act   -5.49 water.conservation.fund    7.52         mount.st.helen
+2     education.program   -5.38 land.water.conservation    7.27            plan.reform
+3         bless.america    5.25  protect.minority.right    6.68    million.job.created
+4         child.support   -5.04          oil.natural.ga     5.9 weapon.grade.plutonium
+5  central.american.fre    4.95      right.life.liberty    5.16        clean.water.act
+6       timber.industry    4.92    valid.driver.license    5.13      pay.national.debt
+7     armenian.genocide   -4.86          birth.abortion    4.96      tax.cut.permanent
+8          student.loan   -4.86           partial.birth    4.96         va.health.care
+9    american.fre.trade    4.81  partial.birth.abortion    4.96 social.security.surplu
+10             war.iraq    -4.8            clean.energy    4.92      armenian.genocide
+   loading                     term loading                        term loading
+1     6.79       flag.draped.coffin     7.9 defense.intelligence.agency    9.36
+2     6.58   racial.ethnic.minoriti    7.42           support.boy.scout    6.22
+3     6.17 permanent.resident.statu    6.59              madison.county    5.76
+4     5.99       urge.swift.passage    6.58             clean.water.act   -5.71
+5    -5.66   supreme.court.rejected     6.1           ayman.al.zawahiri    5.64
+6      5.5           madison.county    6.03                 iraqi.women    5.45
+7     5.33           birth.abortion    5.69                 plan.reform    5.37
+8     5.18            partial.birth    5.69                   bush.plan    5.36
+9     5.07   partial.birth.abortion    5.69      supreme.court.rejected    5.19
+10   -5.02             base.closing   -5.67      united.airline.employe    5.16
+                           term loading                   term loading
+1              little.rock.nine    6.28  middle.class.american    5.85
+2         amnesty.illegal.alien    6.01     provisional.ballot    5.49
+3          guest.worker.program     5.9        oil.ga.industri    5.11
+4  congressional.hispanic.caucu    5.61     urge.swift.passage    4.95
+5           victim.gun.violence     5.5 arctic.wildlife.refuge    4.95
+6             feder.air.marshal    5.39      senate.energy.bil    4.87
+7                tuskege.airmen    5.38         national.guard   -4.87
+8        racial.ethnic.minoriti    5.34               gag.rule    4.51
+9              spending.cut.bil    5.29      major.oil.compani    4.36
+10         caliber.sniper.rifle    5.21        clean.water.act   -4.32
+                           term loading                            term loading
+1             senate.energy.bil    7.22              nunn.lugar.program    8.27
+2      senate.committe.business    6.46          rail.passenger.service     7.9
+3                      anti.gun    6.12                   bunker.buster    6.64
+4        racial.ethnic.minoriti    6.08                repeal.death.tax     6.6
+5             education.program   -5.78               home.heating.fuel     6.6
+6  assistant.secretary.commerce    5.63               public.television    6.03
+7            safety.net.program     5.5                 clean.water.act   -5.72
+8               immigration.law   -5.35 corporation.public.broadcasting    5.65
+9             tax.cut.permanent    5.33             public.broadcasting    5.62
+10                  tax.revenue   -5.25               education.program    -5.4
+                          term loading                       term loading
+1  defense.intelligence.agency    8.33      social.security.crisi    5.66
+2   dropout.prevention.program    8.13            clean.water.act   -5.01
+3         minority.women.owned    7.32       plan.social.security    5.01
+4                   green.card    6.44          tax.cut.permanent    4.92
+5                bunker.buster    6.36    protect.social.security     4.9
+6         guest.worker.program    6.31 committe.government.reform    4.85
+7     temporary.worker.program    6.26             budget.deficit   -4.61
+8            armenian.genocide   -5.64       white.house.official    4.61
+9               voting.machine   -5.31         senate.white.house    4.47
+10              patient.safety    5.29      people.living.poverty    4.24
+                   term loading                         term loading
+1         bunker.buster    7.63       weapon.grade.plutonium    6.91
+2  mission.accomplished    6.17       justice.priscilla.owen    5.68
+3    nunn.lugar.program    6.15     terrorism.risk.insurance    5.68
+4           iraqi.women    6.06     domestic.violence.sexual    5.54
+5     tax.break.compani    5.69       protect.minority.right    5.43
+6     ayman.al.zawahiri    5.62      violence.sexual.assault     5.3
+7    head.start.teacher    4.89           senate.white.house    5.28
+8         invasion.iraq    4.78            hearing.scheduled    5.23
+9              anti.gun    4.65 congressional.hispanic.caucu    5.07
+10   reverse.robin.hood    4.53     permanent.resident.statu    4.86
+                           term loading                       term loading
+1    explosive.device.detonated    6.21         safety.net.program    7.49
+2  assistant.secretary.commerce    6.07                arm.embargo    6.01
+3        protect.minority.right    6.06             un.peacekeeper    4.66
+4        gross.national.product    5.94              price.gouging    4.53
+5            tax.relief.package    5.69              war.terrorism   -4.21
+6                driver.license   -5.37          education.program   -4.19
+7            safety.net.program    5.12             suicide.bomber   -4.08
+8      remembered.family.friend    4.93            timber.industry    3.98
+9                current.system   -4.86 committe.homeland.security   -3.92
+10           export.import.bank    4.85               base.closing   -3.82
+                           term loading                   term loading
+1    malpractice.insurance.rate    6.26 weapon.grade.plutonium    6.57
+2         children.live.poverty    6.02        timber.industry    6.24
+3              human.right.body    6.01         national.guard   -5.76
+4                  human.embryo    5.76         driver.license   -5.62
+5          third.quarter.profit    5.22      pledge.allegiance   -5.29
+6  congressional.hispanic.caucu    5.16            farm.bureau   -5.25
+7                  umbilic.cord    4.91          war.terrorism    -5.2
+8                fre.enterprise    4.85            tax.revenue   -5.18
+9             tax.cut.permanent    4.83       using.adult.stem    5.14
+10                   cord.blood    4.79           human.embryo    5.13
+                   term loading                       term loading                   term
+1        patient.safety    6.04                  wild.bird    9.46            iraqi.women
+2  white.house.official    5.78             republic.cypru    8.55          bunker.buster
+3       clean.water.act   -4.72       caliber.sniper.rifle    7.56     credit.card.issuer
+4     senate.energy.bil    4.59   senate.committe.business    7.35   western.energy.crisi
+5        driver.license   -4.58 dropout.prevention.program     6.8     nunn.lugar.program
+6       budget.surpluse    4.53             mount.st.helen    6.32   caliber.sniper.rifle
+7            cord.blood    4.52       western.energy.crisi     6.3             green.card
+8          gain.tax.cut    4.49       clinic.social.worker    6.29 asian.pacific.islander
+9      jefferson.county    4.18               sniper.rifle    6.28     provisional.ballot
+10    armenian.genocide   -4.06         credit.card.issuer       6     head.start.teacher
+   loading                         term loading
+1     8.06             little.rock.nine    7.27
+2     7.76       asian.pacific.american     6.2
+3     7.67          million.job.created    6.11
+4     7.56                  iraqi.women    6.06
+5      7.3           urge.swift.passage    6.01
+6     7.23       asian.pacific.islander    5.82
+7     6.52     domestic.violence.sexual    5.77
+8     6.09   committe.government.reform    5.45
+9     6.04                asian.pacific    5.38
+10    5.91 fifth.congressional.district    5.35
+Initialization Method: 3 # of Topics: 5
+                       term loading                        term loading
+1     children.live.poverty   -7.32            driver.education   15.27
+2      columbia.river.gorge    5.54        ready.mixed.concrete   11.26
+3  permanent.resident.statu    5.39         near.retirement.age   11.26
+4              base.closing    -5.1      regional.training.cent   11.26
+5    racial.ethnic.minoriti   -4.89           low.cost.reliable    8.47
+6  senate.committe.business   -4.83     gifted.talented.student    8.31
+7          human.right.body    -4.4          nunn.lugar.program    6.91
+8             ronald.reagan   -4.39              grand.ole.opry    6.11
+9               luther.king    -4.2 defense.intelligence.agency    5.99
+10            martin.luther    -4.2           suppli.natural.ga    5.91
+                   term loading                          term loading
+1      produce.stem.cel    6.59          minority.women.owned    9.75
+2  world.poorest.people    4.97                 invasion.iraq    8.64
+3  pluripotent.stem.cel    4.94   consumer.federation.america    7.61
+4  buy.american.product    4.85     flag.protection.amendment    7.54
+5     low.income.people   -4.84                     gun.lobby    6.59
+6    retirement.account   -4.78            assault.weapon.ban    6.52
+7      arab.oil.embargo    4.77        racial.ethnic.minoriti     6.4
+8       immigration.law   -4.73 marriage.protection.amendment   -5.86
+9           cut.benefit   -4.71            export.import.bank    5.63
+10            oil.field     4.7              united.air.force   -5.63
+                            term loading
+1                 republic.cypru    7.92
+2              near.earth.object    6.37
+3  marriage.protection.amendment   -5.51
+4   national.homeownership.month     5.5
+5  financial.accounting.standard    5.48
+6                medic.leave.act   -5.18
+7       national.flood.insurance    5.13
+8             family.medic.leave   -5.05
+9         integrated.oil.compani   -4.84
+10    national.heritage.corridor    4.82
+Initialization Method: 3 # of Topics: 10
+                         term loading                        term loading
+1            driver.education   19.06 defense.intelligence.agency   10.52
+2        ready.mixed.concrete    9.56              republic.cypru    8.67
+3         near.retirement.age    8.62                     buy.gun    5.58
+4      regional.training.cent    8.62      weapon.grade.plutonium    5.56
+5     gifted.talented.student    7.84        plan.social.security    5.46
+6                   wild.bird    7.36                   bush.plan    5.34
+7  explosive.device.detonated    6.82              patient.safety    5.29
+8      asian.american.pacific    6.55              voting.machine   -5.27
+9          nunn.lugar.program    6.53               bunker.buster       5
+10  american.pacific.islander    6.51  feder.emergency.management   -4.98
+                              term loading                   term loading
+1         armored.cavalry.regiment    6.59     america.blood.cent    7.35
+2            united.postal.service    6.19             child.left   -5.37
+3              public.broadcasting    5.99        timber.industry    5.14
+4                     sniper.rifle    5.97               war.iraq   -5.12
+5             caliber.sniper.rifle    5.97 dependence.foreign.oil   -5.06
+6  corporation.public.broadcasting    5.85           fuel.economy   -5.05
+7                  sexual.predator    5.77          clean.air.act   -5.05
+8                  election.reform    5.71      armenian.genocide   -4.99
+9                    voting.system    5.44           voting.right   -4.76
+10                  tuskege.airmen    5.31     justice.department   -4.65
+                          term loading                    term loading
+1           ga.price.reduction   16.59    plan.social.security    6.19
+2               grand.ole.opry   16.51 benefit.social.security    6.14
+3            suppli.natural.ga    7.92    white.house.official    5.06
+4            low.cost.reliable    7.57  private.account.social    5.01
+5        palestinian.authority    5.87  dependence.foreign.oil   -4.93
+6               natural.ga.oil     5.6 social.security.private    4.92
+7         president.budget.cut    5.55           clean.air.act   -4.91
+8          public.broadcasting    5.52        middle.class.tax    4.89
+9         third.quarter.profit    5.46            fuel.economy   -4.89
+10 medic.malpractice.insurance    5.44            rhode.island   -4.67
+                           term loading                        term loading
+1                republic.cypru    8.53  national.heritage.corridor    7.44
+2          guest.worker.program    6.22          america.blood.cent    6.83
+3  national.homeownership.month    5.76         public.broadcasting    6.48
+4     million.illegal.immigrant    5.51           near.earth.object    5.73
+5            urge.swift.passage    5.46 medic.malpractice.insurance     5.7
+6            america.blood.cent    5.23              forest.service    5.69
+7              little.rock.nine     5.2             timber.industry    5.65
+8   medic.malpractice.insurance    5.15        columbia.river.gorge    5.65
+9        asian.pacific.american    5.11            human.right.body    5.41
+10                   break.rule   -4.99            repeal.death.tax    5.37
+                            term loading                          term loading
+1                 grand.ole.opry   17.96       gifted.talented.student   -8.65
+2             ga.price.reduction    17.7                     earth.day    7.29
+3        gifted.talented.student    9.65             arm.embargo.china    7.07
+4             nunn.lugar.program    6.62 marriage.protection.amendment    7.04
+5                      busy.week    5.91        integrated.oil.compani    6.56
+6            term.care.insurance     5.9              middle.class.tax    6.28
+7         justice.priscilla.owen    5.22          third.quarter.profit    6.14
+8  judicial.confirmation.process    5.17             major.oil.compani    6.09
+9     explosive.device.detonated    5.13             strong.opposition   -5.83
+10         deficit.reduction.bil    5.04           class.action.reform    5.69
+Initialization Method: 3 # of Topics: 15
+                            term loading                          term loading
+1               driver.education      20   medic.malpractice.insurance    7.04
+2            near.retirement.age   11.61             support.boy.scout     6.8
+3         regional.training.cent   11.61         county.north.carolina    6.65
+4                global.gag.rule    7.51 malpractice.insurance.premium    6.26
+5     explosive.device.detonated    6.89            oil.ga.exploration    6.01
+6               pacific.islander    5.89       flood.insurance.program    5.97
+7       commonly.prescribed.drug     5.7    malpractice.insurance.rate    5.89
+8          medic.liability.crisi    5.68              repeal.death.tax    5.76
+9           national.ad.campaign    5.63       tongass.national.forest    5.75
+10 financial.accounting.standard    5.62                   timber.sale    5.66
+                      term loading                       term loading
+1  gifted.talented.student   16.68            safety.belt.law    6.69
+2          nation.oil.food    6.92   domestic.violence.sexual    5.93
+3            voting.system    6.12         nunn.lugar.program    5.85
+4     guest.worker.program   -5.34 explosive.device.detonated    5.43
+5             cel.stem.cel    5.34    violence.sexual.assault    5.41
+6                busy.week    5.21      passenger.rail.system     5.2
+7    deficit.reduction.bil    5.04   permanent.resident.statu    5.11
+8                labor.law    -4.8    enforce.immigration.law    5.07
+9           patient.safety    4.74     protect.minority.right    5.03
+10       support.boy.scout    4.66             blood.stem.cel    4.95
+                          term loading                  term loading
+1            support.boy.scout    6.43    america.blood.cent    6.84
+2  defense.intelligence.agency    5.96         bless.america     5.5
+3                  iraqi.women    5.88 million.illegal.alien    5.18
+4                     iwo.jima    5.41         clean.air.act   -4.89
+5       weapon.grade.plutonium    5.35  central.american.fre    4.88
+6                    cash.flow    5.24    american.fre.trade    4.78
+7                    gun.lobby    5.22        voting.machine   -4.74
+8              enemy.combatant    5.17        nuclear.weapon   -4.71
+9      benefit.social.security    5.14           foreign.oil   -4.66
+10                   equal.pay    5.07     japanese.american   -4.46
+                             term loading                         term loading
+1            ready.mixed.concrete      16             human.right.body    7.54
+2            western.energy.crisi   12.17           export.import.bank    7.16
+3                    able.buy.gun   12.17    flag.protection.amendment     6.8
+4            american.force.radio    8.36         united.nation.reform    6.79
+5            caliber.sniper.rifle     7.1               un.peacekeeper    6.74
+6                      gun.safety    6.53                export.import    6.44
+7                       equal.pay    6.41           city.san.francisco    6.38
+8                pacific.islander    6.35     armored.cavalry.regiment    6.34
+9          asian.pacific.islander    5.88 congressional.hispanic.caucu    5.84
+10 national.defense.authorization    5.32                  un.official     5.7
+                      term loading                        term loading
+1                east.texa    6.33                unborn.child    6.59
+2  benefit.social.security    5.97              blood.stem.cel    6.55
+3           tuskege.airmen    5.23             cord.blood.stem     6.5
+4         student.loan.cut    5.18             embryo.stem.cel    6.49
+5     social.security.card    5.18                umbilic.cord    6.36
+6         universal.health    5.11  malpractice.insurance.rate    6.28
+7     white.house.official    4.91                cel.stem.cel    6.26
+8                labor.law   -4.91 medic.malpractice.insurance    6.09
+9   private.account.social    4.87     american.heritage.month    5.88
+10           clean.air.act   -4.86            human.right.body    5.84
+                       term loading                          term loading
+1                 equal.pay    9.77                     earth.day    8.07
+2   land.water.conservation    7.99             arm.embargo.china    7.05
+3   water.conservation.fund    7.25          minority.women.owned    6.28
+4    protect.minority.right    6.18            nunn.lugar.program    -6.1
+5           cost.natural.ga    5.63            sneak.peek.searche    5.74
+6     palestinian.authority    5.47        arctic.wildlife.refuge    5.48
+7  spending.social.security    4.78                   luther.king   -5.41
+8           fuel.efficiency    4.54                 martin.luther   -5.41
+9              chemic.plant     4.4                    body.armor    -5.4
+10                   ga.oil    4.28 marriage.protection.amendment     5.3
+                          term loading                            term loading
+1              nation.oil.food   13.55         gifted.talented.student   17.81
+2            united.nation.oil    8.77      explosive.device.detonated    7.57
+3         minority.women.owned    6.25                       tax.haven    7.34
+4             universal.health    6.24          rail.passenger.service    7.29
+5               white.care.act    6.18            sole.source.contract    6.86
+6              ryan.white.care    6.08                  warren.buffett    6.57
+7    abused.neglected.children    5.72          gross.national.product    6.42
+8        universal.health.care    5.67 corporation.public.broadcasting    6.39
+9               postal.service    4.98              export.import.bank    6.28
+10 medic.malpractice.insurance    4.88                    cost.tax.cut    6.12
+                         term loading
+1        minority.women.owned    7.09
+2  dropout.prevention.program    6.27
+3              patient.safety    6.21
+4          raise.minimum.wage    5.64
+5              voting.machine   -5.53
+6           tax.break.compani    5.37
+7       nuclear.bunker.buster    5.35
+8                   equal.pay    5.27
+9       increase.minimum.wage    4.93
+10              bunker.buster    4.91
+Initialization Method: 3 # of Topics: 20
+                        term loading                       term loading
+1      palestinian.authority    6.39 committe.government.reform    5.66
+2  liberty.pursuit.happiness    6.21          cut.child.support    5.32
+3       life.liberty.pursuit    6.21           student.loan.cut    5.31
+4             oil.natural.ga     6.2           universal.health     5.3
+5                 ethic.rule    6.13      people.living.poverty    5.25
+6    land.water.conservation    5.51              health.saving    5.24
+7     protect.minority.right    5.29                  east.texa    5.24
+8    water.conservation.fund    5.22              income.famili   -4.85
+9                world.trade   -4.86      universal.health.care    4.82
+10            birth.abortion    4.55             tuskege.airmen    4.81
+                            term loading                            term loading
+1             america.blood.cent    7.03          rail.passenger.service   10.16
+2        flood.insurance.program    6.27                       tax.haven     7.9
+3                    timber.sale    6.15              nunn.lugar.program    7.85
+4       national.flood.insurance    5.94               public.television    7.44
+5    medic.malpractice.insurance    5.75               tax.break.compani    6.81
+6  malpractice.insurance.premium    5.64             public.broadcasting     6.5
+7                 oil.ga.compani    5.46 corporation.public.broadcasting    6.15
+8                 housing.market    5.35                repeal.death.tax    5.94
+9     malpractice.insurance.rate    5.34                   bunker.buster    5.93
+10          columbia.river.gorge    4.98    republican.national.committe    5.64
+                         term loading               term loading
+1              tuskege.airmen    6.71 america.blood.cent   10.53
+2  committe.government.reform     6.3  education.program   -5.89
+3       united.postal.service    6.13    cord.blood.stem    5.82
+4       amnesty.illegal.alien     5.3     blood.stem.cel    5.58
+5                 un.official    5.25      child.support   -5.54
+6              postal.service    5.12       voting.right   -5.53
+7     enforce.immigration.law    5.09         safety.net   -5.52
+8           feder.air.marshal    5.04         child.left   -5.43
+9        guest.worker.program    5.02           war.iraq   -5.22
+10      chemic.plant.security    4.83   send.job.oversea    5.21
+                         term loading                    term loading
+1             global.gag.rule    7.53         sexual.predator    6.81
+2             safety.belt.law    6.74            parent.right    5.83
+3  explosive.device.detonated    6.28      sneak.peek.searche    5.48
+4   project.safe.neighborhood    5.89           boy.girl.club    5.28
+5   american.pacific.islander     5.6 violence.sexual.assault    5.21
+6      asian.american.pacific    5.53    minority.women.owned    5.17
+7            pacific.islander    5.32   amnesty.illegal.alien    4.94
+8              oil.ga.compani    5.09         ten.commandment    4.88
+9              blood.stem.cel    5.06           speaker.table    4.87
+10   armored.cavalry.regiment    5.05         victim.domestic    4.65
+                         term loading                          term loading
+1     gifted.talented.student   17.32              driver.education   18.91
+2                cost.tax.cut    6.72           near.retirement.age    11.8
+3      gross.national.product    6.13                     wild.bird    7.29
+4       record.budget.deficit    5.95                deep.sea.coral    6.67
+5  explosive.device.detonated    5.86        rail.passenger.service    6.25
+6              driver.license   -5.64              pacific.islander    6.17
+7       low.income.individual    5.63                southeast.texa    6.14
+8          tax.relief.package    5.55                  able.buy.gun    6.11
+9               export.import    5.04 financial.accounting.standard       6
+10             tax.relief.act    4.99      commonly.prescribed.drug    5.98
+                         term loading                     term loading
+1     gifted.talented.student   16.87            boy.girl.club    7.08
+2             nation.oil.food   11.03       nunn.lugar.program    6.46
+3           united.nation.oil    6.43 domestic.violence.sexual    6.44
+4       palestinian.authority    5.41  violence.sexual.assault    6.37
+5                urge.support   -5.17 permanent.resident.statu    6.37
+6  medicare.prescription.drug   -5.04   justice.priscilla.owen    5.82
+7         class.action.reform    4.92          victim.domestic    5.52
+8       judge.alberto.gonzale    4.88   protect.minority.right    5.41
+9             children.famili   -4.88      growth.job.creation    5.33
+10            immigration.law   -4.88       supreme.court.texa    5.12
+                            term loading                        term loading
+1  marriage.protection.amendment   10.03             nation.oil.food   20.09
+2              arm.embargo.china    8.29           united.nation.oil   12.09
+3                      earth.day    7.22   liberty.pursuit.happiness    8.11
+4                  arctic.refuge    6.65        life.liberty.pursuit    8.11
+5           minority.women.owned    6.39        minority.women.owned    6.73
+6           training.health.care    6.15            universal.health    6.67
+7                 va.health.care    5.83              white.care.act    6.64
+8                ten.commandment    5.79             ryan.white.care     6.6
+9             nunn.lugar.program   -5.78       universal.health.care    5.99
+10               children.famili   -5.71 defense.intelligence.agency   -5.63
+                          term loading                    term loading
+1  defense.intelligence.agency    8.44      umbilic.cord.blood    6.83
+2       weapon.grade.plutonium    6.61         cord.blood.stem    6.49
+3         credit.card.industry    5.85          blood.stem.cel    6.45
+4              enemy.combatant    5.77          adult.stem.cel    6.11
+5            ayman.al.zawahiri     5.6              adult.stem    6.09
+6               madison.county     5.4  weapon.grade.plutonium    5.71
+7          reform.class.action    5.32           type.stem.cel     5.4
+8                    bush.plan    5.18            umbilic.cord    5.38
+9                      buy.gun    4.75          driver.license   -5.12
+10             fuel.efficiency     4.7 american.heritage.month    4.96
+                     term loading                        term loading
+1  regional.training.cent   11.58        minority.women.owned    7.06
+2    national.ad.campaign    7.88  dropout.prevention.program    6.06
+3        little.rock.nine       7 defense.intelligence.agency    5.83
+4         cord.blood.stem    6.67            minimum.wage.job    5.64
+5          blood.stem.cel    6.66        credit.card.industry    5.51
+6        human.right.body    6.59   liberty.pursuit.happiness    5.28
+7      umbilic.cord.blood    6.29        life.liberty.pursuit    5.28
+8            unborn.child    6.28            northern.ireland    5.08
+9           human.cloning    5.82           armenian.genocide   -4.97
+10   death.penalty.system    5.79               health.saving    4.96
+                        term loading                     term loading
+1       ready.mixed.concrete   13.35         student.loan.cut    9.34
+2       caliber.sniper.rifle    9.18         human.right.body    8.82
+3       western.energy.crisi    7.76       sneak.peek.searche    8.58
+4         credit.card.issuer    7.67       assault.weapon.ban    8.51
+5           pacific.islander    6.96                gun.lobby    8.28
+6                 gun.safety    6.81           assault.weapon    8.07
+7     asian.pacific.islander    6.72   military.presence.iraq    7.57
+8             gun.safety.law    6.43 armored.cavalry.regiment    7.44
+9     weapon.grade.plutonium    5.96        ayman.al.zawahiri    7.22
+10 american.pacific.islander    5.86              un.official    7.07
+Initialization Method: 3 # of Topics: 25
+                            term loading                       term loading
+1        gifted.talented.student   21.23     regional.training.cent    9.97
+2                   cost.tax.cut    7.28       national.ad.campaign    8.29
+3         gross.national.product     7.2       third.quarter.profit    6.59
+4                massive.tax.cut    6.02               unborn.child    6.28
+5          low.income.individual    5.93 malpractice.insurance.rate    6.17
+6          record.budget.deficit    5.88           human.right.body    5.97
+7                 southeast.texa    5.73      passenger.rail.system    5.57
+8  marriage.protection.amendment     5.6             adult.stem.cel    5.41
+9                    pay.tax.cut    5.48                 adult.stem     5.4
+10                driver.license   -5.39       clean.drinking.water    5.29
+                   term loading                       term loading
+1         bless.america    7.34     racial.ethnic.minoriti   10.28
+2    america.blood.cent    6.42         voter.registration    6.33
+3      send.job.oversea    5.96               parent.right    6.28
+4   consumer.protection   -5.49            sexual.predator    6.14
+5     god.bless.america     5.3     personal.injury.lawyer    5.76
+6           moral.value    5.26      amnesty.illegal.alien    5.42
+7              war.iraq   -4.98           bush.white.house    5.29
+8          student.loan   -4.87 committe.government.reform    5.24
+9  central.american.fre    4.86          hearing.scheduled    5.16
+10          block.grant   -4.83      united.postal.service    5.03
+                       term loading                        term loading
+1          driver.education   19.31          sneak.peek.searche    9.15
+2       near.retirement.age   14.64            human.right.body     7.2
+3    united.airline.employe   10.16            student.loan.cut    7.18
+4                 wild.bird    7.53          assault.weapon.ban    7.12
+5            southeast.texa    6.71 community.oriented.policing    6.84
+6            deep.sea.coral    6.66               birth.control    5.99
+7    rail.passenger.service    6.53       united.postal.service    5.87
+8  commonly.prescribed.drug    6.34              un.peacekeeper    5.86
+9          pacific.islander    6.21         public.broadcasting    5.82
+10     columbia.river.gorge    6.02                unborn.child    5.77
+                           term loading                   term loading
+1               safety.belt.law       7            exxon.mobil    6.71
+2              little.rock.nine    6.88 weapon.grade.plutonium    6.43
+3  national.homeownership.month    6.82         adult.stem.cel    5.92
+4                tuskege.airmen    6.75             adult.stem     5.9
+5         amnesty.illegal.alien    5.91        economic.growth   -5.55
+6            urge.swift.passage     5.9     umbilic.cord.blood    5.48
+7    committe.government.reform    5.88         driver.license   -5.16
+8         united.postal.service    5.87          war.terrorism   -4.72
+9      national.flood.insurance    5.69         saddam.hussein   -4.67
+10     permanent.resident.statu    5.66           umbilic.cord    4.64
+                      term loading                   term loading
+1       confer.civil.right    7.37     credit.card.issuer   10.89
+2  leadership.confer.civil    7.37            iraqi.women    7.82
+3           madison.county    6.61   western.energy.crisi    7.78
+4   racial.ethnic.minoriti    5.69   caliber.sniper.rifle     7.7
+5   personal.injury.lawyer    5.63       pacific.islander    7.46
+6    universal.health.care    5.59   third.quarter.profit    7.11
+7       health.care.budget    5.49 asian.pacific.islander    6.95
+8     white.house.official    5.23             green.card    6.83
+9       safety.net.program    5.15          voting.system    6.61
+10             chief.judge    5.11   social.security.card    6.38
+                           term loading                      term loading
+1              little.rock.nine    7.48    united.airline.employe   18.98
+2  congressional.hispanic.caucu    6.69    medic.liability.reform    6.13
+3        arctic.wildlife.refuge    6.37        america.blood.cent    6.04
+4      national.flood.insurance    6.22               exxon.mobil    6.03
+5                tax.break.rich    6.02    surplu.social.security    5.86
+6      drilling.arctic.national    5.73     medic.liability.crisi    5.74
+7                   little.rock    5.66 american.pacific.islander    5.61
+8                forest.service    5.64         tax.cut.permanent    5.58
+9           secretary.air.force    5.42 medic.liability.insurance    5.51
+10       private.property.owner    5.32    asian.american.pacific    5.49
+                            term loading                          term loading
+1        gifted.talented.student   21.09 marriage.protection.amendment   12.35
+2                nation.oil.food    8.61             arm.embargo.china    9.44
+3           clean.drinking.water     8.4          third.quarter.profit    7.96
+4          palestinian.authority    6.03                     earth.day    7.61
+5  marriage.protection.amendment    5.88            sneak.peek.searche    6.22
+6         funding.veteran.health    5.26          minority.women.owned    5.83
+7              tax.cut.permanent    5.24                  base.closing   -5.54
+8                      busy.week    5.24         community.development   -5.53
+9                 patient.safety    5.09        supreme.court.rejected    5.52
+10               ten.commandment   -5.07   community.development.block   -5.51
+                           term loading                 term loading
+1   defense.intelligence.agency    7.95 ready.mixed.concrete   14.69
+2             tax.break.compani    7.28   credit.card.issuer    9.42
+3          guest.worker.program    6.73 caliber.sniper.rifle    8.55
+4    dropout.prevention.program    6.72         able.buy.gun    8.23
+5          minority.women.owned    6.67           gun.safety    7.15
+6  fifth.congressional.district    6.22 western.energy.crisi    7.06
+7                patient.safety    5.47     pacific.islander    6.74
+8        supreme.court.rejected    5.42    hearing.scheduled    6.53
+9                    green.card     5.4       gun.safety.law    6.44
+10                 guest.worker    5.23     indian.art.craft    6.23
+                             term loading                            term loading
+1                     iraqi.women    6.28          rail.passenger.service   10.48
+2                   bunker.buster    6.19               public.television    6.44
+3              head.start.teacher    5.31                repeal.death.tax    6.43
+4    international.peace.security    4.93 corporation.public.broadcasting    6.39
+5  national.defense.authorization    4.82               home.heating.fuel    6.35
+6              sneak.peek.searche    4.43               tax.break.compani    6.23
+7               tax.break.wealthy    4.39             public.broadcasting    6.22
+8               ayman.al.zawahiri    4.36            democrat.white.house    5.76
+9              safety.net.program    4.35    republican.national.committe     5.7
+10             reverse.robin.hood    4.21            third.quarter.profit     5.6
+                        term loading                       term loading
+1            nation.oil.food   17.34 committe.government.reform    5.96
+2          united.nation.oil    9.16      social.security.crisi    5.76
+3         right.life.liberty    7.19       social.security.card    5.69
+4  liberty.pursuit.happiness    7.12        consumer.protection   -5.46
+5       life.liberty.pursuit    7.12     private.account.social    5.39
+6       minority.women.owned    6.19    benefit.social.security    5.31
+7      universal.health.care    6.15             tuskege.airmen    5.23
+8             white.care.act    5.87          tax.cut.permanent    5.17
+9            ryan.white.care     5.8   security.private.account    5.11
+10          universal.health    5.55      universal.health.care    4.97
+                               term loading                      term loading
+1                    patient.safety    6.65                 equal.pay    7.78
+2                         equal.pay    5.84     palestinian.authority    7.06
+3  international.labor.organization    5.52   water.conservation.fund    6.96
+4                  minimum.wage.job    5.27   land.water.conservation    6.63
+5              clean.drinking.water    5.17             bil.fal.short    6.16
+6              white.house.official    5.15    protect.minority.right    5.91
+7         electronic.voting.machine    5.02           cost.natural.ga    5.73
+8               growth.job.creation    4.92        right.life.liberty    5.68
+9      republican.national.committe    4.91              soviet.union   -5.01
+10                       cord.blood    4.67 liberty.pursuit.happiness    4.85
+                          term loading                          term loading
+1     permanent.resident.statu    7.12     project.safe.neighborhood    5.97
+2            hearing.scheduled    6.93               global.gag.rule    5.94
+3           confer.civil.right    5.76     american.pacific.islander    5.75
+4      leadership.confer.civil    5.76 financial.accounting.standard    5.73
+5               un.peacekeeper    5.46        asian.american.pacific    5.63
+6        passenger.rail.system    5.39             tax.cut.permanent    5.51
+7       protect.minority.right    5.34              pacific.islander    5.51
+8  community.oriented.policing    5.26    explosive.device.detonated    5.35
+9      violence.sexual.assault    4.81   community.development.block   -5.11
+10               boy.girl.club    4.72                   iraqi.women    5.09
+                          term loading
+1       united.airline.employe   14.81
+2  defense.intelligence.agency    9.34
+3          consumer.protection   -5.77
+4                    cash.flow    5.65
+5               madison.county    5.64
+6             bush.white.house    5.61
+7                  iraqi.women    5.19
+8       supreme.court.rejected    5.19
+9             personal.account    5.18
+10        credit.card.industry    5.09

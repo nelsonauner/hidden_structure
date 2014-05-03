@@ -1,0 +1,17 @@
+term loading
+1   16.87            boy.girl.club    7.08 marriage.protection.amendment   10.03           nation.oil.food   20.09 defense.intelligence.agency    8.44     umbilic.cord.blood    6.83
+2   11.03       nunn.lugar.program    6.46             arm.embargo.china    8.29         united.nation.oil   12.09      weapon.grade.plutonium    6.61        cord.blood.stem    6.49
+3    6.43 domestic.violence.sexual    6.44                     earth.day    7.22 liberty.pursuit.happiness    8.11        credit.card.industry    5.85         blood.stem.cel    6.45
+4    5.41  violence.sexual.assault    6.37                 arctic.refuge    6.65      life.liberty.pursuit    8.11             enemy.combatant    5.77         adult.stem.cel    6.11
+5   -5.17 permanent.resident.statu    6.37          minority.women.owned    6.39      minority.women.owned    6.73           ayman.al.zawahiri     5.6             adult.stem    6.09
+6   -5.04   justice.priscilla.owen    5.82          training.health.care    6.15          universal.health    6.67              madison.county     5.4 weapon.grade.plutonium    5.71
+
+
+
+term loading                     term loading                   term loading                    term loading                 term loading                         term loading
+1    9.15              safety.belt.law       7            exxon.mobil    6.71      confer.civil.right    7.37   credit.card.issuer   10.89             little.rock.nine    7.48
+2     7.2             little.rock.nine    6.88 weapon.grade.plutonium    6.43 leadership.confer.civil    7.37          iraqi.women    7.82 congressional.hispanic.caucu    6.69
+3    7.18 national.homeownership.month    6.82         adult.stem.cel    5.92          madison.county    6.61 western.energy.crisi    7.78       arctic.wildlife.refuge    6.37
+4    7.12               tuskege.airmen    6.75             adult.stem     5.9  racial.ethnic.minoriti    5.69 caliber.sniper.rifle     7.7     national.flood.insurance    6.22
+5    6.84        amnesty.illegal.alien    5.91        economic.growth   -5.55  personal.injury.lawyer    5.63     pacific.islander    7.46               tax.break.rich    6.02
+6    5.99           urge.swift.passage     5.9     umbilic.cord.blood    5.48   universal.health.care    5.59 third.quarter.profit    7.11     drilling.arctic.national    5.73
