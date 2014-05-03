@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.6)  2 MAY 2014 19:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.6)  2 MAY 2014 20:18
 entering extended mode
 **C:/Users/nauner/tech/hidden_structure/paper/Tex/MastersPaperNelsonAuner.tex
 (C:/Users/nauner/tech/hidden_structure/paper/Tex/MastersPaperNelsonAuner.tex
@@ -922,29 +922,33 @@ File: Images/LikelihoodOfClusters_Iterations.jpg Graphic file (type jpg)
 Package pdftex.def Info: Images/LikelihoodOfClusters_Iterations.jpg used on inp
 ut line 372.
 (pdftex.def)             Requested size: 469.75499pt x 315.43709pt.
- [7] [8 <C:/Users/nauner/tech/hidden_structure/paper/Tex/Images/LikelihoodOfClu
-sters_Iterations.jpg>] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 420.
+ [7]
+Overfull \hbox (756.69568pt too wide) in paragraph at lines 381--393
+ [][] 
+ []
 
-[10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 420.
+[8 <C:/Users/nauner/tech/hidden_structure/paper/Tex/Images/LikelihoodOfClusters
+_Iterations.jpg>] [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 440.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 440.
 
 (C:\Users\nauner\tech\hidden_structure\paper\Tex\MastersPaperNelsonAuner.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 420.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 420.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 440.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 440.
 Package rerunfilecheck Info: File `MastersPaperNelsonAuner.out' has not changed
 .
-(rerunfilecheck)             Checksum: 8CBD490A5057F3EBFD22B387266598B8;2802.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 420.
+(rerunfilecheck)             Checksum: F5720FB62E39A72EC9A43A068BE22F37;2815.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 440.
  ) 
 Here is how much of TeX's memory you used:
- 11774 strings out of 493921
- 170273 string characters out of 3144874
+ 11776 strings out of 493921
+ 170291 string characters out of 3144874
  261367 words of memory out of 3000000
  14791 multiletter control sequences out of 15000+200000
- 51949 words of font info for 80 fonts, out of 3000000 for 9000
+ 52040 words of font info for 81 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,7n,35p,426b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,8n,35p,426b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/
@@ -963,7 +967,7 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files (x
 e1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/l
 m/lmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb
 >
-Output written on MastersPaperNelsonAuner.pdf (11 pages, 415265 bytes).
+Output written on MastersPaperNelsonAuner.pdf (11 pages, 416627 bytes).
 PDF statistics:
  236 PDF objects out of 1000 (max. 8388607)
  44 named destinations out of 1000 (max. 500000)

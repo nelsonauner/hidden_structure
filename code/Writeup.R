@@ -16,7 +16,6 @@ plot(c_c$x,c_c$y,col=c_c$cluster,pch=15)
 
 
 
-
 #multinomial deviance
 
 
@@ -36,4 +35,22 @@ table(cong_res[[1]][[1]]$h.clusters[,14]) #no longer evenly distributed
 #find number of non-zero coeffecients
 length(beta[4,][beta[4,]!=0])  #the first cluster
 #find highest rated coeffecients for each cluster and puht into a table!
+
+head(beta[6,][order(abs(beta[6,]),decreasing=TRUE)])
+
+high_loadings <- function(beta,startpoint,digits=2) {
+cl_range = startpoint:(dim(beta)[1])
+highloadings <- data.frame(do.call(cbind,lapply(4:8,
+					FUN=function(x){
+						res<-head(
+						beta[x,][order(abs(beta[x,]),decreasing=TRUE)])
+						return(cbind(names(res),round(res,digits=2)))
+						}
+						)),row.names=NULL)
+names(highloadings) = rep(c("term","loading"),length(cl_range))
+return(highloadings)
+}
+
+y<-high_loadings(beta,4)
+
 
