@@ -38,7 +38,7 @@ iter_cluster <- function(
   #we'll keep track of cluster assignments over time here
   #normalize <- function(Xhat,vector) log(rowSums(exp(cust_sweep(Xhat,x))))
 	for (i in 1:nmax) {
-	print(i)	
+	if (debug) print(i)	
 	Gamma_cl <- B[(1+n.meta):d.Y+1,] #include intercept term...
     #This ignores the alpha and meta data terms of the coeffecient matrix 
     ll_left <- X%*%t(Gamma_cl)   
@@ -113,3 +113,9 @@ make_cl3 <- function(X,covars,cl=NULL,i) {
 	return(kmeans(resids,i)$cluster)
 } 
 
+md <- function(X,covars,iter_obj) {
+	len = length(iter_obj$likes$V1)
+	return(multi.devian(X,
+				 Y=cbind(covars,model.matrix(~0+factor(iter_obj$h.clusters[,len]))),
+				 iter_obj$B))
+				 }

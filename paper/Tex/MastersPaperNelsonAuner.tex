@@ -57,7 +57,7 @@
 \thispagestyle{empty}
 \underline{\bf Master's Paper of the Department of Statistics, the
   University of Chicago} 
-\\~~(Internal document only, not for circulation) 
+
 
 \vspace{1.8in}
 \begin{center}
@@ -146,7 +146,7 @@ remove common tokens that add little meaning and are found in all
 documents (i.e. `the' or `of').
 
 A trivial example of such content might be student's answers to the
-question ``What did homework assignments involve?''
+question ``What did homework assignments involve?'', with the following four responses:
 
 \begin{verbatim}
 Some computation and formula proving, a lot of R code.
@@ -276,7 +276,7 @@ log-link to related sentiment or topics. That is:
 
 where $y_i$, $u_i$ are the metadata and cluster membership associated
 with document $i$, and $\phi_j$ and $\Gamma_{kj}$ are the distortion
-coeffecients for the respective metadata and factor membership. We use
+coeffecients for metadata and factor membership, respectively. We use
 the subscript $k$ to denote that each document $x_i$ is considered a
 member of $k = 1,..,K$ clusters, with their own distortion vectors
 $\Gamma_1,..,\Gamma_K$
@@ -295,7 +295,7 @@ methods:
   K-means on the word count data $X$
 \item
   K-means on the residual of the word count data after incorporating
-  metadata $y$ (That is, give $\hat{X}$ predicted document counts,
+  metadata $y$ (That is, given predicted word count $\hat{X}$,
   clustering on $X-\hat{X}$
 \end{enumerate}
 
@@ -354,7 +354,7 @@ In addition, the right hand side does not depend on $x_i$ and can be precalculat
 
 We applied this method to the congressional speech data of Moskowitz and Shapiro and report our results. (Description of Data here)
 %Do this later dog. 1
-\subsection{Evaluation of cluster-hot-starting} 
+\subsection{Evaluation of Cluster Initialization} 
 Method 2: \\
 Clustering the congressional members by speech content led to the overwhelming (majority around 450) being placed in the same cluster, with 1, 3, and 74 persons in the other clusters. After running the algorithm, clusters seemed to be more or less random
 \\
@@ -370,6 +370,8 @@ At each step in classic two
 
 
 \includegraphics[width=\linewidth]{Images/LikelihoodOfClusters_Iterations}
+
+/subsection{Interpretation of Clusters}
 
 
 
