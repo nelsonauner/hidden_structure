@@ -5,35 +5,29 @@
 #### k -means  #######
 require(textir);data(we8there);cl <- NULL
 #load algorithm
-source('hidden_structure.R')
+source('Iterate.R')
 X = we8thereCounts
-y = we8thereRatings[,'Overall',drop=FALSE]
-
-##### random ##########
-make_cl1 <- function(i) {sample(1:i,size=dim(we8thereRatings)[1],replace=TRUE)}
-##### random ##########
-make_cl1 <- function(i) {sample(1:i,size=dim(we8thereRatings)[1],replace=TRUE)}
-make_cl2 <- function(i) {kmeans(X,i)$cluster}
-##### k means on residuals#################
-cl <- NULL
-fits <- mnlm(cl, y,X, bins=5, gamma=1, nlambda=10)
-##############################################
+covars = we8thereRatings[,'Overall',drop=FALSE]
 
 
-m <- rowSums(we8thereCounts)
-resids <- X-m*predict(fits,y,type="response") #(these are not really good residuals?)
-make_cl3 <- function(i) {kmeans(resids,i)$cluster}
-# k mean
 
+#test:
+fsim.1 <- fsim.2 <- fsim.3<- list()
+n.sim=5 #careful, this is a lot!!
+num_cl_vec = c(5,10,15,20,25)
 nloop = 15
 
-#Now I will test each cluster initialization, for 15 iterations, 
-sim.1 <- sim.2 <- sim.3<- list()
-for (i in c(10,15)) {
-  sim.1 <- append(sim.1,list(iter_cluster(y,make_cl1(i),X,n.loop=nloop)))
-  sim.2 <- append(sim.2,list(iter_cluster(y,make_cl2(i),X,n.loop=nloop)))
-  sim.3 <- append(sim.3,list(iter_cluster(y,make_cl3(i),X,n.loop=nloop)))
+
+
+for(i in 1:n.sim) {
+  num_cl = num_cl_vec[i]
+  fsim.1 <- append(fsim.1,list(iter_cluster(covars,make_cl1(X=X,i=num_cl),X,nmax=nloop)))
+  fsim.2 <- append(fsim.2,list(iter_cluster(covars,make_cl2(X=X,i=num_cl),X,nmax=nloop)))
+  fsim.3 <- append(fsim.3,list(iter_cluster(covars,make_cl3(X=X,covars=covars,cl=cl,num_cl),X,nmax=nloop)))
 }
+
+w8there_res <- list(fsim.1,fsim.2,fsim.3)
+save(w8there_res,file="we8there_res.RData")
 
 #######################################################
 #       Show approx. log likelihood per iteration

@@ -14,7 +14,7 @@ covars$cscore <- covars$cscore -
 tapply(covars$cscore,covars$gop,mean)[covars$gop+1]
 rownames(covars) <- rownames(congress109Ideology)
 
-	
+
 
 #test:
 fsim.1 <- fsim.2 <- fsim.3<- list()
@@ -44,10 +44,10 @@ cl_matrix <- model.matrix(formula(~0+as.factor(temp[[1]]$h.clusters[,30])))
 Y<-  Matrix(cbind(as.matrix(y),cl_matrix),sparse=TRUE)
 multi.devian(X,Y,temp[[1]]$B)
 
-#AICc, k = 5
+#AICc, k = 5c
 
 AICc
-	
+
 
 #prepare results matrix:
 resm <- as.data.frame(c(rep(1,10),rep(2,10),rep(3,10))
@@ -85,7 +85,7 @@ for (i in 2:n.sim) {
 
 plot(resm$init,resm$deviance,ylim=c(-1350000,-1000000),main="Multinomial Deviance",xlab="Initialization Type \n (1=rand, 2=kmeans, 3= resid kmeans)")
 abline(naive.dev,0)
-	
+
 #########Let's investigate the clustering results..? 
 final_clusters <- cbind(cl2,ftotres[[1]][[1]]$h.clusters[,10],ftotres[[1]][[2]]$h.clusters[,15],
                         ftotres[[2]][[1]]$h.clusters[,10],ftotres[[2]][[2]]$h.clusters[,15])

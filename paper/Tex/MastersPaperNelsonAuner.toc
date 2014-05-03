@@ -1,0 +1,18 @@
+\contentsline {section}{Introduction}{3}{section*.2}
+\contentsline {subsection}{Text Data}{3}{section*.3}
+\contentsline {subsection}{Multinomial Model}{3}{section*.4}
+\contentsline {subsection}{Topic Models}{4}{section*.5}
+\contentsline {subsection}{Metadata}{4}{section*.6}
+\contentsline {section}{Theory and Approach}{5}{section*.7}
+\contentsline {subsection}{Mixture models and cluster membership}{5}{section*.8}
+\contentsline {subsection}{Model Specification}{5}{section*.9}
+\contentsline {subsection}{Estimation of Parameters via Maximum a Posteriori}{6}{section*.10}
+\contentsline {subsection}{Computation}{6}{section*.11}
+\contentsline {section}{Application}{7}{section*.12}
+\contentsline {subsection}{Congressional Speech}{7}{section*.13}
+\contentsline {subsection}{Evaluation of Cluster Initialization}{7}{section*.14}
+\contentsline {subsection}{Convergence and Stability of Clusters}{7}{section*.15}
+\contentsline {subsection}{Interpretation of results}{8}{section*.16}
+\contentsline {subsection}{Evaluating fit}{8}{section*.17}
+\contentsline {section}{Conclusion}{8}{section*.18}
+\contentsline {section}{Appendix}{9}{section*.19}
