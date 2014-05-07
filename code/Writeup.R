@@ -1,3 +1,6 @@
+##REQUIRED FOR THIS FILE: 
+##Results of the algorithm run on congress data, stored as a list of lists in "cong_res", as per Cluster_congress.R
+
 setwd("C:/Users/nauner/tech/hidden_structure/code")
 load("cong_res.RData")
 
@@ -29,7 +32,8 @@ table(cong_res[[1]][[1]]$h.clusters[,1])  #vs
 table(cong_res[[1]][[1]]$h.clusters[,14]) #no longer evenly distributed
 
  head(cong_res[[1]][[1]]$B@Dimnames[2][order(cong_res[[1]][[1]]$B@Dimnames[1])])
- 
+
+congress_res_2.10 <-  cong_res[[2]][[2]]  #the results for kmeans initialization, 15 clusters
 congress_res_2.15 <- cong_res[[2]][[3]]  #the results for kmeans initialization, 15 clusters
  
 #find number of non-zero coeffecients
@@ -99,23 +103,48 @@ xtable(cbind(high_loadings(cong_mnlm_beta,2,terms=10),high_loadings(congress_res
 
 #Republican Term: 
 cong_mnlm_beta[,'nation.oil.food']
-congress_res_2.15$B[,'nation.oil.food']
+congress_res_2.10$B[,'nation.oil.food']
 
 #Democrat Term: 
 cong_mnlm_beta[,'death.penalty.system']
-congress_res_2.15$B[,'death.penalty.system']
+congress_res_2.10$B[,'death.penalty.system']
 
 
+ 
 
 ##who are these groups? function idea: reveal the members of a cluster....cong_
 show_members = function(fitted_model,clusternumber){
-return(rownames(congress_res_2.15$covars)[tail(t(fitted_model$h.clusters),n=1)==clusternumber])
-} 		
+	criteria <- tail(t(fitted_model$h.clusters),n=1)==clusternumber
+	return(fitted_model$covars[,'gop'][criteria])
+	}
 
-xtable(as.data.frame(show_members(congress_res_2.15,14)) #for nation.oil.food
-xtable(as.data.frame(show_members(congress_res_2.15,7))) #a category
+
+xtable(as.data.frame(show_members(congress_res_2.10,2))) #for nation.oil.food
+xtable(as.data.frame(show_members(congress_res_2.10,4))) #for death.penalty
 
 
 ##we see that the nation.oil.food category includes cluster number 14
 #The loadings on cluster #14 are 
-high_loadings(congress_res_2.15$B,14+3,terms=100)
+xtable(high_loadings(congress_res_2.10$B,2+3,terms=10))
+
+
+
+###Finally, we recreate the graphs requested 
+##From examining topics, we'll use cong_res_1.10:
+
+congress_res_1.10 <- cong_res[[1]][[2]]
+
+#We want to compare the base topic with the distortion vector on gop!
+high_loadings(congress_res_1.10$B,8+3,terms=20)
+#Now we want to campare this to the distortion vector on coeffecients. 
+matchcoefs <- function(fitted_res,vectorofterms)
+fitted_res$B[2,][names(vectorofterms)]
+
+comparison <- data.frame(matchcoefs(congress_res_1.10,high_loadings(congress_res_1.10$B,2+3,terms=20)$term))
+names(comparison) <- "y"
+comparison$yplot <- seq(from=24,to=5)
+
+
+ggplot(comparison,aes(x=y,y=yplot)) + geom_text(label=row.names(comparison),size=3) + ggtitle("Word Loadings on GOP for select topic") + xlab("y") + ylab("term")
+ 
+##Pick one topic, then show its distortions. 

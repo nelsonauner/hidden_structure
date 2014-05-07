@@ -424,18 +424,23 @@ If the topics produced by our method bear no relation to the topics produced by 
 
 To test topic fit, we compare topics produced from our method with the topics produced by fitting a topic-only model, via MAP, with 12 topics on Gentzkow and Shapiro's Congressional Data. Fortuneately, we find that topics from our model are extremely similar to topics obtained by traditional methods. For example, table below shows a "stem cell" topic found by our method, compared to a similar topic found using the topic-only model mentioned above.
 
-\begin{table}
+\begin{table}[!htbp]
+%\begin{threeparttable}
 \caption{Comparison of top word loadings on a stem-cell topic} \label{tab:title}
-\begin{center}
+\centering
 \begin{tabular}{  c  c }
-Mixed Topic-Sentiment & Topic-Only \\
+Mixed Topic-Sentiment & Topic-Only* \\
 \hline
 umbilic.cord.blood & pluripotent.stem.cel \\
 cord.blood.stem  & national.ad.campaign \\
 blood.stem.cel   & cel.stem.cel \\
 adult.stem.cel & stem.cel.line \\
 \end{tabular}
-\end{center}
+%\begin{tablenotes}
+%\small
+%\item  *Results reported in Taddy (Choosing number of topics) 
+%\end{tablenotes}
+%\end{threeparttable}
 \end{table}
 
 \subsection{Interpretation of results}
