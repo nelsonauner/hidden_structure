@@ -3,7 +3,8 @@
 
 setwd("C:/Users/nauner/tech/hidden_structure/code")
 load("cong_res.RData")
-
+source('multiplot.R')
+as.numeric.factor <- function(x) {(as.numeric(levels(x))[x]}
 ##A brief explanation of how the data was obtained: 
 ##This graph kind of sucks: 
 #First graph: illustrate convergence of clusters
@@ -149,11 +150,23 @@ xtable(high_loadings(congress_res_3.20$B,14+3,terms=15))
 matchcoefs <- function(fitted_res,vectorofterms) { fitted_res$B[2,][names(vectorofterms)]}
 
 comparison <- data.frame(high_loadings(congress_res_3.20$B,14+3,terms=15))
+comparison$loading <- as.numeric.factor(comparison$loading)
 comparison$GOP <- matchcoefs(congress_res_3.20,comparison$term)
 comparison$yplot <- seq(from=24,to=5)
+comparison$order_gop <- with(comparison,order(loading+GOP))
+comparison$order_dem <- with(comparison,order(loading),increasing=TRUE)
 
+#first plot: dems
+p_dem <- ggplot(comparison,aes(x=1,y=order_dem)) + geom_text(label=comparison$term,size=3) + xlab("Democrat") + ylab("term") +theme_bw() + xlab("") + theme(axis.text.x = element_blank(),axis.text.y = element_blank())
+					
+p_gop <- ggplot(comparison,aes(x=GOP,y=order_gop)) + geom_text(label=comparison$term,size=3) + xlab("GOP") + ylab("term") +theme_bw() + xlab("") + theme(axis.text.x = element_blank(),axis.text.y = element_blank()) + scale_x_continuous(limits=c(-8,8))
 
-ggplot(comparison,aes(x=y,y=yplot)) + geom_text(label=row.names(comparison),size=3) + ggtitle("Word Loadings on GOP for select topic") + xlab("y") + ylab("term")
+multiplot(p_dem,p_gop,cols=2)
+					
+					theme(axis.ticks.x=element_blank()) #+
+axis.title.y # + ggtitle("Word Loadings for \" Domestic Issues \" Topic ") 
+p_gop <- ggplot(comparison,aes(x=1,y=order_gop)) + geom_text(label=comparison$term,size=3) + xlab("Democrat") + ylab("term") +theme_bw() # + ggtitle("Word Loadings for \" Domestic Issues \" Topic ")
+
  
 ##Pick one topic, then show its distortions. 
 
