@@ -49,7 +49,7 @@ beta <- as.matrix(beta) #could be something else :)
 highloadings <- data.frame(do.call(cbind,lapply(cl_range,
 					FUN=function(x){
 						res<-head(
-						(beta[x,][order(abs(beta[x,]),decreasing=TRUE)]),n=terms)
+						(beta[x,][order(beta[x,],decreasing=TRUE)]),n=terms)
 						return(cbind(names(res),round(res,digits=2)))
 						}
 						)),row.names=NULL)
@@ -134,17 +134,26 @@ xtable(high_loadings(congress_res_2.10$B,2+3,terms=10))
 
 congress_res_1.10 <- cong_res[[1]][[2]]
 
-#We want to compare the base topic with the distortion vector on gop!
-high_loadings(congress_res_1.10$B,8+3,terms=20)
-#Now we want to campare this to the distortion vector on coeffecients. 
-matchcoefs <- function(fitted_res,vectorofterms)
-fitted_res$B[2,][names(vectorofterms)]
 
-comparison <- data.frame(matchcoefs(congress_res_1.10,high_loadings(congress_res_1.10$B,2+3,terms=20)$term))
-names(comparison) <- "y"
+
+### May 7th: The comparison of different results
+# Initialization Method #3, 20 topic, 14th topic: 
+congress_res_3.20 <- cong_res[[3]][[4]]
+xtable(high_loadings(congress_res_3.20$B,14+3,terms=15))
+
+##Find who the members are:
+#xtable(data.frame(show_members(congress_res_3.20,14)))
+
+
+#Now we want to campare this to the distortion vector on coeffecients. 
+matchcoefs <- function(fitted_res,vectorofterms) { fitted_res$B[2,][names(vectorofterms)]}
+
+comparison <- data.frame(high_loadings(congress_res_3.20$B,14+3,terms=15))
+comparison$GOP <- matchcoefs(congress_res_3.20,comparison$term)
 comparison$yplot <- seq(from=24,to=5)
 
 
 ggplot(comparison,aes(x=y,y=yplot)) + geom_text(label=row.names(comparison),size=3) + ggtitle("Word Loadings on GOP for select topic") + xlab("y") + ylab("term")
  
 ##Pick one topic, then show its distortions. 
+

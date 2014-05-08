@@ -485,33 +485,56 @@ We can test this prediction by examining terms that are significant for a Multin
 
 We find that these terms are now associated with specific topics and specific groups of politicians, instead of being confounded with general party-affiliation.
 
-For example, the phrase "nation oil food" is strongly associated with a topic we might call "macro policy", with the following high word loading terms:
+For example, the phrase "nation oil food" is strongly associated with a topic we might call "domestic issues" topics, with the following high word loading terms:
+
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Sat May 03 16:31:24 2014
+% Wed May 07 18:31:04 2014
 \begin{table}[ht]
 \centering
+\begin{threeparttable}
 \begin{tabular}{rll}
   \hline
  & term & loading \\ 
   \hline
-1 & human.right.body & 6.68 \\ 
-  2 & urge.swift.passage & 5.69 \\ 
-  3 & tongass.national.forest & 5.29 \\ 
-  4 & un.official & 5.07 \\ 
-  5 & export.import.bank & 4.62 \\ 
-  6 & arm.embargo.china & 4.36 \\ 
-  7 & middle.class.tax & 4.26 \\ 
-  8 & nation.oil.food & 4.16 \\ 
-  9 & feder.trade & 4.15 \\ 
-  10 & feder.trade.commission & 4.15 \\ 
+1 & nation.oil.food & 20.09 \\ 
+  2 & united.nation.oil & 12.09 \\ 
+  3 & liberty.pursuit.happiness & 8.11 \\ 
+  4 & life.liberty.pursuit & 8.11 \\ 
+  5 & minority.women.owned & 6.73 \\ 
+  6 & universal.health & 6.67 \\ 
+  7 & white.care.act & 6.64 \\ 
+  8 & ryan.white.care & 6.6 \\ 
+  9 & universal.health.care & 5.99 \\ 
+  10 & growth.job.creation & 5.39 \\ 
+  11 & drilling.arctic.national & 5.3 \\ 
+  12 & tax.relief.package & 5.29 \\ 
+  13 & judge.john.robert & 5.26 \\ 
+  14 & fre.enterprise & 5.07 \\ 
+  15 & arctic.refuge & 4.93 \\ 
    \hline
 \end{tabular}
+\begin{tablenotes}
+\small
+\item One topic from a model fit with 20-topic , each topic initialized with K-means on the residuals of metadata regression
+\end{tablenotes}
+\end{threeparttable}
 \end{table}
 
-We also notice that the members of this topic (by our simplification, each observation can only be a member of one topic) are 10 republicans and 4 democrats. 
+
+We also notice that the members of this topic (by our simplification, each observation can only be a member of one topic) are 3 republicans and 8 democrats. 
 The ability to group observations that may have different metadata (in this case, political party) is a benefit of our mixed regression-topic model approach. 
 Under standard multinomial regression, observations cannot be grouped by topics, whereas topic modeling does not immediately offer a computationally simple way to include influence on outside metadata.
+
+\subsection{Comparison to Blei's Inverse Regression Topic Model}
+As mentioned in Blei (IRTM) the addition of latent topics to a model of text data with attributes is the ability to gain an intuitive concept to how metadata affects the distribution of a given topic. 
+To demonstrate this effect, we use the graphic models presented in (Blei) to show the Democrat/GOP distortion to the "domestic issues"  topic shown earlier. 
+
+
+
+
+
+
 
 \subsection{Evaluating fit}
 
