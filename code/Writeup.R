@@ -148,15 +148,18 @@ comparison$dem_loading <- as.numeric.factor(comparison$loading)
 comparison$GOP <- head(sort(congress_res_3.20$B[2,]+congress_res_3.20$B[14+3,],decreasing=TRUE),n=15)
 
 comparison$GOP_term <- names(head(sort(congress_res_3.20$B[2,]+congress_res_3.20$B[14+3,],decreasing=TRUE),n=15))
+
+comparison$GOP_Beta<-congress_res_3.20$B[2,][comparison$GOP_term]
+
 matchcoefs(congress_res_3.20,comparison$term)
 comparison$yplot <- seq(from=24,to=5)
-comparison$order_gop <- with(comparison,order(loading+GOP))
+comparison$order_gop <- with(comparison,order(GOP))
 comparison$order_dem <- with(comparison,order(loading),increasing=TRUE)
 
 #first plot: dems
-p_dem <- ggplot(comparison,aes(x=ifelse(GOP < 0, GOP, 0),y=order_dem)) + geom_text(label=comparison$term,size=3) + ylab("term") + xlab(" (a) Democrat") +theme_bw() + scale_x_continuous(limits=c(-5,5))   #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
+p_dem <- ggplot(comparison,aes(x=0,y=order_dem)) + geom_text(label=comparison$term,size=3) + ylab("term") + xlab(" (a) Democrat") +theme_bw() + scale_x_continuous(limits=c(-5,5))   #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 					
-p_gop <- ggplot(comparison,aes(x=ifelse(GOP > 0, GOP, 0 ),y=order_gop)) + geom_text(label=comparison$term,size=3)  + ylab("term") + xlab(" (b) Republican ")+theme_bw() + scale_x_continuous(limits=c(-8,12)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
+p_gop <- ggplot(comparison,aes(x=GOP_Beta,y=order_gop)) + geom_text(label=comparison$term,size=3)  + ylab("term") + xlab(" (b) Republican ")+theme_bw() + scale_x_continuous(limits=c(-8,12)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 
 multiplot(p_dem,p_gop,cols=2)
 					
