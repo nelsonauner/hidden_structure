@@ -45,7 +45,6 @@ length(beta[4,][beta[4,]!=0])  #the first cluster
 head(beta[6,][order(abs(beta[6,]),decreasing=TRUE)])
 
 high_loadings <- function(beta,cl_range,terms=10,digits=2) {
-#if(length(cl_range)==1) { 
 beta <- as.matrix(beta) #could be something else :)
 highloadings <- data.frame(do.call(cbind,lapply(cl_range,
 					FUN=function(x){
@@ -128,14 +127,9 @@ xtable(as.data.frame(show_members(congress_res_2.10,4))) #for death.penalty
 #The loadings on cluster #14 are 
 xtable(high_loadings(congress_res_2.10$B,2+3,terms=10))
 
-
-
 ###Finally, we recreate the graphs requested 
 ##From examining topics, we'll use cong_res_1.10:
-
 congress_res_1.10 <- cong_res[[1]][[2]]
-
-
 
 ### May 7th: The comparison of different results
 # Initialization Method #3, 20 topic, 14th topic: 
@@ -150,8 +144,11 @@ xtable(high_loadings(congress_res_3.20$B,14+3,terms=15))
 matchcoefs <- function(fitted_res,vectorofterms) { fitted_res$B[2,][names(vectorofterms)]}
 
 comparison <- data.frame(high_loadings(congress_res_3.20$B,14+3,terms=15))
-comparison$loading <- as.numeric.factor(comparison$loading)
-comparison$GOP <- matchcoefs(congress_res_3.20,comparison$term)
+comparison$dem_loading <- as.numeric.factor(comparison$loading)
+comparison$GOP <- head(sort(congress_res_3.20$B[2,]+congress_res_3.20$B[14+3,],decreasing=TRUE),n=15)
+
+comparison$GOP_term <- names(head(sort(congress_res_3.20$B[2,]+congress_res_3.20$B[14+3,],decreasing=TRUE),n=15))
+matchcoefs(congress_res_3.20,comparison$term)
 comparison$yplot <- seq(from=24,to=5)
 comparison$order_gop <- with(comparison,order(loading+GOP))
 comparison$order_dem <- with(comparison,order(loading),increasing=TRUE)
@@ -174,18 +171,18 @@ p_gop <- ggplot(comparison,aes(x=1,y=order_gop)) + geom_text(label=comparison$te
 #we have cong_res, so let's import we8there_res
 load('we8there_res.RData')
 we8there_res <- w8there_res; rm(w8there_res);save.image("we8there_res",file="we8there_res.RData")
-performance <- we8there
+
 
 #Anyways, first we'll look at performance of congressional data
 
-produce_summary <- function(results_file,FUN) {
+produce_summary <- function(results_file,FUN,X) {
 	clusters <- seq(from=5,to=25,by=5)
 	resm <- data.frame(rep(1:3,each=5))
 	resm$n_clusters <- rep(clusters,3)
 	resm$y <- NA
 	for (init in 1:3) {
 		for (n.cl in 1:length(clusters)) {
-		resm$y[(init-1)*5+n.cl] <- FUN(results_file[[init]][[n.cl]])
+		resm$y[(init-1)*5+n.cl] <- FUN(X,results_file[[init]][[n.cl]])
 		}
 	}
 	return(resm)
@@ -198,27 +195,24 @@ produce_summary(cong_res,length)
 #Now, first things first, plot multinomial deviance:
 res_to_mdev <- function(X,rel_sim) {
 	l = dim(rel_sim$covars)[2]
-	covars <- as.matrix(cbind(rel_sim$covars[,1:(l-1)],model.matrix(~0+as.factor(rel_sim$covars[,l]))))
+	covars <- as.matrix(cbind(as.matrix(rel_sim$covars[,1:(l-1)]),model.matrix(~0+as.factor(rel_sim$covars[,l]))))
 	return(multi.devian(X,Y=covars,rel_sim$B))
 	}
-	
 
-we8there_res_1.10 <- we8there_res[[1]][[2]]
 
-res_to_mdev(we8thereCounts,rel_sim)
+we8there_res_1.10 <- we8there_res[[1]][[1]]
+
+save(resm,file="mdev_we8there.RData")
+save(resm2,file="mdev_congress.RData")
+
+r
 #####
-resm <- as.data.frame(c(rep(1,10),rep(2,10),rep(3,10))
+resm <- as.data.frame(c(rep(1,10),rep(2,10),rep(3,10)))
 
 resm$deviance = 0
 
-for (i in 1:3) {
-for(j in 1:n.sim) {
-print(i)
-print(j)
-rel_sim <- totres[[i]][[1]]
+resm <- res_to_mdev(we8thereCounts, we8there_res_1.10)
+resm <- produce_summary(w8there_res,res_to_mdev,we8thereCounts)
+resm2 <- produce_summary(cong_res,res_to_mdev,congress109Counts)
 
-resm$deviance[(i-1)*10+j] <- multi.devian(X,
-										as.matrix(cbind(covars,model.matrix(~0+as.factor(rel_sim$clusters)))),rel_sim$B) ##THIS IS WRONG!
-resm$elapsed[(i-1)*10+j]<- rel_sim$time[3]
-}
-}
+
