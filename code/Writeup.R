@@ -159,13 +159,9 @@ comparison$order_dem <- with(comparison,order(loading),increasing=TRUE)
 #first plot: dems
 p_dem <- ggplot(comparison,aes(x=0,y=order_dem)) + geom_text(label=comparison$term,size=3) + ylab("term") + xlab(" (a) Democrat") +theme_bw() + scale_x_continuous(limits=c(-5,5))   #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 					
-p_gop <- ggplot(comparison,aes(x=GOP_Beta,y=order_gop)) + geom_text(label=comparison$term,size=3)  + ylab("term") + xlab(" (b) Republican ")+theme_bw() + scale_x_continuous(limits=c(-8,12)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
+p_gop <- ggplot(comparison,aes(x=GOP_Beta,y=order_gop)) + geom_text(label=comparison$GOP_term,size=3)  + ylab("term") + xlab(" (b) Republican ")+theme_bw() + scale_x_continuous(limits=c(-8,12)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 
 multiplot(p_dem,p_gop,cols=2)
-					
-					theme(axis.ticks.x=element_blank()) #+
-axis.title.y # + ggtitle("Word Loadings for \" Domestic Issues \" Topic ") 
-p_gop <- ggplot(comparison,aes(x=1,y=order_gop)) + geom_text(label=comparison$term,size=3) + xlab("Democrat") + ylab("term") +theme_bw() # + ggtitle("Word Loadings for \" Domestic Issues \" Topic ")
 
  
 ### NICE
@@ -218,4 +214,20 @@ resm <- res_to_mdev(we8thereCounts, we8there_res_1.10)
 resm <- produce_summary(w8there_res,res_to_mdev,we8thereCounts)
 resm2 <- produce_summary(cong_res,res_to_mdev,congress109Counts)
 
+load('mdev_congress.RData')
+load('mdev_we8there.RData')
 
+resm$dev <- -2*resm$y
+resm2$dev <- -2*resm2$y
+names(resm)[1] <- "init"
+names(resm2)[1] <- "init"
+### We want to create plots of performance for these two data sets.
+
+
+#first plot: dems
+p_cong <- ggplot(resm,aes(x=n_clusters,y=dev,colour=factor(init))) + geom_point() + theme_bw() + scale_colour_grey(name = "Initialization Method") + xlab("Number of Clusters") + ylab("Multinomial Deviance") + ggtitle("Effect of Initialization Method, Number of Clusters on Multinomial Deviance")
+p_cong
+					
+p_gop <- ggplot(comparison,aes(x=GOP_Beta,y=order_gop)) + geom_text(label=comparison$GOP_term,size=3)  + ylab("term") + xlab(" (b) Republican ")+theme_bw() + scale_x_continuous(limits=c(-8,12)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
+
+multiplot(p_dem,p_gop,cols=2)
