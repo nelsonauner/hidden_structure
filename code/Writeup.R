@@ -157,9 +157,9 @@ comparison$order_gop <- with(comparison,order(loading+GOP))
 comparison$order_dem <- with(comparison,order(loading),increasing=TRUE)
 
 #first plot: dems
-p_dem <- ggplot(comparison,aes(x=1,y=order_dem)) + geom_text(label=comparison$term,size=3) + xlab("Democrat") + ylab("term") +theme_bw() + xlab("") + theme(axis.text.x = element_blank(),axis.text.y = element_blank())
+p_dem <- ggplot(comparison,aes(x=ifelse(GOP < 0, GOP, 0),y=order_dem)) + geom_text(label=comparison$term,size=3) + ylab("term") + xlab(" (a) Democrat") +theme_bw() + scale_x_continuous(limits=c(-5,5))   #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 					
-p_gop <- ggplot(comparison,aes(x=GOP,y=order_gop)) + geom_text(label=comparison$term,size=3) + xlab("GOP") + ylab("term") +theme_bw() + xlab("") + theme(axis.text.x = element_blank(),axis.text.y = element_blank()) + scale_x_continuous(limits=c(-8,8))
+p_gop <- ggplot(comparison,aes(x=ifelse(GOP > 0, GOP, 0 ),y=order_gop)) + geom_text(label=comparison$term,size=3)  + ylab("term") + xlab(" (b) Republican ")+theme_bw() + scale_x_continuous(limits=c(-8,12)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 
 multiplot(p_dem,p_gop,cols=2)
 					
@@ -168,5 +168,12 @@ axis.title.y # + ggtitle("Word Loadings for \" Domestic Issues \" Topic ")
 p_gop <- ggplot(comparison,aes(x=1,y=order_gop)) + geom_text(label=comparison$term,size=3) + xlab("Democrat") + ylab("term") +theme_bw() # + ggtitle("Word Loadings for \" Domestic Issues \" Topic ")
 
  
-##Pick one topic, then show its distortions. 
+### NICE
+
+#Now, plot general performance. Ooofff.
+#we have cong_res
+
+load('we8there_res.RData')
+str(we8there_res)
+performance <- we8there
 
