@@ -4,7 +4,7 @@
 setwd("C:/Users/nauner/tech/hidden_structure/code")
 load("cong_res.RData")
 source('multiplot.R')
-as.numeric.factor <- function(x) {(as.numeric(levels(x))[x]}
+as.numeric.factor <- function(x) {as.numeric(levels(x))}
 ##A brief explanation of how the data was obtained: 
 ##This graph kind of sucks: 
 #First graph: illustrate convergence of clusters
@@ -140,6 +140,10 @@ xtable(high_loadings(congress_res_3.20$B,14+3,terms=15))
 ##Find who the members are:
 #xtable(data.frame(show_members(congress_res_3.20,14)))
 
+high_l_comp <- cbind(high_loadings(cong_res[[2]][[3]]$B,2,terms=15),high_loadings(beta,2,terms=15))
+
+xtable(high_l_comp)
+
 
 #Now we want to campare this to the distortion vector on coeffecients. 
 matchcoefs <- function(fitted_res,vectorofterms) { fitted_res$B[2,][names(vectorofterms)]}
@@ -256,4 +260,54 @@ p3 <- grid.arrange(arrangeGrob(p_cong + theme(legend.position="none"),
 multiplot(p_cong,p_eat,cols=2)
 
 
-#### Now, we want to look at 
+
+
+
+##### Analysis for we8there data ####
+
+##Sweep out statistics from our 15 simulations: 
+sink("we8there_topic.txt")
+cat("Referenced by initialization method, then by # of clusters")
+num_cl_vec = c(5,10,15,20,25)
+for (method in 1:3) {
+for (cls in 1:5) {
+cat("Initialization Method: ");cat(method);cat(" # of Topics: ");cat(num_cl_vec[cls]);cat("\n")
+print(high_loadings(
+										w8there_res[[method]][[cls]]$B,
+										(3:(2+num_cl_vec[cls]))))
+
+	}
+	}
+sink()
+
+
+num_members <- function(res) { table(res$h.clusters[,dim(res$h.clusters)[2]])}
+
+num_members(w8there_res[[2]][[3]])
+
+##We will investigate topic 1, with 152 reviews.
+
+xtable(high_loadings(w8there_res[[2]][[3]]$B,11+2,terms=15))
+
+
+
+#Now we want to campare this to the distortion vector on coeffecients. 
+
+wcomparison <- data.frame(high_loadings(w8there_res[[2]][[3]]$B,11+2,terms=15))
+wcomparison$loading <- as.numeric.factor(wcomparison$loading)
+wcomparison$good <- head(sort(w8there_res[[2]][[3]]$B[2,]+w8there_res[[2]][[3]]$B[11+2,],decreasing=TRUE),n=15)
+
+wcomparison$good_term <- names(head(sort(w8there_res[[2]][[3]]$B[2,]+w8there_res[[2]][[3]]$B[11+2,],decreasing=TRUE),n=15))
+
+wcomparison$good_beta<-w8there_res[[2]][[3]]$B[2,][wcomparison$good_term]
+wcomparison$yplot <- seq(from=15,to=1)
+wcomparison$order_good <- with(wcomparison,order(good))
+wcomparison$order_base <- with(wcomparison,order(loading),increasing=TRUE)
+
+#first plot: dems
+p_base <- ggplot(wcomparison,aes(x=0,y=order_base)) + geom_text(label=wcomparison$term,size=3) + ylab("term") + xlab("Base Frequency") +theme_bw() + scale_x_continuous(limits=c(-1,3))   #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
+					
+p_good <- ggplot(wcomparison,aes(x=good_beta,y=order_good)) + geom_text(label=wcomparison$good_term,size=3)  + ylab("term") + xlab("Positive Review")+theme_bw() + scale_x_continuous(limits=c(-1,3)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
+
+multiplot(p_base,p_good,cols=2)
+

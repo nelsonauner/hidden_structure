@@ -104,7 +104,7 @@ topics with document attributes in text analysis} \\~\\
 {\Large Nelson Auner}
 
 \vspace{1.3in}
-{\Large Advisors: Prof. Matt Taddy, Prof. Stephen Stigler \\{\small }}
+{\Large Advisors: Prof. Matt Taddy\footnote{Associate Professor of Econometrics and Statistics at Chicago Booth School of Business}, Prof. Stephen Stigler\footnote{Ernest DeWitt Burton Distinguished Service Professor at the Department of Statistics of the University of Chicago} \\{\small }}
 
 \end{center}
 
@@ -449,8 +449,8 @@ We also note that initializing the cluster memberships to the residuals of the t
 Previous research (Taddy, 2012) has shown that the optimal number of topics for a topic model on this dataset is around 10. This fact is not shown in our data for a couple of reasons. First, we are possibly overfitting the data, since these models are not run under cross-validation. Second, due to its unigram design, the cluster membership model is much less flexible than a standard topic model, and would likely need many more clusters to model the same lexical variation.
 
 %Do this later dog. 1
-\subsection{Evaluation of Cluster Initialization} 
-textbf{Possibly remove}
+%\subsection{Evaluation of Cluster Initialization} 
+%Possibly remove
 %Method 2: \\
 %Clustering the congressional members by speech content led to the overwhelming (majority around 450) being placed in the same cluster, with 1, 3, and 74 persons in the other clusters. After running the algorithm, clusters seemed to be more or less random
 %\\
@@ -458,10 +458,10 @@ textbf{Possibly remove}
 %Clustering the congressional members by unexplained speech content (that is, on the residuls of the regression of party affiliation led to similar results, albiet that the size of the main cluster increased from 450 to 500 congressional members. 
 %After the algorithm, 
 
-\subsection{Convergence and Stability of Clusters}
+%\subsection{Convergence and Stability of Clusters}
 
-textbf{Possibly remove}
-Of key interest is knowing whether or not the algorithm converges to the same clusters when run repeatedly on the same data, and also how this convergence is affected by the 3 proposed cluster initialization.
+%textbf{Possibly remove}
+%Of key interest is knowing whether or not the algorithm converges to the same clusters when run repeatedly on the same data, and also how this convergence is affected by the 3 proposed cluster initialization.
 
 \subsection{Interpretation of Topics}
 
@@ -579,7 +579,7 @@ To demonstrate this effect, we use the graphic model presented in (Blei) to show
 
 \begin{figure}[!htpb]
   \centering
-\caption[Loadings]{Cluster word loadings with covariate distortion}
+\caption[Loadings]{Congress 109: Cluster word loadings with covariate distortion}
   \includegraphics[width=6.2in]{Images/Blei_Changing_Loadings_GOP.pdf}
 \floatfoot{A cluster from the Congressional data. On the left are, from highest to lowest, terms with the top Democratic word loadings. On the right are the words with the highest Republican word loadings. The horizontal position indicates the value of $\phi$, or word distortion for Republicans}
 \end{figure}
@@ -588,6 +588,53 @@ To demonstrate this effect, we use the graphic model presented in (Blei) to show
 \subsection{We8there Data}
 
 We briefly illustrate the results of the cluster membership model on the we8there corpus of restaurant reviews with a table of word loadings for a selected cluster, as well as a distortion graph of that topic. 
+As with the Congress data, we note that despite the simplicity of our model, we obtain meaningful clusters. The following table illustrates a cluster we might label as "pizza diner". 
+
+
+% latex table generated in R 3.0.2 by xtable 1.7-1 package
+% Fri May 09 11:56:25 2014
+\begin{table}[ht]
+\centering
+\begin{threeparttable}
+\begin{tabular}{rll}
+  \hline
+ & term & loading \\ 
+  \hline
+1 & deep dish & 7.76 \\ 
+  2 & italian beef & 7.07 \\ 
+  3 & pizza like & 6.85 \\ 
+  4 & style food & 6.69 \\ 
+  5 & au jus & 6.33 \\ 
+  6 & cut fri & 6.16 \\ 
+  7 & just ok & 6.01 \\ 
+  8 & great pizza & 5.96 \\ 
+  9 & south side & 5.94 \\ 
+  10 & pizza great & 5.82 \\ 
+  11 & just over & 5.75 \\ 
+  12 & took seat & 5.72 \\ 
+  13 & golden brown & 5.61 \\ 
+  14 & behind counter & 5.58 \\ 
+  15 & got littl & 5.52 \\ 
+   \hline
+\end{tabular}
+\begin{tablenotes}
+\small
+\item One cluster from a model fit with 15 clusters , each having been initialized with K-means on the original text. This particular cluster has 152 reviews as "members".
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+As with the Congressional data, we also show the affect of metadata regression on the topic weights. However, the analysis for the food reviews data is different from the congressional data. Instead of a binary response (dummy variable for party affiliation), the covariate is the overall food review score, from 1 to 5.
+
+\begin{figure}[!htpb]
+  \centering
+\caption[Loadings]{we8there: Cluster word loadings with covariate distortion}
+  \includegraphics[width=6.2in]{Images/we8there_distortion.pdf}
+\floatfoot{A cluster from the we8there restaurant reviews dataset. On the left are, from highest to lowest, terms with the top word loadings in this given cluster. On the right are the word loadings of the cluster altered by a positive review. The horizontal position indicates the value of $\phi$, or word distortion for a positive review}
+\end{figure}
+
+The presence of the term "best mexican" in the "pizza diner" cluster distorted by a positive review illustrates one fundamental drawback of our model. Because we do not model relationship between cluster word loadings and covariate distortion word loadings, combining the two will predict collections of terms that may never appear together in the actual data. The shortcoming is also mentioned in other work on text analysis and metadata (Rabinovich and Blei, 2014), and possible solutions will be mentioned in the next section.
 
 
 \section{Extension}\label{extensions}
@@ -599,12 +646,18 @@ The algorithm provided in this paper could be extended to incorporate a feature 
 \subsection{Cross Validation and Prediction}
 One drawback of our is that, in order to train cluster membership, the values of the metadata are required (see algorithm pseudocode in previous section). This hinder the ability to use the method for prediction (where, presumably, we hope to predict missing metadata from the text), and impeded our ability to perform cross validation. One possible solution for this is, after fitting a model with training data, use k-nearest neighbors or other appropriate algorithm to assign each document of the test data to a cluster. However, this approach would be difficult to combine with the feature allocation extension proposed above, since the $n$ observations would be seperated into $2^{n_k}$ partitions, instead of $n_k$. 
 
+\subsection{Modeling relationships between clusters and metadata}
+As noted in a previous section, one drawback of our model is the lack of relationship between clusters and metadata distortion vectors. 
+Previous work on topic models allowed for correlation between topics (Blei \& Lafferty 2006) and has successfully applied these models to complicated datasets (Blei \&Lafferty 2007).
+Other authors have noted this problem (Rabinovich \& Blei), and possible solutions include allowing a range of metadata distortion vectors with varying relationships to each cluster or topic. 
 
 
 \section{Conclusion}\label{conclusion}
 
 In this paper, we have reviewed the theory behind topic modeling and regression on metadata in text data. 
-We introduce an algorithm that combines the metadata regression techniques developed by Taddy (2013a, 2013b) with a simple adaptation of the classic topic model. We then 
+We introduce an algorithm that combines the metadata regression techniques developed by Taddy (2013a, 2013b) with a simple adaptation of the classic topic model.
+We then applied our algorithm to two large, sparse text datasets and report the results, noting that the simple cluster membership is able to identify similar topics found in more complex LDA models. 
+We conclude by suggesting possible extensions to our approach to assist with generalizng and comparing the cluster membership model to alternative models for topic and metadata analysis. 
 
 
 \section{Acknowledgements}\label{conclusion}
@@ -634,9 +687,15 @@ I thank Professor Matt Taddy for his guidance throughout the research and writin
 
 \bibitem{LDA} Blei, David M., Ng, Andrew Y., and Jordan, Michael I (2003). Latent Dirichlet allocation. Journal of Machine Learning Research (JMLR), 3:993–1022, March 2003. ISSN 1532-4435
 
+\bibitem{Dynamic Topic Models} Blei, David M. and Lafferty, John D (2006). Dynamic Topic Models. Computer Science Department Paper 1038.
+
+\bibitem{CTM Science} DM Blei, JD Lafferty (2007). A Correlated Topic Model of Science. The Annals of Applied Statistics
+
+\bibitem{CTM} Blei, D. M. and Lafferty, J. D. (2006). Correlated topic models. Advances in Neural Information Processing Systems 18. MIT Press, Cambridge, MA.
+
 \bibitem{CorrelatedTopicModels}  Blei and Lafferty (2007) Correlated Topic Models. Proceedings of the 15th International Conference on Artificial Intelligence and Statistics
 
-\bibitem{IRTM} Rabinovich and Blei (2014) Proceedings of the 31st International Conference on Machine Learning, Beijing, China, 2014. JMLR: W\&CP volume 32
+\bibitem{IRTM} Rabinovich and Blei (2014). The Inverse Regression Topic Model. Proceedings of the 31st International Conference on Machine Learning, Beijing, China, 2014. JMLR: W\&CP volume 32
 
 \bibitem{Paintboxes}T. Broderick, J. Pitman, and M. I. Jordan (2013). Feature allocations, probability functions, and paintboxes. Bayesian Analysis, to appear. Preprint arXiv:1301.6647, 2013
 
