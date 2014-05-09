@@ -3,18 +3,23 @@
 \contentsline {subsection}{Multinomial Model}{3}{section*.4}
 \contentsline {subsection}{Topic Models}{4}{section*.5}
 \contentsline {subsection}{Metadata}{4}{section*.6}
-\contentsline {section}{Theory and Approach}{5}{section*.7}
-\contentsline {subsection}{Mixture models and cluster membership}{5}{section*.8}
-\contentsline {subsection}{Model Specification}{5}{section*.9}
-\contentsline {subsection}{Estimation of Parameters via Maximum a Posteriori}{6}{section*.10}
-\contentsline {subsection}{Computation}{6}{section*.11}
-\contentsline {section}{Application and Evaluation of Algorithm}{7}{section*.12}
-\contentsline {subsection}{Congressional Speech}{7}{section*.13}
-\contentsline {subsection}{Evaluation of Cluster Initialization}{7}{section*.14}
-\contentsline {subsection}{Convergence and Stability of Clusters}{7}{section*.15}
-\contentsline {subsection}{Interpretation of Topics}{7}{section*.16}
-\contentsline {subsection}{Interpretation of results}{8}{section*.17}
-\contentsline {subsection}{Comparison to Blei's Inverse Regression Topic Model}{9}{section*.18}
-\contentsline {subsection}{Evaluating fit}{9}{section*.19}
-\contentsline {section}{Conclusion}{10}{section*.20}
-\contentsline {section}{Appendix}{11}{section*.21}
+\contentsline {subsection}{Metadata and Unigram Models}{5}{section*.7}
+\contentsline {section}{Theory and Approach}{5}{section*.8}
+\contentsline {subsection}{Mixture models and cluster membership}{5}{section*.9}
+\contentsline {subsection}{Model Specification}{6}{section*.10}
+\contentsline {subsection}{Initializing Cluster Membership}{6}{section*.11}
+\contentsline {subsection}{Estimation of Parameters via Maximum a Posteriori}{6}{section*.12}
+\contentsline {subsection}{Computation}{7}{section*.13}
+\contentsline {section}{Application and Evaluation of Algorithm}{8}{section*.14}
+\contentsline {subsection}{Congressional Speech}{8}{section*.15}
+\contentsline {subsection}{Evaluation of Cluster Initialization}{9}{section*.16}
+\contentsline {subsection}{Convergence and Stability of Clusters}{9}{section*.17}
+\contentsline {subsection}{Interpretation of Topics}{9}{section*.18}
+\contentsline {subsection}{Interpretation of results}{10}{section*.19}
+\contentsline {subsection}{Comparison to Blei's Inverse Regression Topic Model}{10}{section*.20}
+\contentsline {subsection}{We8there Data}{12}{section*.21}
+\contentsline {section}{Extension}{12}{section*.22}
+\contentsline {subsection}{Feature Allocations}{12}{section*.23}
+\contentsline {subsection}{Cross Validation and Prediction}{12}{section*.24}
+\contentsline {section}{Conclusion}{12}{section*.25}
+\contentsline {section}{Acknowledgements}{12}{section*.26}

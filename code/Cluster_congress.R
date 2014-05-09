@@ -34,6 +34,7 @@ save(cong_res,file="cong_res.RData")
 
 #now, time to calculate multinomial deviance or something for all of them to compare
 
+fits <- mnlm(NULL,covars,congress109Counts,)
 naive.dev <- multi.devian(X,as.matrix(covars),coef(fits))
 ftotres<-list(fsim.1,fsim.2,fsim.3)
 

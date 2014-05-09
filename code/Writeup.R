@@ -59,6 +59,7 @@ return(highloadings)
 
 (y<-high_loadings(beta,c(6,8)))
 
+high_loadings(cong_res[[2]][[3]]$B,2,terms=15)
 
 ##Sweep out statistics from our 15 simulations: 
 sink("congress_topic.txt")
@@ -225,9 +226,34 @@ names(resm2)[1] <- "init"
 
 
 #first plot: dems
-p_cong <- ggplot(resm,aes(x=n_clusters,y=dev,colour=factor(init))) + geom_point() + theme_bw() + scale_colour_grey(name = "Initialization Method") + xlab("Number of Clusters") + ylab("Multinomial Deviance") + ggtitle("Effect of Initialization Method, Number of Clusters on Multinomial Deviance")
+p_cong <- ggplot(resm,aes(x=n_clusters,y=dev,label=init,size=4)) +  geom_text() +
+#scale_shape_discrete(name="Initialization Method",breaks=c("1","2","3"),labels=c("Random","K Means on Text", "K Means on Residuals"))  +
+theme_bw() + scale_colour_grey() + xlab("Number of Clusters") + ylab("Multinomial Deviance") + ggtitle("Congress Data: Multinomial Deviance") + theme(legend.position="none")
 p_cong
-					
-p_gop <- ggplot(comparison,aes(x=GOP_Beta,y=order_gop)) + geom_text(label=comparison$GOP_term,size=3)  + ylab("term") + xlab(" (b) Republican ")+theme_bw() + scale_x_continuous(limits=c(-8,12)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 
-multiplot(p_dem,p_gop,cols=2)
+
+#first plot: dems
+p_eat <- ggplot(resm2,aes(x=n_clusters,y=dev,label=init,size=4)) +geom_text() +
+#scale_shape_discrete(name="Initialization Method",breaks=c("1","2","3"),labels=c("Random","K Means on Text", "K Means on Residuals"))  + 
+theme_bw() + scale_colour_grey() + xlab("Number of Clusters") + ylab("Multinomial Deviance") + ggtitle("We8there Data: Multinomial Deviance") + theme(legend.position="none")
+p_eat
+
+
+
+g_legend<-function(a.gplot){
+tmp <- ggplot_gtable(ggplot_build(a.gplot))
+leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+legend <- tmp$grobs[[leg]]
+return(legend)}
+
+legend <- g_legend(p_cong)
+lwidth <- sum(legend$width)
+
+p3 <- grid.arrange(arrangeGrob(p_cong + theme(legend.position="none"),
+                         p_eat + theme(legend.position="none"),
+						 legend,
+                         nrow=1))
+multiplot(p_cong,p_eat,cols=2)
+
+
+#### Now, we want to look at 
