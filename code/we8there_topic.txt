@@ -1,0 +1,763 @@
+Referenced by initialization method, then by # of clustersInitialization Method: 1 # of Topics: 5
+               term loading          term loading           term loading           term
+1        french dip    6.28   peanut sauc    6.88       food hot    5.64     here great
+2       readi order    5.98  italian dish    5.62      onc month    5.48      good work
+3         just over    5.85      serv bed    5.42       too busi    5.48     new orlean
+4  waitress brought    5.67 recommend tri    5.41 return restaur    5.35       dine out
+5         took seat    5.66    anyon want    5.35  dessert great    5.31     can enough
+6       burger came    5.66    chef owner    5.32      best valu    5.29     sour cream
+7           fri out    5.66   staff alway    5.24  experi wonder    5.16     menu sever
+8         came chip    5.65   expect find    5.24  great varieti    5.15     just plain
+9         got littl    5.65        po boy    5.23  recommend tri    5.14    great staff
+10      thin crispi    5.65     time went    5.14 dessert includ    5.12 french quarter
+   loading            term loading
+1     6.48 outstand servic    6.27
+2     6.35        way make    5.63
+3      5.8       good wine    5.52
+4     5.42 japanes restaur    5.47
+5     5.32      want great    5.38
+6     5.31      din experi    5.19
+7      5.3    best mexican    5.18
+8     5.22   servic prompt    5.17
+9      5.2       best kept    5.12
+10     5.2       best dine    5.11
+Initialization Method: 1 # of Topics: 10
+              term loading            term loading          term loading           term
+1      refil water    5.57       menu well    6.46     just over    6.65    food averag
+2       place dine    5.53        until pm       6     took seat    6.54       until pm
+3      beer select    5.49       one entre    5.72      came fri    6.17   place friend
+4        next trip    5.39       lamb chop    5.62        au jus    6.14   japanes food
+5  outstand servic    5.36   servic awesom     5.6       fri out    5.97      fish chip
+6      delici meal    5.33 restaur special    5.58     got littl    5.97     sushi chef
+7        feel home     5.3   portion small    5.57    over drink    5.71      palo alto
+8    fun atmospher     5.3    buffalo wing    5.53 like sandwich    5.66       out busi
+9     great friend    5.18       sweet tea    5.47     near back    5.64 attent without
+10    place servic    5.11     order appet     5.4       bag fri     5.6       one item
+   loading            term loading         term loading          term loading
+1     6.01     food poison     6.1 tourist trap    5.89 servic awesom    5.91
+2     5.95 outstand servic    5.93   place dine    5.84     gone down    5.66
+3      5.7     order appet    5.61  fri catfish    5.49     sweet tea    5.49
+4     5.68    regular menu    5.43  alway order    5.46   great pizza    5.48
+5     5.53      eat buffet    5.37     until pm     5.4     veri poor    5.48
+6     5.49        day week    5.33   someon els    5.38    bar tender    5.38
+7     5.47      someon els    5.21    wast time    5.36  outdoor seat    5.37
+8     5.37    restaur year    5.19   everi meal    5.34     fish chip    5.28
+9     5.28     first class    5.12    one entre    5.32     food amaz    5.25
+10    5.27    order shrimp    5.06    mani good    5.19  mediocr best    5.24
+             term loading         term loading            term loading
+1       eat place    6.06    palo alto     6.7       sweet tea    6.22
+2     alway fresh    5.85     until pm    6.49       veri cozi    6.15
+3     wonder food    5.76    menu well    6.42 restaur special    6.06
+4     refil drink    5.69  crust pizza     6.3        don wast    6.04
+5     excel place    5.56   place dine    5.97     great staff    5.93
+6       fish chip    5.51 best mexican    5.53   wonder dinner    5.77
+7    thai restaur    5.46   find place    5.52     rave review     5.5
+8  cozi atmospher    5.33  take reserv    5.46    like royalti    5.48
+9      excel veri    5.28  despit fact    5.39     warm friend    5.28
+10   alway wonder    5.25     out door    5.36      numer time    5.19
+Initialization Method: 1 # of Topics: 15
+                term loading            term loading            term loading          term
+1  recommend everyon    7.43     food superb    5.91       each dish    5.76   food superb
+2         alway veri    5.82    friend enjoy    5.68      pizza like     5.5     menu well
+3      steak seafood    5.58      fair price    5.65    potato salad    5.44    food never
+4   wonder atmospher    5.51 restaur definit    5.61     anoth coupl    5.41  seafood dish
+5         great even    5.37    everyth menu    5.46     made reserv     5.4   everi penni
+6       mani restaur    5.31   delici servic    5.42 wed anniversari    5.38     never got
+7          more just    5.28   recommend tri    5.41       like home    5.37  everyth menu
+8         food fabul    5.28         ran out     5.4   peanut butter    5.35 francisco bay
+9         eaten mani    5.22      soon after    5.37      fresh made    5.34    entre came
+10    restaur beauti    5.18      enjoy food    5.27   littl restaur    5.23     after ask
+   loading           term loading            term loading           term loading
+1     6.99     veri enjoy     5.5       went here    5.79    food awesom    5.95
+2     6.12     don expect    5.39 authent mexican     5.5 french quarter    5.78
+3     5.75 reserv suggest    5.26    probabl best    5.37     york style    5.76
+4     5.65      meal just    5.24      sauc great    5.32     pizza like    5.69
+5      5.5      could ask    5.24     everi penni    5.23     half dozen    5.62
+6     5.34    fresh bread    5.17         big fan    5.19    style pizza    5.48
+7     5.33      some kind    5.13       palo alto    5.13       set down    5.47
+8     5.19   everyth menu     5.1       veri slow    5.13      deep dish    5.32
+9     5.15   after dinner    5.09       can order    5.12  peanut butter    5.29
+10    5.15     music play    5.09     garlic sauc     5.1   best chicken    5.27
+              term loading              term loading          term loading           term
+1        food made     5.7         down best    5.79  mediocr best    5.86  take advantag
+2      great peopl    5.49     small portion    5.71 everyth great    5.84  servic except
+3      peopl great     5.4       pm saturday    5.68    enjoy food    5.83    wonder time
+4    restaur great    5.39         best kept    5.58     get great    5.47     food fresh
+5       make point    5.35          http www    5.38    menu great    5.35    alway excel
+6      visit place    5.28 recommend everyon    5.36     too small    5.26       last few
+7     down restaur    5.04       first class    5.34    last night    5.08     time money
+8         high end    5.01     littl restaur    5.28   tabl becaus    5.07    price moder
+9      casual dine    4.97         rack lamb     5.2  food absolut    5.05      can order
+10 atmospher excel    4.96        last night    5.11    york style    5.03 better restaur
+   loading           term loading            term loading          term loading
+1     6.78      good work    6.43 authent mexican    6.23     thai food    6.03
+2     6.31      each dish    6.02   food outstand    5.84 francisco bay    5.89
+3     5.36     bar tender    5.99     made reserv    5.74     serv best    5.67
+4      5.3     enjoy dine    5.85      veri enjoy    5.66  potato salad    5.58
+5     5.24        up good    5.46       fun place    5.42 chines buffet    5.43
+6     5.18      foie gras    5.33  best breakfast    5.36   best chines    5.34
+7     5.12    best servic    5.26      busi lunch    5.26  chicken beef    5.23
+8     5.12 without reserv    5.21        out food    5.04  decent price    5.13
+9      5.1  fun atmospher    5.15   extrem friend    5.04 chicken tikka    5.07
+10     5.1     veri bland    5.09    best mexican    5.04     just good    5.04
+              term loading
+1    take advantag    5.79
+2     just perfect    5.56
+3   french quarter    5.34
+4       best sushi    5.26
+5  authent italian    5.26
+6        fri green    5.24
+7  previous review    5.22
+8       onion soup    5.17
+9        like more    5.16
+10       food area    5.13
+Initialization Method: 1 # of Topics: 20
+             term loading            term loading           term loading            term
+1       best kept    6.31    thai restaur    6.15       sure tri     6.2     credit card
+2      fri shrimp    5.87       great can    6.01    food except    6.06   breakfast day
+3         plan go    5.83     three cours    5.51    made reserv    6.02 restaur definit
+4        more one    5.78    food fantast    5.49    plan return    5.69       hand down
+5  love atmospher    5.72    attent staff    5.38      onli food    5.66       fun place
+6     kept secret    5.67    outsid patio    5.35  seafood entre     5.6      onion ring
+7  won disappoint    5.46       meal didn    5.28 highlight menu    5.48         up tabl
+8    mediocr best    5.45      great veri     5.2     still wait    5.48  indian restaur
+9      place best    5.37       never bad    5.19      wait hour    5.47        up great
+10     empti tabl    5.34 atmospher excel    5.19     roast beef    5.35       decid eat
+   loading          term loading         term loading            term loading
+1     5.55 waitress seem    5.85  food poison    6.32         la cart    5.96
+2     5.36 pleasant dine    5.81  excel price    5.86      great spot    5.86
+3     5.36     eat again    5.63    best valu    5.83        bar wait    5.73
+4     5.32       go away    5.48   serv great    5.65    friend price    5.63
+5     5.28     well done    5.38 portion huge    5.49     local place    5.32
+6     5.22   sever minut    5.31  select wine    5.49      sesam seed    5.29
+7     5.22     never eat    5.29     out door    5.44        more one    5.29
+8     5.15   order steak    5.29     new year    5.37      sushi roll    5.23
+9     5.15   grill chees    5.21   time enjoy    5.33 authent italian     5.2
+10    5.09  food horribl     5.2      bad day    5.26       non smoke     5.2
+            term loading             term loading          term loading          term
+1     veri bland    6.14      especi like     6.4    lunch spot    5.77     good work
+2      hand down     6.1       veri enjoy    5.65 servic impecc    5.54       up good
+3     best eaten    5.82      owner manag    5.48    time place    5.47     meal come
+4     style food    5.79   staff knowledg    5.42    three year    5.47  best chicken
+5       don wast    5.56          get pay    5.41   anywher els    5.45      usual go
+6     wast money    5.53       just plain    5.38     irish pub    5.44 servic prompt
+7      never eat    5.45 generous portion    5.35   thing place    5.35    best place
+8  great italian    5.18        food onli    5.27     down home    5.33     veri slow
+9       out food    5.16     tell everyon    5.26     onli food    5.33  outsid patio
+10      too high     5.1    place everyon    5.25   littl place    5.28    feta chees
+   loading            term loading           term loading        term loading
+1     7.67      veri bland    5.85      walk door    6.49  here great    5.99
+2     6.31 authent mexican    5.59         put up    5.99    kung pao    5.93
+3     6.06       veri poor    5.53  servic realli    5.83   down home    5.79
+4     6.01       veri help    5.52       kung pao    5.81  like great    5.62
+5     5.78    great famili    5.24    food superb    5.53 place lunch    5.59
+6     5.76          use go    5.21 italian cuisin    5.52 again again    5.58
+7     5.61      owner veri    5.21     like great    5.46  empti tabl    5.48
+8     5.51      goat chees    5.18      great job    5.42    food hot    5.36
+9     5.48    attent staff    5.01     side order     5.4   good well    5.32
+10    5.46     place local    4.96 chicken tender    5.35  time enjoy    5.28
+             term loading           term loading          term loading             term
+1     great staff    5.96    wonder time    6.79     next trip    6.73        four year
+2     realli neat     5.7     veri enjoy    6.36        use go    6.32    experi wonder
+3        more one    5.66     serv great    6.06    place town    6.02       best steak
+4      time think    5.55   restaur went    5.67 better servic    5.75     area restaur
+5    everyon veri    5.49    food around    5.64 italian place    5.64 atmospher wonder
+6        two larg     5.4    food friend    5.62  everyon veri     5.5          out one
+7       taco bell    5.38     place town    5.55      more one     5.4      take famili
+8  great waitress    5.35     best place    5.47    pizza best    5.34     group friend
+9      food bland    5.34 forward return    5.36     great can    5.22      excel price
+10     veri happi    5.29      best valu    5.28 chicago style    5.18    chicken salad
+   loading            term loading           term loading
+1      6.2       next trip    6.64     just great    5.72
+2     5.71        go wrong    6.03  pleasant dine    5.37
+3     5.44      enjoy dine    5.73 absolut wonder    5.23
+4     5.37 authent italian    5.67     enjoy dine    5.11
+5     5.28  absolut wonder    5.64      irish pub     5.1
+6     5.24     great pizza     5.6    place lunch    5.08
+7     5.23     alway excel    5.58    beer select    5.08
+8      5.2     big portion    5.51     time think    5.04
+9     5.11         go year    5.41   love restaur    4.98
+10    5.09      food still    5.37      wait wait    4.96
+Initialization Method: 1 # of Topics: 25
+           term loading           term loading           term loading         term loading
+1   cannot wait    5.86      good work    6.14     french dip    5.87  like famili    5.64
+2  outsid patio     5.5  server friend    6.06     everi week    5.84      plan go    5.63
+3  mediocr best    5.48    glass never    5.93     price menu    5.83   veri quick    5.42
+4  food mediocr    5.41   famili style    5.57      best valu    5.58 chocol mouss    5.37
+5    everi year    5.38        up good    5.55 absolut wonder    5.57 restaur near    5.37
+6     place doe    5.37      both veri    5.52 chicken tender    5.57    like most    5.34
+7  type restaur    5.32        pot pie     5.5    peanut sauc    5.44   food fabul    5.32
+8       pan fri    5.26 absolut wonder    5.48    entre order    5.43  brother law    5.24
+9     fri green    5.26    alway fresh    5.37     place busi    5.42   make point     5.2
+10    gift shop    5.26      area veri    5.37      look veri    5.31   treat like    5.18
+             term loading          term loading              term loading          term
+1       thai food    5.61   veri romant    5.94 recommend everyon    6.08 servic attent
+2    thai restaur    5.59     each dish    5.87        everi week    5.57  tell everyon
+3       foie gras    5.38     corn beef    5.79      great select    5.54    veri relax
+4       food more    5.33     wast time    5.78        call order    5.34  best chicken
+5      bleu chees    5.31 chile relleno    5.73     servic extrem    5.24   food prepar
+6   steak chicken    5.27    owner came    5.69         pull pork    5.22  went restaur
+7      more could    5.24   indian food    5.66        busi lunch    5.18    great veri
+8  absolut delici    5.16 excel restaur    5.64    absolut wonder    5.17     lamb chop
+9   dessert great    5.15   sever occas    5.58      barbecu sauc    5.13    potato fri
+10  small restaur    5.14 delici servic    5.47        food still    5.11    veri clean
+   loading          term loading              term loading            term loading
+1     5.88     corn beef    5.89    complain manag     6.2        old town    6.19
+2     5.67     place doe    5.71       new favorit    6.19     worth drive    6.05
+3     5.64   least twice     5.7         food cold    5.94    varieti menu     5.6
+4     5.55  friend enjoy    5.66        shop locat    5.86     slow servic    5.35
+5     5.41     york citi    5.43    forward return     5.6       like food    5.22
+6     5.35 restaur alway    5.43 definit recommend    5.58 authent italian     5.2
+7      5.3  grill salmon    5.32         veri rude    5.54     th birthday    5.11
+8     5.18 italian place    5.25     steak seafood    5.52         up take     5.1
+9     5.18    some peopl    5.17         great job    5.52       time time    5.07
+10    5.03  restaur time    5.15     review submit    5.41    attent staff    5.01
+            term loading              term loading          term loading         term
+1   enough share    5.96 recommend everyon    5.74     went here    6.08   good howev
+2      out quick    5.81         work veri    5.68 chicago style    5.78 grill salmon
+3      brand new    5.61      food qualiti    5.65   expect much    5.71  fresh tasti
+4  kitchen staff     5.6     conveni locat    5.56    pizza good    5.69   best steak
+5       new year    5.57          tri food    5.46  thai restaur    5.65   good bread
+6      food amaz    5.49          here can    5.31   veri expens    5.63   place hang
+7       now live    5.48           st loui    5.26   great decor    5.58      go food
+8      meal come    5.41         great job    5.21        mix up    5.58  least twice
+9      veri cozi    5.32        alway veri    5.19 servic attent    5.53 decent price
+10     like food     5.3         good deal    5.17   chocol cake     5.5    bar grill
+   loading          term loading         term loading            term loading         term
+1     6.03     hot fresh    5.84 decent price    6.96  food atmospher    6.08  veri expens
+2     5.98  best mexican    5.55  wonder time    6.04 restaur definit    6.06  first class
+3     5.73     bring out    5.48    serv food    5.57      want great    5.55     up great
+4      5.7  food present    5.42     old town    5.55     crust pizza    5.54    dure week
+5     5.66      ahi tuna    5.41     hot food     5.4       after ask     5.5    new place
+6     5.57   food especi    5.35 done perfect    5.29       time well    5.46      tri new
+7     5.56  love restaur    5.31    tabl wait    5.24       get earli    5.31     food isn
+8      5.5 seafood entre     5.3  new favorit    5.24      enjoy dine    5.28    gift shop
+9     5.44  thing realli    5.26  place great     5.2      thin crust    5.19    wast time
+10    5.41      sure tri    5.22   veri clean    5.19    food qualiti    5.17 tourist trap
+   loading          term loading            term loading          term loading
+1     6.57       go food    6.13 excel atmospher    6.18   extrem rude    6.29
+2     5.76     brand new    6.05    great burger    6.16   dure summer    5.86
+3     5.58   food superb    5.93     food poison    5.93       dim sum    5.56
+4     5.54   like famili    5.79       taco bell    5.85     food more     5.4
+5     5.53    potato fri    5.76 atmospher excel    5.36 experi wonder    5.38
+6     5.42     here year    5.76    perfect cook    5.32    pizza good    5.31
+7     5.35 review submit    5.59   enjoy restaur    5.31      kung pao    5.23
+8     5.33  enjoy dinner    5.34  attent without    5.23    sesam seed    5.18
+9     5.29    everi year    5.26    seafood dish    5.21    owner veri    5.18
+10    5.25     wast time    5.25  steak sandwich     5.2     menu vari    5.15
+                term loading           term loading           term loading
+1      everyth great    5.78  servic attent    6.45      food love    6.84
+2    authent italian    5.77     food enjoy    5.98      time time    5.82
+3          award win    5.65  great italian    5.92        bad day    5.77
+4         first bite    5.46   best italian    5.84   after dinner    5.76
+5        wine cellar    5.42   friend price     5.7    most delici    5.55
+6         anyon look    5.39 italian cuisin    5.63     veri uniqu    5.44
+7          fun place    5.32    least twice    5.62 coconut shrimp     5.3
+8           ll never    5.28     anyon look    5.61    main street    5.27
+9            d never    5.14      best kept    5.55      food more    5.24
+10 definit recommend    5.14  restaur owner    5.37       hot cold    5.23
+Initialization Method: 2 # of Topics: 5
+              term loading           term loading        term loading           term
+1     best mexican     5.7 definit return    6.08   took seat    6.57   most popular
+2        food even    5.59   recent visit    5.63  shown tabl    5.99 highlight menu
+3          just ok    5.54      food wine     5.6     fri out    5.99  francisco bay
+4    chicago style    5.53      food best    5.59  over drink    5.99    vanilla ice
+5        went here    5.29  attent detail    5.59   came pile    5.99    fresh veget
+6        hand down    5.21       web site    5.58   got littl    5.99       don miss
+7  authent mexican    5.18     numer time    5.54   came chip    5.99    new england
+8       three year    5.05    alway excel    5.54      au jus    5.99  seafood entre
+9       same peopl    4.93     great wine    5.51  crinkl cut    5.92  dinner buffet
+10       down best     4.9      food love    5.51 pizza order    5.86    buffet food
+   loading             term loading
+1      7.3     excel servic    5.87
+2     6.94    servic wonder    5.12
+3      6.8 wonder atmospher    5.06
+4     6.39        back just    4.99
+5     6.34   nice atmospher     4.9
+6      6.3        around pm    4.78
+7     5.61        got drink    4.76
+8     5.42          love go    4.72
+9     5.21      cannot wait    4.72
+10    5.18    wonder servic     4.7
+Initialization Method: 2 # of Topics: 10
+            term loading            term loading          term loading            term
+1  servic wonder     6.3       good wine    5.84     watch out    5.87        set down
+2    realli didn    5.79 excel atmospher    5.76 italian place    5.39    chees lettuc
+3       wait can    5.77      fri shrimp    5.52   great price    5.37       diet coke
+4      watch out    5.68      ll definit    5.45    menu great    5.35        came fri
+5      eat place    5.64          use go    5.44 perfect place    5.35     realli didn
+6    casual dine    5.61       veri slow    5.34      plan eat    5.35      back drink
+7     here sever    5.41      veri bland     5.3    place dine    5.24      over drink
+8   thai restaur    5.35    best mexican    5.11  enjoy dinner    5.18       took seat
+9         use go    5.35       area veri     5.1    just great    5.16 buffalo chicken
+10     palo alto    5.26     worth money    5.07   pizza great    5.13       came chip
+   loading           term loading          term loading          term loading        term
+1     6.77   enough share    6.36    worst dine    7.59     deep dish    6.77 casual dine
+2     6.54       until pm    6.35 pleasant dine    6.28        au jus    6.41   taco bell
+3     6.28   green tomato    6.16    chef owner    5.95       came up    6.06 way through
+4     6.23    locat heart    6.15  like royalti    5.89      set down    5.92 vanilla ice
+5     6.18    vanilla ice    6.06    enjoy dine    5.61  italian beef    5.88 realli didn
+6     6.15   clam chowder    5.85     best dine    5.52 counter order    5.87      use go
+7     6.05        dim sum    5.84   casual dine     5.5    good pizza    5.78    usual go
+8     6.05       serv bed    5.72   list extens    5.45  golden brown    5.71 full servic
+9     6.05 highlight menu    5.58 perfect place    5.29     babi back    5.68   watch out
+10    5.94       don miss    5.56   chees steak    5.25    sauc great    5.59   tast food
+   loading           term loading           term loading
+1      6.7     again next    6.18       set down     6.1
+2     6.43    big portion    6.15         au jus    6.02
+3     6.34      even come    5.97    realli didn    5.93
+4      6.3     better ani    5.41       two piec    5.82
+5     6.16      food more    5.28 sandwhich came    5.81
+6     6.06 best breakfast    5.28  counter order    5.59
+7     6.01    fanci place    5.25     french dip    5.58
+8        6 indian restaur    5.22     good pizza    5.49
+9     5.98      mile away    5.19     shown tabl    5.44
+10    5.93    wait return    5.18    way through    5.39
+Initialization Method: 2 # of Topics: 15
+               term loading          term loading              term loading        term
+1          back tri    5.85   high school    6.52       excel staff    6.76   york citi
+2        good order    5.53 sandwich serv    6.36         palo alto    5.66  york style
+3        ll definit    5.42     fri littl    6.27    indian restaur    5.42    kung pao
+4       cannot wait    5.41    food place    6.25         eat place    5.38 swiss chees
+5  wonder atmospher     5.3     get choic    6.22       wait return     5.3 larg enough
+6        dri tomato     5.3  cedar street    6.18        better ani    5.21 locat heart
+7          just can    5.23    don realli    6.15 recommend restaur    5.18   prime rib
+8         eat place    5.13    three four    6.11      mediocr best    5.08   deep dish
+9              d go    5.12     taco bell    6.07    italian cuisin    5.07      get up
+10       arriv tabl    5.12 chicken strip    5.88     chicken tikka    5.06    serv bed
+   loading           term loading        term loading          term loading          term
+1     8.77    big portion     5.9 casual dine    6.77 pleasant dine    6.56       cut fri
+2     7.64         get up     5.6 most delici    6.39    dri tomato    6.13 sandwich serv
+3      6.4    great peopl    5.54    year now    6.28        get up    6.05     didn care
+4     6.39 complain manag    5.46 vanilla ice    6.15    worst dine    6.03 fresh seafood
+5     6.25 best breakfast    5.26 extrem rude    6.15  like royalti    5.91    dri tomato
+6     6.05      gone down    5.21   both time    6.04   experi food    5.86    back drink
+7     5.97      prime rib    5.19  great spot    5.91  food qualiti    5.74      fri noth
+8     5.96    great price    5.17   get order    5.91   list extens    5.68     diet coke
+9     5.95      food love    5.15   like home    5.75    chef owner    5.64  chees lettuc
+10    5.87      here year    5.08    usual go    5.72    food fabul    5.61  golden brown
+   loading         term loading           term loading         term loading           term
+1      7.4  mouth water    5.88      bake bean    7.46    deep dish    7.76    vanilla ice
+2     6.62    east lans    5.77 sandwhich came    7.19 italian beef    7.07  chines buffet
+3     6.44   littl over    5.68       two side    6.56   pizza like    6.85  seafood entre
+4     6.36      cut fri    5.67      get order    5.84   style food    6.69 italian cuisin
+5     6.34  found place    5.66      menu look    5.84       au jus    6.33    three cours
+6     6.31   don realli    5.65     tabl right    5.81      cut fri    6.16       prix fix
+7     6.21    just over    5.61       back rib     5.8      just ok    6.01     place come
+8     6.21      up just    5.61         get up    5.79  great pizza    5.96        dim sum
+9     6.18 chees lettuc    5.51      carri out    5.76   south side    5.94         get up
+10    6.11   good order    5.44    booth along    5.66  pizza great    5.82      crab cake
+   loading          term loading            term loading           term loading
+1     6.62   booth along    6.54       good wine    6.02 sandwhich came    7.71
+2      6.5       cut fri    6.46 excel atmospher    5.95     french dip    7.42
+3     6.21  chees lettuc    6.45     veri tender    5.63         au jus    6.61
+4      6.1     get choic    6.42  iceberg lettuc    5.62  lunch counter     6.1
+5     6.09     just over    6.42     servic veri    5.42  sandwich serv    6.04
+6     5.99   burger came    6.28 mexican restaur    5.42        bag fri    5.99
+7     5.94 sandwich serv    6.19      good order    5.34       room bar    5.91
+8     5.87     toast bun    6.01     fresh bread    5.14      gift shop    5.85
+9     5.68     took seat    5.98     servic good     5.1    littl extra    5.73
+10    5.67     got littl    5.95      staff veri    5.09      toast bun    5.65
+Initialization Method: 2 # of Topics: 20
+            term loading           term loading          term loading         term loading
+1    buffet food    6.75   thai restaur    6.76     know good    7.01      just ok    6.99
+2     eat buffet    6.68      thai food    6.27    don realli     6.6  quick lunch    6.66
+3  dinner buffet    6.48   grill salmon    6.13     four year    6.55  vanilla ice    6.48
+4  chicken tikka    6.04    excel staff    6.03   quick lunch    6.51    hour wait    6.28
+5      could ask    5.77     excel wine    5.92  cedar street    6.33   place make     6.1
+6  conveni locat    5.76 forward return    5.85  best chicken    6.32    item menu    5.89
+7  sushi restaur    5.72     coupl time    5.63    drive thru    6.26 great experi    5.79
+8  fresh seafood    5.69       pad thai     5.6     taco bell    6.14    taco bell    5.75
+9   attent staff    5.65    entir staff    5.58    food place     6.1     serv one     5.7
+10     one owner    5.63  pleasant even    5.56 chicken strip    5.97   great spot     5.7
+            term loading           term loading            term loading         term
+1      place get    7.27      york citi    7.26     big portion    6.03     two side
+2    grill chees    6.45    quick lunch    6.52 recommend anyon     5.7    babi back
+3        just ok    6.45    pizza order    5.99        up great    5.47 sandwich fri
+4  beef sandwich     6.4 upscal restaur    5.89  best breakfast    5.19     back rib
+5   food alright    6.33     sesam seed    5.86     great price    5.07      st loui
+6     pizza good    6.18    swiss chees    5.79       hour wait    5.03   first date
+7      get order    6.07     come close    5.78     wonder time    5.01    fri fresh
+8         au jus    5.88      food fair    5.77  birthday parti    4.95  fanci place
+9        fri out    5.87        ani one    5.68      here again    4.93     use make
+10  valentin day    5.83    locat heart    5.65      food tasti    4.93   potato fri
+   loading          term loading             term loading            term loading
+1     6.64    definit go    6.33        east lans    5.98   pleasant dine    6.78
+2     6.04     wait over    6.16       don realli    5.88       best dine    6.13
+3     6.01       plan go    6.09 girlfriend order    5.69 celebr birthday    6.06
+4     5.98       wait go    5.38        two slice    5.68      worst dine    6.03
+5     5.86      never go    5.35    lunch counter    5.66      each cours    5.89
+6      5.8    ll definit    5.21       wasn whole    5.64  french quarter    5.75
+7     5.79     food okay    5.18     pretti empti    5.62   attent detail    5.68
+8     5.78     come tabl    5.16         good got    5.47    food qualiti    5.65
+9     5.77      just can    5.11          up just    5.44       foie gras    5.62
+10    5.63 dessert great       5     chees lettuc    5.41      food bland     5.5
+             term loading          term loading             term loading             term
+1     food pretti    7.47      use make    6.38        palo alto    6.59   sandwhich came
+2      coffe shop     6.5   three cours    6.31       french dip    6.03         two piec
+3    food alright    6.38 wild mushroom     6.3     friend great    6.02        came chip
+4      good pizza    6.29  enough share    6.26     food alright    5.75 girlfriend order
+5       serv same    6.17  grill salmon    6.25    high recomend    5.68       over drink
+6     good select    5.84   garlic sauc    6.17      worth money    5.52         two side
+7    still pretti    5.78      prix fix    6.11      good realli    5.49     still pretti
+8  sandwhich came    5.76    open daili    6.05      excel place    5.47        dark wood
+9      shop locat    5.65     pork loin    5.88 atmospher realli    5.43       french dip
+10    great pizza    5.63     crab cake    5.85      quick lunch    5.41          bag fri
+   loading          term loading           term loading           term loading
+1     6.53 outstand food    6.82      menu food    6.07 chees sandwich    6.28
+2     6.05     lot money    6.74      hand down    5.67    grill chees    6.05
+3     5.88     two slice    6.23     food bland    5.49    booth along       6
+4     5.79   thin crispi    6.18       now live    5.35     over drink    5.95
+5     5.77    three four    6.16 french quarter    5.19  sandwich came     5.9
+6     5.74  right amount    6.07    price moder    5.06       set down    5.74
+7     5.72      just can    6.01   thai restaur    5.06      non smoke    5.66
+8     5.67    pizza good    5.97     offer wide    5.06        bag fri    5.65
+9     5.63   pizza joint    5.93      mile away    5.05      toast bun    5.62
+10    5.59  price extrem     5.9      know good    5.05     wasn whole    5.62
+              term loading          term loading
+1        soup veri    5.88    pizza good    7.07
+2     never return    5.67     two slice    7.02
+3        hand down    5.64       just ok    6.72
+4        area veri    5.26     until got    6.19
+5        veri veri    5.21      food too    6.11
+6       alway good    5.21 servic friend       6
+7    restaur alway    5.08       re open    5.98
+8  mexican restaur    5.06  could easili    5.87
+9      veri reason    5.05     serv best    5.86
+10      fri shrimp    5.02 friend effici    5.86
+Initialization Method: 2 # of Topics: 25
+                term loading        term loading        term loading           term
+1        excel staff    6.56    fri noth    6.45 grill chees    6.95    locat heart
+2      recommend tri    6.13 place lunch    6.38 pizza joint    6.53       wine bar
+3        list extens     6.1  shown tabl    6.31 thin crispi    6.52    pizza order
+4        indian food    5.99  back drink     6.3   deep dish    6.47    rave review
+5      chicken tikka    5.85 best burger    6.19  best pizza    6.43 upscal restaur
+6  recommend everyon    5.79    made way    6.11   two slice     6.4      reason go
+7        price moder    5.61 booth along    6.06      au jus    6.37      corn beef
+8           too high    5.49   diet coke    6.04   few place    6.25    first place
+9        place lunch    5.48     cut fri    5.96  larg pizza    6.22   open kitchen
+10      poor qualiti    5.48  wasn whole    5.93  good pizza    6.22    full servic
+   loading              term loading           term loading            term loading
+1     6.75         reason go    5.58      some kind    6.46 outstand servic    6.58
+2     6.74 recommend everyon    5.57       just eat    6.39    dine restaur    6.08
+3     6.64        servic bad    5.46    vanilla ice    6.37    price extrem    6.07
+4      5.9        time think    5.39     great spot    6.32    food qualiti    6.03
+5     5.77     restaur great     5.3       one most    6.31    time favorit    5.97
+6     5.72       grill chees    5.23  counter order    6.23   pleasant dine    5.95
+7     5.66           put out    5.16   cedar street    6.12     bloodi mari    5.89
+8     5.65       price great     5.1    extrem rude    6.12        onc week    5.71
+9     5.65       peopl great    5.07        one guy    6.04    italian food     5.7
+10    5.56        get togeth       5 reserv suggest    6.02     indian food    5.59
+             term loading         term loading            term loading           term
+1     locat heart    6.71  larg enough    6.67      excel food    6.44       two side
+2     vanilla ice    6.62  garlic mash    6.63 atmospher excel    6.26  pork sandwich
+3        prix fix    6.24   onion soup    6.47      larg pizza     6.1 forward return
+4       sweet tea    6.13   jack chees    6.46    lobster tail    6.04     first date
+5      place come    5.87 grill salmon    6.42  dessert includ    6.03      look over
+6     creme brule    5.77   open daili    6.35        serv bed    5.89 sandwhich came
+7  dessert includ    5.74   open lunch    6.34       veri poor    5.87         don go
+8   seafood entre    5.72  garlic sauc    6.04      eat buffet    5.84     side order
+9     three cours    5.68    pm sunday    6.01        worth go    5.77     littl shop
+10     onion soup    5.64  salad entre       6       mahi mahi    5.72      meal came
+   loading          term loading            term loading        term loading         term
+1     6.47   grill chees    6.89       hand down    6.47   good work       6 chees lettuc
+2     6.35   littl extra    6.66         just ok    6.31 chees steak    5.71    east lans
+3     6.28     non smoke    6.43       taco bell    6.29    know whi    5.65    two slice
+4     6.21  best chicken    6.31       food area    6.28     old son    5.54     near bar
+5     6.05     just over    6.04    best mexican    6.27     up good    5.54  place littl
+6     5.93     got littl    5.98 mexican restaur    6.24   main dish    5.53    chees top
+7     5.92 smoke section    5.97     big portion    6.24    can tell    5.39 great burger
+8     5.86     took seat    5.95 authent mexican    6.22     d never    5.17    near back
+9     5.84    over drink    5.92       hot fresh    5.97 veri tender    5.16    got littl
+10    5.83 breakfast day    5.91       rice bean    5.89 thin crispi    5.15    took seat
+   loading         term loading          term loading          term loading           term
+1     6.82   pizza veri    6.72     two slice    7.64          m go    6.71  lunch counter
+2      6.7   year alway    6.03     food area    7.29   parti order    6.67    grill chees
+3     6.44   excel food    6.02      got home    6.43 waitress seem    6.54      two slice
+4     6.36  servic good    5.79    place come    6.24    din experi    6.45      east lans
+5     6.03 servic excel    5.73    almost too    6.18        got up    6.44    pizza order
+6     5.95    both veri    5.58    enjoy food    6.18   walk around    6.41        fri out
+7     5.95      go here    5.58     until got    6.12    fri realli     6.4 sandwhich came
+8     5.93   get togeth    5.49     fri steak    6.09      two piec    6.36   cedar street
+9      5.9   order larg    5.49 like sandwich    6.06     took bite    6.27     order larg
+10    5.86  place lunch    5.36  good italian    6.04      room bar    6.25     larg pizza
+   loading         term loading            term loading           term loading
+1     6.43      wait go    6.76  sandwhich came    6.09    sever minut    6.61
+2     6.34    food took    5.75      upon arriv       6     food bland    6.54
+3     6.29   arriv tabl    5.38  french quarter    5.86      menu food    5.92
+4     6.04     back tri    5.35       meal come    5.86    excel staff    5.75
+5     6.02    wait over    5.34      open lunch    5.76 highlight menu     5.7
+6     5.89    stop tabl    5.29      shown tabl    5.69     fresh food     5.5
+7     5.86      plan go    5.26     parti order    5.68      time well    5.44
+8     5.84   ll definit    5.21    mediocr best     5.6   delici order    5.42
+9     5.83 tell everyon    5.19        room bar    5.53       wine bar     5.4
+10    5.78    reason go    5.16 celebr birthday    5.52     arriv tabl    5.37
+               term loading          term loading         term loading
+1     high recomend    5.83    eat buffet    7.35 cedar street    6.92
+2          wine bar    5.76   wait return    5.87    look over    6.92
+3        pizza veri    5.74     dish like    5.82    toast bun    6.47
+4        good howev    5.71   buffet food    5.78  waiter came    6.43
+5    good atmospher    5.54      area one    5.77   over drink       6
+6  atmospher servic    5.52     stop tabl    5.67    over menu    5.97
+7       mani option    5.43 sushi restaur    5.67    two slice    5.89
+8       veri tender    5.38 take advantag    5.53    diet coke    5.88
+9          don wast    5.28 dinner buffet    5.51 white chocol    5.79
+10      experi food     5.2       just ok     5.5  readi order    5.79
+Initialization Method: 3 # of Topics: 5
+             term loading           term loading            term loading              term
+1  absolut wonder     6.4    larg enough    6.32  absolut wonder     6.4 recommend everyon
+2        year now    5.88       until pm    5.79         plan go    5.33        just plain
+3     food decent    5.42       prix fix    5.78      veri enjoy    5.24       especi like
+4      mani great    5.09    locat heart    5.78      owner veri     5.2        great food
+5     fri catfish    5.07     open daili    5.78 excel atmospher    5.05      almost everi
+6      menu board    5.02 french quarter    5.76       quit good    4.89         gone down
+7       bad place    5.01     staff make    5.73      ll definit    4.71          go everi
+8   counter order    4.99     roast pork    5.71 veri disappoint    4.69           run out
+9       side item    4.94    menu featur    5.69     cannot wait    4.68        kid friend
+10  sandwich come    4.93     upon arriv    5.69       veri help    4.61    absolut wonder
+   loading           term loading
+1     5.52      toast bun    6.52
+2     5.03     wasn whole    6.51
+3      4.9 sandwhich came    6.51
+4     4.79  counter order    6.12
+5     4.76        bag fri    5.93
+6     4.69      took seat    5.93
+7     4.64      got littl    5.93
+8     4.63     over drink    5.93
+9     4.54      came pile    5.93
+10    4.45    didn realli     5.8
+Initialization Method: 3 # of Topics: 10
+           term loading          term loading           term loading            term
+1   food pretti    7.32     came pile    6.76     last minut    6.98 authent mexican
+2     bean rice    6.16      pub food    6.65       year now    6.16        want see
+3   good select    6.12       fri out    6.31    vanilla ice     5.8     place visit
+4  cedar street    5.81     took bite    6.27   most popular     5.7      price veri
+5     fri littl    5.64    wasn whole    6.21       get back    5.67       hand down
+6      red bean    5.64      fri noth     6.2      place doe     5.6       food here
+7  pretti empti    5.55  cedar street    6.17   great experi    5.42     veri reason
+8    shop locat    5.51 lettuc tomato    5.93      get chanc    5.39       serv best
+9     east lans    5.45      want see    5.82 best breakfast    5.36       food serv
+10  pizza order    5.37    over drink    5.79      stop tabl    5.34     famili oper
+   loading           term loading             term loading          term loading
+1     6.98     three year    5.78         pub food    5.91    pizza like    7.23
+2     5.89  conveni locat    5.78    friend servic    5.63   pizza order    7.15
+3     5.61   green tomato    5.78      great price    5.55   style pizza    6.44
+4     5.54 italian cuisin    5.78       sushi chef    5.44      m realli    6.14
+5      5.4    excel staff    5.78       menu great    5.31   pizza joint    6.05
+6     5.38  francisco bay    5.77 atmospher wonder    5.31     deep dish    5.94
+7     5.29      fri green    5.77      excel place    5.28       fri out    5.89
+8     5.22      could ask    5.77       want great    5.27    chees sauc    5.84
+9     5.13  order dessert    5.77       here again    5.22 chicago style    5.63
+10     5.1 absolut wonder    5.77         can beat    5.16      fri noth    5.63
+          term loading        term loading           term loading
+1     fri noth    6.81   took bite     6.7     worst dine    7.41
+2     two side    6.38    fri noth    6.52  pleasant dine    6.33
+3     get tabl    6.25   diet coke    6.48      foie gras    5.88
+4      ok noth    5.92   came chip    6.45      tast menu    5.68
+5   wall cover    5.78    pub food    6.34 experi restaur    5.59
+6   shop locat    5.67     fri out    6.08     excel wine    5.54
+7     want see    5.61   toast bun    5.93   start finish    5.54
+8  made reserv     5.5    seed bun    5.89     each cours    5.46
+9    over menu    5.48   wall tabl    5.89    everi penni    5.41
+10    m realli    5.48 pizza order    5.87  special occas    5.39
+Initialization Method: 3 # of Topics: 15
+            term loading          term loading             term loading          term
+1      taco bell    6.86  chees burger    6.61          wait go    6.44 seafood entre
+2   cedar street    6.34        get up    6.34      cannot wait    5.98    roast pork
+3     same peopl    6.05    york style     6.3     peopl friend    5.66   vanilla ice
+4       came fri    6.03     good deal    6.11             d go    5.56 francisco bay
+5   like royalti    5.89 high recomend    6.03 wonder atmospher    5.55  enough share
+6  chicken strip    5.88    three time       6      servic food    5.51      prix fix
+7           d go    5.86    pizza like     5.8         way like    5.44        get up
+8    food pretti    5.83     dine here    5.77       get better    5.16   fresh veget
+9     food place    5.67   friend mine    5.68        great can     5.1 restaur offer
+10   place lunch    5.57      got home    5.63    servic wonder     5.1      fri rice
+   loading           term loading       term loading         term loading          term
+1     6.69   chees lettuc    6.61  bbq joint    6.78   order larg    6.95     food amaz
+2     6.62      chees top    6.61  babi back     6.4  vanilla ice    6.74 pleasant dine
+3     6.49      palo alto    6.57   two side    6.32     http www    6.21  like royalti
+4     6.26       pub food     6.5 tabl right     6.1  great price    6.19   rave review
+5     6.15   food terribl    6.21  out order    6.05   place make    6.15   sever minut
+6     6.04    select beer    6.18 up counter    5.86   great spot    6.15        get up
+7     5.94     great even    6.17     get up    5.84   coffe shop    5.88   list extens
+8     5.72   great burger    6.13    st loui    5.76    like home    5.87    worst dine
+9     5.66 waitress never    5.77   came fri    5.74 great experi    5.83     best dine
+10    5.65     wasn whole    5.75  put order    5.74  most delici    5.64     wine list
+   loading            term loading           term loading          term loading
+1     6.57       taco bell    6.85 sandwhich came    6.96  great experi    6.64
+2     6.55 mexican restaur    6.38      bar great    6.92   food incred    6.56
+3     6.24     big portion    6.22      diet coke    6.71     crab cake    6.49
+4     6.13       food area    6.18  brought drink    6.35    price high    6.37
+5     6.11       hand down    6.08     french dip    6.33    here again    6.18
+6     6.07     worth money    5.99    dure dinner    6.21    manag came    6.15
+7     5.99     food delici     5.8       came fri    6.17      won find    6.09
+8     5.85    best mexican    5.78         au jus    6.07 special occas    5.94
+9     5.81 authent mexican     5.7      came chip    6.06     like home    5.86
+10    5.78 veri profession    5.65        bag fri    6.05     each time    5.62
+             term loading          term loading        term loading            term
+1        came fri    6.47   excel staff    6.59   chees fri    6.94     server veri
+2    chees lettuc     6.1      go everi    6.03  pizza like     6.6     excel place
+3    cedar street       6   wait return    6.02  style food    6.46     fresh bread
+4     chees pizza       6     food amaz    5.29 style pizza    6.45       good tast
+5  girlfriend got    5.94    servic can    5.29  good pizza    6.28 excel atmospher
+6        m realli    5.93        get up    5.29 great pizza    6.22     servic good
+7      over drink    5.91 servic wonder    5.21    m realli    6.18       quit good
+8       get choic    5.87     place doe    5.18   place get    6.11      fair price
+9      wasn whole    5.85     bar great    5.17      got up    5.99      place make
+10      diet coke     5.8      wait can    5.16  like littl    5.96      alway good
+   loading
+1     5.39
+2     5.35
+3     5.33
+4     5.29
+5     5.23
+6     5.08
+7        5
+8     4.94
+9     4.93
+10    4.92
+Initialization Method: 3 # of Topics: 20
+          term loading           term loading          term loading           term loading
+1    york citi    7.93     again next    6.77      out menu    6.67      fri green     7.3
+2    could ask    6.37   thai restaur    6.31 enter restaur    6.15   green tomato    7.28
+3  place visit    6.02     offer wide    5.64   vanilla ice    6.14 french quarter    7.24
+4  locat heart    5.98     staff make    5.64    great spot    6.06       until pm    6.68
+5   order larg    5.86 highlight menu    5.63 fresh ingredi       6     open daili     6.5
+6  first place    5.79      tast food    5.61     get chanc    5.89       prix fix    6.46
+7  strip steak    5.64      could ask     5.6     tast just    5.69     new orlean    6.25
+8    corn beef    5.64    wait return    5.55     both time    5.68     jack chees    6.24
+9   time befor    5.63      palo alto    5.44     get great    5.65      pm friday    6.18
+10  east coast    5.57      mile away    5.41      usual go    5.65    pm saturday    6.03
+                term loading            term loading          term loading          term
+1         food alway    5.47       babi back     6.9    worst dine     7.6        au jus
+2         owner veri    5.24   pork sandwich    6.37    enjoy dine    6.75     deep dish
+3      recommend tri     5.2      shop locat    6.36 pleasant dine    6.72     place get
+4      servic wonder    5.18        two side    6.32    staff make    6.27 counter order
+5         excel food    5.14        back rib     6.1  like royalti    5.98    style food
+6  recommend restaur    5.14      first date    5.91    great dine    5.88    crinkl cut
+7        experi here    5.14     good though     5.9    chef owner    5.52      time eat
+8       recommend go    5.13 buffalo chicken    5.89   sever minut    5.46    pizza like
+9           wait can    5.12        huge fan    5.79     made feel    5.44  food alright
+10         onli food    5.11     fanci place    5.75    each cours    5.33     back home
+   loading          term loading          term loading            term loading
+1     6.96     san diego     6.6     hot fresh    6.45 buffalo chicken     6.8
+2      6.7      got home    6.57    price good    5.73       whole lot    6.19
+3     6.44    enjoy food    6.22    wast money    5.63    cedar street    6.18
+4     6.19    excel veri    6.12     soup veri    5.54       got littl    6.03
+5     6.09  mexican food    6.06     down best    5.46      over drink    5.98
+6     6.01    mani great    6.04 high recomend     5.4      crinkl cut    5.77
+7     5.94 servic wonder    6.03     come tabl    5.29       never got    5.68
+8     5.93     place get    5.99    alway veri    5.22       bill just    5.63
+9     5.88  best mexican    5.98    veri clean     5.2      wasn whole    5.61
+10    5.85  food homemad    5.85    three year    5.19      seem littl    5.56
+            term loading        term loading        term loading         term loading
+1  friend famili    6.33      au jus    6.15    pub food    7.08    east lans    6.47
+2     mani great    6.01  order larg    6.14  never came    6.59   french dip    6.39
+3     seem littl    5.93      d like    6.08   time dure    6.25 cedar street    6.13
+4      eat place     5.9   got littl    5.98   near back    6.04     huge fan    6.13
+5   monday night    5.79    one tabl    5.79  great even    5.94 pretti empti    6.03
+6       pub food    5.77     fri out    5.78 go somewher    5.93   wast money    5.88
+7      place out    5.73 expos brick    5.77   came chip    5.92     got home     5.8
+8     soon after    5.63  french dip    5.68  want drink    5.91 white chocol     5.7
+9      time come     5.6   took seat    5.67  seem littl    5.83       up get    5.67
+10    pay attent    5.54   near back    5.58      up get    5.83   jack chees    5.66
+           term loading           term loading             term loading          term
+1   food pretti    6.77 sandwhich came    6.41         hot food    6.69    menu great
+2    good pizza    6.36     french dip    6.23       price more    6.59  restaur take
+3  food alright    5.97      came chip    6.16 generous portion    6.34   wait return
+4    just anoth    5.94         au jus    6.02      famili oper    6.18 everyth great
+5    order larg    5.61      toast bun    5.88     enough share    6.14    here again
+6   good select    5.57      didn care    5.82     alway friend    6.03   pizza great
+7      huge fan    5.55     jack chees     5.8      poor servic       6      pub food
+8      got home    5.27     crinkl cut     5.8       excel food    5.97      food hot
+9  pretti empti    5.26      whole lot    5.73        sushi bar    5.89  servic great
+10 staff attent    5.21      near back    5.68      larg enough    5.77    get better
+   loading          term loading
+1     6.47   bloodi mari    6.35
+2     6.19     wait over    6.23
+3     5.85   like someth    5.92
+4     5.61    real treat     5.9
+5     5.57 steak chicken    5.81
+6     5.45        au jus     5.8
+7      5.3  absolut best    5.61
+8     5.17  almost everi     5.5
+9     5.15   food awesom    5.34
+10    5.06     like much    5.26
+Initialization Method: 3 # of Topics: 25
+            term loading           term loading          term loading          term
+1      stop tabl    6.45  pleasant dine    6.87    ll definit    5.72      up great
+2     onion ring    6.35     worst dine     6.4    pizza veri    5.64   kept secret
+3     soft drink    6.32      stop tabl    5.69     both veri    5.57     even come
+4   best mexican    5.92     food bland    5.63     come tabl    5.37     best kept
+5    extrem rude    5.91 finest restaur    5.55  never return    5.28    blue chees
+6    friend veri    5.84     servic bad    5.31     good wine    5.22  green tomato
+7    rave review    5.78   food qualiti    5.28    wait until    5.02 someth differ
+8  restaur great    5.78  attent detail    5.25 wonder dinner    4.99 seafood salad
+9   alway friend    5.77     steak hous     5.2    food alway    4.96     fri green
+10      las vega    5.69      best dine    5.17   expect much    4.95    upon enter
+   loading         term loading           term loading            term loading
+1     6.54    took care    5.92    food pretti    7.23     prepar food    6.27
+2      6.3   crinkl cut     5.8     just anoth    6.22      wait until    6.23
+3     6.21    rack lamb    5.78 sandwhich came    6.18    like royalti    6.18
+4     6.09 cedar street    5.77     same peopl    6.05 excel atmospher    5.97
+5     6.03    took bite    5.56    pizza place    5.98     great lunch    5.94
+6     5.92   best pizza    5.56  servic pretti     5.7       time well     5.9
+7     5.78   took drink    5.55    good select    5.63       too salti    5.86
+8     5.76  friend went    5.49    chees steak    5.43    delici order    5.84
+9     5.61   busi lunch    5.47       huge fan    5.41      found food    5.73
+10    5.59 everyth menu    5.46   place pretti    5.34      both order    5.66
+             term loading           term loading        term loading           term
+1   chicken tikka     6.1       pub food    7.38   food area    6.17    extrem rude
+2  forward return    5.89     open lunch    6.98   menu food       6        one guy
+3      food still    5.81    best burger    6.39  better ani    5.68    vanilla ice
+4     seat prompt    5.77     even after    6.36   palo alto    5.62       even got
+5       menu vari    5.76       room bar    6.25   wait over    5.59     just under
+6     excel staff    5.69      non smoke    6.24   come tabl    5.49     onli peopl
+7     german food    5.61 waitress never    6.22 owner manag    5.36 behind counter
+8      steak hous    5.42   cedar street     6.2 beer select    5.18      both time
+9     spring roll    5.42       help out    6.14  offer wide    5.16   cedar street
+10    place visit    5.42     great time    6.09 wait return    5.14    turn around
+   loading        term loading           term loading           term loading          term
+1     7.76   good idea    6.57     over drink    6.27    larg enough    6.94      up great
+2     6.83   didn take    6.53      whole lot    6.12     open lunch    6.19    food still
+3     6.29    two side    6.49      took bite    6.04  wild mushroom    6.15      even got
+4      6.2       go up    6.48       pub food    6.02 monday through    5.91   price great
+5     6.19    noth els    6.48 chicken finger    5.95  wonder dinner    5.86   peopl great
+6     6.13    fri noth    6.41     wasn whole    5.95      pm sunday    5.85 restaur great
+7     6.05  after seat    6.38       near bar     5.8     feta chees    5.82     food area
+8        6   took bite    6.11      look over    5.73  fresh seafood    5.78  friend great
+9     5.94   mile away    6.09        out bag    5.72     jack chees    5.76    great food
+10    5.93 those place    5.98    grill chees    5.65     sesam seed    5.76    time think
+   loading           term loading           term loading         term loading
+1     6.26    wait return    7.15      east lans    6.68  style pizza    6.41
+2     6.12    excel staff    6.33         au jus    6.45  locat heart    6.04
+3     5.74      food over    6.09     same peopl    5.89  place visit    5.98
+4     5.58 restaur realli    5.51  lettuc tomato    5.85  first place    5.79
+5     5.56      food took     5.4   tomato onion    5.84     kung pao    5.78
+6     5.55       pub food     5.4     just under    5.83 friend enjoy    5.73
+7      5.5    great price    5.27     french dip    5.77  expect find    5.62
+8     5.43      thai food    5.22      didn come     5.7    good idea    5.61
+9     5.38   excel servic    5.19     lunch spot    5.63  meet friend    5.56
+10    5.37    pizza great    5.16 chicken tender    5.53    wash down    5.46
+            term loading          term loading         term loading           term loading
+1   cedar street    6.76     non smoke    7.01   pizza like    7.12    never again    6.93
+2       huge fan    6.67   grill chees    6.53  style pizza    6.83       two side    6.92
+3     food place    6.62        au jus    6.42 italian beef    6.71  pork sandwich    6.55
+4    chees steak    6.33     over menu    6.36   style food    6.58       best bbq    6.55
+5     better ani    6.11     look over    6.31       au jus    6.53     five minut    6.35
+6     just under     6.1     didn come     6.2  grill chees    6.23        gave up    6.16
+7     same peopl    5.94      ate half    6.16    befor got    5.91 sandwhich came    5.98
+8      food even    5.93     smoke non    6.07 great flavor    5.88       huge fan    5.95
+9       didn see    5.83 smoke section    6.06     food isn    5.86      over tabl    5.91
+10 chicken strip    5.82   littl extra    6.05     tri find    5.84     first date     5.8
+             term loading           term loading           term loading
+1    restaur make    6.36      wait over    5.87    locat heart    6.66
+2    italian dish    6.34     both order    5.83    vanilla ice    6.44
+3   great italian    6.21 sandwhich came    5.77       prix fix    6.22
+4    best italian    5.94      time dure    5.68       one item    5.91
+5   restaur great     5.9         po boy    5.63 chicken finger    5.75
+6     pizza pasta    5.88 french quarter    5.56    fri catfish     5.7
+7   seafood entre    5.78      took bite    5.48   time favorit    5.66
+8     food poison    5.75     open lunch     5.3     cours meal    5.53
+9  italian cuisin    5.16     worst dine    5.23 restaur realli    5.52
+10    experi veri    5.15      good idea    5.21  francisco bay    5.51
