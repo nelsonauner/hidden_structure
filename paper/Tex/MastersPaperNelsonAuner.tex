@@ -644,7 +644,7 @@ As with the Congress data, we note that despite the simplicity of our model, we 
 \end{tabular}
 \begin{tablenotes}
 \small
-\item One cluster from a model fit with 15 clusters , each having been initialized with K-means on the original text. This particular cluster has 152 reviews as "members".
+\item One cluster from a model fit with 15 clusters , each having been initialized with K-means on the original text
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
@@ -673,8 +673,8 @@ One drawback of our is that, in order to train cluster membership, the values of
 
 \subsection{Modeling relationships between clusters and metadata}
 As noted in a previous section, one drawback of our model is the lack of relationship between clusters and metadata distortion vectors. 
-Previous work on topic models allowed for correlation between topics (Blei \& Lafferty 2006) and has successfully applied these models to complicated datasets (Blei \&Lafferty 2007).
-Other authors have noted this problem (Rabinovich \& Blei), and possible solutions include allowing a range of metadata distortion vectors with varying relationships to each cluster or topic. 
+Previous work on topic models allowed for correlation between topics (Blei \& Lafferty 2006) and has successfully applied these models to complicated datasets (Blei \& Lafferty 2007).
+Other authors have noted this problem (Rabinovich \& Blei 2014), and possible solutions include allowing a range of metadata distortion vectors with varying relationships to each cluster or topic. 
 
 
 \section{Conclusion}\label{conclusion}
@@ -708,27 +708,33 @@ I thank Professor Matt Taddy for his guidance throughout the research and writin
 
 \begin{thebibliography}{99}
 
-\bibitem{TopicModelsTaddy} Taddy (2012).On Estimation and Selection for Topic Models.  Proceedings of the 15th International Conference on Artificial Intelligence and Statistics
+\bibitem{LDA} Blei, D. , Ng, A., and Jordan, M. (2003). Latent Dirichlet allocation. Journal of Machine Learning Research (JMLR), 3:993–1022, March 2003. ISSN 1532-4435
 
-\bibitem{LDA} Blei, David M., Ng, Andrew Y., and Jordan, Michael I (2003). Latent Dirichlet allocation. Journal of Machine Learning Research (JMLR), 3:993–1022, March 2003. ISSN 1532-4435
+\bibitem{CTM} Blei, D. and Lafferty, J. (2006). Correlated topic models. Advances in Neural Information Processing Systems 18. MIT Press, Cambridge, MA.
 
-\bibitem{Dynamic Topic Models} Blei, David M. and Lafferty, John D (2006). Dynamic Topic Models. Computer Science Department Paper 1038.
+\bibitem{Dynamic Topic Models} Blei, D. and Lafferty, J.(2006b). Dynamic Topic Models. Computer Science Department Paper 1038.
 
-\bibitem{CTM Science} DM Blei, JD Lafferty (2007). A Correlated Topic Model of Science. The Annals of Applied Statistics
+\bibitem{CTM Science}  Blei, D. and Lafferty, J. (2007). A Correlated Topic Model of Science. The Annals of Applied Statistics
 
-\bibitem{CTM} Blei, D. M. and Lafferty, J. D. (2006). Correlated topic models. Advances in Neural Information Processing Systems 18. MIT Press, Cambridge, MA.
-
-\bibitem{CorrelatedTopicModels}  Blei and Lafferty (2007) Correlated Topic Models. Proceedings of the 15th International Conference on Artificial Intelligence and Statistics
-
-\bibitem{IRTM} Rabinovich and Blei (2014). The Inverse Regression Topic Model. Proceedings of the 31st International Conference on Machine Learning, Beijing, China, 2014. JMLR: W\&CP volume 32
-
-\bibitem{Paintboxes}T. Broderick, J. Pitman, and M. I. Jordan (2013). Feature allocations, probability functions, and paintboxes. Bayesian Analysis, to appear. Preprint arXiv:1301.6647, 2013
+\bibitem{Paintboxes} Broderick, T.,  Pitman, J.,  and Jordan, M. (2013). Feature allocations, probability functions, and paintboxes. Bayesian Analysis, to appear. Preprint arXiv:1301.6647, 2013
 
 \bibitem{PartialInverseRegression}  Li, Cook  and Tsai. Partial Inverse Regression. Biometrika (2007), 94, 3, pp. 615–625
 
-\bibitem{GammaLasso} Taddy (2013) The Gamma Lasso. The gamma lasso. arXiv:1308.5623
+\bibitem{TopicModelsTaddy} Taddy, M. (2012).On Estimation and Selection for Topic Models.  Proceedings of the 15th International Conference on Artificial Intelligence and Statistics
 
-\bibitem{MNIR} Taddy, M. (2013). Multinomial inverse regression for text analysis. Journal of the American Statistical Association 108.
+\bibitem{GammaLasso} Taddy, M.  (2013a) The Gamma Lasso. The gamma lasso. arXiv:1308.5623
+
+\bibitem{MNIR} Taddy, M. (2013b). Multinomial inverse regression for text analysis. Journal of the American Statistical Association 108.
+
+\bibitem{IRTM} Rabinovich, M. and Blei, D. (2014). The Inverse Regression Topic Model. Proceedings of the 31st International Conference on Machine Learning, Beijing, China, 2014. JMLR: W\&CP volume 32
+
+
+
+%\bibitem{CorrelatedTopicModels}  Blei, D. and Lafferty, J. (2007) Correlated Topic Models. Proceedings of the 15th International Conference on Artificial Intelligence and Statistics
+
+
+
+
 
 \end{thebibliography}
 \end{document}
