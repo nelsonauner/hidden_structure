@@ -8,6 +8,7 @@
 %\usepackage{babel}
 \usepackage[capposition=top]{floatrow}
 \usepackage{graphicx}
+\usepackage{bm}
 \usepackage[T1]{fontenc}
 \usepackage[flushleft]{threeparttable}
 \usepackage{lmodern}
@@ -81,7 +82,7 @@
 
 
 
-
+%\DeclareMathOperator*{\argmin}{arg\,min}
 
 \begin{document}
 
@@ -227,7 +228,7 @@ distribution. That is,
 
 \[ x_{i} \sim MN(q_i,m_i) \]
 
-Where $q_i$ is the vector $[q_{i1}, \dots q_{ip}]$ of token
+where $q_i$ is the vector $[q_{i1}, \dots q_{ip}]$ of token
 probabilities for document $x_i$ and $m_i$ is
 $\sum_{j = 1}^{p}{x_{ij}}$, or the total number of tokens in document
 $i$
@@ -297,7 +298,7 @@ can be expressed as $m$ collapsed observations:
 \big[  (\sum_{x_i : y_i = y^{(1)}}{x_i}) , (\sum_{x_i : y_i = y^{(2)}}{x_i}), \dots,  (\sum_{x_i : y_i = y^{(m)}}{x_i})  \big]
 \end{equation}
 
-Then, a simple log-link model allows us to express text $x$, with given metadata rating $y$,
+Then, a simple log-link model allows us to express document $x$ with given metadata rating $y$,
 denoted $x_y$, as $x_y \sim MN(q_y,m_y)$, with
 \begin{equation}
 q_{yj} \sim \frac{exp[\alpha_j + y \phi_j]}{\sum_{l=1}^{p} exp[\alpha_l + y \phi_l]}
@@ -309,7 +310,7 @@ q_{yj} \sim \frac{exp[\alpha_j + y \phi_j]}{\sum_{l=1}^{p} exp[\alpha_l + y \phi
 membership}\label{mixture-models-and-cluster-membership}
 
 We now turn our attention to the main purpose of this paper, which is to
-incorporate latent topics across documents while maintaining the computational simplicity of a collapseable multinomial model. To do so we will restrict our model by assuming that every document is a member of one and only one topic. In order not to confused our approach with a traditional topic models, where each topic can take a weight $\theta \in (0,1)$, we refer to the model in which a document can only belong to one topic as a "cluster membership". This also emphasizes the theoretical relationship between our model and finite mixture models. 
+incorporate latent topics across documents while maintaining the computational simplicity of a collapseable multinomial model. To do so we will restrict our model by assuming that every document is a member of one and only one topic. In order not to confused our approach with a traditional topic models, where each topic can take a weight $\theta \in (0,1)$, we refer to the model in which a document can only belong to one topic as a \textit{cluster membership model}. This also emphasizes the theoretical relationship between our model and finite mixture models. 
 
 As a simple motivating example, we might imagine a corpus of
 movie reviews written by several bloggers. After accounting for text
@@ -387,9 +388,33 @@ procedure leads us to minimize
 \begin{equation}
 \ell(\alpha,\Phi,\Gamma,u) + \sum_{j=1}^{p}(\alpha_j/ \sigma_\alpha)^2 + c(\Phi,\Gamma) 
 \end{equation}
-The basic algorithm we use to fit coefficients $\alpha$, $\phi$, $\Gamma$
+
+
+The procedure to fit the coeffecients of a multinomial with gamma lasso penalty are documented in Taddy (2013a). We now briefly detail the fitting of the cluster membership via Bayesian estimation:
+
+\begin{equation}
+\boldsymbol{u}^{*}_{MAP}  = \underset{\mathbf{u}}{\arg\max} \, \, \, P( \mathbf{u} | X) \\
+\end{equation}
+\begin{equation}
+= \underset{\mathbf{u}}{\arg\max} \, \, \frac{P( \mathbf{u} | X) \, P(\boldsymbol{u})}{P(X)}    \\
+\end{equation}
+\begin{equation}
+= \underset{\mathbf{u}}{\arg\max} P( \mathbf{u} | X) \, P(\boldsymbol{u})  \\
+\end{equation}
+
+And under the assumption that the $P(\boldsymbol{u_i}) = P(\boldsymbol{u_j})$ for any two cluster vectors $u_i$, $u_j$, we have
+
+\begin{equation}
+\boldsymbol{u}^{*}_{MAP} = \underset{\mathbf{u}}{\arg\max} P( \mathbf{u} | X)
+\end{equation}
+
+
+Although the likelihood function cannot be solved analytically, the discrete support for \textbf{u} makes it trivial to check the entire parameter space.
+
+
+ The basic algorithm we use to fit coefficients $\alpha$, $\phi$, $\Gamma$
 and cluster memberships $u_i$ is two main steps iterated until
-convergance:
+convergence:
 
 \textbf{Algorithm for Cluster Membership Model with Gamma Lasso Penalty}
 \begin{enumerate}

@@ -50,7 +50,7 @@ iter_cluster <- function(
     tXhat <- t(VPHI)+B[1,]
 	  # Now, for each cluster coeffecient 
     # (row of Gamma_cl, add it to Xhat, then take exp,sum, and log
-    xhg <- function(j){
+    xhg <- function(j){ q
       expetaj <- exp(tXhat +  Gamma_cl[j,])
       log(colSums(expetaj))
     } 

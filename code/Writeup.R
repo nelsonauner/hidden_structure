@@ -4,7 +4,7 @@
 setwd("C:/Users/nauner/tech/hidden_structure/code")
 load("cong_res.RData")
 source('multiplot.R')
-as.numeric.factor <- function(x) {as.numeric(levels(x))}
+as.numeric.factor <- function(x) {as.numeric(levels(x))[x]}
 ##A brief explanation of how the data was obtained: 
 ##This graph kind of sucks: 
 #First graph: illustrate convergence of clusters
@@ -149,7 +149,7 @@ xtable(high_l_comp)
 matchcoefs <- function(fitted_res,vectorofterms) { fitted_res$B[2,][names(vectorofterms)]}
 
 comparison <- data.frame(high_loadings(congress_res_3.20$B,14+3,terms=15))
-comparison$dem_loading <- as.numeric.factor(comparison$loading)
+comparison$loading <- as.numeric.factor(comparison$loading)
 comparison$GOP <- head(sort(congress_res_3.20$B[2,]+congress_res_3.20$B[14+3,],decreasing=TRUE),n=15)
 
 comparison$GOP_term <- names(head(sort(congress_res_3.20$B[2,]+congress_res_3.20$B[14+3,],decreasing=TRUE),n=15))
@@ -159,7 +159,7 @@ comparison$GOP_Beta<-congress_res_3.20$B[2,][comparison$GOP_term]
 matchcoefs(congress_res_3.20,comparison$term)
 comparison$yplot <- seq(from=24,to=5)
 comparison$order_gop <- with(comparison,order(GOP))
-comparison$order_dem <- with(comparison,order(loading),increasing=TRUE)
+comparison$order_dem <- with(comparison,order(loading))
 
 #first plot: dems
 p_dem <- ggplot(comparison,aes(x=0,y=order_dem)) + geom_text(label=comparison$term,size=3) + ylab("term") + xlab(" (a) Democrat") +theme_bw() + scale_x_continuous(limits=c(-5,5))   #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
@@ -305,7 +305,7 @@ wcomparison$order_good <- with(wcomparison,order(good))
 wcomparison$order_base <- with(wcomparison,order(loading),increasing=TRUE)
 
 #first plot: dems
-p_base <- ggplot(wcomparison,aes(x=0,y=order_base)) + geom_text(label=wcomparison$term,size=3) + ylab("term") + xlab("Base Frequency") +theme_bw() + scale_x_continuous(limits=c(-1,3))   #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
+p_base <- ggplot(wcomparison,aes(x=0,y=order_base)) + geom_text(label=wcomparison$term,size=3) + ylab("term") + xlab("Base Frequency") +theme_bw() + scale_x_continuous(limits=c(-1,1))   #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 					
 p_good <- ggplot(wcomparison,aes(x=good_beta,y=order_good)) + geom_text(label=wcomparison$good_term,size=3)  + ylab("term") + xlab("Positive Review")+theme_bw() + scale_x_continuous(limits=c(-1,3)) #+ theme(axis.text.x = element_blank(),axis.text.y = element_blank()) 
 
