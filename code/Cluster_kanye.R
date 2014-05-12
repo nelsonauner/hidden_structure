@@ -1,5 +1,5 @@
-require(SnowballC)
-
+require(SnowballC,tm)
+library(textir)
 kanye = read.csv("C:/Users/nauner/SkyDrive/4year/Spring/Spanish/KANYE_LYRICS.csv")
 kCorp <- Corpus(VectorSource(as.character(kanye[,1])))
 pyong <- kanye[,2]
@@ -20,7 +20,7 @@ ctrl = list( wordLengths = c(4, 15),
 			 
 dtm <- DocumentTermMatrix(kCorp, control = ctrl)
 
-spm <- Matrix(dtm,sparse=TRUE,ncol=dim(dtm[1]))
+spm <- Matrix(dtm,sparse=TRUE,nrow=dim(dtm)[1])
 
 ##now, we do our thing
 
@@ -40,7 +40,7 @@ source('Iterate.R')
 #pyong is our covars matrix
 
 dimnames(spm) = dimnames(m)
-kanye_clusters <- iter_cluster(pyong,make_cl2(X=spm,i=5),X=spm,nmax=10)
+kanye_clusters <- iter_cluster(pyong,make_cl2(X=spm,i=5),X=spm,nmax=15)
 
 
 high_loadings <- function(beta,cl_range,terms=10,digits=2) {
@@ -58,4 +58,21 @@ return(highloadings)
 
 
 dimnames(kanye_clusters$B)[2] = dimnames(m)[2]
-high_loadings(kanye_clusters$B,2)
+
+high<-cbind(high_loadings(kanye_clusters$B,2,terms=50),
+high_loadings(kanye_clusters$B,3,terms=50),
+high_loadings(kanye_clusters$B,4,terms=50),
+high_loadings(kanye_clusters$B,5,terms=50),
+high_loadings(kanye_clusters$B,6,terms=50),
+high_loadings(kanye_clusters$B,7,terms=50))
+
+show_members = function(fitted_model,clusternumber){
+	criteria <- (1:218)[tail(t(fitted_model$h.clusters),n=1)==clusternumber]
+	#return(fitted_model$covars[,'gop'][criteria])
+	return(criteria)
+	}
+
+	
+show_members(kanye_clusters,1)
+library(xtable)
+xtable(high_loadings(kanye_clusters$B,2,terms=14))

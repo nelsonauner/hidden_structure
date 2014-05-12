@@ -65,8 +65,8 @@ def parse_lyrics(messy_string):
 	#use re to remove [...]
 	just_lyrics = re.sub(r'\[.+?\]', '', messy_string)
 	#remove \n
-	one_line = just_lyrics.replace('\n',' ')
-	one_line = one_line.translate(string.maketrans("",""), string.punctuation)
+	one_line = str(just_lyrics.replace('\n',' '))
+	one_line = one_line.translate(string.maketrans("",""), string.punctuation) #Why is this throwing an error?
 	return(one_line)
 
 
@@ -81,7 +81,8 @@ def get_lyrics(song_url):
 	
 
 all_data = [get_lyrics(song_url) for song_url in all_songs]
-all_lyrics = [[data[0].encode('ascii','ignore'),data[1]] for data in all_data] #This shouldn't be necessary twice, w/e. 
+
+all_lyrics = [[data[0].encode('ascii','ignore').translate(string.maketrans("",""), string.punctuation),data[1]] for data in all_data] #This shouldn't be necessary twice, w/e. 
 
 
 
