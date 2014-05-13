@@ -86,13 +86,13 @@
  \frametitle{Text as Data}
  \begin{itemize}
 \pause
-\item A document is a collection of phrases. 
+\item A document is a collection of words or phrases.
 \pause
 \item Our datasets are collections of documents
 \end{itemize}
 \pause
 \begin{table}[!hbpt]
-\caption{What did homework consist of?} \label{tab:title}
+\caption{What did homework consist of? } \label{tab:title}
 \pause
 \begin{center}
 \begin{tabular} {c c}
@@ -133,7 +133,6 @@ problem & writ & program & work \\
 \end{tabular}}
 \end{center}
 \end{table} 
-\pause
 \end{frame}
 
 
@@ -167,11 +166,16 @@ C+ & Proofs, problems, and programming work \\  %something about R :P
 \begin{frame}
 \frametitle{Metadata and Computation}
 \begin{itemize}
+\pause
 \item $n$ documents with metadata that takes $m$ discrete values:
+\pause
 \item Normally, $n >> m$
+\pause
 \item $\Rightarrow$ Collapse observations by outcome variables. 
+\pause
 \item Model as $m$ observations, instead of $n$
 \end{itemize}
+\pause
 \begin{table}[!hbpt]
 \begin{center}
 \resizebox{\textwidth}{!}{%
@@ -244,7 +248,7 @@ Stroke, Air, Water
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item<+->
- Initialize $u_i$ for $i = 1, \dots, n$
+ Initialize cluster membership $u_i$ for $i = 1, \dots, n$
 \item<+->
   Determine parameters $\alpha_, \phi, \Gamma$ by fitting a multinomial
   regression on $y_i | x_i , u_i$ with a gamma lasso penalty (Taddy 2013)
@@ -415,27 +419,27 @@ adult.stem.cel & stem.cel.line \\
 \frametitle{Results}
 \pause
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Mon May 12 10:06:26 2014
+% Mon May 12 22:33:48 2014
 \begin{table}[ht]
 \centering
 \begin{tabular}{rll}
   \hline
  & term & loading \\ 
   \hline
-1 & yeezus & 0.36 \\ 
-  2 & challeng & 0.3 \\ 
-  3 & dreamer & 0.3 \\ 
-  4 & grass & 0.3 \\ 
-  5 & loud & 0.3 \\ 
-  6 & opportun & 0.3 \\ 
-  7 & reduc & 0.3 \\ 
-  8 & speak & 0.3 \\ 
-  9 & frustrat & 0.3 \\ 
-  10 & origin & 0.3 \\ 
-  11 & perfect & 0.29 \\ 
-  12 & rest & 0.27 \\ 
-  13 & bound & 0.23 \\ 
-  14 & seat & 0.22 \\ 
+1 & yeezus & 5.48 \\ 
+  2 & constel & 3.79 \\ 
+  3 & homm & 3.79 \\ 
+  4 & preach & 3.79 \\ 
+  5 & bound & 3.6 \\ 
+  6 & thoma & 3.38 \\ 
+  7 & thirti & 3.32 \\ 
+  8 & rocka & 3.31 \\ 
+  9 & rowland & 3.25 \\ 
+  10 & jamaican & 3.23 \\ 
+  11 & blocka & 3.22 \\ 
+  12 & movement & 3.22 \\ 
+  13 & unlik & 3.08 \\ 
+  14 & yknow & 3.08 \\ 
    \hline
 \end{tabular}
 \end{table}

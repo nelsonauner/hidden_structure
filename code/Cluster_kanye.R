@@ -10,23 +10,22 @@ kCorp <- tm_map(kCorp, removePunctuation)
 kCorp <- tm_map(kCorp, removeNumbers)
 # remove stopwords
 # keep "r" by removing it from stopwords
-kCorp <- tm_map(kCorp, removeWords, stopwords('english'))
+#kCorp <- tm_map(kCorp, removeWords, stopwords('english'))
 kCorp <- tm_map(kCorp, stemDocument)
-
 ctrl = list( wordLengths = c(4, 15),
-			 bounds = list(local = c(2,Inf))
+			 bounds = list(global = c(2,Inf))
 			 )
 
-			 
-dtm <- DocumentTermMatrix(kCorp, control = ctrl)
-
-spm <- Matrix(dtm,sparse=TRUE,nrow=dim(dtm)[1])
-
 ##now, we do our thing
-
- library(wordcloud)
+dtm <- DocumentTermMatrix(kCorp,control=ctrl)
+library(wordcloud)
 m <- as.matrix(dtm)
+emp <- rowSums(m)
 # calculate the frequency of words
+m <- m[emp!=0,]
+pyong <- pyong[emp!=0]
+spm <- Matrix(m,sparse=TRUE)
+
 v <- sort(colSums(m), decreasing=TRUE)
 myNames <- dimnames(m)[2]
 d <- data.frame(word=names(v), freq=v)
@@ -40,7 +39,11 @@ source('Iterate.R')
 #pyong is our covars matrix
 
 dimnames(spm) = dimnames(m)
-kanye_clusters <- iter_cluster(pyong,make_cl2(X=spm,i=5),X=spm,nmax=15)
+
+naive_kanye <- mnlm(NULL,as.matrix(pyong) ,spm, b,ins=5, gamma=1, nlambda=10); 
+kanye_cl <- make_cl2(X=spm,i=5)
+kanye_clusters <- iter_cluster(as.matrix(log(pyong+1)),kanye_cl,X=spm,nmax=15)
+
 
 
 high_loadings <- function(beta,cl_range,terms=10,digits=2) {
@@ -57,14 +60,12 @@ return(highloadings)
 }
 
 
-dimnames(kanye_clusters$B)[2] = dimnames(m)[2]
+dimnames(kanye_clusters$B)[2][[1]] = dimnames(m)[2]$Terms
 
-high<-cbind(high_loadings(kanye_clusters$B,2,terms=50),
+high<-cbind(high_loadings(kanye_clusters$B,1,terms=50),
+high_loadings(kanye_clusters$B,2,terms=50),
 high_loadings(kanye_clusters$B,3,terms=50),
-high_loadings(kanye_clusters$B,4,terms=50),
-high_loadings(kanye_clusters$B,5,terms=50),
-high_loadings(kanye_clusters$B,6,terms=50),
-high_loadings(kanye_clusters$B,7,terms=50))
+high_loadings(kanye_clusters$B,4,terms=50))
 
 show_members = function(fitted_model,clusternumber){
 	criteria <- (1:218)[tail(t(fitted_model$h.clusters),n=1)==clusternumber]
