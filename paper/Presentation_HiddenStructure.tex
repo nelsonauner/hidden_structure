@@ -80,6 +80,21 @@
 %\section{Extensions}
 %\section*{References}
 
+\begin{frame}
+\frametitle{Motivation}
+\pause
+\begin{center}
+\includegraphics[height=.8\textheight]{Images/twitter_fastco.PNG}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Motivation}
+\pause
+\begin{center}
+\includegraphics[height=.8\textheight]{Images/PRISM.jpg}
+\end{center}
+\end{frame}
 
 \section{Text as Data }
 \begin{frame}
@@ -259,18 +274,18 @@ Stroke, Air, Water
  Check if current cluster assignment is different from previous cluster assignment , ($\textbf{u}^{(t)}  = \textbf{u}^{(t-1)}$).If so, return to step 2. If not, end algorithm.
 \end{enumerate}
 \end{frame}
-
-\subsection{Cluster Initialization}
-\begin{frame}
-\frametitle{How do we initialize the clusters?}
-\onslide<1->{We test three different approaches:}
-\begin{enumerate}
-\item<2-> Randomly assign each observation to a cluster 
-\item<3-> Group documents by k-means, then assign clusters 
-\item<4-> Regress metadata on text, then group residual's by k-means to clusters
-\end{enumerate}
-%\onslide<5->{We'll look at the efficacy of each apprach.}
-\end{frame}
+%
+%\subsection{Cluster Initialization}
+%\begin{frame}
+%\frametitle{How do we initialize the clusters?}
+%\onslide<1->{We test three different approaches:}
+%\begin{enumerate}
+%\item<2-> Randomly assign each observation to a cluster 
+%\item<3-> Group documents by k-means, then assign clusters 
+%\item<4-> Regress metadata on text, then group residual's by k-means to clusters
+%\end{enumerate}
+%%\onslide<5->{We'll look at the efficacy of each apprach.}
+%\end{frame}
 
 
 \section{Application}
@@ -390,13 +405,13 @@ adult.stem.cel & stem.cel.line \\
 \includegraphics[width=1\textwidth]{Images/we8there_distortion.pdf}
 \end{center}
 \end{frame}
-
-\begin{frame}
-\frametitle{Evaluating Cluster Initialization}
-\begin{center}
-\includegraphics[width=1.05\textwidth]{Images/mdev_both.pdf}
-\end{center}
-\end{frame}
+%
+%\begin{frame}
+%\frametitle{Evaluating Cluster Initialization}
+%\begin{center}
+%\includegraphics[width=1.05\textwidth]{Images/mdev_both.pdf}
+%\end{center}
+%\end{frame}
 
 \section{Extensions}
 \begin{frame}
