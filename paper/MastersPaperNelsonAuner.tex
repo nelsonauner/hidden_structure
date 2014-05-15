@@ -285,12 +285,10 @@ For a thorough introduction to topic models, we refer the reader to Blei, Ng, an
 Text data is frequently accompanied by information, or metadata, about
 the text itself. For example, in academic journals, metadata on an
 article could include the number of times the article has been cited,
-and the journal in which the article has been published. When this
-metada is believed to be relevant to the composition of the document, we
-use the generic term \emph{sentiment}. For example, given a database of
+and the journal in which the article has been published. We then seek to model the relationship between metadata
+and the composition of the text. For example, given a database of
 written movie reviews and final rating out of five $y \in (1,2,3,4,5)$,
-we might want to model the relationship between the words used in the
-document and the final rating.
+we might want to predict the movie final rating from the text content of the review.
 
 \subsection{Metadata and Unigram Models}
 
@@ -312,22 +310,25 @@ denoted $x_y$, as $x_y \sim MN(q_y,m_y)$, with
 q_{yj} \sim \frac{exp[\alpha_j + y \phi_j]}{\sum_{l=1}^{p} exp[\alpha_l + y \phi_l]}
 \end{equation}
 
+The coefficient $\phi$ is referred to as the \textit{distortion vector}. Intuitively, it \textit{distorts} the base frequency of words $\alpha$ by the effect of the metadata $y$. 
+
 \section{Theory and Approach}\label{theory-and-approach}
 
 \subsection{Mixture models and cluster
 membership}\label{mixture-models-and-cluster-membership}
 
 We now turn our attention to the main purpose of this paper, which is to
-incorporate latent topics across documents while maintaining the computational simplicity of a collapseable multinomial model. To do so we will restrict our model by assuming that every document is a member of one and only one topic. In order not to confused our approach with a traditional topic models, where each topic can take a weight $\theta \in (0,1)$, we refer to the model in which a document can only belong to one topic as a \textit{cluster membership model}. This also emphasizes the theoretical relationship between our model and finite mixture models. 
+incorporate latent topics across documents while maintaining the computational simplicity of a collapsable multinomial model. To do so we will restrict our model by assuming that every document is a member of one and only one topic. In order not to confused our approach with a traditional topic models, where each topic can take a weight $\theta \in (0,1)$, we refer to the model in which a document can only belong to one topic as a \textit{cluster membership model}. This also emphasizes the theoretical relationship between our model and finite mixture models. 
 
 As a simple motivating example, we might imagine a corpus of
 movie reviews written by several bloggers. After accounting for text
 information explained by the rating (e.g. ~relating a 5-star rating to
 `good plot'), the remaining heterogeneity in the movie review
 content could be related traits of the blogger (e.g.~gender, or home
-city) We may be interested in using predicting traits about bloggers
+city). We may be interested predicting traits of bloggers
 given their movie reviews, and also in determining how movie review
-content changes across these traits.
+content changes across these traits. For example, we could examine how movie reviews written by 
+female bloggers differ from movie reviews written by male bloggers.
 
 
 
@@ -343,11 +344,14 @@ log-link to related sentiment and cluster membership. That is:
 \end{equation} 
 
 
-where $y_i$, $u_i$ are the metadata and cluster membership associated
-with document $i$, and $\phi_j$ and $\Gamma_{kj}$ are the distortion
-coeffecients for metadata and cluster membership, respectively. We use
+In our notation, $y_i$ and $u_i$ are the metadata and cluster membership associated
+with document $i$. $\alpha$ is the vector of word frequencies that correspond to a baseline document, with metadata level 0. 
+Using the same terminology introduced earlier, the coefficients $\phi_j$ and $\Gamma_{kj}$ are the distortion
+vectors for metadata and cluster membership, respectively.
+
+ We use
 the subscript $k$ to denote that each document $x_i$ is considered a
-member of $k = 1,..,K$ clusters, with their own distortion vectors
+member of one of a$k = 1,..,K$ clusters, with their own distortion vectors
 $\Gamma_1,..,\Gamma_K$
 
 Now, the unigram collapsing can be expressed as $x_{yk}$, with
@@ -360,26 +364,6 @@ and
 q_{yk} \sim \frac{exp[\alpha + y \phi  + u_k \Gamma_{k}]}{\sum_{l=1}^{p} exp[\alpha_j + y \phi_j+ u_k \Gamma_{kj} ]}
 \end{equation}
 
-\subsection{Initializing Cluster Membership}
-
-Our focus in on predicting cluster membership $u_i$ and the
-corresponding probability distortion $\Gamma_i$. Because each document can only be a member of one topic (unlike a traditional topic model), we want to investigate how important the cluster member initialization is to the final coeffecients. 
-Forthis paper, we initiatilize cluster membership using one of the three following
-methods:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Random Initialization
-\item
-  K-means on the word count data $X$
-\item
-  K-means on the residual of the word count data after incorporating
-  metadata $y$ (That is, given predicted word count $\hat{X}$,
-  clustering on $X-\hat{X}$
-\end{enumerate}
-
 \subsection{Estimation of Parameters via Maximum a
 Posteriori}\label{estimation-of-parameters-via-maximum-a-posteriori}
 
@@ -390,11 +374,11 @@ as
 \ell(\alpha,\phi,\Gamma,u) = \sum_{i = 1}^{N}{ x_i^\top (\alpha + \phi v_i + u_i \Gamma_{kj})} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_{kj} \big]}})
 \end{equation}
 
-Following previous literature on text regression (Taddy, 2013), We specify laplace priors and gamma hyperprior on coeffecients, as well as a gamma lasso penalty on coeffecients $c(\Phi,\Gamma)$. This
-procedure leads us to minimize
+Following previous literature on text regression (Taddy, 2013), We specify Laplace priors and a gamma hyperprior on coefficients, as well as a gamma lasso penalty on coefficients $\Phi$ and $\Gamma)$. This
+procedure leads us to minimize the sum of log likehood with the gamma lasso penalty:
 
 \begin{equation}
-\ell(\alpha,\Phi,\Gamma,u) + \sum_{j=1}^{p}(\alpha_j/ \sigma_\alpha)^2 + c(\Phi,\Gamma) 
+\ell(\alpha,\Phi,\Gamma,u) = \sum_{j=1}^{p}(\alpha_j/ \sigma_\alpha)^2 + c(\Phi,\Gamma) 
 \end{equation}
 
 
@@ -410,7 +394,7 @@ The procedure to fit the coeffecients of a multinomial with gamma lasso penalty 
 = \underset{\mathbf{u}}{\arg\max} P( \mathbf{u} | X) \, P(\boldsymbol{u})  \\
 \end{equation}
 
-And under the assumption that the $P(\boldsymbol{u_i}) = P(\boldsymbol{u_j})$ for any two cluster vectors $u_i$, $u_j$, we have
+And under the assumption that the $P(u_i) = P(u_j)$ for any two cluster vectors $u_i$, $u_j$, we have
 
 \begin{equation}
 \boldsymbol{u}^{*}_{MAP} = \underset{\mathbf{u}}{\arg\max} P( \mathbf{u} | X)
@@ -436,35 +420,59 @@ convergence:
   For each document $i$, determine new cluster $u_i$ membership as \\
   $argmax_{k = 1,..,K} \big[  \ell(u_i| \alpha, \phi, \Gamma) \big]$
 \item 
-Check if current cluster assignment is different from previous cluster assignment , ($\textbf{u}^{(t)}  = \textbf{u}^{(t-1)}$).If so, return to step 2. If not, end algorithm.
+Check if current cluster assignment is different from previous cluster assignment , ($\textbf{u}^{(t)}  = \textbf{u}^{(t-1)}$). If so, return to step 2. If not, end algorithm.
 \end{enumerate}
 
 
 By alternating between the first two steps, we aim to converge to optimal
 parameter estimates $\alpha, \phi, \Gamma$ as well as optimal cluster
 membership $u$.
+
+In practice, the algorithm converged after less than 20 iterations for all datasets. To address possible issues of cycling or non-convergence, an option for a maximum number of iterations was included in the code. 
+If the algorithm does not converge within the maximum number of iterations, the program would stop and return the current parameter estimates, as well as  notifying the user of non-convergence.
+
 \subsection{Computation}\label{computation}
-As noted previously, multinormal regression enjoyes the ability of being able to
-collapse observations across levels of metadata. This attractive
+As noted previously, a property of multinomial regression is the ability to
+collapse observations across levels of metadata without losing information. This attractive
 property is preserved in the cluster membership model.
 
-In step two, we can increase the speed of step two by only evaluating portions of the likelihood function relevant to $u_i$ and $\Gamma$ by eliminating first two terms from equation one:
+In step two, we can increase the speed of step two by only evaluating portions of the likelihood function relevant to $u_i$ and $\Gamma$ by eliminating first two terms from the full likelihood and penalty equation.
 
 \begin{equation} 
 L(u_i|\alpha,\phi,\Gamma) = \sum_{i = 1}^{N}{ x_i^\top (u_i \Gamma_{kj})} - m_i log(\sum_{j = 1}^{p}{exp{\big[ \alpha + \phi v_i + u_i \Gamma_{kj} \big]}})
 \end{equation}
 
-In addition, the right hand side does not depend on $x_i$ and can be precalculated for each cluster $u_i$. This will lead to an order-of-magnitude speed-up as long as the number of clusters is relatively small compared to the number of documents. 
+In addition, the rightmost term does not depend on $x_i$ and can be precalculated for each cluster $u_i$. This will lead to an order-of-magnitude speed-up as long as the number of clusters is relatively small compared to the number of documents. 
 
+
+\subsection{Initializing Cluster Membership}
+
+Our algorithm by initializating \textbf{u}, that is, assigning each document $u_i$ to a cluster. 
+Because each document can only be a member of one topic (unlike a traditional topic model), we want to investigate how important the cluster member initialization is to the final coefficients. 
+For this paper, we initialize cluster membership using one of the three following
+methods:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Random Initialization
+\item
+  K-means on the word count data $X$
+\item
+  K-means on the residual of the word count data after incorporating
+  metadata $y$ (that is, given predicted word count $\hat{X}$,
+  clustering on $X-\hat{X}$
+\end{enumerate}
 
 
 \section{Application and Evaluation of Algorithm}\label{application}
 
-We applied the Cluster Membership model to two datasets; Congressional Speech records, most famously used to investigate media slant (Moskowitz and Shapiro, 2010) and a corpus of restaurant reviews called we8there.
+We applied the Cluster Membership model to two datasets; Congressional Speech records, most famously used to investigate media slant (Gentzkow and Shapiro, 2010) and a corpus of restaurant reviews called we8there.
 
 \subsection{Congressional Speech} 
 
-We first investigate the performance of the algorithm on the congressional speech data of. The data consists of text from 579 speeches of the members of the 109th Congress. For the analysis, party membership was regressed onto speech data. The algorithm was run for 5, 10, 15, 20, and 25 clusters, each over the 3 different initialization methods. We then report the multinomial deviance, or two times the negative log likelihood, in figure 1. 
+We first investigate the performance of the algorithm on the congressional speech data. The data consists of text from 579 speeches of the members of the 109th Congress. For the analysis, party membership was regressed onto speech data. The algorithm was run for 5, 10, 15, 20, and 25 clusters, each over the 3 different initialization methods. We then report the multinomial deviance, or two times the negative log likelihood, in figure 1. 
 
 \begin{figure}[!htpb]
   \centering
@@ -498,12 +506,12 @@ Previous research (Taddy, 2012) has shown that the optimal number of topics for 
 
 \subsection{Interpretation of Topics}
 
-An essential aspect of topic modeling is determining the overall theme from the loadings vector. Previous research (Blei and Lafferty, 2009) shows that correctly-specified topic models allow for rich interpration of themes that can change over time, as well as model relationships between themes. 
+An essential aspect of topic modeling is determining the overall theme from the loadings vector. Previous research (Blei and Lafferty, 2006) shows that correctly-specified topic models allow for rich interpretation of themes that can change over time, as well as model relationships between themes. 
 
-Of particular importance in our model is that our extreme simplication of topic weights does not result in "meaningless" topics. 
+Of particular importance in our model is that our extreme simplification of topic weights does not result in "meaningless" topics. 
 If the topics produced by our method bear no relation to the topics produced by more complex topic modeling approaches, then there is little benefit of our model, regardless of computational improvements and model simplicity. 
 
-To test topic fit, we compare topics produced from our method with the topics produced by fitting a topic-only model, via MAP, with 12 topics on Gentzkow and Shapiro's Congressional Data. Fortuneately, we find that topics from our model are, in many cases, similar to topics obtained by traditional methods. For example, the following table shows a "stem cell" topic found by our method, compared to a similar topic found using the topic-only model mentioned above.
+To test topic fit, we compare topics produced from our method with the topics produced by fitting a topic-only model, via MAP, with 12 topics on the Congressional Data (Gentzkow and Shapiro, 2010). Fortunately, we find that topics from our model are, in many cases, similar to topics obtained by traditional methods. As an example, table 4 shows a "stem cell" topic found by our method, compared to a similar topic found using the topic-only model mentioned above. The table consists of, for both models, the words with the highest distortion in that topic, in decreasing order. This is equivalent to a list of the words with the highest components of $\Gamma_j$ .  
 
 \begin{table}[!htbp]
 \begin{threeparttable}
@@ -526,8 +534,11 @@ adult.stem.cel & stem.cel.line \\
 
 \subsection{Interpretation of results}
 
-We first evaluate our model by comparing the coeffecients predicting GOP to a gamma lasso regression without any topic models. 
-The words with the highest loading for determing party affiiliation are illustrated in Table 4. 
+We first evaluate our model by comparing the coefficients predicting GOP to a gamma lasso regression without any topic models. 
+The words with the highest loading for determining party affiliation are illustrated in Table 4. This is equivalent to the list of words with the highest components in $\beta$
+We see that some words are in common in the party affiliation coefficient for both models, like "weapon grade plutonium" and "speaker table". These are words that are, on general, used by many Republicans. 
+Words such as "People Middle East", which appears in the model without cluster memberships is not as strongly indicative of GOP affiliation once cluster topics are added are evidence that some terms are better explained by a particular topic than by party affiliation as a whole. 
+Finally, we note that the coefficients in Table 4 are higher for the Cluster Membership model than for the multinomial model without clusters. This is because the addition of clusters to the model allows more flexible modeling that permits a closer fit. In this sense, too many clusters will cause over-fitting. General guidelines on the number of topics to be included in a model are well-documented by Taddy (2012).
 
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -561,7 +572,7 @@ The words with the highest loading for determing party affiiliation are illustra
 
 
 The theory behind our mixed topic model regression predicts that the topics should be able to incorporate a specific theme important to a group of individuals, leaving behind the more general predictors of party-affiliation to the regression coeffecient.
-We can test this prediction by examining terms that are significant for a Multinomial Regression without topics, but decrease in importance once topic models are added. For a simple illustration, we choose the phrase "nation oil food", which predicts affiliation with the republican party.  The term is strongly associated with a topic we might call "domestic issues" topics, with the following high word loading terms:
+We can test this prediction by examining terms that are significant for a Multinomial Regression without topics, but decrease in importance once topic models are added. For a simple illustration, we choose the phrase "nation oil food", which predicts affiliation with the Republican party.  The term is strongly associated with a topic we might call "domestic issues" topics, whose top words are displayed in Table 5.
 
 %We find that these terms are now associated with specific topics and specific groups of politicians, instead of being confounded with general party-affiliation.
 
@@ -573,6 +584,7 @@ We can test this prediction by examining terms that are significant for a Multin
 \begin{table}[ht]
 \centering
 \begin{threeparttable}
+\caption{Top word loadings of the "domestic issues" topic (Congress data)}
 \begin{tabular}{rll}
   \hline
  & term & loading \\ 
@@ -596,32 +608,33 @@ We can test this prediction by examining terms that are significant for a Multin
 \end{tabular}
 \begin{tablenotes}
 \small
-\item One cluster from a model fit with 20-clusters , each having been initialized with K-means on the residuals of metadata regression
+\item One cluster from a model fit with 20-clusters, each having been initialized with K-means on the residuals of metadata regression
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
 
 
-We also notice that the members of this cluster (by our simplification, each observation can only be a member of one topic) are 3 republicans and 8 democrats. 
+We also notice that the members of this cluster (by our simplification, each observation can only be a member of one topic) are 3 Republicans and 8 Democrats. 
 The ability to group observations that may have different metadata (in this case, political party) is a benefit of our mixed regression-topic model approach. 
 Under standard multinomial regression, observations cannot be grouped by topics, whereas topic modeling does not immediately offer a computationally simple way to include influence on outside metadata.
 
 \subsection{Comparison to Blei's Inverse Regression Topic Model}
-As mentioned in Blei (IRTM) the addition of latent topics to a model of text data with attributes is the ability to gain an intuitive concept to how metadata affects the distribution of a given topic. 
-To demonstrate this effect, we use the graphic model presented in (Blei) to show the Democrat/GOP distortion to the "domestic issues"  topic shown earlier. 
+As mentioned in Rabinovich and Blei (2014) the addition of latent topics to a model of text data with attributes is the ability to gain an intuitive concept to how metadata affects the distribution of a given topic. 
+To demonstrate this effect, we use the graphic model presented in the Rabinovich and Blei paper to show the Democrat/GOP distortion to the "domestic issues"  topic shown earlier. 
+The algorithm detected a cluster of words, commonly mentioned together, and the graph shows, on the left panel, this cluster as used by Democrats, in order from most used (top) to less used (bottom). On the right panel, the same cluster is distorted by the coefficient for being a Republican, where the value of the coefficient is displayed by the horizontal position of the word. Like the left panel, the vertical ordering of the words depicts the most used (top) to less used (bottom) words, and we see that the order has changed for some words that have a strong Republican connotation. For example, Republicans are much more likely to mention the noun phrase "un official" or "death tax repeal". 
 
 \begin{figure}[!htpb]
   \centering
 \caption[Loadings]{Congress 109: Cluster word loadings with covariate distortion}
   \includegraphics[width=6.2in]{Images/Blei_Changing_Loadings_GOP.pdf}
-\floatfoot{A cluster from the Congressional data. On the left are, from highest to lowest, terms with the top Democratic word loadings. On the right are the words with the highest Republican word loadings. The horizontal position indicates the value of $\phi$, or word distortion for Republicans}
+\floatfoot{A cluster from the Congressional data. On the left are, from highest (top) to lowest (bottom) , terms with the largest Democratic word loadings. On the right are the words with the highest Republican word loadings, also sorted. The horizontal position indicates the value of $\phi$, or distortion on word distribution predicted by being a Republican}
 \end{figure}
 
 
 \subsection{We8there Data}
 
 We briefly illustrate the results of the cluster membership model on the we8there corpus of restaurant reviews with a table of word loadings for a selected cluster, as well as a distortion graph of that topic. 
-As with the Congress data, we note that despite the simplicity of our model, we obtain meaningful clusters. The following table illustrates a cluster we might label as "pizza diner". 
+As with the Congress data, we note that despite the simplicity of our model, we obtain meaningful clusters. Table 6 illustrates a cluster we might label as "pizza diner". 
 
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
@@ -629,6 +642,7 @@ As with the Congress data, we note that despite the simplicity of our model, we 
 \begin{table}[ht]
 \centering
 \begin{threeparttable}
+\caption{Top word loadings of the "pizza diner" topic (we8there data)}
 \begin{tabular}{rll}
   \hline
  & term & loading \\ 
@@ -662,10 +676,12 @@ As with the Congressional data, we also show the affect of metadata regression o
 
 \begin{figure}[!htpb]
   \centering
-\caption[Loadings]{we8there: Cluster word loadings with covariate distortion}
+\caption[Loadings]{we8there: Cluster word loadings with and without  metadata distortion}
   \includegraphics[width=6.2in]{Images/we8there_distortion.pdf}
-\floatfoot{A cluster from the we8there restaurant reviews dataset. On the left are, from highest to lowest, terms with the top word loadings in this given cluster. On the right are the word loadings of the cluster altered by a positive review. The horizontal position indicates the value of $\phi$, or word distortion for a positive review}
+\floatfoot{A cluster from the we8there restaurant reviews dataset. On the left are, from highest (top) to lowest (bottom), terms with the largest word loadings in this given cluster. On the right are the word loadings of the cluster altered by a positive review. The horizontal position indicates the value of $\phi$, or distortion on word distribution predicted by a positive review}
 \end{figure}
+
+A brief interpretation of the results is as follows. The algorithm detected a cluster, characterized by high usage of the words displayed on the left panel of Figure 3. This fitted cluster is not related to the restaurant rating. However, we can visualize what a hypothetical highly positive review of the food in the cluster might look like by adding the rating coefficient, which we do on the right panel. The change in vertical ordering from the left panel to the right shows how the most common words we would expect to see changes when the review is positive, while the horizontal position shows the weight of each word's coefficient on a review being positive. Preprocessing of the data makes it less easy to reconstruct the exact phrases, but we can see that the phrases "pizza great" (originally "pizza is/was great"), "great taste", and "deep dish" are associated with positive reviews. 
 
 The presence of the term "best mexican" in the "pizza diner" cluster distorted by a positive review illustrates one fundamental drawback of our model. Because we do not model relationship between cluster word loadings and covariate distortion word loadings, combining the two will predict collections of terms that may never appear together in the actual data. The shortcoming is also mentioned in other work on text analysis and metadata (Rabinovich and Blei, 2014), and possible solutions will be mentioned in the next section.
 
@@ -673,11 +689,11 @@ The presence of the term "best mexican" in the "pizza diner" cluster distorted b
 \section{Extension}\label{extensions}
 
 \subsection{Feature Allocations}
-A promising extension of the cluster membership model is the generalized "feature allocation" (Broderick 2014), where each observation can be attributed multiple features. This setup is an intermediary between our cluster membership model and a traditional topic model. 
+A promising extension of the cluster membership model is the generalized "feature allocation" (Broderick 2013), where each observation can be attributed multiple features. This setup is an intermediary between our cluster membership model and a traditional topic model. 
 The algorithm provided in this paper could be extended to incorporate a feature allocation, although the order of step 3 of the algorithm increases from linear $\mathcal{O}_{cluster} = n_k$ to $\mathcal{O}_{feature} = 2^{n_k}$, where $n_k$ refers to the number of clusters/features in the model. This increase in complexity may be reduced through changes to the algorithm, and the model would still enjoy the ability to collapse observations across unique features. 
 
 \subsection{Cross Validation and Prediction}
-One drawback of our is that, in order to train cluster membership, the values of the metadata are required (see algorithm pseudocode in previous section). This hinder the ability to use the method for prediction (where, presumably, we hope to predict missing metadata from the text), and impeded our ability to perform cross validation. One possible solution for this is, after fitting a model with training data, use k-nearest neighbors or other appropriate algorithm to assign each document of the test data to a cluster. However, this approach would be difficult to combine with the feature allocation extension proposed above, since the $n$ observations would be seperated into $2^{n_k}$ partitions, instead of $n_k$. 
+One drawback of our model is that, in order to train cluster membership, the values of the metadata are required (see algorithm pseudocode in previous section). This hinders the ability to use the method for prediction (where, presumably, we hope to predict missing metadata from the text), and impeded our ability to perform cross validation. One possible solution would be to, after fitting a model with training data, use k-nearest neighbors or other appropriate algorithm to assign each document of the test data to a cluster. However, this approach would be difficult to combine with the feature allocation extension proposed above, since the $n$ observations would be separated into $2^{n_k}$ partitions, instead of $n_k$. 
 
 \subsection{Modeling relationships between clusters and metadata}
 As noted in a previous section, one drawback of our model is the lack of relationship between clusters and metadata distortion vectors. 
@@ -736,7 +752,7 @@ I thank Professor Matt Taddy for his guidance throughout the research and writin
 
 \bibitem{GammaLasso} Taddy, M.  (2013a) The Gamma Lasso. arXiv:1308.5623
 
-\bibitem Taddy, M.  (2013) Measuring Political Sentiment on Twitter: Factor Optimal Design for Multinomial
+\bibitem{TwitterSentiment}  Taddy, M.  (2013) Measuring Political Sentiment on Twitter: Factor Optimal Design for Multinomial
 Inverse Regression, Technometrics, 55:4, 415-425, DOI
 
 \bibitem{MNIR} Taddy, M. (2013b). Multinomial inverse regression for text analysis. Journal of the American Statistical Association 108.
