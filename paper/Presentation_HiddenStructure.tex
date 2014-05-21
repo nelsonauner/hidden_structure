@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 \usepackage[utf8x]{inputenc}
 \usepackage{ucs}
 \usepackage{amsmath,tabularx}
@@ -9,8 +9,16 @@
 \linespread{1}
 
 \usepackage{subfigure}
+
 \title[Hidden Structure]{\sc{ Combining latent topics with document attributes in text analysis}}
-\author[NA]{Nelson Auner\\Advisors: Prof. Matt Taddy \& Prof. Stephen Stigler}
+\author[NA]{Nelson Auner\\ 
+ Prof. Matt Taddy\footnotemark \footnotetext[1]{Associate Professor of Econometrics and Statistics at Chicago Booth School of Business},
+ Prof. Stephen Stigler\footnotemark \footnotetext[2]{Ernest DeWitt Burton Distinguished Service Professor at the Department of Statistics of the University of Chicago}
+}
+
+
+
+
 
 \institute[UChicago]{University of Chicago}
 \date[13.05.2014]{May 13, 2014}
@@ -58,9 +66,10 @@
 }
 
 
-
+\setcounter{footnote}{0}
 \begin{document}
-\begin{frame}<handout:0>
+
+\begin{frame}
   \titlepage
 \end{frame}
 
@@ -295,7 +304,7 @@ Stroke, Air, Water
 \begin{itemize}
 \item<+-> We apply the algorithm to two datasets:
 	\begin{itemize} 
-	\item Congressional Speech records (Moskowitz and Shapiro, 2010) 
+	\item Congressional Speech records (Gentzkow and Shapiro, 2010) 
 	\item A corpus of restaurant reviews called we8there.
 	\end{itemize}
 \item<+-> Questions:
