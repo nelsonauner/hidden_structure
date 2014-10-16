@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.15)  16 OCT 2014 00:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.15)  16 OCT 2014 10:35
 entering extended mode
 **C:/Users/Nelson/tech/hidden_structure/paper/Presentation_TGG.tex
 (C:/Users/Nelson/tech/hidden_structure/paper/Presentation_TGG.tex
@@ -1009,18 +1009,18 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-<Images/badcode.jpg, id=113, 480.5955pt x 255.354pt>
+<Images/badcode.jpg, id=98, 480.5955pt x 255.354pt>
 File: Images/badcode.jpg Graphic file (type jpg)
  <use Images/badcode.jpg>
-Package pdftex.def Info: Images/badcode.jpg used on input line 84.
-(pdftex.def)             Requested size: 331.72859pt x 176.25146pt.
+Package pdftex.def Info: Images/badcode.jpg used on input line 85.
+(pdftex.def)             Requested size: 341.51118pt x 181.45146pt.
 
-Overfull \hbox (24.43872pt too wide) in paragraph at lines 84--84
+Overfull \hbox (34.22131pt too wide) in paragraph at lines 85--85
  [] 
  []
 
 
-Overfull \vbox (5.67555pt too high) detected at line 84
+Overfull \vbox (4.37558pt too high) detected at line 85
  []
 
 [2
@@ -1029,149 +1029,182 @@ Overfull \vbox (5.67555pt too high) detected at line 84
 File: Images/badcode.jpg Graphic file (type jpg)
 
 <use Images/badcode.jpg>
-Package pdftex.def Info: Images/badcode.jpg used on input line 84.
-(pdftex.def)             Requested size: 331.72859pt x 176.25146pt.
+Package pdftex.def Info: Images/badcode.jpg used on input line 85.
+(pdftex.def)             Requested size: 341.51118pt x 181.45146pt.
 
-Overfull \hbox (24.43872pt too wide) in paragraph at lines 84--84
+Overfull \hbox (34.22131pt too wide) in paragraph at lines 85--85
  [] 
  []
 
 
-Overfull \vbox (5.67555pt too high) detected at line 84
+Overfull \vbox (4.37558pt too high) detected at line 85
  []
 
 [3
 
-] (C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [4
+]
+File: Images/badcode.jpg Graphic file (type jpg)
+ <use Images/badcode.jpg>
+Package pdftex.def Info: Images/badcode.jpg used on input line 85.
+(pdftex.def)             Requested size: 341.51118pt x 181.45146pt.
+
+Overfull \hbox (34.22131pt too wide) in paragraph at lines 85--85
+ [] 
+ []
+
+
+Overfull \vbox (4.37558pt too high) detected at line 85
+ []
+
+[4
+
+] (C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [5
 
 ]
-<Images/federalist.jpg, id=232, 222.8325pt x 250.9375pt>
+<Images/textdata.png, id=239, 335.75438pt x 361.35pt>
+File: Images/textdata.png Graphic file (type png)
+
+<use Images/textdata.png>
+Package pdftex.def Info: Images/textdata.png used on input line 96.
+(pdftex.def)             Requested size: 168.59914pt x 181.45146pt.
+ [6
+
+ <C:/Users/Nelson/tech/hidden_structure/paper/Images/textdata.png>]
+File: Images/textdata.png Graphic file (type png)
+ <use Images/textdata.png>
+Package pdftex.def Info: Images/textdata.png used on input line 96.
+(pdftex.def)             Requested size: 168.59914pt x 181.45146pt.
+ [7
+
+]
+<Images/federalist.jpg, id=303, 222.8325pt x 250.9375pt>
 File: Images/federalist.jpg Graphic file (type jpg)
 
 <use Images/federalist.jpg>
-Package pdftex.def Info: Images/federalist.jpg used on input line 95.
-(pdftex.def)             Requested size: 156.5189pt x 176.25146pt.
- [5
+Package pdftex.def Info: Images/federalist.jpg used on input line 104.
+(pdftex.def)             Requested size: 161.1363pt x 181.45146pt.
+ [8
 
  <C:/Users/Nelson/tech/hidden_structure/paper/Images/federalist.jpg>]
 File: Images/federalist.jpg Graphic file (type jpg)
  <use Images/federalist.jpg>
-Package pdftex.def Info: Images/federalist.jpg used on input line 95.
-(pdftex.def)             Requested size: 156.5189pt x 176.25146pt.
- [6
+Package pdftex.def Info: Images/federalist.jpg used on input line 104.
+(pdftex.def)             Requested size: 161.1363pt x 181.45146pt.
+ [9
 
 ]
-<Images/Treato.jpg, id=295, 327.02174pt x 286.06876pt>
+<Images/Treato.jpg, id=364, 327.02174pt x 286.06876pt>
 File: Images/Treato.jpg Graphic file (type jpg)
  <use Images/Treato.jpg>
-Package pdftex.def Info: Images/Treato.jpg used on input line 103.
-(pdftex.def)             Requested size: 201.48393pt x 176.25146pt.
+Package pdftex.def Info: Images/Treato.jpg used on input line 112.
+(pdftex.def)             Requested size: 207.42696pt x 181.45146pt.
 
-[7
+[10
 
  <C:/Users/Nelson/tech/hidden_structure/paper/Images/Treato.jpg>]
 File: Images/Treato.jpg Graphic file (type jpg)
 
 <use Images/Treato.jpg>
-Package pdftex.def Info: Images/Treato.jpg used on input line 103.
-(pdftex.def)             Requested size: 201.48393pt x 176.25146pt.
- [8
-
-] [9
-
-] [10
+Package pdftex.def Info: Images/Treato.jpg used on input line 112.
+(pdftex.def)             Requested size: 207.42696pt x 181.45146pt.
+ [11
 
 ]
-<Images/PRISM.jpg, id=423, 702.625pt x 526.96875pt>
+<Images/PRISM.jpg, id=425, 702.625pt x 526.96875pt>
 File: Images/PRISM.jpg Graphic file (type jpg)
  <use Images/PRISM.jpg>
-Package pdftex.def Info: Images/PRISM.jpg used on input line 121.
-(pdftex.def)             Requested size: 235.00827pt x 176.25146pt.
+Package pdftex.def Info: Images/PRISM.jpg used on input line 120.
+(pdftex.def)             Requested size: 272.1786pt x 204.13074pt.
 
-[11
+Overfull \vbox (13.45485pt too high) detected at line 120
+ []
+
+[12
 
  <C:/Users/Nelson/tech/hidden_structure/paper/Images/PRISM.jpg>]
 File: Images/PRISM.jpg Graphic file (type jpg)
 
 <use Images/PRISM.jpg>
-Package pdftex.def Info: Images/PRISM.jpg used on input line 121.
-(pdftex.def)             Requested size: 235.00827pt x 176.25146pt.
- [12
+Package pdftex.def Info: Images/PRISM.jpg used on input line 120.
+(pdftex.def)             Requested size: 272.1786pt x 204.13074pt.
 
-]
-(C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [13
+Overfull \vbox (13.45485pt too high) detected at line 120
+ []
 
-]
-[14
+[13
+
+] [14
 
 ] [15
 
-] [16
+]
+(C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [16
 
-] [17
+]
+[17
 
 ] [18
 
-]
-(C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [19
+] [19
+
+] [20
+
+] [21
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 166.
+(C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [22
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 177.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 166.
+LaTeX Font Info:    Try loading font information for U+msb on input line 177.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 166.
+line 177.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\sansmathaccent\ot1mathkerncmss.fd"
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-Overfull \hbox (26.01776pt too wide) in paragraph at lines 166--166
- [] 
- []
-
-[20
-
-]
-Overfull \hbox (26.01776pt too wide) in paragraph at lines 166--166
- [] 
- []
-
-[21
-
-]
-Overfull \hbox (26.01776pt too wide) in paragraph at lines 166--166
- [] 
- []
-
-[22
-
-]
-Overfull \hbox (26.01776pt too wide) in paragraph at lines 166--166
+Overfull \hbox (26.01776pt too wide) in paragraph at lines 177--177
  [] 
  []
 
 [23
 
 ]
-Overfull \hbox (26.01776pt too wide) in paragraph at lines 166--166
+Overfull \hbox (26.01776pt too wide) in paragraph at lines 177--177
  [] 
  []
 
 [24
 
-] [25
+]
+Overfull \hbox (26.01776pt too wide) in paragraph at lines 177--177
+ [] 
+ []
 
-] [26
+[25
 
-] [27
+]
+Overfull \hbox (26.01776pt too wide) in paragraph at lines 177--177
+ [] 
+ []
+
+[26
+
+]
+Overfull \hbox (26.01776pt too wide) in paragraph at lines 177--177
+ [] 
+ []
+
+[27
 
 ] [28
 
@@ -1187,44 +1220,44 @@ Overfull \hbox (26.01776pt too wide) in paragraph at lines 166--166
 
 ] [34
 
+] [35
+
+] [36
+
+] [37
+
 ]pdfTeX warning (ext4): destination with the same identifier (name{tab:title}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 \end{frame}
+l.251 \end{frame}
                  
-Overfull \hbox (3.40292pt too wide) in paragraph at lines 240--240
- [] 
- []
-
-[35
-
-]
-Overfull \hbox (3.40292pt too wide) in paragraph at lines 240--240
- [] 
- []
-
-[36
-
-]
-Overfull \hbox (3.40292pt too wide) in paragraph at lines 240--240
- [] 
- []
-
-[37
-
-]
-Overfull \hbox (3.40292pt too wide) in paragraph at lines 240--240
+Overfull \hbox (3.40292pt too wide) in paragraph at lines 251--251
  [] 
  []
 
 [38
 
-] [39
+]
+Overfull \hbox (3.40292pt too wide) in paragraph at lines 251--251
+ [] 
+ []
 
-] [40
+[39
 
-] [41
+]
+Overfull \hbox (3.40292pt too wide) in paragraph at lines 251--251
+ [] 
+ []
+
+[40
+
+]
+Overfull \hbox (3.40292pt too wide) in paragraph at lines 251--251
+ [] 
+ []
+
+[41
 
 ] [42
 
@@ -1234,132 +1267,110 @@ Overfull \hbox (3.40292pt too wide) in paragraph at lines 240--240
 
 ] [45
 
-]
-(C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [46
+] [46
 
-]
-[47
+] [47
 
 ] [48
 
-] [49
-
-] [50
-
-] [51
-
-] [52
+]
+(C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [49
 
 ]
-(C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.toc) [53
+<Images/lyricsnetwork.png, id=1709, 1027.84pt x 770.88pt>
+File: Images/lyricsnetwork.png Graphic file (type png)
+
+<use Images/lyricsnetwork.png>
+Package pdftex.def Info: Images/lyricsnetwork.png used on input line 321.
+(pdftex.def)             Requested size: 241.93452pt x 181.45146pt.
+ [50
+
+ <C:/Users/Nelson/tech/hidden_structure/paper/Images/lyricsnetwork.png (PNG cop
+y)>]
+File: Images/lyricsnetwork.png Graphic file (type png)
+ <use Images/lyricsnetwork.png>
+Package pdftex.def Info: Images/lyricsnetwork.png used on input line 321.
+(pdftex.def)             Requested size: 241.93452pt x 181.45146pt.
+ [51
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{tab:title}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.406 \end{frame}
-                  [54
+l.340 \end{frame}
+                  [52
+
+] [53
 
 ]
-<Images/we8there_distortion.pdf, id=1960, 536.0025pt x 346.29375pt>
+<Images/we8there_distortion.pdf, id=1830, 536.0025pt x 346.29375pt>
 File: Images/we8there_distortion.pdf Graphic file (type pdf)
 
 <use Images/we8there_distortion.pdf>
-Package pdftex.def Info: Images/we8there_distortion.pdf used on input line 415.
+Package pdftex.def Info: Images/we8there_distortion.pdf used on input line 349.
 
 (pdftex.def)             Requested size: 307.28987pt x 198.52554pt.
 
-Overfull \vbox (14.34962pt too high) detected at line 415
+Overfull \vbox (7.84966pt too high) detected at line 349
  []
 
-[55
+[54
 
  <C:/Users/Nelson/tech/hidden_structure/paper/Images/we8there_distortion.pdf>] 
-<Images/lyrics_sample.png, id=1997, 466.74374pt x 577.40718pt>
+<Images/lyrics_sample.png, id=1864, 466.74374pt x 577.40718pt>
 File: Images/lyrics_sample.png Graphic file (type png)
 
 <use Images/lyrics_sample.png>
-Package pdftex.def Info: Images/lyrics_sample.png used on input line 424.
-(pdftex.def)             Requested size: 178.0909pt x 220.3135pt.
+Package pdftex.def Info: Images/lyrics_sample.png used on input line 358.
+(pdftex.def)             Requested size: 183.34688pt x 226.81348pt.
 
-Overfull \vbox (54.13759pt too high) detected at line 424
+Overfull \vbox (54.13759pt too high) detected at line 358
  []
 
-[56
+[55
 
  <C:/Users/Nelson/tech/hidden_structure/paper/Images/lyrics_sample.png>]
 File: Images/lyrics_sample.png Graphic file (type png)
 
 <use Images/lyrics_sample.png>
-Package pdftex.def Info: Images/lyrics_sample.png used on input line 424.
-(pdftex.def)             Requested size: 178.0909pt x 220.3135pt.
+Package pdftex.def Info: Images/lyrics_sample.png used on input line 358.
+(pdftex.def)             Requested size: 183.34688pt x 226.81348pt.
 
-Overfull \vbox (54.13759pt too high) detected at line 424
+Overfull \vbox (54.13759pt too high) detected at line 358
+ []
+
+[56
+
+]
+Overfull \vbox (14.52396pt too high) detected at line 388
  []
 
 [57
 
 ]
-Overfull \vbox (21.02393pt too high) detected at line 454
+Overfull \vbox (14.52396pt too high) detected at line 388
  []
 
 [58
 
-]
-Overfull \vbox (21.02393pt too high) detected at line 454
- []
-
-[59
+] [59
 
 ] [60
 
 ] [61
 
-] <Images/rogen.jpg, id=2194, 963.6pt x 542.025pt>
-File: Images/rogen.jpg Graphic file (type jpg)
-
-<use Images/rogen.jpg>
-Package pdftex.def Info: Images/rogen.jpg used on input line 472.
-(pdftex.def)             Requested size: 391.66739pt x 220.3135pt.
-
-Overfull \hbox (84.37752pt too wide) in paragraph at lines 472--472
- [] 
- []
-
-
-Overfull \vbox (49.7376pt too high) detected at line 472
- []
-
-[62
-
- <C:/Users/Nelson/tech/hidden_structure/paper/Images/rogen.jpg>]
-File: Images/rogen.jpg Graphic file (type jpg)
-
-<use Images/rogen.jpg>
-Package pdftex.def Info: Images/rogen.jpg used on input line 472.
-(pdftex.def)             Requested size: 391.66739pt x 220.3135pt.
-
-Overfull \hbox (84.37752pt too wide) in paragraph at lines 472--472
- [] 
- []
-
-
-Overfull \vbox (49.7376pt too high) detected at line 472
- []
-
-[63
-
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 475.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 475.
- (C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 475.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 475.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
+
+(C:\Users\Nelson\tech\hidden_structure\paper\Presentation_TGG.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
 Package rerunfilecheck Info: File `Presentation_TGG.out' has not changed.
-(rerunfilecheck)             Checksum: 8A337C298908BD6D95D72F8016930F36;619.
+(rerunfilecheck)             Checksum: 79C98F354896DFEEF3B49979840F55AE;433.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1368,32 +1379,30 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 475.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 412.
  ) 
 Here is how much of TeX's memory you used:
- 18035 strings out of 493921
- 342882 string characters out of 3147278
- 430721 words of memory out of 3000000
- 20727 multiletter control sequences out of 15000+200000
- 15528 words of font info for 56 fonts, out of 3000000 for 9000
+ 17999 strings out of 493921
+ 342142 string characters out of 3147278
+ 430361 words of memory out of 3000000
+ 20699 multiletter control sequences out of 15000+200000
+ 14940 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,19n,65p,469b,748s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmss9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Presentation_TGG.pdf (63 pages, 1248706 bytes).
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmss9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Presentation_TGG.pdf (61 pages, 2052012 bytes).
 PDF statistics:
- 2335 PDF objects out of 2487 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2150 PDF objects out of 2487 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 

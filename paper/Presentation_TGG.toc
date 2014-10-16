@@ -1,12 +1,9 @@
 \beamer@endinputifotherversion {3.33pt}
-\beamer@sectionintoc {1}{Motivation}{4}{0}{1}
-\beamer@sectionintoc {2}{Goals}{13}{0}{2}
-\beamer@sectionintoc {3}{Text as Data }{19}{0}{3}
-\beamer@subsectionintoc {3}{1}{Overview}{20}{0}{3}
-\beamer@subsectionintoc {3}{2}{Parsing}{25}{0}{3}
-\beamer@subsectionintoc {3}{3}{Multinomial Models}{31}{0}{3}
-\beamer@subsectionintoc {3}{4}{Topic Models}{39}{0}{3}
-\beamer@sectionintoc {4}{Cluster Model}{46}{0}{4}
-\beamer@subsectionintoc {4}{1}{Algorithm}{49}{0}{4}
-\beamer@sectionintoc {5}{Application}{53}{0}{5}
-\beamer@subsectionintoc {5}{1}{Congressional Speech Data}{54}{0}{5}
+\beamer@sectionintoc {1}{Motivation}{5}{0}{1}
+\beamer@sectionintoc {2}{Goals}{16}{0}{2}
+\beamer@sectionintoc {3}{Text as Data }{22}{0}{3}
+\beamer@subsectionintoc {3}{1}{Overview}{23}{0}{3}
+\beamer@subsectionintoc {3}{2}{Parsing}{28}{0}{3}
+\beamer@subsectionintoc {3}{3}{Multinomial Models}{34}{0}{3}
+\beamer@subsectionintoc {3}{4}{Topic Models}{42}{0}{3}
+\beamer@sectionintoc {4}{Applications}{49}{0}{4}

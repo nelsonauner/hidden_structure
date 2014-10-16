@@ -78,6 +78,7 @@
 \begin{frame}
 \frametitle{A quick aside...}
 \begin{center}
+\pause
 \includegraphics[height=.8\textheight]{Images/badcode.jpg}
 \end{center}
 \pause
@@ -85,6 +86,14 @@
 
 
 \section{Motivation}
+
+\begin{frame}
+\frametitle{Drowning in text}
+\pause
+\begin{center}
+\includegraphics[height=.8\textheight]{Images/textdata.png}
+\end{center}
+\end{frame}
 
 \begin{frame}
 \frametitle{Motivation: Historical }
@@ -103,6 +112,15 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{Public Sector Use}
+\pause
+\begin{center}
+\includegraphics[height=.9\textheight]{Images/PRISM.jpg}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
 \frametitle{How do they do it?}
 \begin{itemize}
 \pause
@@ -111,16 +129,9 @@
 \end{itemize}
 \end{frame}
 
-
-\begin{frame}
-\frametitle{Public Sector Use}
-\pause
-\begin{center}
-\includegraphics[height=.8\textheight]{Images/PRISM.jpg}
-\end{center}
-\end{frame}
-
 \section{Goals}
+
+
 \begin{frame}
 \frametitle{Are you comfortable talking about text?}
 \pause
@@ -129,7 +140,7 @@
 \pause
 \item explain the basics of text analysis to a potential client?
 \pause
-\item identify opportunity to utilize text analysis?
+\item identify opportunities to utilize text analysis?
 \pause
 \item commicate why text analysis is difficult?
 \end{itemize}
@@ -299,97 +310,19 @@ or mine \footnotemark \footnotetext[2]{Auner, 2014. Combining Latent Topics with
 \end{itemize}
 \end{frame}
 
-\section{Cluster Model}
+\section{Applications}
+
 \begin{frame}
- \frametitle{Cluster Model}
-\begin{block}{Goal}<1->
-\begin{itemize}
-\item Want to use the Topic Model but incorporate Metadata
-\item Also want computational ease
-\end{itemize}
-\end{block}
-\begin{block}{Approach}<2->
-\begin{itemize}
-\item Restrict each document to only one topic $\Rightarrow$ "cluster"
-\item Can collapse observations over unique (metadata, cluster) combination
-\item $ x_{i} \sim MN(q_{ij},m_{ij})    ; ~~  q_{ij} = \frac{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}{\sum_{l=1}^{p}{exp(\alpha_l+ y_i \phi_l + u_i \Gamma_{kl})}} $
-\end{itemize}
-\end{block}
+\frametitle{Uncovering relationships}
+\pause
+\begin{center}
+\includegraphics[height=.8\textheight]{Images/lyricsnetwork.png}
+\end{center}
 \end{frame}
 
-\subsection{Algorithm}
-\begin{frame}
-\frametitle{Algorithm for Cluster Membership Model with Gamma Lasso Penalty}
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item<+->
- Initialize cluster membership $u_i$ for $i = 1, \dots, n$
-\item<+->
-  Determine parameters $\alpha_, \phi, \Gamma$ by fitting a multinomial
-  regression on $y_i | x_i , u_i$ with a gamma lasso penalty (Taddy 2013)
-\item<+->
- For each document $i$, determine new cluster $u_i$ membership as \\
-  $argmax_{k = 1,..,K} \big[  \ell(u_i| \alpha, \phi, \Gamma) \big]$
-\item<+->
- Check if current cluster assignment is different from previous cluster assignment , ($\textbf{u}^{(t)}  = \textbf{u}^{(t-1)}$).If so, return to step 2. If not, end algorithm.
-\end{enumerate}
-\end{frame}
-
-\section{Application}
-%
-%\begin{frame}
-%\frametitle{Congressional Speech and Restaurant Reviews}
-%\begin{itemize}
-%\item<+-> We apply the algorithm to two datasets:
-%	\begin{itemize} 
-%	\item Congressional Speech records (Gentzkow and Shapiro, 2010) 
-%	\item A corpus of restaurant reviews called we8there (not shown here)
-%	\end{itemize}
-%\item<+-> Questions:
-%	\begin{itemize}
-%	\item Can this simple model capture the variation explained by a topic model?
-%	\item How does choice of cluster initialization affect the fit? 
-%	\end{itemize}
-%\end{itemize}
-%\end{frame}
-
-
-\subsection{Congressional Speech Data}
-%
-%\begin{frame}
-%\frametitle{An Example Cluster}
-%% latex table generated in R 3.0.2 by xtable 1.7-1 package
-%% Wed May 07 18:31:04 2014
-%\begin{center}
-%\small
-%\begin{tabular}{rll}
-%  \hline
-% & term & loading \\ 
-%  \hline
-%1 & nation.oil.food & 20.09 \\ 
-%  2 & united.nation.oil & 12.09 \\ 
-%  3 & liberty.pursuit.happiness & 8.11 \\ 
-%  4 & life.liberty.pursuit & 8.11 \\ 
-%  5 & minority.women.owned & 6.73 \\ 
-%  6 & universal.health & 6.67 \\ 
-%  7 & white.care.act & 6.64 \\ 
-%  8 & ryan.white.care & 6.6 \\ 
-%  9 & universal.health.care & 5.99 \\ 
-%  10 & growth.job.creation & 5.39 \\ 
-%  11 & drilling.arctic.national & 5.3 \\ 
-%  12 & tax.relief.package & 5.29 \\ 
-%  13 & judge.john.robert & 5.26 \\ 
-%  14 & fre.enterprise & 5.07 \\ 
-%  15 & arctic.refuge & 4.93 \\ 
-%   \hline
-%\end{tabular}
-%\end{center}
-%\end{frame}
-
 
 \begin{frame}
-\frametitle{Comparison with the Topic Model}
-Good news: We are able to recover similar topics with our model:
+\frametitle{Uncovering topics}
 \begin{table}[!htbp]
 \caption{Comparison of top word loadings on a stem-cell topic} \label{tab:title}
 \centering
@@ -402,13 +335,14 @@ blood.stem.cel   & cel.stem.cel \\
 adult.stem.cel & stem.cel.line \\
 \end{tabular}
 \end{table}
+\pause
 *Results reported in Taddy (2012)
 \end{frame}
 
 
 
 \begin{frame}
-\frametitle{Incorporating metadata: Restaurant Review} %Graph of first topic:
+\frametitle{Topics on Yelp} %Graph of first topic:
 \begin{center}
 \includegraphics[width=1\textwidth]{Images/we8there_distortion.pdf}
 \end{center}
@@ -457,7 +391,7 @@ adult.stem.cel & stem.cel.line \\
 \frametitle{Dip your feet in}
 \pause
 \begin{itemize}
-\item \textit{Textir} or \textit{Gamlr} package by Matt Taddy
+\item \textit{Textir} or \textit{Gamlr} 
 \item Currently only for R
 \item Python coming soon!
 \end{itemize}
@@ -465,10 +399,13 @@ adult.stem.cel & stem.cel.line \\
 
 \begin{frame}
 \frametitle{Thank You}
-\pause
-\begin{center}
-\includegraphics[height=1.0\textheight]{Images/rogen.jpg}
-\end{center}
+\begin{itemize}
+\item Math: $ x_{i} \sim MN(q_{ij},m_{ij})    ; ~~  q_{ij} = \frac{exp(\alpha_j + y_i \phi_j + u_i \Gamma_{kj})}{\sum_{l=1}^{p}{exp(\alpha_l+ y_i \phi_l + u_i \Gamma_{kl})}} $
+\item Talk based on \\ \textit{Combining Latent Topics with Document Attributes in Text Analysis}
+\item Advisors: 
+ Prof. Matt Taddy\footnotemark \footnotetext[2]{Associate Professor of Econometrics and Statistics at Chicago Booth School of Business},
+Prof. Stephen Stigler\footnotemark \footnotetext[3]{Ernest DeWitt Burton Distinguished Service Professor at the Department of Statistics of the University of Chicago}
+\end{itemize}
 \end{frame}
 
 
